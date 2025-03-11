@@ -71,9 +71,9 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 2rem 8rem;
+    padding: 8rem 2rem 5rem;
     background-color: var(--gray-light);
-    min-height: 100vh;
+    min-height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,14 +81,14 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     line-height: 1.2;
     color: var(--text-color);
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-color);
     margin-bottom: 2rem;
     max-width: 600px;
@@ -209,7 +209,7 @@ body {
 
 .contact h2 {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--text-color);
 }
 
