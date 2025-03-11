@@ -3,90 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Xinglong's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Xinglong Zhou</div>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">XINGLONG ZHOU</div>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="ux-design.html">UX Design</a></li>
-                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ux-design.html">UX DESIGN</a></li>
+                <li><a href="game-design.html">GAME DESIGN</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">Xinglong</span></h1>
-                <p class="subtitle">UX Designer & Game Designer</p>
-                <p class="description">I create engaging digital experiences through thoughtful design and creative solutions.</p>
-                <div class="cta-buttons">
-                    <a href="#work" class="cta-primary">View My Work</a>
-                    <a href="#contact" class="cta-secondary">Contact Me</a>
-                </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p class="description">I am a UX Designer dedicated to creating intuitive and engaging digital experiences.</p>
+            <div class="cta-buttons">
+                <a href="#work" class="cta-primary">Explore My Work</a>
+                <a href="#contact" class="cta-secondary">Get in Touch</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="work" class="work-preview">
-            <h2>Featured Work</h2>
-            <div class="work-categories">
-                <div class="category">
-                    <h3>UX Design</h3>
-                    <div class="work-grid">
-                        <!-- Add your UX design work previews here -->
-                        <div class="work-item">
-                            <img src="placeholder-ux-1.jpg" alt="UX Project 1">
-                            <h4>Project Title 1</h4>
-                            <p>Brief project description</p>
-                        </div>
-                        <div class="work-item">
-                            <img src="placeholder-ux-2.jpg" alt="UX Project 2">
-                            <h4>Project Title 2</h4>
-                            <p>Brief project description</p>
-                        </div>
+    <section id="work" class="work-preview">
+        <h2>Featured Work</h2>
+        <div class="work-categories">
+            <div class="category ux-design-section">
+                <h3>UX Design</h3>
+                <div class="work-grid">
+                    <div class="work-item ux-design">
+                        <img src="placeholder-ux-1.jpg" alt="UX Project 1">
+                        <h4>Project Title 1</h4>
+                        <p>Brief project description</p>
                     </div>
-                    <a href="ux-design.html" class="see-more">See all UX work →</a>
-                </div>
-
-                <div class="category">
-                    <h3>Game Design</h3>
-                    <div class="work-grid">
-                        <!-- Add your game design work previews here -->
-                        <div class="work-item">
-                            <img src="placeholder-game-1.jpg" alt="Game Project 1">
-                            <h4>Game Title 1</h4>
-                            <p>Brief project description</p>
-                        </div>
-                        <div class="work-item">
-                            <img src="placeholder-game-2.jpg" alt="Game Project 2">
-                            <h4>Game Title 2</h4>
-                            <p>Brief project description</p>
-                        </div>
+                    <div class="work-item ux-design">
+                        <img src="placeholder-ux-2.jpg" alt="UX Project 2">
+                        <h4>Project Title 2</h4>
+                        <p>Brief project description</p>
                     </div>
-                    <a href="game-design.html" class="see-more">See all game work →</a>
                 </div>
+                <a href="ux-design.html" class="see-more">See all UX work →</a>
             </div>
-        </section>
 
-        <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <p>Interested in working together? Let's connect!</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            <div class="category game-design-section theme-transition">
+                <h3>Game Design</h3>
+                <div class="work-grid">
+                    <div class="work-item game-design">
+                        <img src="placeholder-game-1.jpg" alt="Game Project 1">
+                        <h4>Game Title 1</h4>
+                        <p>Brief project description</p>
+                    </div>
+                    <div class="work-item game-design">
+                        <img src="placeholder-game-2.jpg" alt="Game Project 2">
+                        <h4>Game Title 2</h4>
+                        <p>Brief project description</p>
+                    </div>
                 </div>
+                <a href="game-design.html" class="see-more">See all game work →</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Interested in working together? Let's connect!</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Xinglong. All rights reserved.</p>
+        <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
     </footer>
 </body>
 </html>
