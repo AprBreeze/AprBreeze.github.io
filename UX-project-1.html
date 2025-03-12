@@ -8,186 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --ipet-primary: #FFC674;
-            --ipet-secondary: #FFCB80;
-            --ipet-text: #333333;
-            --ipet-light-bg: #FFF9F0;
-            --ipet-accent: #FF9F40;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: var(--ipet-text);
-            background-color: #f8f8f8;
-        }
-        
-        .hero-section {
-            background-color: var(--ipet-primary);
-            padding: 120px 0 60px;
-        }
-        
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            flex-wrap: wrap;
-        }
-        
-        .hero-text {
-            flex: 1;
-            min-width: 300px;
-            padding: 0 20px;
-        }
-        
-        .hero-image {
-            flex: 1;
-            min-width: 300px;
-            padding: 20px;
-        }
-        
-        .hero-title {
-            font-size: 2.5rem;
-            color: var(--ipet-text);
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        
-        .hero-description {
-            font-size: 1.1rem;
-            color: var(--ipet-text);
-            margin-bottom: 20px;
-            max-width: 500px;
-        }
-        
-        .case-study-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-top: -40px;
-            position: relative;
-        }
-        
-        .project-info {
-            background-color: var(--ipet-light-bg);
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .project-info h1 {
-            grid-column: 1 / -1;
-            color: var(--ipet-accent);
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-        
-        .info-item {
-            margin: 0;
-        }
-        
-        .info-label {
-            font-weight: 600;
-            display: block;
-            margin-bottom: 5px;
-            color: var(--ipet-text);
-        }
-        
-        .section {
-            margin-bottom: 50px;
-        }
-        
-        .section-title {
-            color: var(--ipet-accent);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--ipet-secondary);
-        }
-        
-        .section-content {
-            margin-bottom: 20px;
-        }
-        
-        .image-container {
-            margin: 30px 0;
-            text-align: center;
-        }
-        
-        .image-container img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .process-step {
-            background-color: var(--ipet-light-bg);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .process-step h3 {
-            color: var(--ipet-accent);
-            margin-top: 0;
-        }
-        
-        .feature-list, .challenge-list, .result-list {
-            padding-left: 20px;
-        }
-        
-        .feature-list li, .challenge-list li, .result-list li {
-            margin-bottom: 10px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: var(--ipet-light-bg);
-            margin-top: 50px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-text {
-                order: 1;
-            }
-            
-            .hero-image {
-                order: 0;
-                margin-bottom: 20px;
-            }
-            
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .case-study-container {
-                margin-top: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="main-header">
@@ -204,119 +24,374 @@
     <section class="hero-section">
         <div class="hero-container">
             <div class="hero-text">
-                <h1 class="hero-title">Project Title</h1>
-                <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                <h1 class="hero-title">iPet Pet Interpreter</h1>
+                <p class="hero-description">Help pet owners understand their pets' needs and provide effective pet care.</p>
             </div>
             <div class="hero-image">
-                <img src="image/ipet showcase.png" alt="Project Showcase" style="width:100%; height:auto; display:block; margin: 0 auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                <img src="image/ipet showcase.png" alt="Project Showcase" class="hero-img">
             </div>
         </div>
     </section>
 
     <div class="case-study-container">
         <div class="project-info">
-            <h1>Project Title</h1>
+            <h1>UofT Masters' Course Project</h1>
             <div class="info-item">
                 <span class="info-label">Role</span>
-                UX Designer
+                UX Designer, User Researcher, Usability Tester
             </div>
             <div class="info-item">
                 <span class="info-label">Duration</span>
-                Month Year - Month Year
+                09.2024 - 12.2024
             </div>
             <div class="info-item">
                 <span class="info-label">Tools</span>
-                Tool 1, Tool 2, Tool 3
+                Figma, Adobe Illustrator
             </div>
         </div>
 
         <div class="section">
             <h2 class="section-title">Overview</h2>
             <div class="section-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Problem Statement</h2>
-            <div class="section-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                <div class="overview-grid">
+                    <div class="overview-item">
+                        <h3>Problem</h3>
+                        <p>Pet's behaviour can often be hard to interpret and lead to bad treatment in their physical and mental health.</p>
+                    </div>
+                    
+                    <div class="overview-item overview-item-margin">
+                        <h3>Solution</h3>
+                        <p>An AI pet interpreter app that helps pet owners to understand pet needs and provide effective pet care.</p>
+                    </div>
+                </div>
                 
-                <div class="image-container">
-                    <img src="image/ipet thumbnail.png" alt="Problem visualization" style="max-width: 600px;">
+                <div class="overview-context">
+                    <h3>Context</h3>
+                    <p>User Experience Design Course Project - INF1602 - Fundamentals of UX<br>
+                    Master of Information program, University of Toronto</p>
+                </div>
+                
+                <div class="team-section">
+                    <h3>Team</h3>
+                    <p>Xinglong Zhou (Me), Runqing Zhang, Yonghan Liu, Yijing Shen, Lyle Guo, Kaiyue Zhou</p>
+                </div>
+                
+                <div class="role-section">
+                    <h3>My Role in Detail</h3>
+                    <ul class="feature-list">
+                        <li>Studio leader of prototype ideation and usability testing.</li>
+                        <li>Researched the core value that users are gaining from pet interactions.</li>
+                        <li>Led the ideation of wireframe creation.</li>
+                        <li>Conducted qualitative interviews with 2 pet owners.</li>
+                        <li>Wrote an analytical report based on the interview results.</li>
+                        <li>Conducted usability testing with 4 participants.</li>
+                        <li>Iterated on wireframes based on usability testing feedback.</li>
+                        <li>Created mood board and style tile for visual design.</li>
+                        <li>Participated in the graphic design of the high-fidelity prototype.</li>
+                        <li>Helped team members troubleshoot technical challenges on Figma.</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
+
+
         <div class="section">
-            <h2 class="section-title">Research</h2>
+            <h2 class="section-title">Design Stage Overview</h2>
             <div class="section-content">
-                <p>Our research phase included:</p>
+                <div class="design-process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-circle">
+                            <p>Problem Discovery</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-circle">
+                            <p>Problem Definition</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-circle">
+                            <p>User Research</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-circle">
+                            <p>Research Analysis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-circle">
+                            <p>User Journey Mapping</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <div class="step-circle">
+                            <p>Solution Definition</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">7</div>
+                        <div class="step-circle">
+                            <p>Wireframe Ideation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">8</div>
+                        <div class="step-circle">
+                            <p>Usability Testing & Review</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">9</div>
+                        <div class="step-circle">
+                            <p>Graphic Design</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">10</div>
+                        <div class="step-circle">
+                            <p>Prototype Production</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <style>
+                    .design-process-timeline {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        padding: 20px 0;
+                        background-color: #FFF9F0;
+                    }
+                    
+                    .process-step {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 20%;
+                        margin-bottom: 20px;
+                        position: relative;
+                    }
+                    
+                    .step-number {
+                        color: #FF9F40;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .step-circle {
+                        background-color: white;
+                        border-radius: 50%;
+                        width: 120px;
+                        height: 120px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                    }
+                    
+                    .step-circle p {
+                        margin: 0;
+                        padding: 10px;
+                        font-size: 0.9rem;
+                        font-weight: normal;
+                    }
+                    
+                    @media (max-width: 992px) {
+                        .process-step {
+                            width: 33.33%;
+                        }
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .process-step {
+                            width: 50%;
+                        }
+                    }
+                    
+                    @media (max-width: 480px) {
+                        .process-step {
+                            width: 100%;
+                        }
+                    }
+                </style>
+            </div>
+        </div>
+
+<!-- Problem Discovery -->
+        <div class="section">
+            <h2 class="section-title">Problem Discovery</h2>
+            <div class="section-content">
+                <div class="research-item">   
+                    <p>Our team's shared love for pets inspired our brainstorming sessions to identify key topics and pain points we wanted to address. We drew inspiration from trending products like Pet Talk and pet communication buttons, which explore advanced interactions between pets and their owners. These tools sparked our curiosity about fostering deeper bonds and enhancing understanding through technology.</p>
+                </div>
+                <div class="research-item">
+                    <h3 class="subsection-title">Key Research Questions</h3>
+                    <div class="research-questions-list">
+                        <p>
+                            <strong>Behavior Interpretation:</strong> 
+                            <p class = "research-item">What challenges do pet owners face when interpreting their pets' behaviors, and how do these challenges affect their ability to meet their pets' needs?</p>
+                        </p>
+                        <p>
+                            <strong>Technology Usability:</strong> 
+                            <p class = "research-item">What are pet owners' experiences with the usability and effectiveness of current pet-related technologies, and what limitations do they encounter?</p>
+                        </p>
+                        <p>
+                            <strong>New Tool Expectations:</strong> 
+                            <p class = "research-item">What are pet owners' main concerns and expectations regarding new tools designed to improve pet-owner communication?</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Problem Definition -->
+        <div class="section">
+            <h2 class="section-title">Problem Definition</h2>
+            <div class="section-content">
+                <h3 class="subsection-title" style="margin-bottom: 10px;">Key Area of Focus</h3>
+                <div class="research-questions-list" style="margin-bottom: 40px;">
+                    <div class="research-item">
+                        <p>
+                            <strong>Interpreting Pet Behavior:</strong> 
+                            <p class = "research-item">Identify challenges in understanding pets' emotions, common misinterpretations, and frustrations.</p>
+                        </p>
+                        <p>
+                            <strong>Experience with Pet Technologies:</strong> 
+                            <p class = "research-item">Explore usability issues, data reliability, and communication limitations in current tools.</p>
+                        </p>
+                        <p>
+                            <strong>Improving Pet Communication:</strong> 
+                            <p class = "research-item">Uncover desired features and expectations for technology to enhance pet-owner bonds.</p>
+                        </p>
+                    </div>
+                </div>
+                <h3 class="subsection-title" style="margin-bottom: 10px;">Problem Statement</h3>    
+                <p class = "research-item" style="padding-left: 20px;">Pet owners struggle to understand their pets' behaviors and needs, leading to poor pet care and frustration.
+                </p>
+            </div>
+        </div>
+
+<!-- User Research -->
+        <div class="section">
+            <h2 class="section-title">User Research</h2>
+            <div class="section-content">
+                <p>We conducted 12 interviews with a diverse group of potential users and stakeholders, including:</p>
                 <ul class="feature-list">
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Consectetur adipiscing elit</li>
-                    <li>Nullam in dui mauris</li>
-                    <li>Vivamus hendrerit arcu sed erat</li>
+                    <li>Pet owners (Primary Audience)</li>
+                    <li>Pet Industry Professionals</li>
                 </ul>
                 
-                <p><strong>Key Findings:</strong></p>
-                <ul class="feature-list">
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                    <li>Nullam in dui mauris vivamus hendrerit</li>
-                    <li>Sed auctor neque eu tellus rhoncus</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Design Process</h2>
-            <div class="section-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                <h3 class="subsection-title">Key Findings from User Interviews</h3>
                 
-                <div class="process-steps">
-                    <div class="process-step">
-                        <h3>1. Phase One</h3>
-                        <p>Lorem ipsum dolor sit amet</p>
+                <div class="user-quotes-container">
+                    <div class="user-quote">
+                        <div class="user-avatar">
+                            <img src="image/persona figure 1.png" alt="User 1" class="avatar-img">
+                        </div>
+                        <div class="quote-content">
+                            <p class="quote-text">"I usually spend about 2 to 3 hours with her after school every day. <span class="highlight">I also use tools like notebooks or other methods to track her to-do list and ensure nothing is left unfinished</span>. Additionally, <span class="highlight">we use a camera to check on our pet</span> and make sure everything is fine."</p>
+                        </div>
                     </div>
-                    <div class="process-step">
-                        <h3>2. Phase Two</h3>
-                        <p>Consectetur adipiscing elit</p>
+                    
+                    <div class="user-quote">
+                        <div class="user-avatar">
+                            <img src="image/persona figure 2.png" alt="User 2" class="avatar-img">
+                        </div>
+                        <div class="quote-content">
+                            <p class="quote-text">"My dog had brain cancer, and <span class="highlight">it happened very suddenly. It's difficult to understand without resorting to expensive diagnostic tests</span>."</p>
+                        </div>
                     </div>
-                    <div class="process-step">
-                        <h3>3. Phase Three</h3>
-                        <p>Nullam in dui mauris</p>
+                    
+                    <div class="user-quote">
+                        <div class="user-avatar">
+                            <img src="image/persona figure 3.png" alt="User 3" class="avatar-img">
+                        </div>
+                        <div class="quote-content">
+                            <p class="quote-text">"Sometimes I try to understand her behaviour by searching on the internet or using forums. I rely on groups or chats with experienced pet owners where I can ask questions online. <span class="highlight">I haven't downloaded many pet communication apps because I'm not sure how accurate they are</span>. On the rare occasions I do use such apps, it's mostly just for fun."</p>
+                        </div>
                     </div>
-                    <div class="process-step">
-                        <h3>4. Phase Four</h3>
-                        <p>Vivamus hendrerit arcu sed</p>
+                </div>
+                
+                <h3 class="subsection-title">Research Insights</h3>
+                <div class="insights-container">
+                    <div class="insight-item">
+                        <h4>Tracking & Monitoring</h4>
+                        <p>Pet owners use various tools to track pet activities and monitor their well-being, from simple notebooks to cameras.</p>
+                    </div>
+                    <div class="insight-item">
+                        <h4>Health Concerns</h4>
+                        <p>Sudden health issues are difficult to detect early without expensive tests, causing frustration and worry.</p>
+                    </div>
+                    <div class="insight-item">
+                        <h4>Information Sources</h4>
+                        <p>Owners rely on online communities and forums for advice, but are skeptical about the accuracy of pet communication apps.</p>
+                    </div>
+                </div>
+                
+                <h3 class="subsection-title">Research Analysis</h3>
+                <div class="research-analysis">
+                    <h4 class="analysis-subtitle">Coding</h4>
+                    <p>We analyzed and coded the interview scripts, breaking down complex issues into smaller thematic units.</p>
+                    
+                    <div class="coding-analysis">
+                        <div class="coding-item">
+                            <div class="avatar-circle">
+                                <img src="image/persona figure 1.png" alt="User 1" class="avatar-img">
+                            </div>
+                            <div class="quote-box">
+                                <p>"I also use tools like notebooks or other methods to track her to-do list and ensure nothing is left unfinished."</p>
+                            </div>
+                            <div class="arrow-down"></div>
+                            <div class="theme-tag">Need for reminder</div>
+                        </div>
+                        
+                        <div class="coding-item">
+                            <div class="avatar-circle">
+                                <img src="image/persona figure 2.png" alt="User 2" class="avatar-img">
+                            </div>
+                            <div class="quote-box">
+                                <p>"My dog had brain cancer, and it happened very suddenly. It's difficult to understand without resorting to expensive diagnostic tests."</p>
+                            </div>
+                            <div class="arrow-down"></div>
+                            <div class="theme-tag">Timely medical care</div>
+                        </div>
+                        
+                        <div class="coding-item">
+                            <div class="avatar-circle">
+                                <img src="image/persona figure 3.png" alt="User 3" class="avatar-img">
+                            </div>
+                            <div class="quote-box">
+                                <p>"I haven't downloaded many pet communication apps because I'm not sure how accurate they are."</p>
+                            </div>
+                            <div class="arrow-down"></div>
+                            <div class="theme-tag">Skeptical on accuracy</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">Challenges & Solutions</h2>
-            <div class="section-content">
-                <div class="challenge-list">
-                    <div class="challenge-item">
-                        <h3>Challenge One</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p><strong>Solution:</strong> Nullam in dui mauris vivamus hendrerit.</p>
-                    </div>
-                    <div class="challenge-item">
-                        <h3>Challenge Two</h3>
-                        <p>Consectetur adipiscing elit nullam in dui mauris.</p>
-                        <p><strong>Solution:</strong> Sed auctor neque eu tellus rhoncus.</p>
-                    </div>
-                    <div class="challenge-item">
-                        <h3>Challenge Three</h3>
-                        <p>Nullam in dui mauris vivamus hendrerit.</p>
-                        <p><strong>Solution:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+        
         <div class="section">
             <h2 class="section-title">Solution</h2>
             <div class="section-content">
@@ -329,7 +404,7 @@
                 </ul>
                 
                 <div class="image-container">
-                    <img src="image/ipet showcase.png" alt="Final design solution" style="max-width: 600px;">
+                    <img src="image/ipet showcase.png" alt="Final design solution" class="medium-width-img">
                 </div>
             </div>
         </div>
@@ -356,6 +431,18 @@
                 </div>
             </div>
         </div>
+        
+        <div class="section">
+            <h2 class="section-title">Sequencial Storyboard</h2>
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="image/ipet-walkthrough 1.png" alt="ipet-walkthrough 1" class="full-width-img">
+                </div>
+                <div class="image-container">
+                    <img src="image/ipet-walkthrough 2.png" alt="ipet-walkthrough 2" class="full-width-img">
+                </div>
+            </div>
+        </div>
 
         <div class="section">
             <h2 class="section-title">Conclusion</h2>
@@ -372,7 +459,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="ipet-footer">
         <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
     </footer>
 </body>
