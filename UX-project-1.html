@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title - UX Case Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ipet-primary: #FFC674;
+            --ipet-secondary: #FFCB80;
+            --ipet-text: #333333;
+            --ipet-light-bg: #FFF9F0;
+            --ipet-accent: #FF9F40;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--ipet-text);
+            background-color: #f8f8f8;
+        }
+        
+        .hero-section {
+            background-color: var(--ipet-primary);
+            padding: 120px 0 60px;
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 20px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            color: var(--ipet-text);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--ipet-text);
+            margin-bottom: 20px;
+            max-width: 500px;
+        }
+        
+        .case-study-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: -40px;
+            position: relative;
+        }
+        
+        .project-info {
+            background-color: var(--ipet-light-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-info h1 {
+            grid-column: 1 / -1;
+            color: var(--ipet-accent);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .info-item {
+            margin: 0;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            color: var(--ipet-text);
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            color: var(--ipet-accent);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--ipet-secondary);
+        }
+        
+        .section-content {
+            margin-bottom: 20px;
+        }
+        
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .process-step {
+            background-color: var(--ipet-light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .process-step h3 {
+            color: var(--ipet-accent);
+            margin-top: 0;
+        }
+        
+        .feature-list, .challenge-list, .result-list {
+            padding-left: 20px;
+        }
+        
+        .feature-list li, .challenge-list li, .result-list li {
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: var(--ipet-light-bg);
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-text {
+                order: 1;
+            }
+            
+            .hero-image {
+                order: 0;
+                margin-bottom: 20px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .case-study-container {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">XINGLONG ZHOU</div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="ux-design.html">UX DESIGN</a></li>
+                <li><a href="game-design.html">GAME DESIGN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title">Project Title</h1>
+                <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+            </div>
+            <div class="hero-image">
+                <img src="image/ipet showcase.png" alt="Project Showcase" style="width:100%; height:auto; display:block; margin: 0 auto; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+            </div>
+        </div>
+    </section>
+
+    <div class="case-study-container">
+        <div class="project-info">
+            <h1>Project Title</h1>
+            <div class="info-item">
+                <span class="info-label">Role</span>
+                UX Designer
+            </div>
+            <div class="info-item">
+                <span class="info-label">Duration</span>
+                Month Year - Month Year
+            </div>
+            <div class="info-item">
+                <span class="info-label">Tools</span>
+                Tool 1, Tool 2, Tool 3
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Overview</h2>
+            <div class="section-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Problem Statement</h2>
+            <div class="section-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                
+                <div class="image-container">
+                    <img src="image/ipet thumbnail.png" alt="Problem visualization" style="max-width: 600px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Research</h2>
+            <div class="section-content">
+                <p>Our research phase included:</p>
+                <ul class="feature-list">
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Nullam in dui mauris</li>
+                    <li>Vivamus hendrerit arcu sed erat</li>
+                </ul>
+                
+                <p><strong>Key Findings:</strong></p>
+                <ul class="feature-list">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                    <li>Nullam in dui mauris vivamus hendrerit</li>
+                    <li>Sed auctor neque eu tellus rhoncus</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Design Process</h2>
+            <div class="section-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <h3>1. Phase One</h3>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>2. Phase Two</h3>
+                        <p>Consectetur adipiscing elit</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>3. Phase Three</h3>
+                        <p>Nullam in dui mauris</p>
+                    </div>
+                    <div class="process-step">
+                        <h3>4. Phase Four</h3>
+                        <p>Vivamus hendrerit arcu sed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Challenges & Solutions</h2>
+            <div class="section-content">
+                <div class="challenge-list">
+                    <div class="challenge-item">
+                        <h3>Challenge One</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p><strong>Solution:</strong> Nullam in dui mauris vivamus hendrerit.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Challenge Two</h3>
+                        <p>Consectetur adipiscing elit nullam in dui mauris.</p>
+                        <p><strong>Solution:</strong> Sed auctor neque eu tellus rhoncus.</p>
+                    </div>
+                    <div class="challenge-item">
+                        <h3>Challenge Three</h3>
+                        <p>Nullam in dui mauris vivamus hendrerit.</p>
+                        <p><strong>Solution:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Solution</h2>
+            <div class="section-content">
+                <p>The final design features:</p>
+                <ul class="feature-list">
+                    <li><strong>Feature One:</strong> Lorem ipsum dolor sit amet</li>
+                    <li><strong>Feature Two:</strong> Consectetur adipiscing elit</li>
+                    <li><strong>Feature Three:</strong> Nullam in dui mauris</li>
+                    <li><strong>Feature Four:</strong> Vivamus hendrerit arcu sed</li>
+                </ul>
+                
+                <div class="image-container">
+                    <img src="image/ipet showcase.png" alt="Final design solution" style="max-width: 600px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Results & Impact</h2>
+            <div class="section-content">
+                <div class="result-list">
+                    <div class="result-item">
+                        <h3>User Feedback</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                            <li>Nullam in dui mauris vivamus hendrerit</li>
+                        </ul>
+                    </div>
+                    <div class="result-item">
+                        <h3>Key Metrics</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Consectetur adipiscing elit</li>
+                            <li>Nullam in dui mauris</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Conclusion</h2>
+            <div class="section-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                
+                <h3>Future Developments</h3>
+                <ul class="feature-list">
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Nullam in dui mauris</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+    </footer>
+</body>
+</html>
