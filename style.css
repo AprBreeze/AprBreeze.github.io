@@ -572,7 +572,7 @@ footer {
 }
 
 .section-content {
-    margin-bottom: 20px;
+    margin-bottom: 20px; padding-left: 10px;
 }
 
 .image-container {
@@ -680,7 +680,7 @@ footer {
 .subsection-title {
     color: var(--ipet-text);
     font-size: 1.2rem;
-    margin: 30px 0 20px;
+    margin: 10px 0 10px;
 }
 
 .user-quotes-container {
@@ -784,7 +784,7 @@ footer {
 
 /* Research Analysis Section */
 .research-analysis {
-    margin: 40px 0;
+    margin: 10px 0;
 }
 
 .analysis-subtitle {
