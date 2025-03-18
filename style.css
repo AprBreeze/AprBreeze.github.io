@@ -7,7 +7,7 @@
 
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #409eb8;
+    --secondary-color: #1788B0;
     --iPet-color-primary: #FFC674;
     --text-color: #333333;
     --secondary-text-color: #595959;
@@ -15,7 +15,7 @@
     --gray-light: #f0f0f0;
     --gray: #cccccc;
     --card-background: #ffffff;
-    --header-background: rgba(255, 255, 255, 0.98);
+    --header-background: #333333;
     --ipet-primary: #FFC674;
     --ipet-secondary: #FFCB80;
     --ipet-text: #333333;
@@ -36,7 +36,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: var(--header-background);
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
@@ -54,7 +54,7 @@ body {
 .logo {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -65,7 +65,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-weight: 600;
     transition: color 0.3s ease;
     font-size: 0.9rem;
