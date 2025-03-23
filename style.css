@@ -7,9 +7,9 @@
 
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #409eb8;
+    --secondary-color: #1c1c1c;
     --iPet-color-primary: #FFC674;
-    --text-color: #333333;
+    --text-color: #1c1c1c;
     --secondary-text-color: #595959;
     --background-color: #f4f4f4;
     --gray-light: #f0f0f0;
@@ -18,7 +18,7 @@
     --header-background: rgba(255, 255, 255, 0.98);
     --ipet-primary: #FFC674;
     --ipet-secondary: #FFCB80;
-    --ipet-text: #333333;
+    --ipet-text: #1c1c1c;
     --ipet-light-bg: #FFF9F0;
     --ipet-accent: #FF9F40;
 }
@@ -78,46 +78,61 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 4rem 2rem 2rem;
+    padding: 0;
     background-color: var(--gray-light);
-    min-height: 30vh;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: stretch;
 }
 
-.hero-iPet {
-    padding: 4rem 2rem 2rem;
-    background-color: var(--iPet-color-primary);
-    min-height: 30vh;
+.hero-split {
+    display: flex;
+    width: 100%;
+}
+
+.hero-image-container {
+    flex: 0 0 45%;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.hero-content {
+    flex: 0 0 60%;
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1.2;
     color: var(--text-color);
 }
 
 .description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .cta-buttons {
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .cta-primary,
@@ -221,7 +236,7 @@ body {
 /* Contact Section */
 .contact {
     background-color: var(--gray-light);
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     text-align: center;
 }
 
@@ -262,37 +277,43 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive adjustments for hero section */
+@media (max-width: 1024px) {
+    .hero-content {
+        padding: 4rem 2rem;
+    }
+    
     .hero h1 {
         font-size: 3rem;
     }
-
-    .description {
-        font-size: 1.2rem;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
 }
 
-@media (max-width: 480px) {
-    .cta-buttons {
+@media (max-width: 768px) {
+    .hero-split {
         flex-direction: column;
     }
-
-    .hero {
-        padding: 6rem 1rem 4rem;
+    
+    .hero-image-container {
+        flex: 0 0 50vh;
+    }
+    
+    .hero-content {
+        flex: 1;
+        padding: 3rem 2rem;
+        text-align: center;
+        align-items: center;
     }
 
-    .work-preview,
-    .contact {
-        padding: 4rem 1rem;
+    .cta-buttons {
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .description {
+        font-size: 1rem;
     }
 }
 
