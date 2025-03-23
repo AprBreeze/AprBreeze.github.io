@@ -7,7 +7,11 @@
 
 :root {
     --primary-color: #ffffff;
+<<<<<<< HEAD
     --secondary-color: #1c1c1c;
+=======
+    --secondary-color: #2596be;
+>>>>>>> 1dedaa3febe2228757ca736c7413761bafc177e8
     --iPet-color-primary: #FFC674;
     --text-color: #1c1c1c;
     --secondary-text-color: #595959;
@@ -15,7 +19,7 @@
     --gray-light: #f0f0f0;
     --gray: #cccccc;
     --card-background: #ffffff;
-    --header-background: rgba(255, 255, 255, 0.98);
+    --header-background: #333333;
     --ipet-primary: #FFC674;
     --ipet-secondary: #FFCB80;
     --ipet-text: #1c1c1c;
@@ -36,7 +40,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: var(--header-background);
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     z-index: 1000;
@@ -54,7 +58,7 @@ body {
 .logo {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -65,7 +69,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-weight: 600;
     transition: color 0.3s ease;
     font-size: 0.9rem;
@@ -593,7 +597,7 @@ footer {
 }
 
 .section-content {
-    margin-bottom: 20px; padding-left: 10px;
+    margin-bottom: 10px; padding-left: 10px;
 }
 
 .image-container {
@@ -935,5 +939,288 @@ footer {
     
     .quote-content:before {
         display: none;
+    }
+}
+
+/* Prototype Production Section */
+.prototype-showcase {
+    background-color: var(--ipet-primary);
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.prototype-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.prototype-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .prototype-showcase {
+        padding: 40px 15px;
+    }
+}
+
+/* Design Process Timeline */
+.design-process-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #FFF9F0;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.step-number {
+    color: #FF9F40;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.step-circle {
+    background-color: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-circle p {
+    margin: 0;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+/* Wireframe Examples */
+.wireframe-examples {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.wireframe-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.wireframe-item {
+    flex: 1;
+}
+
+.wireframe-img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Research Themes */
+.research-themes {
+    margin: 30px 0;
+}
+
+.theme-item {
+    margin-bottom: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.theme-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.theme-title {
+    color: #FF9F40;
+    margin: 0;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    min-width: 80px;
+}
+
+.theme-header p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.theme-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.people-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+.person-icon {
+    font-size: 1.1rem;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.person-icon:hover {
+    transform: scale(1.2);
+}
+
+.person-icon.filled {
+    color: white;
+    background-color: #FF9F40;
+}
+
+.person-icon.unfilled {
+    color: #ccc;
+    background-color: #f5f5f5;
+}
+
+.payment-row {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px dashed #eee;
+}
+
+.payment-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-right: 10px;
+}
+
+.payment-icon {
+    font-size: 0.9rem;
+    width: 20px;
+    height: 20px;
+}
+
+.report-download {
+    margin-top: 30px;
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .process-step {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-step {
+        width: 50%;
+    }
+    
+    .theme-header {
+        flex-direction: column;
+    }
+    
+    .theme-title {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-step {
+        width: 100%;
+    }
+}
+
+/* Image Row Styles */
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.ideation-images .image-container {
+    flex: 1;
+}
+
+.ideation-img {
+    width: 100%;
+    height: 80%;
+    border-radius: 6px;
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Prototype Showcase */
+.prototype-showcase {
+    background-color: var(--ipet-primary);
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.prototype-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.prototype-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .prototype-showcase {
+        padding: 40px 15px;
     }
 }
