@@ -350,8 +350,10 @@ footer {
 }
 
 .portfolio-image {
+    display: flex;
     height: 100%;
     min-height: 400px;
+    align-items: center;
 }
 
 .portfolio-image img {
@@ -729,7 +731,7 @@ footer {
     object-fit: cover;
 }
 
-.portfolio-content {
+.-content {
     padding: 2rem;
     display: flex;
     flex-direction: column;
