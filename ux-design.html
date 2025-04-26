@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UX Design Portfolio</title>
+    <title>UX Design Portfolio | Xinglong Zhou</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="UX Design Portfolio of Xinglong Zhou - Showcasing projects and case studies">
 </head>
 <body>
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">XINGLONG ZHOU</div>
+            <div class="logo">Xinglong's Base</div>
             <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="ux-design.html">UX DESIGN</a></li>
-                <li><a href="game-design.html">GAME DESIGN</a></li>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="ux-design.html" class="active">UX Design</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
             </ul>
         </nav>
     </header>
@@ -22,18 +26,18 @@
     <main>
         <section class="portfolio-header">
             <h1>UX Design Portfolio</h1>
-            <p>A collection of my user experience design work, focusing on creating intuitive and engaging digital experiences.</p>
+            <p>Creating intuitive, user-centered experiences through research, iteration, and thoughtful design</p>
         </section>
 
         <section class="portfolio-grid">
             <!-- Project 1 -->
             <article class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="image/ipet-front.png" alt="UX Project 1">
+                    <img src="image/ipet-front.png" alt="iPet - Pet Interpreter App">
                 </div>
                 <div class="portfolio-content">
-                    <h2>iPet Pet Interpreter App</h2>
                     <p class="project-category">Mobile App Design</p>
+                    <h2>iPet Pet Interpreter App</h2>
                     <p class="project-description">iPet is an AI-powered app designed to help pet owners interpret their pets' behaviors 
                         and provide effective care. The app fosters deeper pet-owner bonds, promotes pet health, 
                         and offers intuitive, user-friendly interactions.</p>
@@ -50,36 +54,38 @@
             <!-- Project 2 -->
             <article class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="placeholder-ux-2.jpg" alt="UX Project 2">
+                    <img src="image/Boardgame thumbnail.jpg" alt="Slasher Board Game">
                 </div>
                 <div class="portfolio-content">
-                    <h2>Project Title 2</h2>
-                    <p class="project-category">Website Redesign</p>
-                    <p class="project-description">Reimagining the user experience for a complex web application, focusing on simplification and accessibility.</p>
+                    <p class="project-category">Game UX Design</p>
+                    <h2>Slasher Board Game</h2>
+                    <p class="project-description">Slasher is a 4-player cooperative board game where players navigate a haunted mansion to exorcise a supernatural slasher. I designed gameplay, balanced mechanics, and improved UX through iterative testing, enhancing accessibility and replayability.</p>
                     <ul class="project-highlights">
-                        <li>Information Architecture</li>
-                        <li>User Flow Design</li>
-                        <li>UI Design</li>
-                        <li>A/B Testing</li>
+                        <li>Game Mechanics</li>
+                        <li>User Testing</li>
+                        <li>Visual Design</li>
+                        <li>Interaction Design</li>
                     </ul>
-                    <a href="#" class="view-project">View Case Study →</a>
+                    <a href="UX-project-2.html" class="view-project">View Case Study →</a>
                 </div>
             </article>
 
             <!-- Project 3 -->
             <article class="portfolio-item">
                 <div class="portfolio-image">
-                    <img src="placeholder-ux-3.jpg" alt="UX Project 3">
+                    <img src="placeholder-ux-3.jpg" alt="Service Design Project">
                 </div>
                 <div class="portfolio-content">
-                    <h2>Project Title 3</h2>
                     <p class="project-category">Service Design</p>
-                    <p class="project-description">Creating a seamless omnichannel experience for a retail service, improving customer satisfaction and engagement.</p>
+                    <h2>Retail Experience Redesign</h2>
+                    <p class="project-description">Creating a seamless omnichannel experience for a retail service, improving customer satisfaction and engagement through careful journey mapping and user-centered design thinking.</p>
                     <ul class="project-highlights">
                         <li>Service Blueprint</li>
                         <li>Journey Mapping</li>
                         <li>Interaction Design</li>
                         <li>User Testing</li>
+                        <li>Iterative Design</li>
+                        <li>Experience Mapping</li>
                     </ul>
                     <a href="#" class="view-project">View Case Study →</a>
                 </div>
@@ -87,8 +93,57 @@
         </section>
     </main>
 
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Looking to collaborate on UX projects? I'd love to hear from you!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
     </footer>
+    
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add subtle animation for portfolio items on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
 </body>
 </html> 

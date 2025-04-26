@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Xinglong Zhou - UX Designer and Game Designer Portfolio">
 </head>
 <body>
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">XINGLONG ZHOU</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="ux-design.html">UX DESIGN</a></li>
-                    <li><a href="game-design.html">GAME DESIGN</a></li>
-                </ul>
-            </div>
+            <div class="logo">Xinglong's Base</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">About Me</a></li>
+                <li><a href="ux-design.html">UX Design</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -29,14 +29,16 @@
                 <img src="image/me4.jpg" alt="Xinglong Zhou" class="profile-image">
             </div>
             <div class="hero-content">
-                <h1>Hi, I'm Xinglong</h1>
-                <p class="description">I am a ...<br> 
+                <h1>I'm Xinglong</h1>
+                <p class="description">
+                    Do you know I am a ...<br> 
                     UXD Graduate Student @ UofToronto<br>
                     Level Designer Intern<br>
                     Video Game Content Creator / Reviewer / Guide Writer<br>
                     Research / Teaching Assistant <br> 
                     And... (most importantly) <br> 
-                    a Passionate Creator!</p>
+                    a Passionate Creator!
+                </p>
                 <div class="cta-buttons">
                     <a href="#work" class="cta-primary">Explore My Work</a>
                     <a href="#contact" class="cta-secondary">Get in Touch</a>
@@ -54,7 +56,7 @@
                     <div class="work-item ux-design">
                         <a href="UX-project-1.html" style="text-decoration: none;">
                             <img src="image/ipet thumbnail.png" alt="iPet - Pet Interpreter App Course Project 2024">
-                            <h4>iPet - Pet Interpreter App Course Project 2024</h4>
+                            <h4>iPet - Pet Interpreter App</h4>
                             <p>iPet is an AI-powered app designed to help pet owners interpret their pets' behaviors 
                                 and provide effective care. The app fosters deeper pet-owner bonds, promotes pet health, 
                                 and offers intuitive, user-friendly interactions.</p>
@@ -63,7 +65,7 @@
                     <div class="work-item ux-design">
                         <a href="UX-project-2.html" style="text-decoration: none;">
                             <img src="image/Boardgame thumbnail.jpg" alt="UX Project 2">
-                            <h4>Slasher Board Game Design Course Project 2022</h4>
+                            <h4>Slasher Board Game Design</h4>
                             <p>Slasher is a 4-player cooperative board game where players navigate a haunted mansion to exorcise a supernatural slasher. I designed gameplay, balanced mechanics, and improved UX through iterative testing, enhancing accessibility and replayability.</p>
                         </a>
                     </div>
@@ -77,19 +79,19 @@
                     <div class="work-item game-design">
                         <a href="game-project-1.html" style="text-decoration: none;">
                             <img src="image/INCARNATION.png" alt="Perfect World Intern">
-                            <h4>Perfect World Level Designer Intern 2023</h4>
-                            <p>I designed open-world exploration systems, blockout standards, and gameplay challenges for an open-world project. I crafted engaging exploration loops, developed scalable prototypes, and prioritized player flow. </p> 
+                            <h4>Perfect World Level Designer Intern</h4>
+                            <p>I designed open-world exploration systems, blockout standards, and gameplay challenges for an open-world project. I crafted engaging exploration loops, developed scalable prototypes, and prioritized player flow.</p> 
                         </a>
                     </div>
                     <div class="work-item game-design">
                         <a href="game-project-2.html" style="text-decoration: none;">
                             <img src="image/ubisoft NEXT 2024 overview.png" alt="Ubisoft NEXT Level Design Competition 2025">
-                            <h4>Ubisoft NEXT Level Design Competition 2025</h4>
-                            <p>I designed an FPS level incorporating stealth mechanics. I implemented a multi-layered structure. The player infiltrates the cargo ship to search for the missing agent, explores environmental storytelling, uncovers the secrets hidden on the cargo ship, and ultimately escapes in a blockbuster narrative.</p>
+                            <h4>Ubisoft NEXT Level Design Competition</h4>
+                            <p>I designed an FPS level incorporating stealth mechanics. I implemented a multi-layered structure. The player infiltrates the cargo ship to search for the missing agent, explores environmental storytelling, and escapes in a blockbuster narrative.</p>
                         </a>
                     </div>
                 </div>
-                <a href="game-design.html" class="see-more">See all game deisgn and level design work →</a>
+                <a href="game-design.html" class="see-more">See all game design and level design work →</a>
             </div>
         </div>
     </section>
@@ -97,17 +99,54 @@
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
         <div class="contact-content">
-            <p>Look forward to work together! Let's connect!</p>
+            <p>Looking forward to working together! Let's connect and create something amazing!</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
+    
     <footer>
         <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
     </footer>
-  
+    
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add subtle animation for work items on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.work-item').forEach(item => {
+            observer.observe(item);
+        });
+    </script>
 </body>
-
 </html>

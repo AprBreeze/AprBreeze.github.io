@@ -5,96 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Design Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="main-header">
-        <nav class="nav-container">
-            <div class="logo">XINGLONG ZHOU</div>
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="ux-design.html">UX DESIGN</a></li>
-                <li><a href="game-design.html">GAME DESIGN</a></li>
+<body class="game-design-body">
+    <div class="particle-container">
+        <div id="particles-js"></div>
+    </div>
+    
+    <header class="game-header">
+        <nav class="game-nav">
+            <div class="game-logo">Xinglong's Base</div>
+            <ul class="game-nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="ux-design.html">UX Design</a></li>
+                <li><a href="game-design.html" class="active">Game Design</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="portfolio-header">
-            <h1>Game Design Portfolio</h1>
-            <p>A showcase of my game design projects, featuring innovative gameplay mechanics and engaging player experiences.</p>
+    <main class="game-main">
+        <section class="game-hero">
+            <div class="hero-content">
+                <h1>Game <span class="accent">Design</span></h1>
+                <div class="hero-text-container">
+                    <div class="rotating-text"></div>
+                </div>
+                <div class="hero-line"></div>
+            </div>
         </section>
 
-        <section class="portfolio-grid">
+        <section class="game-portfolio">
             <!-- Project 1 -->
-            <article class="portfolio-item">
-                <div class="portfolio-image">
+            <article class="game-card">
+                <div class="card-image">
                     <img src="image/ubisoft NEXT 2024 overview.png" alt="Game Project 1">
                 </div>
-                <div class="portfolio-content">
+                <div class="card-content">
                     <h2>Ubisoft Level Design Competition</h2>
-                    <p class="project-category">2024 Ubisoft NEXT Competition</p>
-                    <p class="project-description">Designed a verticality-themed FPS level where players infiltrate a multi-layered cargo ship, uncover secrets, and escape in a blockbuster narrative.</p>
-                    <ul class="project-highlights">
-                        <li>Level Design and Mission Design</li>
-                        <li>2D Layout and 3D Greybox</li>
+                    <p class="card-category">2024 Ubisoft NEXT Competition</p>
+                    <p class="card-description">Designed a verticality-themed FPS level that accommodates both stealth and direct combat playstyles. Created a playable prototype through user research, mechanic breakdowns, level pacing charts, and 2D layout design and 3D blockout design.</p>
+                    <ul class="card-skills">
+                        <li>Level Design</li>
+                        <li>Mission Design</li>
                         <li>Dynamic Pacing</li>
-                        <li>Environmental Narration</li>
+                        <li>Environmental Storytelling</li>
+                        <li>User Research</li>
+                        <li>Mechanic Adaptation</li>
+                        <li>2D Layout</li>
+                        <li>3D Greybox</li>
+                        
                     </ul>
-                    <div class="project-links">
-                        <a href="#" class="view-project">View Project →</a>
+                    <div class="card-links">
+                        <a href="game-project-1.html" class="view-button">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </article>
 
             <!-- Project 2 -->
-            <article class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="image/perfect world games.png" alt="Game Project 2" style="width: 100%; height: auto; object-fit: cover;">
+            <article class="game-card">
+                <div class="card-image">
+                    <img src="image/perfect world games.png" alt="Game Project 2">
                 </div>
-                <div class="portfolio-content">
-                    <h2>Open World Gameplay Challenges & Level Design</h2>
-                    <p class="project-category">Level Designer Intern - Perfect World</p>
-                    <p class="project-description">Designed and implemented open world gameplay challenges and level design for a story-driven adventure game.</p>
-                    <ul class="project-highlights">
-                        <li>Gameplay Challenges Prototyping</li>
-                        <li>Level Design and World Building</li>
-                        <li>Enemy AI and Gameplay Planting</li>
-                        <li>Gameplay Implementation & Test</li>
+                <div class="card-content">
+                    <h2>Open World Gameplay Challenges Design</h2>
+                    <p class="card-category">Level Designer Intern - Perfect World</p>
+                    <p class="card-description">Designed 5 open-world exploration gameplay challenges, helped drafting exploration content metric standards for an open-world project. Translating high-level design goals into functional workflows and level design prototypes.</p>
+                    <ul class="card-skills">
+                        <li>Level Design</li>
+                        <li>Gameplay Implementation</li>
+                        <li>Multidisciplinary Collaboration </li>
+                        <li>Enemy AI</li>
+                        <li>Ecosystem Design</li>
+                        
                     </ul>
-                    <div class="project-links">
-                        <a href="#" class="view-project">View Project →</a>
-                        <!-- <a href="#" class="play-game">Watch Trailer</a> -->
+                    <div class="card-links">
+                        <a href="game-project-2.html" class="view-button">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </article>
 
             <!-- Project 3 -->
-            <article class="portfolio-item">
-                <div class="portfolio-image">
+            <article class="game-card">
+                <div class="card-image">
                     <img src="image/Boardgame thumbnail.jpg" alt="Board Game Project">
                 </div>
-                <div class="portfolio-content">
+                <div class="card-content">
                     <h2>UX Course Project - Board Game Design</h2>
-                    <p class="project-category">Course Project - Gameplay Mechanics Design</p>
-                    <p class="project-description">Designed a board game that combines elements of luck and strategy, offering a unique and engaging experience.</p>
-                    <ul class="project-highlights">
-                        <li>Gameplay Mechanics Design</li>
+                    <p class="card-category">Course Project - Gameplay Mechanics Design</p>
+                    <p class="card-description">Slasher is a 4-player cooperative board game where players navigate a haunted mansion to exorcise a supernatural slasher. I designed gameplay, balanced mechanics, and improved UX through iterative testing, enhancing accessibility and replayability.</p>
+                    <ul class="card-skills">
+                        <li>Mechanics Design</li>
                         <li>User Research</li>
-                        <li>User Experience Design</li>
+                        <li>UX Design</li>
                         <li>Usability Testing</li>
                     </ul>
-                    <div class="project-links">
-                        <a href="#" class="view-project">View Project →</a>
-                        <!-- <a href="#" class="play-game">View Demo Video</a> -->
+                    <div class="card-links">
+                        <a href="#" class="view-button">
+                            <span>View Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </article>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    <footer class="game-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+    <script src="game-design.js"></script>
 </body>
 </html> 
