@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinglong's Blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Xinglong Zhou - Blog posts about UX Design, Game Design, and more">
+</head>
+<body class="blog-body">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">Xinglong's Base</div>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-header">
+        <div class="blog-header-content">
+            <h1>My Blog</h1>
+            <p>Thoughts, insights, notes in game design, analysis, and development.</p>
+        </div>
+    </section>
+
+    <section id="blog" class="blog-posts">
+        <div class="blog-grid">
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="https://source.unsplash.com/random/600x400?ux,design" alt="UX Design Process">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">June 15, 2024</span>
+                        <span class="post-tags">
+                            <span class="tag">UX Design</span>
+                            <span class="tag">Research</span>
+                        </span>
+                    </div>
+                    <h2>Effective User Research Methods for Modern UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="https://source.unsplash.com/random/600x400?game,development" alt="Game Development">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">May 28, 2024</span>
+                        <span class="post-tags">
+                            <span class="tag">Game Design</span>
+                            <span class="tag">Level Design</span>
+                        </span>
+                    </div>
+                    <h2>Principles of Engaging Level Design in Modern Games</h2>
+                    <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <div class="post-image">
+                    <img src="https://source.unsplash.com/random/600x400?portfolio,creative" alt="Portfolio Tips">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">
+                        <span class="post-date">April 10, 2024</span>
+                        <span class="post-tags">
+                            <span class="tag">Portfolio</span>
+                            <span class="tag">Career</span>
+                        </span>
+                    </div>
+                    <h2>Building a Standout Design Portfolio: Tips and Tricks</h2>
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Looking forward to working together! Let's connect and create something amazing!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Add animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.blog-post').forEach(post => {
+            observer.observe(post);
+        });
+    </script>
+</body>
+</html> 

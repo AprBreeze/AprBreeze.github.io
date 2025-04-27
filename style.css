@@ -17,7 +17,7 @@
     --accent-color: #FF6B6B;
     --iPet-color-primary: #FFC674;
     --text-color: #2D3748;
-    --secondary-text-color: #718096;
+    --secondary-text-color: #4A4F64;
     --background-color: #F7FAFC;
     
     /* Grays */
@@ -79,9 +79,6 @@ body {
     position: relative;
 }
 
-.logo:hover {
-    transform: translateY(-2px);
-}
 
 .nav-links {
     display: flex;
@@ -171,9 +168,6 @@ body {
     filter: saturate(1.1);
 }
 
-.hero-image-container:hover .profile-image {
-    transform: scale(1.03);
-}
 
 .hero-content {
     flex: 0 0 60%;

@@ -18,7 +18,7 @@
   --game-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   --game-card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
   --game-header-font: 'Rajdhani', sans-serif;
-  --game-body-font: 'Inter', sans-serif;
+  --game-body-font: 'Source Sans Pro', sans-serif;
 }
 
 /* ========== Base Styles ========== */
@@ -90,13 +90,15 @@
 }
 
 .game-nav-links a {
-  color: var(--game-text-muted);
+  font-family: 'Source Sans Pro', sans-serif;
   text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  position: relative;
-  padding: 0.5rem 0;
+  color: var(--game-text-muted);
+  font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  letter-spacing: 0.5px;
 }
 
 .game-nav-links a:after {
@@ -523,3 +525,7 @@
     padding: 0.2rem 0.5rem;
   }
 }
+
+
+/* ========== Game Base Page Styles ========== */
+

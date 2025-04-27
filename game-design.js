@@ -111,16 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Enhanced text animation with glitch effect
-const phrases = [
-  'Creating interactive worlds',
-  'Designing player experiences',
-  'Crafting game mechanics',
-  'Balancing gameplay systems',
-  'Building digital adventures'
-];
+// Text rotation animation
+const phrases = [];
 
-// Initialize and enhance the rotating text
+// Initialize the rotating text
 document.addEventListener('DOMContentLoaded', function() {
   const rotatingText = document.querySelector('.rotating-text');
   
@@ -143,35 +137,28 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get all phrase elements
   const phraseElements = document.querySelectorAll('.text-phrase');
   
-  // Function to rotate through phrases with glitch effect
+  // Function to rotate through phrases
   function rotatePhrases() {
     // Find the current active phrase
     const currentActive = document.querySelector('.text-phrase.active');
     
     if (!currentActive) return;
     
-    // Add glitch effect
-    currentActive.classList.add('glitch');
+    // Remove active class from current phrase
+    currentActive.classList.remove('active');
     
-    // Set timeout to remove active class and add to next
-    setTimeout(() => {
-      // Remove classes from current phrase
-      currentActive.classList.remove('active', 'glitch');
-      
-      const currentIndex = Array.from(phraseElements).indexOf(currentActive);
-      
-      // Calculate next index (loop back to start if at end)
-      const nextIndex = (currentIndex + 1) % phraseElements.length;
-      
-      // Add active class to next phrase
-      phraseElements[nextIndex].classList.add('active');
-    }, 500);
+    const currentIndex = Array.from(phraseElements).indexOf(currentActive);
+    
+    // Calculate next index (loop back to start if at end)
+    const nextIndex = (currentIndex + 1) % phraseElements.length;
+    
+    // Add active class to next phrase
+    phraseElements[nextIndex].classList.add('active');
   }
   
   // Set interval for rotation
   setInterval(rotatePhrases, 3000);
 });
-
 // Card hover effects enhancement
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.game-card');
