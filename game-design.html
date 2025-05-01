@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game & Level Design Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game-base.css">
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,20 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="game-design-body">
-    <div class="particle-container">
-        <div id="particles-js"></div>
-    </div>
-    
-    <header class="game-header">
-        <nav class="game-nav">
-            <div class="game-logo">Xinglong's Base</div>
-            <ul class="game-nav-links">
-                <li><a href="game-base.html">About Me</a></li>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">Xinglong's Base</div>
+            <ul class="nav-links">
+                <li><a href="game-base.html" >About Me</a></li>
                 <li><a href="game-design.html" class="active">Game & Level Design</a></li>
                 <!--<li><a href="blog.html">Blog</a></li>-->
             </ul>
         </nav>
     </header>
+    
+    <div class="particle-container">
+        <div id="particles-js"></div>
+    </div>
+    
+
 
     <main class="game-main">
         <section class="game-hero">
@@ -84,10 +86,9 @@
                         <li>Multidisciplinary Collaboration </li>
                         <li>Enemy AI</li>
                         <li>Ecosystem Design</li>
-                        
                     </ul>
                     <div class="card-links">
-                        <a href="game-project-2.html" class="view-button">
+                        <a href="perfect-world-intern.html" class="view-button">
                             <span>View Project</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -111,7 +112,7 @@
                         <li>Usability Testing</li>
                     </ul>
                     <div class="card-links">
-                        <a href="#" class="view-button">
+                        <a href="board-game-ux-project.html" class="view-button">
                             <span>View Project</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -121,13 +122,22 @@
         </section>
     </main>
 
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+
     <footer class="game-footer">
         <div class="footer-content">
             <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>

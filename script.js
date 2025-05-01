@@ -39,7 +39,7 @@ if (rotatingText) {
     }
 
     // Set interval for rotation (2.5 seconds)
-    setInterval(rotatePhrases, 2500);
+    setInterval(rotatePhrases, 3000);
 }
 
 // Back to top button functionality
