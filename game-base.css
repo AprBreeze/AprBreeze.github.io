@@ -91,9 +91,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.logo:hover {
-    transform: translateY(-2px);
-}
 
 .nav-links {
     display: flex;
@@ -175,9 +172,6 @@ body {
     filter: saturate(1.1);
 }
 
-.hero-image-container:hover .profile-image {
-    transform: scale(1.03);
-}
 
 .hero-content {
     flex: 0 0 60%;
@@ -311,6 +305,12 @@ body {
     margin-bottom: 2rem;
 }
 
+.work-item.fade-in {
+    animation: fadeIn 0.8s forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .work-item {
     background: var(--card-background);
     border-radius: 12px;
@@ -318,8 +318,6 @@ body {
     box-shadow: var(--game-card-shadow);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 1px solid var(--gray);
-    opacity: 0;
-    transform: translateY(20px);
     will-change: transform;
 }
 
@@ -335,9 +333,6 @@ body {
     transition: transform 0.5s ease;
 }
 
-.work-item:hover img {
-    transform: scale(1.05);
-}
 
 .work-item h4 {
     padding: 1.2rem 1.2rem 0.6rem;
@@ -384,7 +379,7 @@ body {
    ========================================================================== */
 .contact {
     background-color: var(--game-bg-lighter);
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     text-align: center;
 }
 
@@ -417,7 +412,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
 }
 
 .social-link {
@@ -503,11 +498,7 @@ footer {
     }
 }
 
-.work-item.fade-in {
-    animation: fadeIn 0.8s forwards;
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 /* Improved focus states for accessibility */
 a:focus, 

@@ -57,84 +57,16 @@ body {
 p {
   font-size: 1rem
 }
-/* ==========================================================================
-   Header and Navigation
-   ========================================================================== */
-.main-header {
-    width: 100%;
-    background-color: var(--header-background);
-    padding: 16px 0;
-    border-bottom: 1px solid var(--gray);
-    position: relative;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(10px);
-}
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1.5rem;
+h1 {
+    font-family: var(--game-header-font);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding-top: 5rem;
+    line-height: 1.2;
+    color: var(--text-color);
     font-weight: 700;
-    color: var(--text-color);
-    transition: transform 0.3s ease;
-    letter-spacing: 1px;
-    position: relative;
-    background: var(--game-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.logo:hover {
-    transform: translateY(-2px);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    font-family: 'Source Sans Pro', sans-serif;
-    text-decoration: none;
-    color: var(--secondary-text-color);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    letter-spacing: 0.5px;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--text-color);
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: var(--game-gradient);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
+    letter-spacing: -0.5px;
 }
 
 /* ==========================================================================
@@ -178,9 +110,6 @@ p {
     filter: saturate(1.1);
 }
 
-.hero-image-container:hover .profile-image {
-    transform: scale(1.03);
-}
 
 .hero-content {
     flex: 0 0 60%;
@@ -383,70 +312,6 @@ p {
 }
 
 /* ==========================================================================
-   Contact Section
-   ========================================================================== */
-.contact {
-    background-color: var(--game-bg-lighter);
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.contact h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    color: var(--text-color);
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-.contact h2::after {
-    content: '';
-    width: 180px;
-    height: 3px;
-    background: var(--game-gradient);
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.contact-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2.5rem;
-}
-
-.social-link {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--game-card-bg);
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid var(--game-border);
-}
-
-.social-link:hover {
-    color: var(--accent-color);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* ==========================================================================
    Footer
    ========================================================================== */
 footer {
@@ -609,9 +474,6 @@ button:focus {
     -webkit-text-fill-color: transparent;
 }
 
-.logo:hover {
-    transform: translateY(-2px);
-}
 
 .nav-links {
     display: flex;
@@ -663,8 +525,8 @@ button:focus {
 
 /* Hero Section */
 .game-hero {
-  height: 40vh;
-  min-height: 300px;
+  height: 20vh;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -774,10 +636,6 @@ button:focus {
   position: relative;
 }
 
-.game-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--game-card-hover-shadow);
-}
 
 .card-image {
   width: 100%;
@@ -805,9 +663,6 @@ button:focus {
   transition: transform 0.5s ease;
 }
 
-.game-card:hover .card-image img {
-  transform: scale(1.05);
-}
 
 .card-content {
   padding: 1.5rem;
@@ -1111,7 +966,6 @@ button:focus {
 .hero-image {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ease;
 }
@@ -1119,7 +973,7 @@ button:focus {
 
 /* Project Overview */
 .project-overview {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     padding: 2rem;
     background-color: var(--game-bg-lighter);
     border-radius: 8px;
@@ -1156,19 +1010,8 @@ button:focus {
     margin-bottom: 1.5rem;
     color: var(--game-accent-alt);
     position: relative;
-    padding-left: 1rem;
 }
 
-.section-title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 5px;
-    background-color: var(--game-accent-alt);
-    border-radius: 3px;
-}
 
 .section-content {
     line-height: 1.6;
@@ -1237,7 +1080,6 @@ button:focus {
 
 .grid-image {
     width: 100%;
-    border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1441,12 +1283,6 @@ button:focus {
     margin: 0 auto;
   }
   
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2.5rem;
-  }
   
   .social-link {
     color: var(--game-text);
@@ -1735,9 +1571,307 @@ button:focus {
     color: var(--game-accent);
 }
 
-/* Add more space between sections */
-.project-section {
-    margin-bottom: 4rem;
-    padding-bottom: 1rem;
+/* ==========================================================================
+   Horizontal Gallery Styles
+   ========================================================================== */
+
+/* Gallery Container and Layout */
+.horizontal-gallery-container {
+    position: relative;
+    width: 85vw;
+    max-width: none;
+    margin: 10px 0 10px calc(-45vw + 5%);
+    left: 50%;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
+
+.horizontal-gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 20px 6%;
+    gap: 2%;
+    align-items: flex-start;
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Gallery Spacing Elements */
+.horizontal-gallery::after, 
+.horizontal-gallery::before {
+    content: "";
+    min-width: 6%;
+}
+
+/* Individual Gallery Slides */
+.gallery-slide {
+    min-width: 30%;
+    max-width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.gallery-slide:hover {
+    transform: scale(1.02);
+}
+
+/* Gallery Navigation */
+.gallery-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    pointer-events: none;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.gallery-nav-btn {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    transform: none;
+    font-size: 1.2rem;
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.gallery-nav-btn:hover {
+    background: var(--game-accent);
+    transform: scale(1.1);
+}
+
+/* Gallery Title */
+.gallery-title {
+    margin: 40px 0 15px;
+    font-size: 1.4rem;
+    color: var(--game-accent-alt);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Lightbox Gallery Styles
+   ========================================================================== */
+
+/* Lightbox Container */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Lightbox Content */
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 85vh;
+    margin: 0 auto;
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.lightbox.active .lightbox-image {
+    transform: scale(1);
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+}
+
+/* Lightbox Controls */
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--game-accent-alt);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: translateY(-50%);
+    z-index: 1010;
+}
+
+.lightbox-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.lightbox-btn:hover {
+    background-color: var(--game-accent);
+}
+
+/* ==========================================================================
+   Responsive Styles for Gallery & Lightbox
+   ========================================================================== */
+
+/* Larger screens */
+@media (max-width: 1024px) {
+    .horizontal-gallery-container {
+        width: 96vw;
+        margin: 40px 0 40px calc(-48vw + 2%);
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    /* Gallery */
+    .gallery-slide {
+        min-width: 45%;
+        max-width: 45%;
+    }
+    
+    .horizontal-gallery {
+        padding: 20px 5%;
+    }
+    
+    .horizontal-gallery::after, 
+    .horizontal-gallery::before {
+        min-width: 5%;
+    }
+    
+    /* Lightbox */
+    .lightbox-content {
+        max-width: 95%;
+    }
+    
+    .lightbox-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    /* Gallery */
+    .gallery-slide {
+        min-width: 75%;
+        max-width: 75%;
+    }
+    
+    .gallery-nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .horizontal-gallery {
+        padding: 20px 4%;
+    }
+    
+    .horizontal-gallery::after, 
+    .horizontal-gallery::before {
+        min-width: 4%;
+    }
+    
+    .prev-btn {
+        left: 10px;
+    }
+    
+    .next-btn {
+        right: 10px;
+    }
+    
+    /* Lightbox */
+    .lightbox-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    
+    .lightbox-close {
+        font-size: 26px;
+    }
+}
+
 
