@@ -13,12 +13,11 @@
     <header class="main-header">
         <nav class="nav-container">
             <div class="logo">Xinglong's Base</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">About Me</a></li>
-                    <li><a href="ux-design.html">UX Design</a></li>
-                    <li><a href="game-design.html">Game Design</a></li>
-                </ul>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="ux-design.html">UX Design</a></li>
+                <li><a href="game-design.html">Game Design</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -56,29 +55,29 @@
             <div class="section-content">
                 <div class="overview-grid">
                     <div class="overview-item">
-                        <h3>Problem</h3>
+                        <h3 class="subsection-title">Problem</h3>
                         <p>Pet's behaviour can often be hard to interpret and lead to bad treatment in their physical and mental health.</p>
                     </div>
                     
                     <div class="overview-item overview-item-margin">
-                        <h3>Solution</h3>
+                        <h3 class="subsection-title">Solution</h3>
                         <p>An AI pet interpreter app that helps pet owners to understand pet needs and provide effective pet care.</p>
                     </div>
                 </div>
                 
                 <div class="overview-context">
-                    <h3>Context</h3>
+                    <h3 class="subsection-title">Context</h3>
                     <p>User Experience Design Course Project - INF1602 - Fundamentals of UX<br>
                     Master of Information program, University of Toronto</p>
                 </div>
                 
-                <div class="team-section">
-                    <h3>Team</h3>
+                <div class="overview-context">
+                    <h3 class="subsection-title">Team</h3>
                     <p>Xinglong Zhou (Me), Runqing Zhang, Yonghan Liu, Yijing Shen, Lyle Guo, Kaiyue Zhou</p>
                 </div>
                 
                 <div class="role-section">
-                    <h3>My Role in Detail</h3>
+                    <h3 class="subsection-title">My Role in Detail</h3>
                     <ul class="feature-list">
                         <li>Studio leader of prototype ideation and usability testing.</li>
                         <li>Researched the core value that users are gaining from pet interactions.</li>
@@ -395,7 +394,7 @@
                 <p>We created an affinity diagram to cluster similar codes into themes, enabling us to identify common problems and concerns faced by our potential users. This process allowed us to extract analytical value from the interview scripts, transforming raw textual content into actionable design insights. By visually organizing the data, the affinity diagram also helped us uncover deeper patterns and relationships that informed our design decisions.</p>
                 
                 <div class="image-container">
-                    <img src="image/ipet-affinit diagram.png" alt="Affinity Diagram" class="full-width-img">
+                    <img src="image/ipet-affinit diagram.png" alt="Affinity Diagram" class="image-container">
                 </div>
             </div>
         </div>
@@ -741,12 +740,12 @@
 
                 <h3 class="subsection-title">As-is User Journey Map</h3>
                 <div class="image-container">
-                    <img src="image/ipet-As is User Journey Map.png" alt="User Journey Mapping" class="full-width-img">
+                    <img src="image/ipet-As is User Journey Map.png" alt="User Journey Mapping" class="image-container">
                 </div>
 
                 <h3 class="subsection-title">To-be User Journey Map</h3>
                 <div class="image-container">
-                    <img src="image/ipet-To be User Journey Map.png" alt="User Journey Mapping" class="full-width-img">
+                    <img src="image/ipet-To be User Journey Map.png" alt="User Journey Mapping" class="image-container">
                 </div>
             </div>
         </div>
@@ -773,9 +772,10 @@
             </div>
         </div>
         
-        <h3>Ideation</h3>
-        <div class="section-content">
-            <p>We used the Crazy 8s brainstorming methodology (rapid brainstorming 8 ideas and finding inspiration among them) to generate ideas for features to include in our app. We also created a priority grid, evaluating the prioritization ranking of each feature based on its potential effectiveness and implementation effort.</p>
+        <div class="section">
+            <h2 class="section-title">Ideation</h2>
+            <div class="section-content">
+                <p>We used the Crazy 8s brainstorming methodology (rapid brainstorming 8 ideas and finding inspiration among them) to generate ideas for features to include in our app. We also created a priority grid, evaluating the prioritization ranking of each feature based on its potential effectiveness and implementation effort.</p>
                 <div class="image-row">
                     <div class="image-container">
                         <img src="image/ipet-ideation-1.jpg" alt="Crazy 8s Brainstorming" class="ideation-img">
@@ -792,39 +792,14 @@
                         <p class="image-caption">Priority Chart Sketch</p>
                     </div>
                 </div>
+                
+                <h3 class="subsection-title">Refined version of the prioritization grid:</h3>
+                <div class="image-container">
+                    <img src="image/ipet-prioritization-chart.png" alt="Refined Prioritization Grid" class="full-width-img">
+                </div>
+            </div>
         </div>
-            
-            <style>
-                
-                .image-row {
-                    display: flex;
-                    justify-content: space-between;
-                    gap: 15px;
-                }
-                
-                .ideation-images .image-container {
-                    flex: 1;
-                }
-                
-                .ideation-img {
-                    width: 100%;
-                    height: 80%;
-                    border-radius: 6px;
-                }
-                
-                .image-caption {
-                    text-align: center;
-                    font-style: italic;
-                    color: #666;
-                    margin-top: 5px;
-                    font-size: 0.9rem;
-                }
-            </style>
 
-        <h3>Refined version of the prioritization grid:</h3>
-        <div class="image-container">
-            <img src="image/ipet-prioritization-chart.png" alt="Refined Prioritization Grid" class="full-width-img">
-        </div>
         <div class="section">
             <h2 class="section-title">Wireframe Ideation</h2>
             <h3>Ideation Process</h3>
@@ -930,7 +905,7 @@
                 <p>We created this mood board to capture the emotions and atmosphere we wanted our app to convey. It helped us align on the graphic style direction and served as inspiration for key design decisions, such as the use of warm colours and soft, rounded edges.</p>
                 <br>
                 <div class="image-container">
-                    <img src="image/ipet-moodboard.png" alt="ipet-moodboard" class="full-width-img">
+                    <img src="image/ipet-moodboard.png" alt="ipet-moodboard" class="image-container">
                 </div>
             </div>
 
@@ -939,7 +914,7 @@
             <p>These style tiles are created to consolidate our design choices, including fonts for titles, headings, and body text, color palettes, button designs, and other key elements and establish a visual identity for our app. This style tile also streamlined our prototype production later on by letting team members have a clear standard.</p>
             <br>
             <div class="image-container">
-                <img src="image/ipet-styletile.png" alt="ipet-style-tiles" class="full-width-img">
+                <img src="image/ipet-styletile.png" alt="ipet-style-tiles" class="image-container">
             </div>
         </div>
 
@@ -948,7 +923,7 @@
             <h2 class="section-title">Prototype Production</h2>
             <div class="prototype-showcase">
                 <div class="prototype-content">
-                    <img src="image/ipet-product.png" alt="iPet App Prototype" class="full-width-img">
+                    <img src="image/ipet-product.png" alt="iPet App Prototype" class="image-container">
                 </div>
             </div>
         </div>
@@ -958,10 +933,10 @@
             <h2 class="section-title">Sequencial Storyboard</h2>
             <div class="section-content">
                 <div class="image-container">
-                    <img src="image/ipet-Walkthrough 1.png" alt="ipet-walkthrough 1" class="full-width-img">
+                    <img src="image/ipet-Walkthrough 1.png" alt="ipet-walkthrough 1" class="image-container">
                 </div>
                 <div class="image-container">
-                    <img src="image/ipet-Walkthrough 2.png" alt="ipet-walkthrough 2" class="full-width-img">
+                    <img src="image/ipet-Walkthrough 2.png" alt="ipet-walkthrough 2" class="image-container">
                 </div>
             </div>
         </div>
@@ -1000,7 +975,7 @@
                                     Throughout the design process, we conducted multiple brainstorming sessions using the Crazy 8s method to generate and refine ideas. I found this practice invaluable as it encouraged unrestricted creativity while channelling it into useful solutions.</li>
                                 <li><strong>The Importance of Teamwork</strong><br>
                                     Recognized the crucial role of collaboration in design. At times, our team's vision diverged, highlighting the need for effective discussion facilitation to align goals and ensure cohesion.</li>
-                                <li><strong>Practiced Graphic Design Skills</strong><br>
+                                <li><strong>Graphic Design Skills</strong><br>
                                     Improved my graphic design abilities by learning from peers during the creation of the high-fidelity prototype.</li>
                         </ul>
                     </div>

@@ -11,16 +11,15 @@
    CSS Variables (Custom Properties)
    ========================================================================== */
 :root {
-    /* Color Palette */
+    /* Primary Color Palette */
     --primary-color: #ffffff;
     --secondary-color: #3E8EDE;
     --accent-color: #FF6B6B;
-    --iPet-color-primary: #FFC674;
     --text-color: #2D3748;
     --secondary-text-color: #4A4F64;
     --background-color: #F7FAFC;
     
-    /* Grays */
+    /* Neutral Colors */
     --gray-light: #EDF2F7;
     --gray: #E2E8F0;
     
@@ -31,9 +30,9 @@
     /* iPet Theme Colors */
     --ipet-primary: #FFC674;
     --ipet-secondary: #FFCB80;
+    --ipet-accent: #FF9F40;
     --ipet-text: #1c1c1c;
     --ipet-light-bg: #FFF9F0;
-    --ipet-accent: #FF9F40;
 }
 
 /* ==========================================================================
@@ -459,20 +458,16 @@ footer {
 
 .portfolio-item {
     background: var(--card-background);
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     margin-bottom: 4rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
 
 .portfolio-image {
     display: flex;
@@ -489,9 +484,6 @@ footer {
     transition: transform 0.5s ease;
 }
 
-.portfolio-item:hover .portfolio-image img {
-    transform: scale(1.05);
-}
 
 .portfolio-content {
     padding: 2.5rem;
@@ -539,10 +531,6 @@ footer {
     transition: all 0.3s ease;
 }
 
-.project-highlights li:hover {
-    background-color: var(--gray);
-    transform: translateY(-2px);
-}
 
 .project-links {
     margin-top: auto;
@@ -678,10 +666,12 @@ footer {
     margin-bottom: 20px;
 }
 
-/* iPet Project Specific Styles */
+/* ==========================================================================
+   iPet Project Specific Styles
+   ========================================================================== */
 .hero-section {
     background-color: var(--ipet-primary);
-    padding: 120px 0 60px;
+    padding: 0px 0 60px;
 }
 
 .hero-container {
@@ -728,14 +718,11 @@ footer {
     max-width: 500px;
 }
 
+/* iPet Case Study Container */
 .case-study-container {
-    max-width: 1000px;
     margin: 0 auto;
-    padding: 40px 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-top: -40px;
+    max-width: 1000px;
+    padding: 40px 0px;
     position: relative;
 }
 
@@ -767,115 +754,6 @@ footer {
     color: var(--ipet-text);
 }
 
-.section {
-    margin-bottom: 50px;
-}
-
-.section-title {
-    color: var(--ipet-accent);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--ipet-secondary);
-}
-
-.section-content {
-    margin-bottom: 10px; padding-left: 10px;
-}
-
-.image-container {
-    margin: 30px 0;
-    text-align: center;
-}
-
-.image-container img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.process-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.process-step {
-    background-color: var(--ipet-light-bg);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.process-step h3 {
-    color: var(--ipet-accent);
-    margin-top: 0;
-}
-
-.feature-list, .research-questions-list, .result-list {
-    padding-left: 20px; 
-}
-
-.feature-list li, .result-list li {
-    margin-bottom: 10px;
-}
-
-.overview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.overview-item, .overview-context, .team-section, .role-section {
-    margin-bottom: 20px;
-    margin-top: 30px;
-}
-
-.overview-item-margin {
-    margin-top: 30px;
-}
-
-.feature-list {
-    margin-top: 10px;
-}
-
-.full-width-img {
-    max-width: 900px;
-}
-
-.medium-width-img {
-    max-width: 600px;
-}
-
-.research-questions-list, .research-item, .result-list .result-item {
-    margin-bottom: 15px;
-}
-
-/* iPet Project Media Queries */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-text {
-        order: 1;
-    }
-    
-    .hero-image {
-        order: 0;
-        margin-bottom: 20px;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .case-study-container {
-        margin-top: 20px;
-    }
-}
-
 /* iPet Footer */
 .ipet-footer {
     text-align: center;
@@ -888,7 +766,7 @@ footer {
 .subsection-title {
     color: var(--ipet-text);
     font-size: 1.2rem;
-    margin: 10px 0 10px;
+    margin: 12px 0 8px;
 }
 
 .user-quotes-container {
@@ -980,10 +858,7 @@ footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.insight-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+
 
 .insight-item h4 {
     color: var(--ipet-accent);
@@ -1151,50 +1026,6 @@ footer {
     .prototype-showcase {
         padding: 40px 15px;
     }
-}
-
-/* Design Process Timeline */
-.design-process-timeline {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
-    background-color: #FFF9F0;
-}
-
-.process-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20%;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.step-number {
-    color: #FF9F40;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.step-circle {
-    background-color: white;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.step-circle p {
-    margin: 0;
-    padding: 10px;
-    font-size: 0.9rem;
-    font-weight: normal;
 }
 
 /* Wireframe Examples */
@@ -1368,16 +1199,61 @@ footer {
 
 .ideation-img {
     width: 100%;
-    height: 80%;
-    border-radius: 6px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ideation-img:hover {
+    transform: scale(1.03);
 }
 
 .image-caption {
     text-align: center;
     font-style: italic;
     color: #666;
-    margin-top: 5px;
+    margin-top: 10px;
     font-size: 0.9rem;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.image-row .image-container {
+    flex: 1;
+    margin: 0;
+}
+
+/* Add responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .wireframe-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .wireframe-item {
+        margin-bottom: 15px;
+    }
+    
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-row .image-container {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .ideation-img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 /* Prototype Showcase */
@@ -1549,4 +1425,273 @@ button:focus {
 .see-more,
 .project-highlights li {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ==========================================================================
+   Media Queries - Responsive Designs
+   ========================================================================== */
+@media (max-width: 992px) {
+    .process-step {
+        width: 33.33%;
+    }
+    
+    .coding-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 968px) {
+    .portfolio-item {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-image {
+        min-height: 300px;
+    }
+
+    .portfolio-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-split {
+        flex-direction: column-reverse;
+    }
+    
+    .hero-image-container {
+        height: 40vh;
+    }
+    
+    .hero-content {
+        padding: 3rem 2rem;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Portfolio styles */
+    .portfolio-header {
+        padding: 5rem 1.5rem 3rem;
+    }
+    
+    .portfolio-header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .portfolio-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .portfolio-item {
+        grid-template-columns: 1fr;
+    }
+
+    /* Hero section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* iPet specific */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        order: 1;
+    }
+    
+    .hero-image {
+        order: 0;
+        margin-bottom: 20px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .case-study-container {
+        margin-top: 20px;
+    }
+    
+    /* Prototype and process */
+    .prototype-showcase {
+        padding: 40px 15px;
+    }
+    
+    .process-step {
+        width: 50%;
+    }
+    
+    .theme-header {
+        flex-direction: column;
+    }
+    
+    .theme-title {
+        margin-bottom: 5px;
+    }
+    
+    /* User research quotes */
+    .user-quote {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .user-avatar {
+        margin-bottom: 15px;
+    }
+    
+    .quote-content:before {
+        display: none;
+    }
+    
+    /* Research analysis */
+    .coding-item {
+        width: 100%;
+    }
+    
+    .coding-analysis {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-header {
+        padding: 4rem 1rem 2rem;
+    }
+    
+    .portfolio-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .portfolio-header p {
+        font-size: 0.95rem;
+    }
+
+    .portfolio-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .process-step {
+        width: 100%;
+    }
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 12px 0;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 0px;
+}
+
+.section-title {
+    color: var(--ipet-accent);
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 12px;
+    padding-top: 16px;
+}
+
+
+.section-content {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.research-item {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.research-questions-list {
+    padding-left: 15px;
+}
+
+.research-questions-list p {
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.result-list {
+    padding: 10px 0;
+}
+
+.result-item {
+    background-color: var(--ipet-light-bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.result-item ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.result-item li {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid var(--ipet-accent);
+}
+
+/* Add responsive styles for mobile devices */
+@media (max-width: 768px) {
+    .wireframe-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .wireframe-item {
+        margin-bottom: 15px;
+    }
+    
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-row .image-container {
+        margin-bottom: 20px;
+    }
 }
