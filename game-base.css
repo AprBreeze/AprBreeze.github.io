@@ -39,15 +39,17 @@
     --game-text-muted: #a0a0a0;
     --game-border: #2a2a2a;
     --game-gradient: linear-gradient(135deg, #4d5bce 0%, #61efce 100%);
-    --game-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     --game-card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+
+    --game-header-font: 'Rajdhani', sans-serif;
+    --game-body-font: 'Sofia Sans Semi Condensed', sans-serif;
 }
 
 /* ==========================================================================
    Typography and Base Elements
    ========================================================================== */
 body {
-    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: var(--game-body-font);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -62,7 +64,9 @@ body {
     background-color: var(--header-background);
     padding: 16px 0;
     border-bottom: 1px solid var(--gray);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
@@ -78,7 +82,7 @@ body {
 }
 
 .logo {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: var(--game-header-font);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-color);
@@ -99,13 +103,13 @@ body {
 }
 
 .nav-links a {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-header-font);
     text-decoration: none;
     color: var(--secondary-text-color);
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.5rem 0;
     letter-spacing: 0.5px;
 }
@@ -138,12 +142,13 @@ body {
     padding: 0;
     background-color: var(--game-bg-dark);
     min-height: 90vh;
-    max-height: 90vh;
+    max-height: none;
     display: flex;
     align-items: stretch;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+    margin-top: 72px;
 }
 
 
@@ -152,6 +157,7 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
+    min-height: calc(90vh - 72px);
 }
 
 .hero-image-container {
@@ -175,14 +181,15 @@ body {
 
 .hero-content {
     flex: 0 0 60%;
-    padding: 14rem 8rem;
+    padding: 4rem 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: visible;
 }
 
 .hero h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-header-font);
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -192,7 +199,7 @@ body {
 }
 
 .description {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-body-font);
     font-size: 1.1rem;
     color: var(--secondary-text-color);
     margin-bottom: 2.5rem;
@@ -208,11 +215,12 @@ body {
     display: flex;
     gap: 1rem;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .cta-primary,
 .cta-secondary {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-header-font);
     padding: 0.9rem 2rem;
     border-radius: 6px;
     text-decoration: none;
@@ -220,6 +228,9 @@ body {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 160px;
 }
 
 .cta-primary {
@@ -345,9 +356,22 @@ body {
 .work-item p {
     padding: 0 1.2rem 1.5rem;
     color: var(--secondary-text-color);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
+
+.game-card {
+    background-color: var(--game-card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--game-card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--game-border);
+    position: relative;
+  }
 
 .see-more {
     display: inline-block;
@@ -454,21 +478,24 @@ footer {
    ========================================================================== */
 @media (max-width: 968px) {
     .hero-split {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        min-height: auto;
     }
     
     .hero-image-container {
-        height: 40vh;
+        flex: 0 0 40vh;
     }
     
     .hero-content {
-        padding: 3rem 2rem;
-        text-align: center;
-        align-items: center;
+        flex: 1;
+        padding: 2rem 4rem;
     }
     
     .cta-buttons {
+        flex-direction: row;
         justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -476,11 +503,30 @@ footer {
     .hero h1 {
         font-size: 2.5rem;
     }
+    
+    .hero-content {
+        padding: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2rem;
+    }
+    
+    .hero-content {
+        padding: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        width: 100%;
     }
 }
 

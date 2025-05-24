@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -16,7 +16,6 @@
             <ul class="nav-links">
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="ux-design.html">UX Design</a></li>
-                <li><a href="game-design.html">Game Design</a></li>
             </ul>
         </nav>
     </header>
@@ -24,34 +23,36 @@
     <section class="hero-section">
         <div class="hero-container">
             <div class="hero-text">
-                <h1 class="hero-title">iPet Pet Interpreter</h1>
+                <h1 class="hero-title">iPet - Pet Interpreter</h1>
                 <p class="hero-description">Help pet owners understand their pets' needs and provide effective pet care.</p>
             </div>
             <div class="hero-image">
-                <img src="image/ipet showcase.png" alt="Project Showcase" class="hero-img">
+                <img src="image/ipet thumbnail_2.png" alt="Project Showcase" class="hero-img">
             </div>
         </div>
     </section>
 
     <div class="case-study-container">
-        <div class="project-info">
-            <h1>UofT Masters' Course Project</h1>
-            <div class="info-item">
-                <span class="info-label">Role</span>
-                UX Designer, User Researcher, Usability Tester
-            </div>
-            <div class="info-item">
-                <span class="info-label">Duration</span>
-                09.2024 - 12.2024
-            </div>
-            <div class="info-item">
-                <span class="info-label">Tools</span>
-                Figma, Adobe Illustrator
-            </div>
-        </div>
+        
 
         <div class="section">
-            <h2 class="section-title">Overview</h2>
+            <h2 class="section-title">UofT Masters' Course Project</h2>
+
+            <div class="project-info">
+                <div class="info-item">
+                    <h3 class="subsection-title">Role</h3>
+                    UX Designer, User Researcher, Usability Tester
+                </div>
+                <div class="info-item">
+                    <h3 class="subsection-title">Duration</h3>
+                    09.2024 - 12.2024
+                </div>
+                <div class="info-item">
+                    <h3 class="subsection-title">Tools</h3>
+                    Figma, Adobe Illustrator
+                </div>
+            </div>  
+
             <div class="section-content">
                 <div class="overview-grid">
                     <div class="overview-item">
@@ -94,8 +95,22 @@
             </div>
         </div>
 
+
         <div class="section">
-            <h2 class="section-title">Design Stage Overview</h2>
+            <h2 class="section-title">If you are short on time, here is the outcome:</h2>
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="image/ipet-Walkthrough 1.png" alt="ipet-walkthrough 1" class="image-container">
+                </div>
+                <div class="image-container">
+                    <img src="image/ipet-Walkthrough 2.png" alt="ipet-walkthrough 2" class="image-container">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <h2 class="section-title">Design Stages</h2>
             <div class="section-content">
                 <div class="design-process-timeline">
                     <div class="process-step">
@@ -175,7 +190,6 @@
                         flex-wrap: wrap;
                         justify-content: space-between;
                         padding: 20px 0;
-                        background-color: #FFF9F0;
                     }
                     
                     .process-step {
@@ -239,22 +253,19 @@
             <h2 class="section-title">Problem Discovery</h2>
             <div class="section-content">
                 <div class="research-item">   
-                    <p>Our team's shared love for pets inspired our brainstorming sessions to identify key topics and pain points we wanted to address. We drew inspiration from trending products like Pet Talk and pet communication buttons, which explore advanced interactions between pets and their owners. These tools sparked our curiosity about fostering deeper bonds and enhancing understanding through technology.</p>
+                    <p>Starting with AI technology and our team's interest in pets, I defined our research path. We first explored the feasibility of computer vision and natural language models, then analyzed observable pet behaviors from academic research. Subsequent market research helped us identify existing solutions and competitors. This iterative process led to actionable insights and clarified our core research questions:
+
+                        
+                        </p>
                 </div>
                 <div class="research-item">
-                    <h3 class="subsection-title">Key Research Questions</h3>
                     <div class="research-questions-list">
                         <p>
-                            <strong>Behavior Interpretation:</strong> 
-                            <p class = "research-item">What challenges do pet owners face when interpreting their pets' behaviors, and how do these challenges affect their ability to meet their pets' needs?</p>
+                            <h4>How do users currently observe and interpret pet behavior?</h3> 
                         </p>
+                                  
                         <p>
-                            <strong>Technology Usability:</strong> 
-                            <p class = "research-item">What are pet owners' experiences with the usability and effectiveness of current pet-related technologies, and what limitations do they encounter?</p>
-                        </p>
-                        <p>
-                            <strong>New Tool Expectations:</strong> 
-                            <p class = "research-item">What are pet owners' main concerns and expectations regarding new tools designed to improve pet-owner communication?</p>
+                            <h4>What are user perceptions regarding AI integration into pet behavior interpretation? </h3> 
                         </p>
                     </div>
                 </div>
@@ -775,7 +786,7 @@
         <div class="section">
             <h2 class="section-title">Ideation</h2>
             <div class="section-content">
-                <p>We used the Crazy 8s brainstorming methodology (rapid brainstorming 8 ideas and finding inspiration among them) to generate ideas for features to include in our app. We also created a priority grid, evaluating the prioritization ranking of each feature based on its potential effectiveness and implementation effort.</p>
+                <p>Our feature ideation began with Crazy 8s brainstorming. We then assessed each feature using a priority grid, ranking them based on anticipated effectiveness and implementation effort to determine development priorities.</p>
                 <div class="image-row">
                     <div class="image-container">
                         <img src="image/ipet-ideation-1.jpg" alt="Crazy 8s Brainstorming" class="ideation-img">
@@ -793,7 +804,6 @@
                     </div>
                 </div>
                 
-                <h3 class="subsection-title">Refined version of the prioritization grid:</h3>
                 <div class="image-container">
                     <img src="image/ipet-prioritization-chart.png" alt="Refined Prioritization Grid" class="full-width-img">
                 </div>
@@ -807,7 +817,6 @@
             <p>Each team member created their own wireframes from sketches to Figma wireframes, and we collaboratively reviewed and reflected on each design. We incorporated the strengths, refined weaker elements, and combined our insights to produce the first version of the wireframe.</p>
         </div>
 
-        <h3>Example Output</h3>
         <div class="wireframe-examples">
             <div class="wireframe-row">
                 <div class="wireframe-item">
@@ -875,7 +884,6 @@
             <h3>Iteration Process</h3>
             <div class="section-content">
                 <p>Using feedback from usability testing, we refined the wireframes to create interfaces that are more intuitive and user-friendly. The major changes included:</p>
-                <br>
                     <div class="result-list">
                         <div class="result-item">
                             <ul>
@@ -899,22 +907,34 @@
 
         <!-- Graphic Design -->
         <div class="section">
-            <h2 class="section-title">Graphic Design</h2>
-            <h3>Mood Board</h3>
-            <div class="section-content">
-                <p>We created this mood board to capture the emotions and atmosphere we wanted our app to convey. It helped us align on the graphic style direction and served as inspiration for key design decisions, such as the use of warm colours and soft, rounded edges.</p>
-                <br>
+            <div class="horizontal-section">
+                <div class="content-wrapper">
+                    <h2 class="section-title">Graphic Design</h2>
+                    <h3>Mood Board</h3>
+                    <p>This mood board captured our app's desired emotions and atmosphere, guiding our graphic style and inspiring key design decisions like warm colors and soft edges.</p>
+                </div>
                 <div class="image-container">
                     <img src="image/ipet-moodboard.png" alt="ipet-moodboard" class="image-container">
                 </div>
             </div>
 
-        <h3>Style Tiles</h3>
+            <div class="section">
+                <div class="horizontal-section">
+                    <div class="content-wrapper">
+                        <h3>Style Tiles</h3>
+                        <p>By consolidating fonts, color palettes, button designs, and other key elements, these style tiles established a cohesive visual identity for our app and streamlined prototype production through clear design standards.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="image/ipet-styletile.png" alt="ipet-style-tiles" class="image-container">
+                    </div>
+                </div>
+
+        
         <div class="section-content">
-            <p>These style tiles are created to consolidate our design choices, including fonts for titles, headings, and body text, color palettes, button designs, and other key elements and establish a visual identity for our app. This style tile also streamlined our prototype production later on by letting team members have a clear standard.</p>
+            
             <br>
             <div class="image-container">
-                <img src="image/ipet-styletile.png" alt="ipet-style-tiles" class="image-container">
+                
             </div>
         </div>
 
@@ -946,38 +966,27 @@
             <h2 class="section-title">Reflection & Conclusion</h2> 
             <div class="section-content">
 
-            <h3>Challenges Overcomed</h3>
             <div class="section-content">
                     <div class="result-list">
                         <div class="result-item">
                             <ul>
-                                <li><strong>Cognitive Overload</strong> <br>
-                                    Initially, our app aimed to implement too many features, resulting in a cluttered and confusing user flow. Feedback from industry experts helped us identify the need to streamline the app by removing unnecessary features. This experience taught us that simplicity is key—delivering the right solutions with minimal cognitive load creates the best user experience.</li>
-                                <li><strong>Finding Innovative Approach</strong><br>
-                                    Designing for a relatively new and innovative concept meant there were few mature examples to draw inspiration from. To address this, we abstracted and restructured our app flows into simple, user-centred concepts like "see pets, know pets, share pets". Usability testing further guided us in aligning the app's functionality with user expectations, helping us refine the flow.</li>
+                                <li><strong>End to End Design Practice</strong><br>
+                                    Gained hands-on experience across the entire mobile app design process, from ideation to high-fidelity prototyping.</li>
+                                <li><strong>Cognitive Load</strong> <br>
+                                    Initial feature overload taught us the importance of streamlined, user-centric solutions for minimal cognitive load.</li>
                                 <li><strong>Developing Graphic Design Skills</strong><br>
-                                    Graphic design has not been my strongest skill, but collaboration with peers significantly improved my abilities. Additionally, I leveraged generative AI tools to accelerate my learning and productivity. Now I am more capable of leveraging user experience by having readable and pleasing colors, composition, shapes and icons. </li>  
-                            </ul>
+                                    Collaborative work and leveraging AI tools significantly enhanced my graphic design skills, improving readability and aesthetic appeal. </li>  
+                                <li><strong>The Value of User Research</strong><br>
+                                    Reaffirmed that understanding user needs is the essential foundation for creating impactful solutions.</li>
+                                <li><strong>Effective Idea Generation</strong><br>
+                                    Repeated Crazy 8s brainstorming sessions proved invaluable for generating diverse, creative, yet actionable solutions.</li>
+                                <li><strong>Crucial Team Collaboration</strong><br>
+                                    Highlighted the importance of effective discussion and alignment to maintain a cohesive vision, even when perspectives diverged.</li>
+                                </ul>
                         </div>
                     </div>
             </div>
 
-            <h3>Overall Reflection</h3>
-            <div class="section-content">
-                <div class="result-list">
-                    <div class="result-item">
-                        <ul>
-                            <li><strong>From Start to End Design Practice</strong><br>
-                                Gained hands-on experience in the complete interface design process for a mobile app, from initial ideas to the final high-fidelity prototype.</li>
-                                <li><strong>The Value of User Research</strong><br>
-                                    Learned that understanding user needs is the essential first step in the design process and the foundation for creating meaningful and effective solutions.</li>
-                                <li><strong>Effective Idea Generation</strong><br>
-                                    Throughout the design process, we conducted multiple brainstorming sessions using the Crazy 8s method to generate and refine ideas. I found this practice invaluable as it encouraged unrestricted creativity while channelling it into useful solutions.</li>
-                                <li><strong>The Importance of Teamwork</strong><br>
-                                    Recognized the crucial role of collaboration in design. At times, our team's vision diverged, highlighting the need for effective discussion facilitation to align goals and ensure cohesion.</li>
-                                <li><strong>Graphic Design Skills</strong><br>
-                                    Improved my graphic design abilities by learning from peers during the creation of the high-fidelity prototype.</li>
-                        </ul>
                     </div>
                 </div>
             </div>

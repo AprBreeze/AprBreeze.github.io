@@ -74,10 +74,6 @@ body.blog-body {
   -webkit-text-fill-color: transparent;
 }
 
-.logo:hover {
-  transform: translateY(-2px);
-}
-
 .nav-links {
   display: flex;
   list-style: none;
@@ -85,15 +81,15 @@ body.blog-body {
 }
 
 .nav-links a {
-  font-family: 'Source Sans Pro', sans-serif;
-  text-decoration: none;
-  color: var(--game-text-muted);
-  font-weight: 600;
-  transition: all 0.3s ease;
-  position: relative;
-  font-size: 0.9rem;
-  padding: 0.5rem 0;
-  letter-spacing: 0.5px;
+    font-family: var(--game-header-font);
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    letter-spacing: 0.5px;
 }
 
 .nav-links a:hover,

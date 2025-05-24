@@ -41,21 +41,47 @@
     --game-gradient: linear-gradient(135deg, #4d5bce 0%, #61efce 100%);
     --game-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     --game-card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+
+
 }
+
+
+/* ==========================================================================
+   Game Design Page - Dark Gaming Theme
+   ========================================================================== */
+
+/* Custom Variables */
+:root {
+    --game-bg-dark: #121212;
+    --game-bg-darker: #0f0f0f;
+    --game-bg-lighter: #1a1a1a;
+    --game-card-bg: #1e1e1e;
+    --game-accent: #707DE1;
+    --game-accent-glow: #4d5bce40;
+    --game-accent-alt: #61efce;
+    --game-text: #e6e6e6;
+    --game-text-muted: #d1d1d1;
+    --game-border: #2a2a2a;
+    --game-gradient: linear-gradient(135deg, #4d5bce 0%, #61efce 100%);
+    --game-card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    --game-header-font: 'Rajdhani', sans-serif;
+    --game-body-font: 'Sofia Sans Semi Condensed', sans-serif;
+  }
 
 /* ==========================================================================
    Typography and Base Elements
    ========================================================================== */
+
 body {
-    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: var(--game-body-font);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 p {
-  font-size: 1rem
+  font-size: 1.1rem
 }
 
 h1 {
@@ -65,7 +91,7 @@ h1 {
     padding-top: 5rem;
     line-height: 1.2;
     color: var(--text-color);
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.5px;
 }
 
@@ -120,7 +146,7 @@ h1 {
 }
 
 .hero h1 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-body-font);
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -130,7 +156,7 @@ h1 {
 }
 
 .description {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-body-font);
     font-size: 1.1rem;
     color: var(--secondary-text-color);
     margin-bottom: 2.5rem;
@@ -150,7 +176,7 @@ h1 {
 
 .cta-primary,
 .cta-secondary {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-body-font);
     padding: 0.9rem 2rem;
     border-radius: 6px;
     text-decoration: none;
@@ -384,28 +410,6 @@ button:focus {
     outline-offset: 3px;
 } 
 
-/* ==========================================================================
-   Game Design Page - Dark Gaming Theme
-   ========================================================================== */
-
-/* Custom Variables */
-:root {
-  --game-bg-dark: #121212;
-  --game-bg-darker: #0f0f0f;
-  --game-bg-lighter: #1a1a1a;
-  --game-card-bg: #1e1e1e;
-  --game-accent: #707DE1;
-  --game-accent-glow: #4d5bce40;
-  --game-accent-alt: #61efce;
-  --game-text: #e6e6e6;
-  --game-text-muted: #a0a0a0;
-  --game-border: #2a2a2a;
-  --game-gradient: linear-gradient(135deg, #4d5bce 0%, #61efce 100%);
-  --game-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  --game-card-hover-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-  --game-header-font: 'Rajdhani', sans-serif;
-  --game-body-font: 'Source Sans Pro', sans-serif;
-}
 
 /* ========== Base Styles ========== */
 .game-design-body {
@@ -461,7 +465,7 @@ button:focus {
 }
 
 .logo {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: var(--game-header-font);
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-color);
@@ -482,13 +486,13 @@ button:focus {
 }
 
 .nav-links a {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--game-header-font);
     text-decoration: none;
     color: var(--secondary-text-color);
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.5rem 0;
     letter-spacing: 0.5px;
 }
@@ -639,7 +643,7 @@ button:focus {
 
 .card-image {
   width: 100%;
-  height: 200px;
+  height: 300px;
   position: relative;
   overflow: hidden;
   background-color: var(--game-bg-darker);
@@ -928,19 +932,9 @@ button:focus {
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
 }
 
-.project-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.7));
-    z-index: -1;
-}
 
 .project-hero-content {
     text-align: center;
@@ -954,7 +948,6 @@ button:focus {
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--game-text);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .project-subtitle {
@@ -973,17 +966,12 @@ button:focus {
 
 /* Project Overview */
 .project-overview {
-    margin-bottom: 1rem;
-    padding: 2rem;
-    background-color: var(--game-bg-lighter);
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    padding: 0rem;
 }
 
 .project-container {
-    max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .project-description {
@@ -1031,26 +1019,22 @@ button:focus {
 }
 
 .section-image {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 50%;
+    margin: 0 auto 1.5rem;
     transition: transform 0.3s ease;
 }
 
 /* User Research Section */
 .quotes-list, .codes-list {
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
     border-left: 4px solid var(--game-accent-alt);
     color: var(--game-text);
     list-style: none;
-    padding-left: 1.5rem;
 }
 
 .quotes-list li, .codes-list li {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 0.75rem;
     line-height: 1.5;
     position: relative;
@@ -1058,12 +1042,6 @@ button:focus {
     list-style-type: none;
 }
 
-.quotes-list li::before, .codes-list li::before {
-    content: '➤';
-    position: absolute;
-    left: 1rem;
-    color: var(--game-accent-alt);
-}
 
 .quotes-list li:last-child, 
 .codes-list li:last-child {
@@ -1086,9 +1064,7 @@ button:focus {
 
 /* Document Section */
 .document-index {
-    background-color: var(--game-bg-lighter);
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding-left: 2rem;
     margin-bottom: 2rem;
     border-left: 4px solid var(--game-accent-alt);
     color: var(--game-text);
@@ -1161,9 +1137,9 @@ button:focus {
 }
 
 .carousel-container {
-    width: 100%;
+    width: 70%;
     overflow: hidden;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .carousel-track {
@@ -1498,7 +1474,7 @@ button:focus {
 }
 
 .project-content p {
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -1875,3 +1851,510 @@ button:focus {
 }
 
 
+
+/* ==========================================================================
+   Blog Index Page Styles
+   ========================================================================== */
+
+/* Blog Header */
+.blog-header {
+    background-color: var(--game-bg-darker);
+    padding: 6rem 0 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--game-border);
+}
+
+.blog-header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.blog-header h1 {
+    font-family: var(--game-header-font);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: var(--game-text);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.blog-header h1::after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background: var(--game-gradient);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog-header p {
+    font-family: var(--game-body-font);
+    font-size: 1.1rem;
+    color: var(--game-text-muted);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+/* Blog Posts Grid */
+.blog-posts {
+    padding: 4rem 0;
+    background-color: var(--game-bg-dark);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Blog Post Card */
+.blog-post {
+    background-color: var(--game-card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--game-card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    border: 1px solid var(--game-border);
+}
+
+.blog-post:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--game-card-hover-shadow);
+}
+
+.blog-post.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Post Images */
+.post-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--game-bg-darker);
+}
+
+.post-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    pointer-events: none;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.05);
+}
+
+/* Post Content */
+.post-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.post-date {
+    color: var(--game-accent);
+    font-weight: 600;
+}
+
+.post-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: rgba(77, 91, 206, 0.12);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--game-accent-alt);
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(77, 91, 206, 0.25);
+}
+
+.tag:hover {
+    background-color: rgba(77, 91, 206, 0.2);
+}
+
+.post-content h2 {
+    font-family: var(--game-body-font);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    color: var(--game-text);
+    font-weight: 700;
+}
+
+.post-content p {
+    color: var(--game-text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.read-more {
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--game-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--game-gradient);
+    transition: width 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--game-accent-alt);
+}
+
+.read-more:hover::after {
+    width: 100%;
+}
+
+.read-more i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Single Blog Post Styles
+   ========================================================================== */
+
+/* Blog Container */
+.blog-container {
+    padding-top: 2rem;
+    background-color: var(--game-bg-dark);
+}
+
+/* Blog Single Layout */
+.blog-single {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--game-card-bg);
+    border-radius: 8px;
+    box-shadow: var(--game-card-shadow);
+    margin-top: 2rem;
+    position: relative;
+    z-index: 10;
+    border: 1px solid var(--game-border);
+}
+
+/* Post Header */
+.blog-post-header {
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-family: var(--game-header-font);
+    font-size: 2.5rem;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.2;
+    color: var(--game-text);
+    font-weight: 700;
+}
+
+.post-featured-image {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    border: 1px solid var(--game-border);
+}
+
+.post-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Post Content */
+.blog-post-content {
+    margin-bottom: 3rem;
+}
+
+.post-section {
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.post-section.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.post-section h2 {
+    font-family: var(--game-body-font);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--game-text);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.post-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--game-gradient);
+}
+
+.post-section h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--game-text);
+}
+
+.post-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--game-text-muted);
+}
+
+.post-section ul, 
+.post-section ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    color: var(--game-text-muted);
+}
+
+.post-section li {
+    margin-bottom: 0.5rem;
+}
+
+.post-section blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--game-accent);
+    background-color: rgba(77, 91, 206, 0.08);
+    color: var(--game-text);
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+.code-block {
+    margin: 1.5rem 0;
+    background-color: var(--game-bg-darker);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--game-border);
+}
+
+.code-block pre {
+    padding: 1.5rem;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: var(--game-body-font);
+    color: var(--game-accent-alt);
+    line-height: 1.6;
+}
+
+.post-section figure {
+    margin: 2rem 0;
+}
+
+.post-section figure img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    border: 1px solid var(--game-border);
+}
+
+.post-section figcaption {
+    font-size: 0.85rem;
+    color: var(--game-text-muted);
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.post-section.conclusion {
+    background-color: rgba(77, 91, 206, 0.05);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(77, 91, 206, 0.15);
+}
+
+/* Author Bio */
+.post-footer {
+    padding-top: 2rem;
+    border-top: 1px solid var(--game-border);
+}
+
+.author-bio {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.author-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--game-text);
+    text-align: left;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    color: var(--game-text-muted);
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Share Links */
+.post-share {
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.post-share h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--game-text);
+    text-align: left;
+}
+
+.share-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.share-link {
+    color: var(--game-text-muted);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--game-bg-dark);
+    border-radius: 50%;
+    border: 1px solid var(--game-border);
+}
+
+.share-link:hover {
+    color: var(--game-accent);
+    transform: translateY(-2px);
+}
+
+/* Post Navigation */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--game-border);
+}
+
+.prev-post, 
+.next-post, 
+.back-to-blog {
+    padding: 0.5rem 0.75rem;
+    color: var(--game-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.prev-post:hover, 
+.next-post:hover, 
+.back-to-blog:hover {
+    color: var(--game-accent);
+}
+
+.back-to-blog {
+    background-color: rgba(77, 91, 206, 0.1);
+    border-radius: 4px;
+    border: 1px solid rgba(77, 91, 206, 0.2);
+}
+
+/* Related Posts */
+.related-posts {
+    padding: 4rem 0;
+    background-color: var(--game-bg-dark);
+}
+
+.related-posts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--game-header-font);
+    font-size: 2rem;
+    color: var(--game-text);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.related-posts h2::after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background: var(--game-gradient);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
