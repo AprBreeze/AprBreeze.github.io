@@ -991,6 +991,21 @@ button:focus {
     border-top: none;
 }
 
+
+.horizontal-section {
+    display: flex; /* 启用 Flexbox 布局 */
+    align-items: flex-start; /* 让两列顶部对齐 */
+    gap: 8px;
+    margin: 2rem 0 2rem;
+    gap: 1rem;
+}
+
+.content-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    box-sizing: border-box; 
+}
+
 .section-title {
     font-family: var(--game-header-font);
     font-size: 2rem;
@@ -1038,7 +1053,7 @@ button:focus {
     margin-bottom: 0.75rem;
     line-height: 1.5;
     position: relative;
-    padding-left: 3rem;
+    padding-left: 2rem;
     list-style-type: none;
 }
 
@@ -1074,7 +1089,6 @@ button:focus {
     margin-bottom: 0.5rem;
     margin-left: 1rem;
     position: relative;
-    padding-left: 1.5rem;
 }
 
 .document-index li::before {
@@ -1137,7 +1151,7 @@ button:focus {
 }
 
 .carousel-container {
-    width: 70%;
+    width: 90%;
     overflow: hidden;
     margin: 0 auto;
 }

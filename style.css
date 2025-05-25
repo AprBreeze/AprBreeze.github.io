@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .work-item img {
     width: 100%;
-    height: 220px;
+    height: 260px;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
