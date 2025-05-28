@@ -111,88 +111,286 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Text rotation animation
-const phrases = [];
-
-// Initialize the rotating text
+// Gallery Navigation and Lightbox Functionality - Full Version
 document.addEventListener('DOMContentLoaded', function() {
-  const rotatingText = document.querySelector('.rotating-text');
+  console.log('Gallery script starting...');
   
-  // Clear any existing content (from the global script.js)
-  rotatingText.innerHTML = '';
-  
-  // Create and append all phrase elements
-  phrases.forEach((phrase, index) => {
-    const span = document.createElement('span');
-    span.className = 'text-phrase';
-    span.textContent = phrase;
-    span.style.width = '100%';
-    span.style.whiteSpace = 'nowrap';
-    span.style.textAlign = 'left';
-    span.style.left = '0';
-    if (index === 0) span.classList.add('active');
-    rotatingText.appendChild(span);
-  });
-  
-  // Get all phrase elements
-  const phraseElements = document.querySelectorAll('.text-phrase');
-  
-  // Function to rotate through phrases
-  function rotatePhrases() {
-    // Find the current active phrase
-    const currentActive = document.querySelector('.text-phrase.active');
+  // Wait a bit for DOM to be fully ready
+  setTimeout(function() {
+    const gallery = document.querySelector('.horizontal-gallery');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
     
-    if (!currentActive) return;
+    // Look for gallery slides in any container, not just .horizontal-gallery
+    const slides = document.querySelectorAll('.gallery-slide');
     
-    // Remove active class from current phrase
-    currentActive.classList.remove('active');
-    
-    const currentIndex = Array.from(phraseElements).indexOf(currentActive);
-    
-    // Calculate next index (loop back to start if at end)
-    const nextIndex = (currentIndex + 1) % phraseElements.length;
-    
-    // Add active class to next phrase
-    phraseElements[nextIndex].classList.add('active');
-  }
-  
-  // Set interval for rotation
-  setInterval(rotatePhrases, 3000);
-});
-// Card hover effects enhancement
-document.addEventListener('DOMContentLoaded', function() {
-  const cards = document.querySelectorAll('.game-card');
-  
-  cards.forEach(card => {
-    // Create subtle movement effect on mouse move
-    card.addEventListener('mousemove', function(e) {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left; // x position within the element
-      const y = e.clientY - rect.top; // y position within the element
-      
-      // Calculate rotation based on mouse position
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = (y - centerY) / 30;
-      const rotateY = (centerX - x) / 30;
-      
-      // Apply subtle transform
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+    console.log('Gallery elements found:', {
+      gallery: !!gallery,
+      prevBtn: !!prevBtn,
+      nextBtn: !!nextBtn,
+      slidesCount: slides.length
     });
     
-    // Reset transform on mouse leave
-    card.addEventListener('mouseleave', function() {
-      card.style.transform = '';
-      // Add a small delay to make it look smoother
-      setTimeout(() => {
-        card.style.transition = 'transform 0.3s ease';
-      }, 100);
+    // Only set up horizontal gallery navigation if the gallery container exists
+    if (gallery && prevBtn && nextBtn && gallery.querySelectorAll('.gallery-slide').length > 0) {
+      console.log('Setting up horizontal gallery...');
+      
+      const gallerySlides = gallery.querySelectorAll('.gallery-slide');
+      
+      // Function to calculate slide width dynamically
+      function getSlideWidth() {
+        const slide = gallery.querySelector('.gallery-slide');
+        if (slide) {
+          return slide.offsetWidth + 20; // width + gap
+        }
+        return 300; // fallback
+      }
+      
+      // Gallery navigation click handlers
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Previous button clicked!');
+        const slideWidth = getSlideWidth();
+        gallery.scrollBy({
+          left: -slideWidth,
+          behavior: 'smooth'
+        });
+      });
+      
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log('Next button clicked!');
+        const slideWidth = getSlideWidth();
+        gallery.scrollBy({
+          left: slideWidth,
+          behavior: 'smooth'
+        });
+      });
+      
+      console.log('Horizontal gallery navigation setup complete!');
+    } else {
+      console.log('Horizontal gallery elements missing - skipping gallery navigation');
+    }
+    
+    // Lightbox Functionality - works with any .gallery-slide images
+    const lightbox = document.getElementById('gallery-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    let currentImageIndex = 0;
+    let currentZoom = 1;
+    let isDragging = false;
+    let hasDragged = false;
+    let startX = 0;
+    let startY = 0;
+    let translateX = 0;
+    let translateY = 0;
+    
+    console.log('Lightbox elements found:', {
+      lightbox: !!lightbox,
+      lightboxImage: !!lightboxImage,
+      lightboxClose: !!lightboxClose,
+      lightboxPrev: !!lightboxPrev,
+      lightboxNext: !!lightboxNext,
+      lightboxCaption: !!lightboxCaption,
+      slidesCount: slides.length
     });
     
-    // Reset transition on mouse enter
-    card.addEventListener('mouseenter', function() {
-      card.style.transition = 'transform 0.1s ease';
-    });
-  });
+    if (lightbox && lightboxImage && lightboxClose && lightboxPrev && lightboxNext && lightboxCaption && slides.length > 0) {
+      console.log('Setting up lightbox...');
+      
+      // Image click handlers for lightbox
+      slides.forEach((slide, index) => {
+        slide.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log(`Image ${index} clicked for lightbox!`);
+          currentImageIndex = index;
+          openLightbox(slide.src, slide.alt, index);
+        });
+      });
+      
+      function openLightbox(src, alt, index) {
+        console.log('Opening lightbox for image:', index);
+        lightboxImage.src = src;
+        lightboxImage.alt = alt;
+        lightboxCaption.textContent = `Image ${index + 1} of ${slides.length} - Use mouse wheel to zoom`;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling while lightbox is open
+        
+        // Reset zoom and position
+        currentZoom = 1;
+        translateX = 0;
+        translateY = 0;
+        updateImageTransform();
+      }
+      
+      function closeLightbox() {
+        console.log('Closing lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+        
+        // Reset zoom and position
+        currentZoom = 1;
+        translateX = 0;
+        translateY = 0;
+        updateImageTransform();
+      }
+      
+      function updateImageTransform() {
+        lightboxImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom})`;
+        lightboxImage.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+      }
+      
+      function navigateLightbox(direction) {
+        currentImageIndex += direction;
+        
+        // Loop around if at the end
+        if (currentImageIndex < 0) {
+          currentImageIndex = slides.length - 1;
+        } else if (currentImageIndex >= slides.length) {
+          currentImageIndex = 0;
+        }
+        
+        const slide = slides[currentImageIndex];
+        lightboxImage.src = slide.src;
+        lightboxImage.alt = slide.alt;
+        lightboxCaption.textContent = `Image ${currentImageIndex + 1} of ${slides.length} - Use mouse wheel to zoom`;
+        console.log('Navigated to image:', currentImageIndex);
+        
+        // Reset zoom and position when navigating
+        currentZoom = 1;
+        translateX = 0;
+        translateY = 0;
+        updateImageTransform();
+      }
+      
+      // Zoom functionality with mouse wheel
+      lightboxImage.addEventListener('wheel', function(e) {
+        e.preventDefault();
+        
+        const zoomSpeed = 0.1;
+        const minZoom = 0.5;
+        const maxZoom = 3;
+        
+        if (e.deltaY < 0) {
+          // Zoom in
+          currentZoom = Math.min(currentZoom + zoomSpeed, maxZoom);
+        } else {
+          // Zoom out
+          currentZoom = Math.max(currentZoom - zoomSpeed, minZoom);
+        }
+        
+        // Reset position when zooming out to 1x or less
+        if (currentZoom <= 1) {
+          translateX = 0;
+          translateY = 0;
+        }
+        
+        updateImageTransform();
+        console.log('Zoom level:', currentZoom);
+      });
+      
+      // Drag functionality for zoomed images
+      lightboxImage.addEventListener('mousedown', function(e) {
+        if (currentZoom > 1) {
+          isDragging = true;
+          hasDragged = false;
+          startX = e.clientX - translateX;
+          startY = e.clientY - translateY;
+          lightboxImage.style.cursor = 'grabbing';
+          e.preventDefault();
+        }
+      });
+      
+      document.addEventListener('mousemove', function(e) {
+        if (isDragging && currentZoom > 1) {
+          const deltaX = e.clientX - startX;
+          const deltaY = e.clientY - startY;
+          
+          // If mouse has moved more than 5 pixels, consider it a drag
+          if (Math.abs(deltaX - translateX) > 5 || Math.abs(deltaY - translateY) > 5) {
+            hasDragged = true;
+          }
+          
+          translateX = deltaX;
+          translateY = deltaY;
+          updateImageTransform();
+        }
+      });
+      
+      document.addEventListener('mouseup', function() {
+        if (isDragging) {
+          isDragging = false;
+          lightboxImage.style.cursor = currentZoom > 1 ? 'grab' : 'default';
+          
+          // Reset hasDragged after a short delay to prevent accidental closes
+          setTimeout(() => {
+            hasDragged = false;
+          }, 100);
+        }
+      });
+      
+      // Lightbox event listeners
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+      lightboxNext.addEventListener('click', () => navigateLightbox(1));
+      
+      // Close lightbox when clicking outside the image
+      lightbox.addEventListener('click', function(e) {
+        // Don't close if user was dragging (to prevent accidental closes)
+        if (isDragging || hasDragged) {
+          return;
+        }
+        
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+      
+      // Prevent accidental lightbox close when dragging
+      lightbox.addEventListener('mousedown', function(e) {
+        if (e.target === lightbox && currentZoom > 1) {
+          e.preventDefault();
+        }
+      });
+      
+      // Keyboard navigation for lightbox
+      document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          navigateLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigateLightbox(1);
+        } else if (e.key === '+' || e.key === '=') {
+          // Zoom in with keyboard
+          currentZoom = Math.min(currentZoom + 0.2, 3);
+          updateImageTransform();
+        } else if (e.key === '-') {
+          // Zoom out with keyboard
+          currentZoom = Math.max(currentZoom - 0.2, 0.5);
+          if (currentZoom <= 1) {
+            translateX = 0;
+            translateY = 0;
+          }
+          updateImageTransform();
+        } else if (e.key === '0') {
+          // Reset zoom with keyboard
+          currentZoom = 1;
+          translateX = 0;
+          translateY = 0;
+          updateImageTransform();
+        }
+      });
+      
+      console.log('Lightbox setup complete!');
+    } else {
+      console.log('Lightbox elements missing');
+    }
+    
+  }, 500); // Wait 500ms for everything to load
 });

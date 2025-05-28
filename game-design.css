@@ -63,11 +63,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 p {
-  font-size: 1.1rem
+  font-size: 1rem
 }
 
 h1 {
@@ -81,6 +81,22 @@ h1 {
     letter-spacing: -0.5px;
 }
 
+h3 {
+    color: var(--game-text);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: var(--game-header-font);
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--game-accent-alt);
+    position: relative;
+}
 /* ==========================================================================
    Hero Section
    ========================================================================== */
@@ -143,7 +159,7 @@ h1 {
 
 .description {
     font-family: var(--game-body-font);
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--secondary-text-color);
     margin-bottom: 2.5rem;
     max-width: 600px;
@@ -287,7 +303,7 @@ h1 {
     padding: 1.2rem 1.2rem 0.6rem;
     margin: 0;
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -617,8 +633,6 @@ button:focus {
   background-color: var(--game-card-bg);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--game-card-shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -665,7 +679,7 @@ button:focus {
   font-family: var(--game-header-font);
   font-size: 1.4rem;
   font-weight: 600;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 0.5rem 0;
   color: var(--game-text);
   line-height: 1.3;
 }
@@ -673,14 +687,14 @@ button:focus {
 .card-category {
   color: var(--game-accent);
   font-size: 0.9rem;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   font-weight: 500;
 }
 
 .card-description {
   color: var(--game-text-muted);
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   line-height: 1.6;
 }
 
@@ -690,7 +704,7 @@ button:focus {
   gap: 0.75rem;
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .card-skills li {
@@ -826,7 +840,7 @@ button:focus {
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   color: var(--game-text-muted);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   z-index: 5;
   white-space: nowrap;
@@ -930,7 +944,7 @@ button:focus {
 
 .project-hero-content h1 {
     font-family: var(--game-header-font);
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--game-text);
@@ -961,7 +975,7 @@ button:focus {
 }
 
 .project-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--game-text);
 }
@@ -994,7 +1008,7 @@ button:focus {
 
 .section-title {
     font-family: var(--game-header-font);
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--game-accent-alt);
@@ -1026,7 +1040,9 @@ button:focus {
 }
 
 /* User Research Section */
-.quotes-list, .codes-list {
+.quotes-list, .codes-list,.iteration-list,
+.outcomes-list,
+.improvement-list {
     margin-top: 1rem;
     margin-bottom: 4rem;
     border-left: 4px solid var(--game-accent-alt);
@@ -1034,8 +1050,11 @@ button:focus {
     list-style: none;
 }
 
-.quotes-list li, .codes-list li {
-    font-size: 1.1rem;
+.quotes-list li, .codes-list li,
+.iteration-list li,
+.outcomes-list li,
+.improvement-list li {
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     line-height: 1.5;
     position: relative;
@@ -1326,7 +1345,7 @@ button:focus {
 .contact-link {
     display: flex;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: transform 0.3s ease;
 }
 
@@ -1401,7 +1420,7 @@ button:focus {
     }
     
     .project-hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .document-image {
@@ -1474,7 +1493,7 @@ button:focus {
 }
 
 .project-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -1523,22 +1542,7 @@ button:focus {
 }
 
 /* Enhanced Lists and Spacing */
-.iteration-list,
-.outcomes-list,
-.improvement-list {
-    padding-left: 1.5rem;
-    margin: 2rem 0;
-}
 
-.iteration-list li,
-.outcomes-list li,
-.improvement-list li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 1.2rem;
-    font-size: 1rem;
-    line-height: 1.6;
-}
 
 
 .project-section h4 {
@@ -1590,7 +1594,7 @@ button:focus {
 /* Individual Gallery Slides */
 .gallery-slide {
     min-width: 30%;
-    max-width: 30%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -1688,7 +1692,7 @@ button:focus {
 /* Lightbox Content */
 .lightbox-content {
     position: relative;
-    max-width: 90%;
+    max-width: 95%;
     max-height: 85vh;
     margin: 0 auto;
 }
@@ -1721,20 +1725,31 @@ button:focus {
 
 /* Lightbox Controls */
 .lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
+    position: fixed;
+    top: 15px;
+    right: 15px;
     color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
     cursor: pointer;
     outline: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1020;
+    font-weight: bold;
 }
 
 .lightbox-close:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border-color: var(--game-accent-alt);
     color: var(--game-accent-alt);
+    transform: scale(1.1);
 }
 
 .lightbox-nav {
@@ -1846,7 +1861,11 @@ button:focus {
     }
     
     .lightbox-close {
-        font-size: 26px;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
     }
 }
 
@@ -1895,7 +1914,7 @@ button:focus {
 
 .blog-header p {
     font-family: var(--game-body-font);
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--game-text-muted);
     margin-top: 1.5rem;
     margin-bottom: 0;
@@ -2279,7 +2298,7 @@ button:focus {
 
 .share-link {
     color: var(--game-text-muted);
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
     width: 36px;
     height: 36px;
@@ -2357,4 +2376,45 @@ button:focus {
     bottom: -8px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* ==========================================================================
+   Text Highlighting Styles
+   ========================================================================== */
+
+/* Primary highlight - accent color background */
+.highlight {
+    color: var(--game-accent-alt);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Alternative highlight styles */
+.highlight-blue {
+    background: linear-gradient(120deg, rgba(112, 125, 225, 0.3) 0%, rgba(112, 125, 225, 0.1) 100%);
+    color: var(--game-accent);
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.highlight-underline {
+    background: linear-gradient(to right, var(--game-accent-alt) 0%, var(--game-accent-alt) 100%);
+    background-size: 100% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    color: var(--game-accent-alt);
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+.highlight-glow {
+    color: var(--game-accent-alt);
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(97, 239, 206, 0.5);
+    transition: text-shadow 0.3s ease;
+}
+
+.highlight-glow:hover {
+    text-shadow: 0 0 12px rgba(97, 239, 206, 0.8);
 }
