@@ -8,11 +8,11 @@
   --game-bg-darker: #0f0f0f;
   --game-bg-lighter: #1a1a1a;
   --game-card-bg: #1e1e1e;
-  --game-accent: #707DE1;
+  --game-accent: #8e9bff;
   --game-accent-glow: #4d5bce40;
   --game-accent-alt: #61efce;
   --game-text: #e6e6e6;
-  --game-text-muted: #a0a0a0;
+  --game-text-muted: #bfbfbf;
   --game-border: #2a2a2a;
   --game-gradient: linear-gradient(135deg, #4d5bce 0%, #61efce 100%);
   --game-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -32,7 +32,7 @@
 body.blog-body {
   background-color: var(--game-bg-dark);
   color: var(--game-text);
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
   line-height: 1.6;
   font-size: 0.9rem;
 }
@@ -72,7 +72,10 @@ body.blog-body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 
 .nav-links {
   display: flex;
@@ -81,9 +84,9 @@ body.blog-body {
 }
 
 .nav-links a {
-    font-family: var(--game-header-font);
+    font-family: 'Rajdhani', sans-serif;
     text-decoration: none;
-    color: var(--secondary-text-color);
+    color: var(--game-text-muted);
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -155,7 +158,7 @@ body.blog-body {
 }
 
 .blog-header p {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     font-size: 1.1rem;
     color: var(--game-text-muted);
     margin-top: 1.5rem;
@@ -189,6 +192,15 @@ body.blog-body {
     opacity: 0;
     transform: translateY(20px);
     border: 1px solid var(--game-border);
+    cursor: pointer;
+}
+
+.blog-post-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .blog-post:hover {
@@ -273,8 +285,8 @@ body.blog-body {
 }
 
 .post-content h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.4rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     line-height: 1.3;
     color: var(--game-text);
@@ -282,52 +294,11 @@ body.blog-body {
 }
 
 .post-content p {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     color: var(--game-text-muted);
     margin-bottom: 1.5rem;
     line-height: 1.6;
     flex-grow: 1;
-}
-
-.read-more {
-    align-self: flex-start;
-    text-decoration: none;
-    color: var(--game-accent);
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.read-more::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background: var(--game-gradient);
-    transition: width 0.3s ease;
-}
-
-.read-more:hover {
-    color: var(--game-accent-alt);
-}
-
-.read-more:hover::after {
-    width: 100%;
-}
-
-.read-more i {
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-}
-
-.read-more:hover i {
-    transform: translateX(4px);
 }
 
 /* ==========================================================================
@@ -361,7 +332,7 @@ body.blog-body {
 
 .post-title {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 1rem 0 1.5rem;
     line-height: 1.2;
     color: var(--game-text);
@@ -398,8 +369,8 @@ body.blog-body {
 }
 
 .post-section h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--game-text);
     font-weight: 700;
@@ -407,40 +378,36 @@ body.blog-body {
     padding-bottom: 0.5rem;
 }
 
-.post-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--game-gradient);
-}
 
 .post-section h3 {
-    font-size: 1.4rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
     margin: 1.5rem 0 1rem;
     color: var(--game-text);
 }
 
 .post-section p {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     margin-bottom: 1rem;
     line-height: 1.8;
-    color: var(--game-text-muted);
+    color: var(--game-text);
 }
 
 .post-section ul, 
 .post-section ol {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
-    color: var(--game-text-muted);
+    color: var(--game-text);
 }
 
 .post-section li {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     margin-bottom: 0.5rem;
 }
 
 .post-section blockquote {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     border-left: 4px solid var(--game-accent);
@@ -507,6 +474,7 @@ body.blog-body {
 }
 
 .author-info h3 {
+    font-family: 'Rajdhani', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: var(--game-text);
@@ -514,6 +482,7 @@ body.blog-body {
 }
 
 .author-info p {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     font-size: 0.9rem;
     color: var(--game-text-muted);
     line-height: 1.6;
@@ -527,6 +496,7 @@ body.blog-body {
 }
 
 .post-share h4 {
+    font-family: 'Rajdhani', sans-serif;
     font-size: 1rem;
     margin-bottom: 0.75rem;
     color: var(--game-text);
@@ -568,6 +538,7 @@ body.blog-body {
 .prev-post, 
 .next-post, 
 .back-to-blog {
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
     padding: 0.5rem 0.75rem;
     color: var(--game-text);
     text-decoration: none;
@@ -598,9 +569,9 @@ body.blog-body {
 }
 
 .related-posts h2 {
+    font-family: 'Rajdhani', sans-serif;
     text-align: center;
     margin-bottom: 2rem;
-    font-family: 'Rajdhani', sans-serif;
     font-size: 2rem;
     color: var(--game-text);
     position: relative;
@@ -630,6 +601,7 @@ body.blog-body {
 }
 
 .contact h2 {
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   color: var(--game-text);
@@ -652,6 +624,10 @@ body.blog-body {
 .contact-content {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.contact-content p {
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
 
 .social-links {
@@ -688,6 +664,7 @@ body.blog-body {
    Footer
    ========================================================================== */
 footer {
+  font-family: 'Sofia Sans Semi Condensed', sans-serif;
   text-align: center;
   padding: 20px 0;
   background-color: var(--game-bg-darker);
@@ -834,7 +811,4 @@ button:focus {
         width: 2px;
     }
     
-    .post-section h2 {
-        font-size: 1.5rem;
-    }
 } 

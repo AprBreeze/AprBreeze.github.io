@@ -16,7 +16,7 @@
     --secondary-color: #707DE1;
     --accent-color: #61efce;
     --text-color: #e6e6e6;
-    --secondary-text-color: #a0a0a0;
+    --secondary-text-color: #bfbfbf;
     --background-color: #121212;
     
     /* Grays */
@@ -36,7 +36,7 @@
     --game-accent-glow: #4d5bce40;
     --game-accent-alt: #61efce;
     --game-text: #e6e6e6;
-    --game-text-muted: #d1d1d1;
+    --game-text-muted: #bfbfbf;
     --game-border: #2a2a2a;
     --game-gradient: linear-gradient(135deg, #4d5bce 0%, #61efce 100%);
     --game-card-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -2184,15 +2184,6 @@ button:focus {
     padding-bottom: 0.5rem;
 }
 
-.post-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--game-gradient);
-}
 
 .post-section h3 {
     font-size: 1.4rem;
