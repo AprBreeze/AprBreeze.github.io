@@ -14,7 +14,7 @@
 <body class="game-design-body">
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">Xinglong's Base</div>
+            <a href="game-design.html" class="logo">Xinglong's Base</a>
             <ul class="nav-links">
                 <li><a href="game-base.html" >About Me</a></li>
                 <li><a href="game-design.html" class="active">Game & Level Design</a></li>
@@ -22,8 +22,6 @@
             </ul>
         </nav>
     </header>
-    
-
 
     <main class="game-main">
         <section class="game-hero">
@@ -36,181 +34,217 @@
             </div>
         </section>
 
+        <!-- Mobile Mission Toggle Button -->
+        <button class="mission-toggle" onclick="toggleMissionNav()">
+            <i class="fas fa-bars"></i>
+        </button>
 
-        
-
-
-        <h1>Projects</h1>
-
-        <section class="game-portfolio">
-
-            <!-- Project 1 Ubisoft Level Design Competition -->
-            <article class="game-card" >
-                <a href="game-project-1.html" style="text-decoration: none;">
-                    <div class="card-image">
-                        <img src="image/ubisoft NEXT 2024 overview.png" alt="Game Project 1">
-                    </div>
-                    <div class="card-content">
-                        <h2>Ubisoft Level Design Competition</h2>
-                        <p class="card-category">Ubisoft NEXT Competition - 2024</p>
-                        <p class="card-description">Designed a verticality-themed FPS level that supports stealth and aggressor playstyles. Placed in Top 10.</p>
-                        <ul class="card-skills">
-                            <li>Level Design</li>
-                            <li>Dynamic Pacing</li>
-                            <li>Modular Design</li>
-                            <li>Environmental Storytelling</li>
-                            <li>User Research</li>
-                        </ul>
-                        <div class="card-links">
-                            <a href="game-project-1.html" class="view-button">
-                                <span>View Project</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Project 1  Level Designer Intern - Perfect World -->
-            <article class="game-card">
-                <a href="perfect-world-intern.html" style="text-decoration: none;">
-                    <div class="card-image">
-                        <img src="image/INCARNATION.png" alt="Game Project 2">
-                    </div>
-                    <div class="card-content">
-                        <h2>Open World Exploration Gameplay Design</h2>
-                        <p class="card-category">Level Designer Intern - Perfect World</p>
-                        <p class="card-description">Prototyped 5 open-world exploration gameplay challenges, drafting exploration level metrics for an open-world project.</p>
-                        <ul class="card-skills">
-                            <li>Level Design</li>
-                            <li>Gameplay Design</li>
-                            <li>Ecosystem Design</li>
-                        </ul>
-                        <div class="card-links">
-                        <a href="perfect-world-intern.html" class="view-button">
-                            <span>View Work</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+        <!-- Mission Panel Layout -->
+        <div class="mission-panel">
+            <!-- Left Navigation Panel - Fixed Sidebar -->
+            <div class="mission-nav">
+                <div class="mission-nav-header">
+                    <h2><i class="fas fa-list-ul"></i> Quests</h2>
                 </div>
-            </a>
-            </article>
+                
+                <div class="mission-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-star"></i> Featured Projects
+                    </h3>
+                    <ul class="mission-list">
+                        <li class="mission-item" data-target="project-1">
+                            <span class="mission-status completed"></span>
+                            <span class="mission-name">Ubisoft Level Design Competition</span>
+                        </li>
+                        <li class="mission-item" data-target="project-2">
+                            <span class="mission-status completed"></span>
+                            <span class="mission-name">Open World Exploration Design</span>
+                        </li>
+                        <li class="mission-item" data-target="project-3">
+                            <span class="mission-status completed"></span>
+                            <span class="mission-name">Slasher Board Game Design</span>
+                        </li>
+                        <li class="mission-item" data-target="project-4">
+                            <span class="mission-status completed"></span>
+                            <span class="mission-name">Hard West 2 Walkthrough Guide</span>
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- Project 2 UX Course Project - Board Game Design -->
-            <article class="game-card">
-                <a href="board-game-ux-project.html" style="text-decoration: none;">
-                    <div class="card-image">
-                        <img src="image/Boardgame thumbnail.jpg" alt="Board Game Project">
-                    </div>
-                    <div class="card-content">
-                        <h2>Board Game Design</h2>
-                        <p class="card-category"> UX Course Project - Gameplay and UX Design</p>
-                        <p class="card-description">Slasher is a 4-player co-op board game where players navigate a haunted mansion to exorcise a supernatural slasher.</p>
-                        <ul class="card-skills">
-                            <li>Gameplay Design</li>
-                            <li>Board Design</li>
-                            <li>UX Design</li>
-                            <li>Usability Testing</li>
-                            <li>Open Playtest</li>
-                            <li>Data Driven Iteration</li>
-                        </ul>
-                        <div class="card-links">
-                            <a href="board-game-ux-project.html" class="view-button">
-                                <span>View Project</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                <div class="mission-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-clipboard-list"></i> Other Works
+                    </h3>
+                    <ul class="mission-list">
+                        <li class="mission-item" data-target="project-5">
+                            <span class="mission-status completed"></span>
+                            <span class="mission-name">Apex System Analysis</span>
+                        </li>
+                        <li class="mission-item" data-target="project-6">
+                            <span class="mission-status completed"></span>
+                            <span class="mission-name">Far Cry 5 Outpost</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <!-- Project 1 Ubisoft Level Design Competition -->
+                <article class="game-card" id="project-1">
+                    <a href="game-project-1.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/ubisoft NEXT 2024 overview.png" alt="Game Project 1">
                         </div>
-                    </div>
-                </a>
-            </article>
-
-
-
-            <!-- Project 2 Game Review & Guide Writer (need adding content)-->
-            <article class="game-card">
-                <a href="game-review&guide.html" style="text-decoration: none;">
-                    <div class="card-image">
-                        <img src="image/HardWest2-Published Game Review and Guide.jpg" alt="Board Game Project">
-                    </div>
-                    <div class="card-content">
-                        <h2>Hard West 2 Walkthrough Guide</h2>
-                        <p class="card-category">Freelance Works - UCG Media</p>
-                        <p class="card-description">At UCG Media, I produced game reviews, news articles, and walkthrough guides for social media content and magazine.</p>
-                        <ul class="card-skills">
-                            <li>Game Review</li>
-                            <li>Analytical Writing</li>
-                            <li>Remote Collaboration</li>
-                        </ul>
-                        <div class="card-links">
-                            <a href="game-review&guide.html" class="view-button">
-                                <span>View Work</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                        <div class="card-content">
+                            <h2>Ubisoft Level Design Competition</h2>
+                            <p class="card-category">Ubisoft NEXT Competition - 2024</p>
+                            <p class="card-description">Designed a verticality-themed FPS level that supports stealth and aggressor playstyles. Placed in Top 10.</p>
+                            <ul class="card-skills">
+                                <li>Level Design</li>
+                                <li>Dynamic Pacing</li>
+                                <li>Modular Design</li>
+                                <li>Environmental Storytelling</li>
+                                <li>User Research</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="game-project-1.html" class="view-button">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </article>
-        </section>
+                    </a>
+                </article>
 
-
-        <h1>My other works</h1>
-         
-        <section class="game-portfolio">
-            <!-- Project 2 Game Review & Guide Writer (need adding content)-->
-            <article class="game-card">
-                <a href="apex-analysis.html" style="text-decoration: none;">
-                    <div class="card-image">
-                        <img src="image/Apex_Economy_System.png" alt="Board Game Project">
-                    </div>
-                    <div class="card-content">
-                        <h2>Apex System Breakdown Analysis</h2>
-                        <p class="card-category">Freelance Works - UCG Media</p>
-                        <p class="card-description">I analyzed Apex Legends’ economy system and combat mechanics as incentives for combat motivation.</p>
-                        <ul class="card-skills">
-                            <li>Analytical Thinking</li>
-                        </ul>
-                        <div class="card-links">
-                            <a href="apex-analysis.html" class="view-button">
-                                <span>View Work</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                <!-- Project 2 Level Designer Intern - Perfect World -->
+                <article class="game-card" id="project-2">
+                    <a href="perfect-world-intern.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/INCARNATION.png" alt="Game Project 2">
                         </div>
-                    </div>
-                </a>
-            </article>
-
-            <!-- Project 3 Far Cry 5 Outpost Level Design -->
-            <!-- Not good enough to put into Portfolio -->
-            <article class="game-card">
-                <a href="far-cry-5-out-post-level.html" style="text-decoration: none;">
-                    <div class="card-image">
-                        <img src="image/fc5-overview.jpg" alt="Board Game Project">
-                    </div>
-                    <div class="card-content">
-                        <h2>Level Design - Far Cry 5 Outpost </h2>
-                        <p class="card-category">Passion Project - Level Design with Level Editor</p>
-                        <p class="card-description">I designed a Far Cry 5 outpost using the level editor to explore the creation pipeline, enhance environmental storytelling, and encourage unique traversal opportunities.</p>
-                        <ul class="card-skills">
-                            <li>Level Design</li>
-                            <li>Level Editor</li>
-                            <li>Environmental Storytelling</li>
-                        </ul>
-                        <div class="card-links">
-                            <a href="far-cry-5-out-post-level.html" class="view-button">
-                                <span>View Project</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
+                        <div class="card-content">
+                            <h2>Open World Exploration Gameplay Design</h2>
+                            <p class="card-category">Level Designer Intern - Perfect World</p>
+                            <p class="card-description">Prototyped 5 open-world exploration gameplay challenges, drafting exploration level metrics for an open-world project.</p>
+                            <ul class="card-skills">
+                                <li>Level Design</li>
+                                <li>Gameplay Design</li>
+                                <li>Ecosystem Design</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="perfect-world-intern.html" class="view-button">
+                                    <span>View Work</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </article>
- 
-        </section>
+                    </a>
+                </article>
 
+                <!-- Project 3 UX Course Project - Board Game Design -->
+                <article class="game-card" id="project-3">
+                    <a href="board-game-ux-project.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/Boardgame thumbnail.jpg" alt="Board Game Project">
+                        </div>
+                        <div class="card-content">
+                            <h2>Slasher Board Game Design</h2>
+                            <p class="card-category"> UX Course Project - Gameplay and UX Design</p>
+                            <p class="card-description">Slasher is a 4-player co-op board game where players navigate a haunted mansion to exorcise a supernatural slasher.</p>
+                            <ul class="card-skills">
+                                <li>Gameplay Design</li>
+                                <li>Board Design</li>
+                                <li>UX Design</li>
+                                <li>Usability Testing</li>
+                                <li>Open Playtest</li>
+                                <li>Data Driven Iteration</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="board-game-ux-project.html" class="view-button">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </article>
 
+                <!-- Project 4 Game Review & Guide Writer -->
+                <article class="game-card" id="project-4">
+                    <a href="game-review&guide.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/HardWest2-Published Game Review and Guide.jpg" alt="Board Game Project">
+                        </div>
+                        <div class="card-content">
+                            <h2>Hard West 2 Walkthrough Guide</h2>
+                            <p class="card-category">Freelance Works - UCG Media</p>
+                            <p class="card-description">At UCG Media, I produced game reviews, news articles, and walkthrough guides for social media content and magazine.</p>
+                            <ul class="card-skills">
+                                <li>Game Review</li>
+                                <li>Analytical Writing</li>
+                                <li>Remote Collaboration</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="game-review&guide.html" class="view-button">
+                                    <span>View Work</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </article>
 
+                <!-- Project 5 Apex Analysis -->
+                <article class="game-card" id="project-5">
+                    <a href="apex-analysis.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/Apex_Economy_System.png" alt="Board Game Project">
+                        </div>
+                        <div class="card-content">
+                            <h2>Apex System Breakdown Analysis</h2>
+                            <p class="card-category">Freelance Works - UCG Media</p>
+                            <p class="card-description">I analyzed Apex Legends' economy system and combat mechanics as incentives for combat motivation.</p>
+                            <ul class="card-skills">
+                                <li>Analytical Thinking</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="apex-analysis.html" class="view-button">
+                                    <span>View Work</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Project 6 Far Cry 5 Outpost Level Design -->
+                <article class="game-card" id="project-6">
+                    <a href="far-cry-5-out-post-level.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/fc5-overview.jpg" alt="Board Game Project">
+                        </div>
+                        <div class="card-content">
+                            <h2>Level Design - Far Cry 5 Outpost </h2>
+                            <p class="card-category">Passion Project - Level Design with Level Editor</p>
+                            <p class="card-description">I designed a Far Cry 5 outpost using the level editor to explore the creation pipeline, enhance environmental storytelling, and encourage unique traversal opportunities.</p>
+                            <ul class="card-skills">
+                                <li>Level Design</li>
+                                <li>Level Editor</li>
+                                <li>Environmental Storytelling</li>
+                            </ul>
+                            <div class="card-links">
+                                <a href="far-cry-5-out-post-level.html" class="view-button">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
     </main>
-
 
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
@@ -223,11 +257,9 @@
         </div>
     </section>
 
-
     <footer class="game-footer">
         <div class="footer-content">
             <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
-            </div>
         </div>
     </footer>
     

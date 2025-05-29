@@ -111,6 +111,193 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// Wait for everything to load, then initialize mission panel
+window.addEventListener('load', function() {
+  console.log('Window loaded, initializing mission panel...');
+  setTimeout(initializeMissionPanel, 200);
+});
+
+// Backup initialization in case window.load doesn't fire
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    if (!window.missionPanelInitialized) {
+      console.log('Backup initialization triggered...');
+      initializeMissionPanel();
+    }
+  }, 1000);
+});
+
+// Mission Panel Navigation System
+function initializeMissionPanel() {
+  if (window.missionPanelInitialized) {
+    console.log('Mission panel already initialized, skipping...');
+    return;
+  }
+  
+  console.log('=== INITIALIZING MISSION PANEL ===');
+  
+  const missionItems = document.querySelectorAll('.mission-item');
+  const mainContent = document.querySelector('.main-content');
+  const gameCards = document.querySelectorAll('.main-content .game-card');
+  
+  console.log('Found elements:', {
+    missionItems: missionItems.length,
+    mainContent: !!mainContent,
+    gameCards: gameCards.length
+  });
+
+  if (missionItems.length === 0) {
+    console.error('❌ No mission items found!');
+    return;
+  }
+
+  if (!mainContent) {
+    console.error('❌ Main content container not found!');
+    return;
+  }
+
+  if (gameCards.length === 0) {
+    console.error('❌ No game cards found!');
+    return;
+  }
+
+  // Set up click handlers with direct event binding
+  missionItems.forEach((item, index) => {
+    const targetId = item.getAttribute('data-target');
+    const targetCard = document.getElementById(targetId);
+    
+    console.log(`Setting up mission item ${index}: ${targetId} -> ${!!targetCard}`);
+    
+    if (!targetCard) {
+      console.error(`❌ Target card not found for: ${targetId}`);
+      return;
+    }
+    
+    // Remove any existing event listeners
+    item.removeEventListener('click', handleMissionClick);
+    
+    // Add new event listener
+    item.addEventListener('click', function(event) {
+      handleMissionClick(event, targetId, missionItems, mainContent, gameCards);
+    });
+    
+    console.log(`✅ Click handler added for: ${targetId}`);
+  });
+
+  // Auto-activate first mission item
+  if (missionItems.length > 0) {
+    missionItems[0].classList.add('active');
+    console.log('✅ First mission item activated');
+  }
+
+  window.missionPanelInitialized = true;
+  console.log('✅ Mission Panel initialization complete!');
+}
+
+// Separate click handler function
+function handleMissionClick(event, targetId, missionItems, mainContent, gameCards) {
+  event.preventDefault();
+  event.stopPropagation();
+  
+  console.log(`🎯 Mission clicked: ${targetId}`);
+  
+  const targetCard = document.getElementById(targetId);
+  
+  if (!targetCard) {
+    console.error(`❌ Target card not found: ${targetId}`);
+    return;
+  }
+  
+  // Remove active state from all mission items
+  missionItems.forEach(item => item.classList.remove('active'));
+  
+  // Add active state to clicked item
+  event.currentTarget.classList.add('active');
+  console.log(`✅ Active state set for: ${targetId}`);
+  
+  // Remove highlighted state from all cards
+  gameCards.forEach(card => card.classList.remove('highlighted'));
+  
+  // Calculate scroll position for the main window
+  const targetRect = targetCard.getBoundingClientRect();
+  const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // Calculate target scroll position (account for fixed header and some padding)
+  const headerHeight = 80; // Approximate header height
+  const padding = 20;
+  const targetScrollTop = currentScrollTop + targetRect.top - headerHeight - padding;
+  
+  console.log(`📍 Scrolling to position: ${targetScrollTop}`);
+  
+  // Scroll the main window to target
+  window.scrollTo({
+    top: targetScrollTop,
+    behavior: 'smooth'
+  });
+  
+  // Highlight the card
+  setTimeout(() => {
+    targetCard.classList.add('highlighted');
+    console.log(`✨ Card highlighted: ${targetId}`);
+    
+    // Remove highlight after 3 seconds
+    setTimeout(() => {
+      targetCard.classList.remove('highlighted');
+      console.log(`🔄 Highlight removed: ${targetId}`);
+    }, 3000);
+  }, 300);
+}
+
+// Test function for debugging mission panel
+function testMissionPanel() {
+  console.log('=== MISSION PANEL TEST ===');
+  
+  const missionItems = document.querySelectorAll('.mission-item');
+  const mainContent = document.querySelector('.main-content');
+  const gameCards = document.querySelectorAll('.main-content .game-card');
+  
+  console.log('Elements found:');
+  console.log('- Mission items:', missionItems.length);
+  console.log('- Main content:', !!mainContent);
+  console.log('- Game cards:', gameCards.length);
+  
+  missionItems.forEach((item, index) => {
+    const targetId = item.getAttribute('data-target');
+    const targetCard = document.getElementById(targetId);
+    console.log(`Mission ${index}: ${targetId} -> Card found: ${!!targetCard}`);
+  });
+  
+  // Test clicking the first mission item
+  if (missionItems.length > 0) {
+    console.log('🧪 Testing click on first mission item...');
+    missionItems[0].click();
+  } else {
+    console.error('❌ No mission items to test!');
+  }
+}
+
+// Mobile Mission Navigation Toggle
+function toggleMissionNav() {
+  const missionNav = document.querySelector('.mission-nav');
+  if (missionNav) {
+    missionNav.classList.toggle('open');
+    console.log('Mission nav toggled:', missionNav.classList.contains('open'));
+  }
+}
+
+// Close mission nav when clicking outside on mobile
+document.addEventListener('click', function(event) {
+  const missionNav = document.querySelector('.mission-nav');
+  const missionToggle = document.querySelector('.mission-toggle');
+  
+  if (missionNav && missionToggle && window.innerWidth <= 768) {
+    // If clicking outside the nav and not on the toggle button
+    if (!missionNav.contains(event.target) && !missionToggle.contains(event.target)) {
+      missionNav.classList.remove('open');
+    }
+  }
+});
+
 // Gallery Navigation and Lightbox Functionality - Full Version
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Gallery script starting...');

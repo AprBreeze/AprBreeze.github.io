@@ -478,8 +478,6 @@ button:focus {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 
@@ -553,15 +551,13 @@ button:focus {
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 3rem;
-  margin-left: 320px; /* Account for fixed sidebar */
   position: relative;
-  max-width: calc(100% - 320px);
-  padding: 0 2rem;
-  width: calc(100% - 320px);
+  max-width: 100%;
+  padding: 0;
 }
 
 .hero-content {
-  width: 120%;
+  width: 100%;
   text-align: left;
   padding-left: 0;
   display: flex;
@@ -793,9 +789,7 @@ button:focus {
   padding: 2rem 0;
   margin-top: 3rem;
   position: relative;
-  z-index: 50; /* Lower than mission sidebar (z-index: 100) */
-  margin-left: 320px; /* Account for fixed sidebar */
-  width: calc(100% - 320px);
+  z-index: 1;
 }
 
 .footer-content {
@@ -2693,17 +2687,6 @@ button:focus {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     }
     
-    .game-hero {
-        margin-left: 280px;
-        max-width: calc(100% - 280px);
-        width: calc(100% - 280px);
-    }
-    
-    .game-footer {
-        margin-left: 280px;
-        width: calc(100% - 280px);
-    }
-    
     .mission-item {
         padding: 0.6rem 0.8rem;
     }
@@ -2730,18 +2713,6 @@ button:focus {
         width: 100%;
         padding: 1rem;
         grid-template-columns: 1fr;
-    }
-    
-    .game-hero {
-        margin-left: 0;
-        max-width: 100%;
-        width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .game-footer {
-        margin-left: 0;
-        width: 100%;
     }
     
     /* Add a toggle button for mobile */
@@ -2782,17 +2753,6 @@ button:focus {
         gap: 2rem;
     }
     
-    .game-hero {
-        padding: 0 0.5rem;
-        height: 15vh;
-        min-height: 200px;
-    }
-    
-    .game-footer {
-        margin-left: 0;
-        width: 100%;
-    }
-    
     .mission-nav-header h2 {
         font-size: 1.2rem;
     }
@@ -2809,7 +2769,10 @@ button:focus {
         font-size: 0.85rem;
     }
     
+        font-size: 0.65rem;
+        padding: 0.15rem 0.4rem;
+    }
+    
     .main-content .game-card {
         margin-bottom: 0;
     }
-}
