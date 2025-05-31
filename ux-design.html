@@ -30,63 +30,60 @@
 
         <section class="portfolio-grid">
             <!-- Project 1 -->
-            <article class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="image/ipet-front.png" alt="iPet - Pet Interpreter App">
+            <a href="UX-project-1.html" class="portfolio-item-link">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="image/ipet-front.png" alt="iPet - Pet Interpreter App">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="project-category">Mobile App UX Design</span>
+                        <h2>iPet Pet Interpreter</h2>
+                        <p class="project-description">iPet is an AI-powered app designed to help pet owners interpret their pets' behaviors and provide effective care. The app fosters deeper pet-owner bonds, promotes pet health, and offers intuitive, user-friendly interactions.</p>
+                        <div class="project-tags">
+                            <span class="tag">User Research</span>
+                            <span class="tag">Usability Testing</span>
+                            <span class="tag">UI/UX Design</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-content">
-                    <p class="project-category">Mobile App UX Design</p>
-                    <h2>iPet Pet Interpreter</h2>
-                    <p class="project-description">iPet is an AI-powered app designed to help pet owners interpret their pets' behaviors 
-                        and provide effective care. The app fosters deeper pet-owner bonds, promotes pet health, 
-                        and offers intuitive, user-friendly interactions.</p>
-                    <ul class="project-highlights">
-                        <li>User Research</li>
-                        <li>Usability Testing</li>
-                        <li>Figma Prototyping</li>
-                        <li>Graphic Design</li>
-                    </ul>
-                    <a href="UX-project-1.html" class="view-project">View Case Study →</a>
-                </div>
-            </article>
+            </a>
 
             <!-- Project 2 -->
-            <article class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="image/Elections Ontario Thumbnail.png" alt="Service Design">
+            <a href="ux-service-design.html" class="portfolio-item-link">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="image/Elections Ontario Thumbnail 2.png" alt="Service Design">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="project-category">Service Design</span>
+                        <h2>Elections Ontario <br> Accessibility Overhaul</h2>
+                        <p class="project-description">Work In Progress</p>
+                        <div class="project-tags">
+                            <span class="tag">Service Mapping</span>
+                            <span class="tag">Exploratory Research</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-content">
-                    <p class="project-category">Service Design</p>
-                    <h2>Elections Ontario Accessibility</h2>
-                    <p class="project-description">Work In Progress</p>
-                    <ul class="project-highlights">
-                        <li>Service Mapping</li>
-                        <li>Generative Research</li>
-                        <li>Stakeholder Managing</li>
-                        <li>Imeplementation Plan</li>
-                    </ul>
-                    <a href="service-design.html" class="view-project">View Case Study →</a>
-                </div>
-            </article>
+            </a>
 
             <!-- Project 3 -->
-            <article class="portfolio-item">
-                <div class="portfolio-image">
-                    <img src="placeholder-ux-3.jpg" alt="PitchIn App Thumbnail">
+            <a href="#" class="portfolio-item-link">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="placeholder-ux-3.jpg" alt="PitchIn App Thumbnail">
+                    </div>
+                    <div class="portfolio-content">
+                        <span class="project-category">Mobile App UX Design</span>
+                        <h2>PitchIn</h2>
+                        <p class="project-description">Work In Progress</p>
+                        <div class="project-tags">
+                            <span class="tag">UI Design</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">Design System</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-content">
-                    <p class="project-category">Mobile App UX Design</p>
-                    <h2>PitchIn</h2>
-                    <p class="project-description">Work In Progress</p>
-                    <ul class="project-highlights">
-                        <li>UI Design</li>
-                        <li>User Testing</li>
-                        <li>Responsive Design</li>
-                        <li>Design System</li>
-                    </ul>
-                    <a href="#" class="view-project">View Case Study →</a>
-                </div>
-            </article>
+            </a>
         </section>
     </main>
 
@@ -122,7 +119,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.portfolio-item').forEach(item => {
+        document.querySelectorAll('.portfolio-item-link').forEach(item => {
             observer.observe(item);
         });
     </script>
