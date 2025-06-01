@@ -49,6 +49,10 @@
                     09.2024 - 12.2024
                 </div>
                 <div class="info-item">
+                    <h3 class="subsection-title">Team</h3>
+                    5 Designers
+                </div>
+                <div class="info-item">
                     <h3 class="subsection-title">Tools</h3>
                     Figma, Adobe Illustrator
                 </div>
@@ -67,31 +71,32 @@
                     </div>
                 </div>
                 
-                <div class="overview-context">
-                    <h3 class="subsection-title">Context</h3>
-                    <p>User Experience Design Course Project - INF1602 - Fundamentals of UX<br>
-                    Master of Information program, University of Toronto</p>
-                </div>
-                
-                <div class="overview-context">
-                    <h3 class="subsection-title">Team</h3>
-                    <p>Xinglong Zhou (Me), Runqing Zhang, Yonghan Liu, Yijing Shen, Lyle Guo, Kaiyue Zhou</p>
-                </div>
                 
                 <div class="role-section">
                     <h3 class="subsection-title">My Role in Detail</h3>
-                    <ul class="feature-list">
-                        <li>Studio leader of prototype ideation and usability testing.</li>
-                        <li>Researched the core value that users are gaining from pet interactions.</li>
-                        <li>Led the ideation of wireframe creation.</li>
-                        <li>Conducted qualitative interviews with 2 pet owners.</li>
-                        <li>Wrote an analytical report based on the interview results.</li>
-                        <li>Conducted usability testing with 4 participants.</li>
-                        <li>Iterated on wireframes based on usability testing feedback.</li>
-                        <li>Created mood board and style tile for visual design.</li>
-                        <li>Participated in the graphic design of the high-fidelity prototype.</li>
-                        <li>Helped team members troubleshoot technical challenges on Figma.</li>
-                    </ul>
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <ul class="feature-list">
+                                <li>Studio leader of prototype ideation and usability testing.</li>
+                                <li>Researched the core value of pet interactions.</li>
+                                <li>Led the ideation of wireframe creation.</li>
+                                <li>Conducted qualitative interviews with 2 pet owners.</li>
+                                <li>Wrote an analytical report based on the interview results.</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="overview-item overview-item-margin">
+                            <ul class="feature-list">
+                                <li>Conducted usability testing with 4 participants.</li>
+                                <li>Iterated on wireframes based on usability testing feedback.</li>
+                                <li>Created mood board and style tile for visual design.</li>
+                                <li>Participated in the graphic design of the high-fidelity prototype.</li>
+                                <li>Helped team members troubleshoot technical challenges on Figma.</li>
+                            </ul>
+                        </div>
+                    
+                    
+
                 </div>
             </div>
         </div>
@@ -224,7 +229,7 @@
                     .step-circle p {
                         margin: 0;
                         padding: 10px;
-                        font-size: 0.9rem;
+                        font-size: 1rem;
                         font-weight: normal;
                     }
                     
@@ -276,27 +281,32 @@
         <!-- Problem Definition -->
         <div class="section">
             <h2 class="section-title">Problem Definition</h2>
-            <div class="section-content">
-                <h3 class="subsection-title" style="margin-bottom: 10px;">Key Area of Focus</h3>
-                <div class="research-questions-list" style="margin-bottom: 40px;">
-                    <div class="research-item">
-                        <p>
-                            <strong>Interpreting Pet Behavior:</strong> 
-                            <p class = "research-item">Identify challenges in understanding pets' emotions, common misinterpretations, and frustrations.</p>
-                        </p>
-                        <p>
-                            <strong>Experience with Pet Technologies:</strong> 
-                            <p class = "research-item">Explore usability issues, data reliability, and communication limitations in current tools.</p>
-                        </p>
-                        <p>
-                            <strong>Improving Pet Communication:</strong> 
-                            <p class = "research-item">Uncover desired features and expectations for technology to enhance pet-owner bonds.</p>
-                        </p>
-                    </div>
-                </div>
+            <div class ="section-content">
                 <h3 class="subsection-title" style="margin-bottom: 10px;">Problem Statement</h3>    
                 <p class = "research-item" style="padding-left: 20px;">Pet owners struggle to understand their pets' behaviors and needs, leading to poor pet care and frustration.
                 </p>
+            </div>
+            <div class="section-content">
+                <h3 class="subsection-title" style="margin-bottom: 10px;">Key Area of Focus</h3>
+
+                <div class="focus-areas-container">
+                    <div class="focus-area-card">
+                        <h4>Interpreting Pet Behavior:</h4>
+                        <p>Identify challenges in understanding pets' emotions, common misinterpretations, and frustrations.</p>
+                    </div>
+                    
+                    <div class="focus-area-card">
+                        <h4>Experience with Pet Technologies:</h4>
+                        <p>Explore usability issues, data reliability, and communication limitations in current tools.</p>
+                    </div>
+                    
+                    <div class="focus-area-card">
+                        <h4>Improving Pet Communication:</h4>
+                        <p>Uncover desired features and expectations for technology to enhance pet-owner bonds.</p>
+                    </div>
+                </div>
+                
+
             </div>
         </div>
 
@@ -304,13 +314,51 @@
         <div class="section">
             <h2 class="section-title">User Research</h2>
             <div class="section-content">
-                <p>We conducted 12 interviews with a diverse group of potential users and stakeholders, including:</p>
-                <ul class="feature-list">
-                    <li>Pet owners (Primary Audience)</li>
-                    <li>Pet Industry Professionals</li>
-                </ul>
+                <div class="research-intro">
+                    <div class="research-intro-text">
+                        <h3 class="subsection-title">Research Approach</h3>
+                        <p class="approach-description">We conducted <span class="highlight-text">structured interviews</span> with a diverse group of potential users and stakeholders to understand their needs, pain points, and expectations.</p>
+                        
+                        <div class="audience-groups">
+                            <div class="audience-group">
+                                <div class="audience-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="audience-details">
+                                    <h4>Pet Owners</h4>
+                                    <p>Primary audience with direct experience of pet behavior challenges</p>
+                                </div>
+                            </div>
+                            
+                            <div class="audience-group">
+                                <div class="audience-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="audience-details">
+                                    <h4>Industry Professionals</h4>
+                                    <p>Veterinarians and pet care specialists with expert knowledge</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="research-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Interviews</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">User Groups</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Key Themes</span>
+                        </div>
+                    </div>
+                </div>
                 
-                <h3 class="subsection-title">Key Findings from User Interviews</h3>
+                <h3 class="subsection-title section-divider">Key Findings from User Interviews</h3>
                 
                 <div class="user-quotes-container">
                     <div class="user-quote">
@@ -341,23 +389,26 @@
                     </div>
                 </div>
                 
-                <h3 class="subsection-title">Research Insights</h3>
+                <h3 class="subsection-title section-divider">Research Insights</h3>
                 <div class="insights-container">
                     <div class="insight-item">
+                        <div class="insight-icon"><i class="fas fa-clipboard-check"></i></div>
                         <h4>Tracking & Monitoring</h4>
                         <p>Pet owners use various tools to track pet activities and monitor their well-being, from simple notebooks to cameras.</p>
                     </div>
                     <div class="insight-item">
+                        <div class="insight-icon"><i class="fas fa-heartbeat"></i></div>
                         <h4>Health Concerns</h4>
                         <p>Sudden health issues are difficult to detect early without expensive tests, causing frustration and worry.</p>
                     </div>
                     <div class="insight-item">
+                        <div class="insight-icon"><i class="fas fa-users"></i></div>
                         <h4>Information Sources</h4>
                         <p>Owners rely on online communities and forums for advice, but are skeptical about the accuracy of pet communication apps.</p>
                     </div>
                 </div>
                 
-                <h3 class="subsection-title">Research Analysis</h3>
+                <h3 class="subsection-title section-divider">Research Analysis</h3>
                 <div class="research-analysis">
                     <h4 class="analysis-subtitle">Coding</h4>
                     <p>We analyzed and coded the interview scripts, breaking down complex issues into smaller thematic units.</p>
@@ -403,11 +454,12 @@
         <div class="section">
             <h2 class="section-title">Affinity Diagram</h2>
             <div class="section-content">
-                <p>We created an affinity diagram to cluster similar codes into themes, enabling us to identify common problems and concerns faced by our potential users. This process allowed us to extract analytical value from the interview scripts, transforming raw textual content into actionable design insights. By visually organizing the data, the affinity diagram also helped us uncover deeper patterns and relationships that informed our design decisions.</p>
+                <p>We created an affinity diagram to cluster similar codes into themes, enabling us to identify common problems and concerns faced by our potential users. </p>
                 
                 <div class="image-container">
                     <img src="image/ipet-affinit diagram.png" alt="Affinity Diagram" class="image-container">
                 </div>
+                <p>This process allowed us to extract analytical value from the interview scripts, transforming raw textual content into actionable design insights. By visually organizing the data, the affinity diagram also helped us uncover deeper patterns and relationships that informed our design decisions.</p>
             </div>
         </div>
 
@@ -620,18 +672,65 @@
             <h2 class="section-title">User Journey Mapping</h2>
             <div class="section-content">
                 <h3 class="subsection-title">Persona</h3>
-                <strong style="font-size:1.1rem;">Anna</strong>
-                <div style="padding-left: 10px; margin-bottom: 30px;">
-                    <p>Age: 35 years old</p>
-                    <p>Occupation: Full-time data analyst</p>
-                    <p>Location: A city apartment with her husband, a dog and a cat.</p>
-                    <p>Interests: Love pets, biking</p>
-                    <p>Work Situation: Relatively intense workload, leaving limited energy for pets.</p>
-                    <p>Pet Experience: A sufficient understanding of pet behaviour and regularly seeks new pet care tips.</p>
-                    <p>Relationship with Pets: Mostly harmonious, with occasional minor conflicts.</p>
+                
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-image">
+                            <img src="image/persona figure 1.png" alt="Anna Persona" class="persona-avatar">
+                        </div>
+                        <div class="persona-intro">
+                            <h3 class="persona-name">Anna</h3>
+                            <p class="persona-tagline">"I love my pets, but sometimes I wish I could better understand what they need."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="persona-details">
+                        <div class="persona-info-grid">
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-user"></i></div>
+                                <h4>Age</h4>
+                                <p>35 years old</p>
+                            </div>
+                            
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                                <h4>Occupation</h4>
+                                <p>Full-time data analyst</p>
+                            </div>
+                            
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <h4>Location</h4>
+                                <p>City apartment with husband, a dog and a cat</p>
+                            </div>
+                            
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-heart"></i></div>
+                                <h4>Interests</h4>
+                                <p>Pets, biking</p>
+                            </div>
+                        </div>
+                        
+                        <div class="persona-traits">
+                            <div class="trait-item">
+                                <h4><i class="fas fa-business-time"></i> Work Situation</h4>
+                                <p>Relatively intense workload, leaving limited energy for pets.</p>
+                            </div>
+                            
+                            <div class="trait-item">
+                                <h4><i class="fas fa-paw"></i> Pet Experience</h4>
+                                <p>A sufficient understanding of pet behaviour and regularly seeks new pet care tips.</p>
+                            </div>
+                            
+                            <div class="trait-item">
+                                <h4><i class="fas fa-heart"></i> Relationship with Pets</h4>
+                                <p>Mostly harmonious, with occasional minor conflicts.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <h3 class="subsection-title">As-is User Journey Map</h3>
+                <h3 class="subsection-title section-divider">As-is User Journey Map</h3>
                 <div class="image-container">
                     <img src="image/ipet-As is User Journey Map.png" alt="User Journey Mapping" class="image-container">
                 </div>
@@ -742,28 +841,60 @@
         <div class="section">
             <h2 class="section-title">Usability Testing & Iteration</h2>
             <h3>Methodology and Results</h3>
-            <div class="section-content">
-                <p>We conducted five in-person usability testing sessions: one with an expert and four with classmates. The goal was to assess whether users could comprehend the application's structure and complete the assigned tasks successfully.</p>
-                <br>
-
-                <p>From careful observation and user feedback, we identified the following key insights:</p>
-                    <div class="result-list">
-                        <div class="result-item">
-                            <ul>
-                                <li><strong>Complex Application Structure</strong> <br>
-                                    Users found the overall structure of the application overly complicated and difficult to navigate.</li>
-                                <li><strong>Generative AI Learning Curve</strong><br>
-                                    The integration of generative AI technology posed a significant challenge, particularly for users unfamiliar with tools like ChatGPT.</li>
-                                <li><strong>AI Model Selection Confusion</strong><br>
-                                    The AI model selection feature was especially difficult for users to understand, creating confusion during the testing process.</li>  
-                                <li><strong>Overwhelming Interaction Buttons</strong><br>
-                                    The interface had too many interaction buttons, leaving users unsure about their functionality. This was a recurring point of feedback during the sessions.</li>
-                            </ul>
-                        </div>
+            <div class="testing-methodology-section">
+                <div class="methodology-header">
+                    <div class="methodology-icon">
+                        <i class="fas fa-users"></i>
                     </div>
+                    <h4 class="methodology-title">Usability Testing Approach</h4>
+                </div>
+                
+                <p class="methodology-description">We conducted five in-person usability testing sessions: one with an expert and four with classmates. The goal was to assess whether users could comprehend the application's structure and complete the assigned tasks successfully.</p>
+                
+                <div class="testing-stats">
+                    <div class="stat-box">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Testing Sessions</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Expert Review</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">User Tests</span>
+                    </div>
+                </div>
+                
+                <div class="insights-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Key Insights from Testing</h4>
+                </div>
+                
+                <div class="testing-insights-grid">
+                    <div class="insight-card">
+                        <h5>Complex Application Structure</h5>
+                        <p>Users found the overall structure of the application overly complicated and difficult to navigate.</p>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <h5>Generative AI Learning Curve</h5>
+                        <p>The integration of generative AI technology posed a significant challenge, particularly for users unfamiliar with tools like ChatGPT.</p>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <h5>AI Model Selection Confusion</h5>
+                        <p>The AI model selection feature was especially difficult for users to understand, creating confusion during the testing process.</p>
+                    </div>
+                    
+                    <div class="insight-card">
+                        <h5>Overwhelming Interaction Buttons</h5>
+                        <p>The interface had too many interaction buttons, leaving users unsure about their functionality. This was a recurring point of feedback during the sessions.</p>
+                    </div>
+                </div>
             </div>
 
-            <h3>Iteration Process</h3>
+            <h3>Iteration Outcome</h3>
             <div class="section-content">
                 <p>Using feedback from usability testing, we refined the wireframes to create interfaces that are more intuitive and user-friendly. The major changes included:</p>
                     <div class="result-list">
