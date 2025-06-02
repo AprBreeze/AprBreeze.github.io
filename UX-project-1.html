@@ -13,10 +13,10 @@
 <body>
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">Xinglong's Portfolio</div>
+            <a style="text-decoration: none;" href="ux-design.html" class="logo">Xinglong</a>
             <ul class="nav-links">
-                <li><a href="index.html">About Me</a></li>
                 <li><a href="ux-design.html">UX Design</a></li>
+                <li><a href="index.html">About Me</a></li>
             </ul>
         </nav>
     </header>
@@ -37,7 +37,7 @@
         
 
         <div class="section">
-            <h2 class="section-title">UofT Masters' Course Project</h2>
+            <h2 class="section-title" style="padding-top: 10px;">UofT Masters' Course Project</h2>
 
             <div class="project-info">
                 <div class="info-item">
@@ -116,141 +116,11 @@
 
 
         <div class="section">
-            <h2 class="section-title">Design Stages</h2>
+            <h2 class="section-title">Design Process Overview</h2>
             <div class="section-content">
                 <div class="design-process-timeline">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <div class="step-circle">
-                            <p>Problem Discovery</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-circle">
-                            <p>Problem Definition</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <div class="step-circle">
-                            <p>User Research</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <div class="step-circle">
-                            <p>Research Analysis</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">5</div>
-                        <div class="step-circle">
-                            <p>User Journey Mapping</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">6</div>
-                        <div class="step-circle">
-                            <p>Solution Definition</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">7</div>
-                        <div class="step-circle">
-                            <p>Wireframe Ideation</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">8</div>
-                        <div class="step-circle">
-                            <p>Usability Testing & Review</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">9</div>
-                        <div class="step-circle">
-                            <p>Graphic Design</p>
-                        </div>
-                    </div>
-                    
-                    <div class="process-step">
-                        <div class="step-number">10</div>
-                        <div class="step-circle">
-                            <p>Prototype Production</p>
-                        </div>
-                    </div>
+                    <img src="image/ipet-design process.svg" alt="design-process-timeline" class="image-container">
                 </div>
-                
-                <style>
-                    .design-process-timeline {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                        padding: 20px 0;
-                    }
-                    
-                    .process-step {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        width: 20%;
-                        margin-bottom: 20px;
-                        position: relative;
-                    }
-                    
-                    .step-number {
-                        color: #FF9F40;
-                        font-weight: bold;
-                        margin-bottom: 10px;
-                        font-size: 1.2rem;
-                    }
-                    
-                    .step-circle {
-                        background-color: white;
-                        border-radius: 50%;
-                        width: 120px;
-                        height: 120px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                    }
-                    
-                    .step-circle p {
-                        margin: 0;
-                        padding: 10px;
-                        font-size: 1rem;
-                        font-weight: normal;
-                    }
-                    
-                    @media (max-width: 992px) {
-                        .process-step {
-                            width: 33.33%;
-                        }
-                    }
-                    
-                    @media (max-width: 768px) {
-                        .process-step {
-                            width: 50%;
-                        }
-                    }
-                    
-                    @media (max-width: 480px) {
-                        .process-step {
-                            width: 100%;
-                        }
-                    }
-                </style>
             </div>
         </div>
 
@@ -277,6 +147,82 @@
                 </div>
             </div>
         </div>
+
+        <!-- User Journey Mapping -->
+        <div class="section">
+            <h2 class="section-title">User Journey Mapping</h2>
+            <div class="section-content">
+                <h3 class="subsection-title">Persona</h3>
+                
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-image">
+                            <img src="image/persona figure 1.png" alt="Anna Persona" class="persona-avatar">
+                        </div>
+                        <div class="persona-intro">
+                            <h3 class="persona-name">Anna</h3>
+                            <p class="persona-tagline">"I love my pets, but sometimes I wish I could better understand what they need."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="persona-details">
+                        <div class="persona-info-grid">
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-user"></i></div>
+                                <h4>Age</h4>
+                                <p>35 years old</p>
+                            </div>
+                            
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                                <h4>Occupation</h4>
+                                <p>Full-time data analyst</p>
+                            </div>
+                            
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <h4>Location</h4>
+                                <p>City apartment with husband, a dog and a cat</p>
+                            </div>
+                            
+                            <div class="persona-info-item">
+                                <div class="info-icon"><i class="fas fa-heart"></i></div>
+                                <h4>Interests</h4>
+                                <p>Pets, biking</p>
+                            </div>
+                        </div>
+                        
+                        <div class="persona-traits">
+                            <div class="trait-item">
+                                <h4><i class="fas fa-business-time"></i> Work Situation</h4>
+                                <p>Relatively intense workload, leaving limited energy for pets.</p>
+                            </div>
+                            
+                            <div class="trait-item">
+                                <h4><i class="fas fa-paw"></i> Pet Experience</h4>
+                                <p>A sufficient understanding of pet behaviour and regularly seeks new pet care tips.</p>
+                            </div>
+                            
+                            <div class="trait-item">
+                                <h4><i class="fas fa-heart"></i> Relationship with Pets</h4>
+                                <p>Mostly harmonious, with occasional minor conflicts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title section-divider">As-is User Journey Map</h3>
+                <div class="image-container">
+                    <img src="image/ipet-As is User Journey Map.png" alt="User Journey Mapping" class="image-container">
+                </div>
+
+                <h3 class="subsection-title">To-be User Journey Map</h3>
+                <div class="image-container">
+                    <img src="image/ipet-To be User Journey Map.png" alt="User Journey Mapping" class="image-container">
+                </div>
+            </div>
+        </div>
+
 
         <!-- Problem Definition -->
         <div class="section">
@@ -314,9 +260,9 @@
         <div class="section">
             <h2 class="section-title">User Research</h2>
             <div class="section-content">
+                <h3 class="subsection-title">Research Approach</h3>
                 <div class="research-intro">
                     <div class="research-intro-text">
-                        <h3 class="subsection-title">Research Approach</h3>
                         <p class="approach-description">We conducted <span class="highlight-text">structured interviews</span> with a diverse group of potential users and stakeholders to understand their needs, pain points, and expectations.</p>
                         
                         <div class="audience-groups">
@@ -451,8 +397,8 @@
             </div>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">Affinity Diagram</h2>
+        <div class="research-analysis">
+            <h4 class="analysis-subtitle">Affinity Diagram</h4>
             <div class="section-content">
                 <p>We created an affinity diagram to cluster similar codes into themes, enabling us to identify common problems and concerns faced by our potential users. </p>
                 
@@ -465,7 +411,7 @@
 
         <!-- Research Report Section -->
         <div class="section">
-            <h2 class="section-title">Research Report</h2>
+            <h3 class="subsection-title section-divider">Research Report</h3>
             <div class="section-content">
                 <p>After coding all the scripts, we consolidated each team member's analyses to produce a comprehensive research report. From the data, we identified seven major themes that emerged from the coding process.</p>
                 
@@ -667,86 +613,12 @@
         
         
 
-        <!-- User Journey Mapping -->
-        <div class="section">
-            <h2 class="section-title">User Journey Mapping</h2>
-            <div class="section-content">
-                <h3 class="subsection-title">Persona</h3>
-                
-                <div class="persona-card">
-                    <div class="persona-header">
-                        <div class="persona-image">
-                            <img src="image/persona figure 1.png" alt="Anna Persona" class="persona-avatar">
-                        </div>
-                        <div class="persona-intro">
-                            <h3 class="persona-name">Anna</h3>
-                            <p class="persona-tagline">"I love my pets, but sometimes I wish I could better understand what they need."</p>
-                        </div>
-                    </div>
-                    
-                    <div class="persona-details">
-                        <div class="persona-info-grid">
-                            <div class="persona-info-item">
-                                <div class="info-icon"><i class="fas fa-user"></i></div>
-                                <h4>Age</h4>
-                                <p>35 years old</p>
-                            </div>
-                            
-                            <div class="persona-info-item">
-                                <div class="info-icon"><i class="fas fa-briefcase"></i></div>
-                                <h4>Occupation</h4>
-                                <p>Full-time data analyst</p>
-                            </div>
-                            
-                            <div class="persona-info-item">
-                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                <h4>Location</h4>
-                                <p>City apartment with husband, a dog and a cat</p>
-                            </div>
-                            
-                            <div class="persona-info-item">
-                                <div class="info-icon"><i class="fas fa-heart"></i></div>
-                                <h4>Interests</h4>
-                                <p>Pets, biking</p>
-                            </div>
-                        </div>
-                        
-                        <div class="persona-traits">
-                            <div class="trait-item">
-                                <h4><i class="fas fa-business-time"></i> Work Situation</h4>
-                                <p>Relatively intense workload, leaving limited energy for pets.</p>
-                            </div>
-                            
-                            <div class="trait-item">
-                                <h4><i class="fas fa-paw"></i> Pet Experience</h4>
-                                <p>A sufficient understanding of pet behaviour and regularly seeks new pet care tips.</p>
-                            </div>
-                            
-                            <div class="trait-item">
-                                <h4><i class="fas fa-heart"></i> Relationship with Pets</h4>
-                                <p>Mostly harmonious, with occasional minor conflicts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="subsection-title section-divider">As-is User Journey Map</h3>
-                <div class="image-container">
-                    <img src="image/ipet-As is User Journey Map.png" alt="User Journey Mapping" class="image-container">
-                </div>
-
-                <h3 class="subsection-title">To-be User Journey Map</h3>
-                <div class="image-container">
-                    <img src="image/ipet-To be User Journey Map.png" alt="User Journey Mapping" class="image-container">
-                </div>
-            </div>
-        </div>
 
         <!-- Solution Definition -->
         <div class="section">
             <h2 class="section-title">Solution Definition</h2>
             <div class="section-content">
-                <h3>Our Goals</h3>
+                <h3>Our solution aims to...</h3>
                 <div class="result-list">
                     <div class="result-item">
                         <ul>
@@ -765,7 +637,7 @@
         </div>
         
         <div class="section">
-            <h2 class="section-title">Ideation</h2>
+            <h2 class="section-title">Solution Ideation</h2>
             <div class="section-content">
                 <p>Our feature ideation began with Crazy 8s brainstorming. We then assessed each feature using a priority grid, ranking them based on anticipated effectiveness and implementation effort to determine development priorities.</p>
                 <div class="image-row">
@@ -792,8 +664,8 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title">Wireframe Ideation</h2>
-            <h3>Ideation Process</h3>
+            <h2 class="section-title">Wireframe Prototype</h2>
+            <h3>Ideation and Consolidation</h3>
             <div class="section-content">
             <p>Each team member created their own wireframes from sketches to Figma wireframes, and we collaboratively reviewed and reflected on each design. We incorporated the strengths, refined weaker elements, and combined our insights to produce the first version of the wireframe.</p>
         </div>
@@ -894,35 +766,113 @@
                 </div>
             </div>
 
-            <h3>Iteration Outcome</h3>
+            <h3>Iteration</h3>
             <div class="section-content">
                 <p>Using feedback from usability testing, we refined the wireframes to create interfaces that are more intuitive and user-friendly. The major changes included:</p>
                     <div class="result-list">
                         <div class="result-item">
                             <ul>
-                                <li><strong>Simplified Features</strong> <br>
+                                <li><span class="highlight-text">Simplified Features</span> <br>
                                     Consolidated functionality into a single AI model focused solely on pet behaviour interpretation.</li>
-                                <li><strong>Highlighted Core Functions</strong><br>
+                                <li><span class="highlight-text">Highlighted Core Functions</span><br>
                                     Featured frequently used functions on the home page to clearly communicate the app's primary purpose.</li>
-                                <li><strong>Removed Secondary Features</strong><br>
+                                <li><span class="highlight-text">Removed Secondary Features</span><br>
                                     Removed secondary features, such as "upload" and "take pictures," to avoid distractions from the app's main goal.</li>  
-                                <li><strong>Restructured Navigation</strong><br>
+                                <li><span class="highlight-text">Restructured Navigation</span><br>
                                     Redesigned the navigation flow to align with intuitive usage logic: See the pet → Pet interpretation → Further analysis → Share.</li>
-                                <li><strong>Reduced Interaction Buttons</strong><br>
+                                <li><span class="highlight-text">Reduced Interaction Buttons</span><br>
                                     Combined and reorganized interactive buttons across pages to reduce users' mental load.</li>
-                                <li><strong>Enhanced Icon Clarity</strong><br>
+                                <li><span class="highlight-text">Enhanced Icon Clarity</span><br>
                                     Improved icon design to minimize visual ambiguity and ensure clear communication of their functions.</li>
                                </ul>
                         </div>
                     </div>
             </div>
+
+            <h3>Impact of Iteration</h3>
+            
+            <div class="metrics-comparison">
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-color before"></div>
+                        <span>Before</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color after"></div>
+                        <span>After</span>
+                    </div>
+                </div>
+                
+                <div class="vertical-chart-container">
+                    <div class="metric-group">
+                        <div class="bars-vertical">
+                            <div class="bar-vertical before" data-height="100px">
+                                <span class="bar-label-vertical">100%</span>
+                            </div>
+                            <div class="bar-vertical after positive" data-height="140px">
+                                <span class="bar-label-vertical">140%</span>
+                            </div>
+                        </div>
+                        <div class="metric-name">Task Completion Rate</div>
+                    </div>
+                    
+                    <div class="metric-group">
+                        <div class="bars-vertical">
+                            <div class="bar-vertical before" data-height="100px">
+                                <span class="bar-label-vertical">100%</span>
+                            </div>
+                            <div class="bar-vertical after negative" data-height="40px">
+                                <span class="bar-label-vertical">40%</span>
+                            </div>
+                        </div>
+                        <div class="metric-name">Time to Complete Task</div>
+                    </div>
+                    
+                    <div class="metric-group">
+                        <div class="bars-vertical">
+                            <div class="bar-vertical before" data-height="100px">
+                                <span class="bar-label-vertical">100%</span>
+                            </div>
+                            <div class="bar-vertical after positive" data-height="150px">
+                                <span class="bar-label-vertical">150%</span>
+                            </div>
+                        </div>
+                        <div class="metric-name">Navigation Success</div>
+                    </div>
+                    
+                    <div class="metric-group">
+                        <div class="bars-vertical">
+                            <div class="bar-vertical before" data-height="100px">
+                                <span class="bar-label-vertical">100%</span>
+                            </div>
+                            <div class="bar-vertical after negative" data-height="40px">
+                                <span class="bar-label-vertical">40%</span>
+                            </div>
+                        </div>
+                        <div class="metric-name">User Errors</div>
+                    </div>
+                    
+                    <div class="metric-group">
+                        <div class="bars-vertical">
+                            <div class="bar-vertical before" data-height="100px">
+                                <span class="bar-label-vertical">100%</span>
+                            </div>
+                            <div class="bar-vertical after positive" data-height="160px">
+                                <span class="bar-label-vertical">160%</span>
+                            </div>
+                        </div>
+                        <div class="metric-name">User Confidence</div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <!-- Graphic Design -->
         <div class="section">
+            <h2 class="section-title">High-Fidelity Prototype</h2>
             <div class="horizontal-section">
                 <div class="content-wrapper">
-                    <h2 class="section-title">Graphic Design</h2>
                     <h3>Mood Board</h3>
                     <p>This mood board captured our app's desired emotions and atmosphere, guiding our graphic style and inspiring key design decisions like warm colors and soft edges.</p>
                 </div>
@@ -932,11 +882,9 @@
             </div>
 
             <div class="section">
-                <div class="horizontal-section">
-                    <div class="content-wrapper">
+                <div class="content-section">
                         <h3>Style Tiles</h3>
                         <p>Style tiles unified our app's visual identity by consolidating fonts, colors, and button designs, which also streamlined prototype creation.</p>
-                    </div>
                     <div class="image-container">
                         <img src="image/ipet-styletile.png" alt="ipet-style-tiles" class="image-container">
                     </div>
@@ -953,7 +901,7 @@
 
         <!-- Prototype Production -->
         <div class="section">
-            <h2 class="section-title">Prototype Production</h2>
+            <h3>Graphic Design</h3>
             <div class="prototype-showcase">
                 <div class="prototype-content">
                     <img src="image/ipet-product.png" alt="iPet App Prototype" class="image-container">
@@ -963,7 +911,7 @@
 
         <!-- Sequential Storyboard -->
         <div class="section">
-            <h2 class="section-title">Sequencial Storyboard</h2>
+            <h3>App Flow</h3>
             <div class="section-content">
                 <div class="image-container">
                     <img src="image/ipet-Walkthrough 1.png" alt="ipet-walkthrough 1" class="image-container">
@@ -983,19 +931,21 @@
                     <div class="result-list">
                         <div class="result-item">
                             <ul>
-                                <li><strong>End to End Design Practice</strong><br>
-                                    Gained hands-on experience across the entire mobile app design process, from ideation to high-fidelity prototyping.</li>
-                                <li><strong>Cognitive Load</strong> <br>
-                                    Initial feature overload taught us the importance of streamlined, user-centric solutions for minimal cognitive load.</li>
-                                <li><strong>Developing Graphic Design Skills</strong><br>
-                                    Collaborative work and leveraging AI tools significantly enhanced my graphic design skills, improving readability and aesthetic appeal. </li>  
-                                <li><strong>The Value of User Research</strong><br>
-                                    Reaffirmed that understanding user needs is the essential foundation for creating impactful solutions.</li>
-                                <li><strong>Effective Idea Generation</strong><br>
+                                <li><span class="highlight-text">Cognitive Load Management</span> <br>
+                                    Wanting too much often leads to a cluttered interface, high cognitive load and a poor user experience.</li>
+                                <li><span class="highlight-text">Developing Graphic Design Skills</span><br>
+                                    Collaborative work and leveraging AI tools significantly enhanced my graphic design skills, improving readability, setting a consistent style system, and enhancing visual presentation. </li>  
+                                <li><span class="highlight-text">User Testing is Crucial to Break Biased Assumptions</span><br>
+                                    We assumed that users are firmiliar with AI models and features, but in fact, most of them are lost in our initial testing. User testing breaked our biased asumptions and led us to a more intuitive design.</li>
+                                <li><span class="highlight-text">The Value of User Research</span><br>
+                                Reaffirmed that research is such a powerful way to empathize with users and understand their needs.</li>
+                                <li><span class="highlight-text">Effective Idea Generation</span><br>
                                     Repeated Crazy 8s brainstorming sessions proved invaluable for generating diverse, creative, yet actionable solutions.</li>
-                                <li><strong>Crucial Team Collaboration</strong><br>
+                                <li><span class="highlight-text">Crucial Team Collaboration</span><br>
                                     Highlighted the importance of effective discussion and alignment to maintain a cohesive vision, even when perspectives diverged.</li>
-                                </ul>
+                                <li><span class="highlight-text">End to End Design Process</span><br>
+                                    Gained hands-on experience across the entire mobile app design process, from ideation to high-fidelity prototyping.</li>
+
                         </div>
                     </div>
             </div>

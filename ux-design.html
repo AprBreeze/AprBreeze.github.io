@@ -14,13 +14,84 @@
 <body>
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">Xinglong's Portfolio</div>
+            <a style="text-decoration: none;" href="ux-design.html" class="logo">Xinglong</a>
             <ul class="nav-links">
-                <li><a href="index.html">About Me</a></li>
                 <li><a href="ux-design.html" class="active">UX Design</a></li>
+                <li><a href="index.html">About Me</a></li>
             </ul>
         </nav>
     </header>
+
+    <style>
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            z-index: 0;
+        }
+
+        .hero-content {
+            flex: 1;
+            margin: auto;
+            gap: 0.2rem;
+        }
+
+    </style>
+
+    <!-- Interactive Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Interactive Tab Navigation -->
+            <div class="hero-tabs">
+                <button class="tab-button active" data-tab="who-am-i">Who am I?</button>
+                <button class="tab-button" data-tab="ux-designer">UX Designer</button>
+                <button class="tab-button" data-tab="product-designer">Product Designer</button>
+                <button class="tab-button" data-tab="programmer">Developer</button>
+                <button class="tab-button" data-tab="graphic">Graphic Designer</button>
+                <button class="tab-button" data-tab="game-designer">Game Designer</button>
+            </div>
+
+            <!-- Dynamic Content Area -->
+            <div class="hero-content-area">
+                <div class="tab-content active" id="who-am-i">
+                    <h1>Hi, I am Xinglong / Mark who believe great design comes from empathetic listening.</h1>
+                    <p class="hero-links"></p>
+                </div>
+
+                <div class="tab-content" id="ux-designer">
+                    <h1>I break down complex systematic challenges and convert into intuitive user experience impact.</h1>
+                    <p class="hero-links">Examine my conversion rate in <a href="UX-project-1.html" class="content-link">iPet app</a> & <a href="ux-service-design.html" class="content-link">Voting app</a></p>
+                </div>
+                
+                <div class="tab-content" id="product-designer">
+                    <h1>I design meaningful and feasible solutions through deep resonance with users and stakeholders.</h1>
+                    <p class="hero-links">Check my <a href="UX-project-1.html" class="content-link">pet-caring app</a> & <a href="ux-service-design.html" class="content-link">event organizing app</a></p>
+                </div>
+
+                <div class="tab-content" id="programmer">
+                    <h1>While Xinglong != Engineer, Xinglong.capability.understand coding concepts&collab with Engineers returns True.</h1>
+                    <p class="hero-links">In fact, I built <a href="ux-design.html" class="content-link">(this portfolio)</a> from scratch with AI Copilot.</p>
+                </div>
+
+                <div class="tab-content" id="graphic">
+                    <h1>I like to make useful things also look pleasing, because why not?</h1>
+                    <p class="hero-links">See my visual design in <a href="UX-project-1.html" class="content-link">iPet app</a> & <a href="ux-PitchIn.html" class="content-link">PitchIn app</a></p>
+                </div>
+
+                <div class="tab-content" id="game-designer">
+                    <h1>I design gamified incentives to cultivate deep, lasting user engagement and loyalty.</h1>
+                    <p class="hero-links">Discover my <a href="https://www.linkedin.com/feed/update/urn:li:activity:7307816756448821249/" target="_blank" class="content-link">guest lecture at UofT</a> & <a href="ux-PitchIn.html" class="content-link" target="_blank">PitchIn app</a></p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
 
     <main>
         <section class="portfolio-header">
@@ -28,7 +99,7 @@
             <p>Great design comes from empathetic listening.</p>
         </section>
 
-        <section class="portfolio-grid">
+        <section id="portfolio" class="portfolio-grid">
             <!-- Project 1 -->
             <a href="UX-project-1.html" class="portfolio-item-link">
                 <div class="portfolio-item">
@@ -103,6 +174,212 @@
     </footer>
     
     <script>  
+        // Hero Tab Switching with Typing Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            let typingSpeed = 30;
+            let animationQueue = [];
+            let isCurrentlyAnimating = false;
+            let animationAborted = false;
+            
+            // Store original content for all tabs on load
+            const originalContent = new Map();
+            
+            // Initialize original content storage
+            tabContents.forEach(content => {
+                const h1 = content.querySelector('h1');
+                const p = content.querySelector('.hero-links');
+                if (h1 && p) {
+                    originalContent.set(content.id, {
+                        h1HTML: h1.innerHTML,
+                        pHTML: p.innerHTML,
+                        h1Text: h1.textContent || '',
+                        pText: p.textContent || ''
+                    });
+                }
+            });
+            
+            function stopAllAnimations() {
+                // Abort current animation
+                animationAborted = true;
+                
+                // Clear all timeouts
+                animationQueue.forEach(timeout => {
+                    if (timeout) clearTimeout(timeout);
+                });
+                animationQueue = [];
+                
+                // Remove all typing cursors
+                document.querySelectorAll('.typing-cursor').forEach(el => {
+                    el.classList.remove('typing-cursor');
+                });
+                
+                // Reset flags
+                isCurrentlyAnimating = false;
+            }
+            
+            function resetAllTabsToOriginalState() {
+                // Reset all tabs to their original HTML state
+                tabContents.forEach(content => {
+                    const h1 = content.querySelector('h1');
+                    const p = content.querySelector('.hero-links');
+                    const original = originalContent.get(content.id);
+                    
+                    if (h1 && p && original) {
+                        h1.innerHTML = original.h1HTML;
+                        p.innerHTML = original.pHTML;
+                        h1.classList.remove('typing-cursor');
+                        p.classList.remove('typing-cursor');
+                    }
+                });
+            }
+            
+            function animateText(element, targetText, onComplete) {
+                if (!element || animationAborted) {
+                    if (onComplete) onComplete();
+                    return;
+                }
+                
+                element.textContent = '';
+                element.classList.add('typing-cursor');
+                
+                let charIndex = 0;
+                
+                function addNextCharacter() {
+                    // Check if animation was aborted
+                    if (animationAborted) {
+                        element.classList.remove('typing-cursor');
+                        return;
+                    }
+                    
+                    if (charIndex < targetText.length) {
+                        element.textContent += targetText[charIndex];
+                        charIndex++;
+                        
+                        const timeout = setTimeout(addNextCharacter, typingSpeed);
+                        animationQueue.push(timeout);
+                    } else {
+                        // Animation completed
+                        element.classList.remove('typing-cursor');
+                        if (onComplete && !animationAborted) {
+                            onComplete();
+                        }
+                    }
+                }
+                
+                addNextCharacter();
+            }
+            
+            function switchTab(targetTab) {
+                // Check if we're already on this tab - prevent same tab switching
+                const currentActiveButton = document.querySelector('.tab-button.active');
+                if (currentActiveButton && currentActiveButton.getAttribute('data-tab') === targetTab) {
+                    console.log('Already on this tab, ignoring click');
+                    return;
+                }
+                
+                // Stop any current animations
+                stopAllAnimations();
+                
+                // Reset ALL tabs to their original state first
+                resetAllTabsToOriginalState();
+                
+                // Reset animation state
+                animationAborted = false;
+                isCurrentlyAnimating = true;
+                
+                // Update UI immediately
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+                const activeContent = document.getElementById(targetTab);
+                
+                if (!activeButton || !activeContent) {
+                    isCurrentlyAnimating = false;
+                    return;
+                }
+                
+                activeButton.classList.add('active');
+                activeContent.classList.add('active');
+                
+                const h1Element = activeContent.querySelector('h1');
+                const pElement = activeContent.querySelector('.hero-links');
+                const original = originalContent.get(targetTab);
+                
+                if (!h1Element || !pElement || !original) {
+                    isCurrentlyAnimating = false;
+                    return;
+                }
+                
+                // Clear paragraph immediately for animation
+                pElement.textContent = '';
+                
+                // Start animation sequence
+                animateText(h1Element, original.h1Text, function() {
+                    if (animationAborted) {
+                        isCurrentlyAnimating = false;
+                        return;
+                    }
+                    
+                    // Restore h1 HTML and start paragraph animation
+                    h1Element.innerHTML = original.h1HTML;
+                    
+                    animateText(pElement, original.pText, function() {
+                        if (animationAborted) {
+                            isCurrentlyAnimating = false;
+                            return;
+                        }
+                        
+                        // Restore paragraph HTML
+                        pElement.innerHTML = original.pHTML;
+                        isCurrentlyAnimating = false;
+                    });
+                });
+            }
+            
+            // Add click event listeners
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const targetTab = this.getAttribute('data-tab');
+                    if (targetTab) {
+                        switchTab(targetTab);
+                    }
+                });
+            });
+            
+            // Initialize first tab
+            setTimeout(() => {
+                const activeTab = document.querySelector('.tab-button.active');
+                if (activeTab) {
+                    const targetTab = activeTab.getAttribute('data-tab');
+                    if (targetTab) {
+                        switchTab(targetTab);
+                    }
+                }
+            }, 100);
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
         // Add subtle animation for portfolio items on scroll
         const observerOptions = {
             root: null,
