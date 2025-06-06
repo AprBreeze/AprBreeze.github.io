@@ -1,18 +1,74 @@
 // Interactive Flip Cards Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const flipCards = document.querySelectorAll('.flip-card');
-    let revealedCards = 0;
+    const gaugeFill = document.getElementById('gaugeFill');
+    const gaugeText = document.getElementById('gaugeText');
+    const achievementText = document.getElementById('achievementText');
+    const experienceGauge = document.querySelector('.experience-gauge');
+    const achievementPopup = document.getElementById('achievementPopup');
+    
+    let flippedCards = new Set();
+    const totalCards = flipCards.length;
+    
+    // Experience gauge update function
+    function updateExperienceGauge() {
+        const progress = (flippedCards.size / totalCards) * 100;
+        const progressPercent = (flippedCards.size / totalCards * 100).toFixed(2);
+        
+        // Update gauge fill
+        gaugeFill.setAttribute('data-progress', progressPercent);
+        gaugeFill.style.width = progress + '%';
+        
+        // Check if all cards are flipped
+        if (flippedCards.size === totalCards) {
+            // Complete the gauge
+            gaugeFill.classList.add('complete');
+            
+            // Hide the entire gauge after a brief delay
+            setTimeout(() => {
+                experienceGauge.classList.add('complete');
+                
+                // Show popup notification
+                showAchievementPopup();
+            }, 400);
+        }
+    }
+    
+    // Show achievement popup notification
+    function showAchievementPopup() {
+        achievementPopup.classList.add('show');
+        
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+            achievementPopup.classList.remove('show');
+            achievementPopup.classList.add('hide');
+            
+            // Clean up hide class after animation
+            setTimeout(() => {
+                achievementPopup.classList.remove('hide');
+            }, 500);
+        }, 3000);
+    }
     
     // Add click event listeners to each card
     flipCards.forEach((card, index) => {
         card.addEventListener('click', function() {
-            this.classList.toggle('flipped');
-            
-            // Add a subtle sound effect simulation (visual feedback)
-            this.style.transform = 'scale(0.98)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 100);
+            // Only allow flipping if card is not already flipped
+            if (!this.classList.contains('flipped')) {
+                this.classList.add('flipped');
+                flippedCards.add(index);
+                updateExperienceGauge();
+                
+                // Add a celebration effect for each card flip
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+                
+                // Make the card unclickable after flipping
+                this.style.cursor = 'default';
+                this.setAttribute('aria-label', `Fun fact card ${index + 1} revealed.`);
+            }
         });
         
         // Add keyboard accessibility
@@ -23,7 +79,10 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                this.click();
+                // Only trigger click if card is not already flipped
+                if (!this.classList.contains('flipped')) {
+                    this.click();
+                }
             }
         });
     });
@@ -35,6 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 if (!card.classList.contains('flipped')) {
                     card.classList.add('flipped');
+                    flippedCards.add(index);
+                    updateExperienceGauge();
                 }
             }, (index + 1) * 800); // 800ms delay between each card
         });
@@ -90,9 +151,13 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         revealButton.addEventListener('click', function() {
-            flipCards.forEach(card => {
+            flipCards.forEach((card, index) => {
                 if (!card.classList.contains('flipped')) {
-                    card.classList.add('flipped');
+                    setTimeout(() => {
+                        card.classList.add('flipped');
+                        flippedCards.add(index);
+                        updateExperienceGauge();
+                    }, index * 200);
                 }
             });
             this.style.display = 'none';
@@ -106,22 +171,19 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
         
-        // Insert the button after the cards container
-        const cardsContainer = document.querySelector('.cards-container');
-        cardsContainer.parentNode.insertBefore(revealButton, cardsContainer.nextSibling);
+        // Insert the button after the gauge container
+        const gaugeContainer = document.querySelector('.experience-gauge-container');
+        gaugeContainer.parentNode.insertBefore(revealButton, gaugeContainer.nextSibling);
     }
     
     // Uncomment the line below to add a "Reveal All" button
     // createRevealAllButton();
     
     // Track card interactions for analytics (optional)
-    function trackCardInteraction(cardIndex) {
-        // You can add analytics tracking here
-        console.log(`Card ${cardIndex + 1} was flipped`);
+    function trackCardInteraction(cardIndex, isFlipped) {
+        console.log(`Card ${cardIndex + 1} was ${isFlipped ? 'flipped' : 'unflipped'}`);
     }
     
-    // Add tracking to existing click events
-    flipCards.forEach((card, index) => {
-        card.addEventListener('click', () => trackCardInteraction(index));
-    });
+    // Initialize the gauge
+    updateExperienceGauge();
 }); 

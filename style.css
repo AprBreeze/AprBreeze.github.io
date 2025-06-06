@@ -13,10 +13,10 @@
 :root {
     /* Primary Color Palette */
     --primary-color: #ffffff;
-    --secondary-color: #3E8EDE;
+    --secondary-color: #3399ff;
     --accent-color: #FF6B6B;
-    --text-color: #2D3748;
-    --secondary-text-color: #4A4F64;
+    --text-color: #141414;
+    --secondary-text-color: #5d5d5d;
     --background-color: #ffffff;
     --text-muted-color: #959595;
     
@@ -31,7 +31,7 @@
     /* iPet Theme Colors */
     --ipet-primary: #FFC674;
     --ipet-secondary: #FFCB80;
-    --ipet-accent: #FF9F40;
+    --ipet-accent: #fb7d00;
     --ipet-text: #1c1c1c;
     --ipet-light-bg: #FFF9F0;
 
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
     display: flex;
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
     font-family: var(--header-text-font);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 300;
     color: var(--text-color);
     transition: transform 0.3s ease;
@@ -146,6 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     overflow: visible;
     position: relative;
+
 }
 
 .index-highlight {
@@ -169,7 +170,9 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     z-index: 1;
     min-height: calc(90vh - 72px);
+    max-width: 1400px;
     gap: 4rem;
+    margin: 0 auto;
 }
 
 .hero-image-container {
@@ -446,7 +449,7 @@ footer {
    Portfolio Pages
    ========================================================================== */
 .portfolio-header {
-    padding: 4rem 2rem 6rem;
+    padding: 6rem 2rem 6rem;
     background-color: transparent;
     text-align: center;
     position: relative;
@@ -474,7 +477,7 @@ footer {
 }
 
 .portfolio-grid {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 4rem auto;
     padding: 0 2rem;
 }
@@ -491,10 +494,6 @@ footer {
     opacity: 0.8;
 }
 
-.portfolio-item-link:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 4px;
-}
 
 .portfolio-item {
     display: grid;
@@ -568,8 +567,8 @@ footer {
 }
 
 .project-description {
-    color: var(--secondary-text-color);
-    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
     line-height: 1.6;
     font-weight: 300;
     font-size: 1rem;
@@ -810,7 +809,7 @@ footer {
 /* iPet Case Study Container */
 .case-study-container {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 40px 0px;
     position: relative;
 }
@@ -1755,7 +1754,6 @@ button:focus {
     font-size: 2.4rem;
     position: relative;
     padding-bottom: 12px;
-    padding-top: 60px;
     font-weight: 500;
 }
 
@@ -1976,55 +1974,12 @@ button:focus {
     margin: 2rem 0;
 }
 
-.insights-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 30px 0 20px 0;
-    justify-content: flex-start;
-}
-
-.insights-header h4 {
-    font-family: var(--header-text-font);
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin: 0;
-    font-weight: 600;
-    flex-shrink: 0;
-}
-
-.insights-header i {
-    color: var(--ipet-accent);
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
-
-.eo-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo-x {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-.logo-text {
-    font-family: var(--header-text-font);
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-color);
-    line-height: 1.1;
-}
-
 .insights-title {
     font-family: var(--header-text-font);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.3;
 }
 
@@ -2126,16 +2081,11 @@ button:focus {
     }
     
     .insights-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
 @media (max-width: 768px) {
-    .insights-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
     
     .insights-title {
         font-size: 1.3rem;
@@ -2309,6 +2259,11 @@ button:focus {
 .highlight-text {
     color: var(--ipet-accent);
     font-weight: 600;
+}
+
+.highlight {
+    color: var(--ipet-accent);
+    font-weight: 500;
 }
 
 .audience-groups {
@@ -2741,28 +2696,6 @@ button:focus {
     font-weight: 500;
 }
 
-.insights-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 30px 0 20px 0;
-    justify-content: flex-start;
-}
-
-.insights-header h4 {
-    font-family: var(--header-text-font);
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin: 0;
-    font-weight: 600;
-    flex-shrink: 0;
-}
-
-.insights-header i {
-    color: var(--ipet-accent);
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
 
 .testing-insights-grid {
     display: grid;
@@ -3504,3 +3437,322 @@ button:focus {
     .bar-vertical[data-height="150px"] { height: 90px; }
     .bar-vertical[data-height="160px"] { height: 96px; }
 }
+
+/* ==========================================================================
+   Experience Gauge Styling
+   ========================================================================== */
+.experience-gauge-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5rem 0 1rem 0;
+    text-align: center;
+}
+
+.gauge-label {
+    font-family: var(--body-text-font);
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    display: none;
+}
+
+.experience-gauge {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.gauge-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--secondary-color), #4A90E2);
+    border-radius: 12px;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 8px rgba(62, 142, 222, 0.3);
+}
+
+.gauge-fill.complete {
+    background: linear-gradient(90deg, #28a745, #20c997);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+    animation: gaugeGlow 1.5s ease-in-out;
+}
+
+@keyframes gaugeGlow {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(40, 167, 69, 0.6);
+    }
+}
+
+.gauge-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--header-text-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    display: none;
+}
+
+.achievement-text {
+    font-family: var(--header-text-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-top: 0.5rem;
+}
+
+.achievement-text.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    animation: achievementPulse 1s ease-in-out;
+}
+
+@keyframes achievementPulse {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.05);
+    }
+}
+
+/* Gauge fill percentage states */
+.gauge-fill[data-progress="16.67"] { width: 16.67%; }
+.gauge-fill[data-progress="33.33"] { width: 33.33%; }
+.gauge-fill[data-progress="50"] { width: 50%; }
+.gauge-fill[data-progress="66.67"] { width: 66.67%; }
+.gauge-fill[data-progress="83.33"] { width: 83.33%; }
+.gauge-fill[data-progress="100"] { width: 100%; }
+
+/* Responsive adjustments for experience gauge */
+@media (max-width: 768px) {
+    .experience-gauge-container {
+        max-width: 100%;
+    }
+    
+    .experience-gauge {
+        height: 20px;
+        border-radius: 10px;
+    }
+    
+    .gauge-text {
+        font-size: 0.75rem;
+    }
+    
+    .achievement-text {
+        font-size: 1rem;
+    }
+    
+    .gauge-label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-gauge {
+        height: 18px;
+        border-radius: 9px;
+    }
+    
+    .gauge-text {
+        font-size: 0.7rem;
+    }
+    
+    .achievement-text {
+        font-size: 0.95rem;
+    }
+}
+
+.experience-gauge.complete {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: all 0.6s ease;
+}
+
+.achievement-text {
+    font-family: var(--header-text-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-top: 0.5rem;
+    display: none;
+}
+
+/* Achievement Popup Notification */
+.achievement-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--secondary-color), #4A90E2);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(62, 142, 222, 0.3);
+    font-family: var(--header-text-font);
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 10000;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+    max-width: 280px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievement-popup.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.achievement-popup.hide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.achievement-popup::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #3E8EDE, #4A90E2, #3E8EDE);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments for achievement popup */
+@media (max-width: 768px) {
+    .achievement-popup {
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.9rem;
+        padding: 12px 16px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievement-popup {
+        bottom: 15px;
+        right: 15px;
+        font-size: 0.85rem;
+        padding: 10px 14px;
+        max-width: 220px;
+    }
+}
+
+/* ==========================================================================
+   Design Impact Section Styling
+   ========================================================================== */
+.design-impact {
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.impact-title {
+    font-family: var(--header-text-font);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.impact-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.index-metric-value {
+    font-family: var(--header-text-font);
+    font-size: 1.4rem;
+    font-weight: 700;
+    min-width: 94px;
+    text-align: left;
+    line-height: 1;
+    color: var(--secondary-color);
+}
+
+
+.metric-label {
+    font-family: var(--body-text-font);
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Responsive adjustments for design impact */
+@media (max-width: 768px) {
+    .design-impact {
+        margin: 1.2rem 0;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+        min-width: 50px;
+    }
+    
+    .metric-label {
+        font-size: 0.8rem;
+    }
+    
+    .impact-metrics {
+        gap: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .design-impact {
+        margin: 1rem 0;
+    }
+    
+    .metric-item {
+        gap: 0.4rem;
+    }
+    
+    .metric-value {
+        font-size: 1.3rem;
+        min-width: 45px;
+    }
+    
+    .metric-label {
+        font-size: 0.8rem;
+    }
+}
+
