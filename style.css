@@ -947,6 +947,11 @@ footer {
     transition: color 0.3s ease;
 }
 
+.highlight-2 {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
 
 .insights-container {
     display: grid;
