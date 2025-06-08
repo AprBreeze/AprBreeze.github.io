@@ -186,4 +186,100 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize the gauge
     updateExperienceGauge();
+});
+
+// Hover Image Effect Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to create hover image effect for any image with data-hover-image attribute
+    function initializeHoverImageEffect() {
+        const hoverImages = document.querySelectorAll('[data-hover-image]');
+        
+        hoverImages.forEach(image => {
+            const hoverImageSrc = image.getAttribute('data-hover-image');
+            const hoverDescription = image.getAttribute('data-hover-description') || '';
+            
+            // Create tooltip element
+            const tooltip = document.createElement('div');
+            tooltip.className = 'hover-image-tooltip';
+            
+            // Build tooltip content
+            let tooltipContent = `<img src="${hoverImageSrc}" alt="Hover preview">`;
+            if (hoverDescription) {
+                tooltipContent += `<div class="hover-image-description">${hoverDescription}</div>`;
+            }
+            
+            tooltip.innerHTML = tooltipContent;
+            document.body.appendChild(tooltip);
+            
+            // Add hover container class to parent
+            const container = image.closest('.image-container') || image.parentElement;
+            container.classList.add('hover-image-container');
+            
+            // Mouse enter event
+            image.addEventListener('mouseenter', function(e) {
+                tooltip.classList.add('show');
+                updateTooltipPosition(e, tooltip);
+            });
+            
+            // Mouse move event
+            image.addEventListener('mousemove', function(e) {
+                updateTooltipPosition(e, tooltip);
+            });
+            
+            // Mouse leave event
+            image.addEventListener('mouseleave', function() {
+                tooltip.classList.remove('show');
+            });
+        });
+    }
+    
+    // Function to update tooltip position based on mouse coordinates
+    function updateTooltipPosition(event, tooltip) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const offset = 20; // Distance from mouse cursor
+        
+        // Get tooltip dimensions
+        const tooltipRect = tooltip.getBoundingClientRect();
+        const tooltipWidth = tooltipRect.width || 1000;
+        const tooltipHeight = tooltipRect.height || 1000;
+        
+        // Get viewport dimensions
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+        
+        // Calculate initial position (to the right and below the cursor)
+        let left = mouseX + offset;
+        let top = mouseY + offset;
+        
+        // Adjust if tooltip would go off the right edge
+        if (left + tooltipWidth > viewportWidth) {
+            left = mouseX - tooltipWidth - offset;
+        }
+        
+        // Adjust if tooltip would go off the bottom edge
+        if (top + tooltipHeight > viewportHeight) {
+            top = mouseY - tooltipHeight - offset;
+        }
+        
+        // Adjust if tooltip would go off the left edge
+        if (left < 0) {
+            left = offset;
+        }
+        
+        // Adjust if tooltip would go off the top edge
+        if (top < 0) {
+            top = offset;
+        }
+        
+        // Apply position
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+    }
+    
+    // Initialize the hover image effect
+    initializeHoverImageEffect();
+    
+    // Optional: Re-initialize if new images are added dynamically
+    window.reinitializeHoverImages = initializeHoverImageEffect;
 }); 

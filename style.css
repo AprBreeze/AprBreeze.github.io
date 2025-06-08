@@ -3690,6 +3690,84 @@ button:focus {
 }
 
 /* ==========================================================================
+   Hover Image Effect
+   ========================================================================== */
+.hover-image-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hover-image-tooltip {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background: white;
+    border: 2px solid #e0e0e0;
+    max-width: 900px;
+    max-height: 900px;
+}
+
+.hover-image-tooltip.show {
+    opacity: 1;
+}
+
+.hover-image-tooltip img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.hover-image-description {
+    padding: 15px;
+    background: white;
+    font-family: var(--body-text-font);
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.4;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #f0f0f0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.hover-image-container:hover .image-container {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments for hover effect */
+@media (max-width: 768px) {
+    .hover-image-tooltip {
+        max-width: 750px;
+        max-height: 750px;
+    }
+    
+    .hover-image-description {
+        font-size: 0.8rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hover-image-tooltip {
+        max-width: 600px;
+        max-height: 600px;
+    }
+    
+    .hover-image-description {
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+}
+
+/* ==========================================================================
    Design Impact Section Styling
    ========================================================================== */
 .design-impact {
