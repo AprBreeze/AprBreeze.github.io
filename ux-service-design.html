@@ -76,7 +76,7 @@
         <section class="section">
             <section class="horizontal-section">
                 <div class="content-wrapper" style="max-width: 25%;">
-                    <h2 class="section-title-2">Client Problem</h2>
+                    <h2 class="section-title-2">Client Interview</h2>
                 </div>
                 <div style="flex: 1; margin-left: 2rem;">
                     <p>We conducted a 1 hour <span class="highlight-2">client interview</span> to understand the problem that Elections Ontario (EO) is facing. EO aims to ensure every eligible citizen can cast their ballot. However, they have encountered <span class="highlight-2">growth barrier</span>.</p>
@@ -120,7 +120,7 @@
                 </div>
                 <div style="flex: 1; margin-left: 2rem;">
                     <p>Further more, the user insight data provided by Elections Ontario showed a <span class="highlight-2">significant growth potential for accessibility use</span>, especially if we compare to the most recent disability data.</p>
-                    <div class="image-container" style="margin: 0rem 0;">
+                    <div class="image-container">
                         <img src="image/Service Design/disability data.png" alt="Elections Ontario app flow showcase" class="full-width-img" style="border-radius: 0px;">
                     </div>
                 </div>
@@ -136,8 +136,113 @@
                     <h2 class="section-title-2">User Problem</h2>
                 </div>
                 <div style="flex: 1; margin-left: 2rem;">
-                    <p>After we identified the potential growth opportunities, we conducted interviews with users to validate if the problem is a <span class="highlight-2">real challenge</span> that our users are facing. </p>
-                    <p>Insights - WIP</p>
+                    <p>After we identified the potential growth opportunities, we conducted exploratory research to validate if the problem is a <span class="highlight-2">real challenge</span> that our users are facing. </p>
+
+                    <!-- Collapsible Research Method Section -->
+                    <div class="collapsible-section">
+                        <button class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <span class="collapsible-title">Methodology of the Exploratory Research </span>
+                            <span class="collapsible-arrow">▼</span>
+                        </button>
+                        <div class="collapsible-content">
+                            <div class="collapsible-inner">
+                                
+                                <div class="method-section">
+                                    <h5 class="method-title">Role Play:</h5>
+                                    <p>To uncover unmet needs in the voting journey, we designed a generative research activity rooted in empathy. We created a deck of identity cards representing a range of voters (e.g. an elderly person with arthritis, someone with limited vision, or a voter with hearing loss) and paired them with scenario cards that captured common voting tasks like applying for a special ballot or locating an accessible polling station. Each participant was asked to draw one identity and one scenario at random. From there, we facilitated a guided role-play interview, encouraging them to think through the experience from that identity's perspective.</p>
+                                    
+                                    <p><strong>Our questions focused on three core themes:</strong></p>
+                                    <ul class="method-list">
+                                        <li><strong>Clarity</strong> – Which parts of the process were confusing or hard to follow for this voter?</li>
+                                        <li><strong>Expectations</strong> – What would they reasonably expect to happen at each step?</li>
+                                        <li><strong>Opportunities</strong> – Where could the experience be improved to better support this voter?</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="method-section">
+                                    <h5 class="method-title">Role Play Benefits/Advantage:</h5>
+                                    <p><strong>Effective in revealing edge cases:</strong> helped us explore intersections of needs, like how low vision and low tech confidence compound barriers. Such complexity is difficult to capture in standard interviews unless recruiting very large and specific samples.</p>
+                                </div>
+                                
+                                <div class="method-section">
+                                    <h5 class="method-title">Why Not Interview Rationale:</h5>
+                                    <ul class="method-list">
+                                        <li>Limited time and budget to conduct user interviews</li>
+                                        <li>We intentionally chose role play over direct user interviews because we were designing for a diverse population with a range of accessibility needs, many of whom we couldn't easily reach.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User Research Findings -->
+                    <div class="research-findings-section">
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <span class="finding-number">01</span>
+                                <h3 class="finding-title">Barriers Persist in Booking Accessible Voting Options</h3>
+                            </div>
+                            
+                            <div class="barriers-grid">
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">📞</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Phone</span>
+                                        <span class="barrier-description">Inaccessible to those with <span class="highlight-text">hearing disabilities</span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">📧</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Email</span>
+                                        <span class="barrier-description">Challenging for <span class="highlight-text">elderly voters</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="user-quotes">
+                                <div class="quote-item">
+                                    <p class="quote-text">"I can't really do phone calls, and email takes forever."</p>
+                                    <span class="quote-source">(User Interview)</span>
+                                </div>
+                                
+                                <div class="quote-item">
+                                    <p class="quote-text">"I get overwhelmed with email. It's not easy for someone my age to keep up."</p>
+                                    <span class="quote-source">(User Interview)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="quote-item">
+                                <p>15% of users voted on wishing for more info about voting locations</p>
+                                <span class="stat-source">(Client Interview)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <span class="finding-number">02</span>
+                                <h3 class="finding-title">Scattered Voting Info Hinders Navigation</h3>
+                            </div>
+                            
+                            <div class="finding-description">
+                                <p>Voters must piece together information from <span class="highlight-text">multiple sources</span> to understand their <strong>options</strong> and <strong>eligibility</strong>.</p>
+                            </div>
+                            
+                            <div class="user-quotes">
+                                <div class="quote-item">
+                                    <p class="quote-text">"I had to look all over just to figure out how to vote from home. It's frustrating...why isn't everything in one place?"</p>
+                                    <span class="quote-source">(User Interview)</span>
+                                </div>
+                                
+                                <div class="quote-item">
+                                    <p class="quote-text">"The app should help in finding information quickly and intuitively."</p>
+                                    <span class="quote-source">(Client Interview)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </section>
@@ -308,5 +413,16 @@
     </footer>
 
     <script src="ux-interact.js"></script>
+    
+    <script>
+        function toggleCollapsible(button) {
+            const content = button.nextElementSibling;
+            const arrow = button.querySelector('.collapsible-arrow');
+            
+            // Toggle active classes
+            button.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
