@@ -146,7 +146,7 @@ body {
     display: flex;
     align-items: stretch;
     width: 100%;
-    overflow: visible;
+    overflow-x: hidden;
     position: relative;
     margin-top: 72px;
 }
@@ -180,8 +180,8 @@ body {
 
 
 .hero-content {
-    flex: 0 0 60%;
-    padding: 4rem 8rem;
+    flex: 1;
+    padding: 4rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -527,6 +527,305 @@ footer {
     .cta-primary,
     .cta-secondary {
         width: 100%;
+    }
+}
+
+/* ==========================================================================
+   Interactive Flip Cards
+   ========================================================================== */
+.fun-facts-section {
+    margin-bottom: 0.5rem;
+}
+
+.cards-section {
+    width: 100%;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    max-width: 600px;
+}
+
+.intro-text {
+    font-family: var(--game-body-font);
+    font-size: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0;
+    font-weight: 400;
+    flex: 1;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    max-width: 600px;
+    margin-bottom: 0.5rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--game-border);
+}
+
+.flip-card-front {
+    background: var(--card-background);
+    color: var(--text-color);
+}
+
+.flip-card-back {
+    background: var(--card-background);
+    color: var(--text-color);
+    transform: rotateY(180deg);
+    padding: 0.5rem;
+}
+
+.question-mark {
+    font-family: var(--game-header-font);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.flip-card-back p {
+    font-family: var(--game-body-font);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flip-card:hover .flip-card-back {
+    transform: rotateY(180deg) translateY(-2px);
+}
+
+/* Experience Gauge Styling */
+.experience-gauge-container {
+    flex: 0 0 200px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 48px;
+    padding-left: 0;
+}
+
+.gauge-label {
+    font-family: var(--game-body-font);
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.8rem;
+    font-weight: 400;
+    display: none;
+}
+
+.experience-gauge {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0;
+    align-self: flex-start;
+    background-color: var(--game-border);
+}
+
+.gauge-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--game-gradient);
+    border-radius: 12px;
+    transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 2px 8px rgba(112, 125, 225, 0.3);
+}
+
+.gauge-fill.complete {
+    background: linear-gradient(90deg, #28a745, #20c997);
+    box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+    animation: gaugeGlow 1.5s ease-in-out;
+}
+
+@keyframes gaugeGlow {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(40, 167, 69, 0.6);
+    }
+}
+
+.gauge-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--game-header-font);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    display: none;
+}
+
+.achievement-text {
+    font-family: var(--game-header-font);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    margin-top: 0.5rem;
+    display: none;
+}
+
+/* Gauge fill percentage states */
+.gauge-fill[data-progress="16.67"] { width: 16.67%; }
+.gauge-fill[data-progress="33.33"] { width: 33.33%; }
+.gauge-fill[data-progress="50"] { width: 50%; }
+.gauge-fill[data-progress="66.67"] { width: 66.67%; }
+.gauge-fill[data-progress="83.33"] { width: 83.33%; }
+.gauge-fill[data-progress="100"] { width: 100%; }
+
+/* Achievement Popup Notification */
+.achievement-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--game-gradient);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(112, 125, 225, 0.3);
+    font-family: var(--game-header-font);
+    font-size: 1rem;
+    font-weight: 600;
+    z-index: 10000;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+    max-width: 280px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievement-popup.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.achievement-popup.hide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Responsive adjustments for flip cards */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .experience-gauge-container {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0;
+        min-height: auto;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.8rem;
+    }
+    
+    .flip-card {
+        height: 90px;
+    }
+    
+    .question-mark {
+        font-size: 1.8rem;
+    }
+    
+    .flip-card-back p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section {
+        gap: 0.8rem;
+    }
+    
+    .experience-gauge-container {
+        max-width: 300px;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6rem;
+    }
+    
+    .flip-card {
+        height: 80px;
+    }
+    
+    .question-mark {
+        font-size: 1.6rem;
+    }
+    
+    .flip-card-back p {
+        font-size: 0.7rem;
+        padding: 0.2rem;
     }
 }
 

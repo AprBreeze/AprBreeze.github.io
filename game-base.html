@@ -26,23 +26,96 @@
 
     <section class="hero">
         <div class="hero-split">
-            <div class="hero-image-container">
+            <div class="hero-image-container" style="border-radius: 28px; margin-top: 20px;">
                 <img src="image/me4.jpg" alt="Xinglong Zhou" class="profile-image">
             </div>
-            <div class="hero-content">
-                <h1>I'm Xinglong</h1>
-                <p class="description">
-                    Do you know I am a ...<br> 
-                    UXD Graduate Student @ U of Toronto<br>
-                    Level Designer Intern<br>
-                    Video Game Content Creator / Reviewer / Guide Writer<br>
-                    Research / Teaching Assistant <br> 
-                    My Highschool Band Lead Singer <br> 
-                    And... (most importantly) <br> 
-                    a Passionate Creator!
-                </p>
+            <div class="hero-content" style="display: flex; flex-direction: column; gap: 10px; margin:auto;">
+                <h1>Hi! I'm Xinglong / Mark</h1>
+                <div class="fun-facts-section">
+                    <div class="cards-section">
+                        <div class="intro-section">
+                            <p class="intro-text">Fun facts about me...</p>
+                            <!-- Experience Gauge -->
+                            <div class="experience-gauge-container">
+                                <div class="gauge-label">Getting to know me...</div>
+                                <div class="experience-gauge">
+                                    <div class="gauge-fill" id="gaugeFill"></div>
+                                    <div class="gauge-text" id="gaugeText">0/6</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cards-container">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <div class="question-mark">?</div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p>Level Designer Intern @ Perfect World</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <div class="question-mark">?</div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p>Ubisoft NEXT Top 10 Finalist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <div class="question-mark">?</div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p>Game Content Creator & Reviewer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <div class="question-mark">?</div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p>Board Game Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <div class="question-mark">?</div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p>Highschool Band <br>Lead Singer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <div class="question-mark">?</div>
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <p>And... (most importantly) a Passionate Game Creator!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="cta-buttons">
-                    <a href="game-design.html" class="cta-primary">Explore My Work</a>
+                    <a href="#work" class="cta-primary">Explore My Work</a>
                     <a href="#contact" class="cta-secondary">Get in Touch</a>
                 </div>
             </div>
@@ -91,7 +164,53 @@
         <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
     </footer>
     
+    <!-- Achievement Popup Notification -->
+    <div class="achievement-popup" id="achievementPopup">
+        🏆Achievement <br> New Friend
+    </div>
+    
     <script>
+        // Flip card functionality
+        let flippedCards = 0;
+        const totalCards = 6;
+        const gaugeFill = document.getElementById('gaugeFill');
+        const gaugeText = document.getElementById('gaugeText');
+        const achievementPopup = document.getElementById('achievementPopup');
+
+        document.querySelectorAll('.flip-card').forEach((card, index) => {
+            card.addEventListener('click', function() {
+                if (!this.classList.contains('flipped')) {
+                    this.classList.add('flipped');
+                    flippedCards++;
+                    updateGauge();
+                    
+                    if (flippedCards === totalCards) {
+                        setTimeout(showAchievement, 500);
+                    }
+                }
+            });
+        });
+
+        function updateGauge() {
+            const percentage = (flippedCards / totalCards) * 100;
+            gaugeFill.style.width = percentage + '%';
+            gaugeFill.setAttribute('data-progress', percentage.toFixed(2));
+            gaugeText.textContent = `${flippedCards}/${totalCards}`;
+            
+            if (flippedCards === totalCards) {
+                gaugeFill.classList.add('complete');
+            }
+        }
+
+        function showAchievement() {
+            achievementPopup.classList.add('show');
+            
+            setTimeout(() => {
+                achievementPopup.classList.remove('show');
+                achievementPopup.classList.add('hide');
+            }, 3000);
+        }
+
         // Add smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {

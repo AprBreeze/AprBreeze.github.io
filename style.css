@@ -2945,8 +2945,8 @@ button:focus {
 
     }
 
-    .hero-links {
-        font-size: 1.2rem;
+    .tab-content .hero-links {
+        font-size: 0.8rem;
     }
     
  
@@ -2982,8 +2982,8 @@ button:focus {
         text-align: left;
     }
 
-    .hero-links {
-        font-size: 1.2rem;
+    .tab-content .hero-links {
+        font-size: 0.8rem;
     }
 }
 
@@ -3016,7 +3016,7 @@ button:focus {
         text-align: left;
     }
 
-    .hero-links {
+    .tab-content .hero-links {
         font-size: 0.8rem;
     }
 }
