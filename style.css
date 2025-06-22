@@ -38,6 +38,9 @@
     /* iPet Theme Colors */
     --body-text-font: 'DM Sans', sans-serif;
     --header-text-font: "Manrope", sans-serif;
+
+    /* EO Service Design Theme Colors */
+    --EO-ux-service-design-theme: #FFCD41; 
 }
 
 
@@ -4304,8 +4307,8 @@ button:focus {
 }
 
 .finding-number {
-    background-color: var(--ipet-accent);
-    color: white;
+    background-color: var(--EO-ux-service-design-theme);
+    color: black;
     font-family: var(--header-text-font);
     font-size: 1.2rem;
     font-weight: 700;
