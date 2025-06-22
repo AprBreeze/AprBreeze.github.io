@@ -3141,6 +3141,327 @@ button:focus {
 }
 
 /* ==========================================================================
+   Service Design Page Responsive Styles
+   ========================================================================== */
+
+/* Tablet and small desktop */
+@media (max-width: 968px) {
+    .horizontal-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .content-wrapper {
+        flex: none;
+        max-width: 100% !important;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title-2 {
+        font-size: 2rem;
+        padding-bottom: 8px;
+    }
+    
+    .data-visualization {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stats-summary {
+        flex: none;
+        width: 100%;
+    }
+    
+    .chart-container {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+/* Mobile landscape and tablet portrait */
+@media (max-width: 768px) {
+    .case-study-container {
+        padding: 30px 1.5rem;
+    }
+    
+    .horizontal-section {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .content-wrapper {
+        flex: none;
+        max-width: 100%;
+        margin-bottom: 0.8rem;
+    }
+    
+    .section-title-2 {
+        font-size: 1.8rem;
+        padding-bottom: 6px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .barriers-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .barrier-item {
+        gap: 0.8rem;
+    }
+    
+    .barrier-icon {
+        font-size: 1.3rem;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+    }
+    
+    .research-findings-section {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .finding-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .finding-number {
+        font-size: 1rem;
+        padding: 0.4rem 0.6rem;
+        min-width: 2rem;
+    }
+    
+    .finding-title {
+        font-size: 1.1rem;
+    }
+    
+    .user-quotes {
+        margin-bottom: 1rem;
+    }
+    
+    .quote-item {
+        padding-left: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .quote-item::before {
+        font-size: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .collapsible-header {
+        padding: 0.8rem 1rem;
+    }
+    
+    .collapsible-title {
+        font-size: 1rem;
+    }
+    
+    .collapsible-inner {
+        padding: 1rem;
+    }
+    
+    .method-title {
+        font-size: 0.9rem;
+    }
+    
+    .method-section p,
+    .method-list li {
+        font-size: 0.9rem;
+    }
+    
+    /* Data insights section */
+    .insights-title {
+        font-size: 1.3rem;
+    }
+    
+    .chart-img {
+        max-width: 100%;
+    }
+    
+    /* Image containers */
+    .image-container {
+        text-align: center !important;
+    }
+    
+    .image-container img {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .case-study-container {
+        padding: 20px 1rem;
+    }
+    
+    .horizontal-section {
+        gap: 0.8rem;
+        margin: 0.8rem 0;
+    }
+    
+    .section-title-2 {
+        font-size: 1.5rem;
+        padding-bottom: 4px;
+        margin-bottom: 0.6rem;
+    }
+    
+    .research-findings-section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .finding-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .finding-title {
+        font-size: 1rem;
+    }
+    
+    .barrier-item {
+        gap: 0.6rem;
+    }
+    
+    .barrier-icon {
+        font-size: 1.2rem;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    
+    .barrier-method {
+        font-size: 0.9rem;
+    }
+    
+    .barrier-description {
+        font-size: 0.8rem;
+    }
+    
+    .quote-text {
+        font-size: 0.9rem;
+    }
+    
+    .quote-item {
+        padding-left: 1.8rem;
+    }
+    
+    .quote-item::before {
+        font-size: 0.9rem;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    
+    .collapsible-header {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .collapsible-inner {
+        padding: 0.8rem;
+    }
+    
+    .method-list {
+        padding-left: 1.2rem;
+    }
+    
+    .method-section p,
+    .method-list li {
+        font-size: 0.85rem;
+    }
+    
+    /* Data insights section */
+    .insights-title {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+    
+    .number {
+        font-size: 2rem;
+    }
+    
+    .trend-down {
+        font-size: 1.2rem;
+    }
+    
+    /* Project info section */
+    .project-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .info-item {
+        min-width: unset;
+        padding-right: 0;
+        margin-bottom: 0.8rem;
+    }
+    
+    .info-label {
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+    }
+    
+    /* Image containers */
+    .image-container {
+        margin: 1rem 0 !important;
+        text-align: center !important;
+    }
+    
+    .image-container img {
+        width: 100% !important;
+        border-radius: 16px !important;
+    }
+    
+    .full-width-img {
+        border-radius: 16px !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .case-study-container {
+        padding: 15px 0.8rem;
+    }
+    
+    .content-wrapper {
+        max-width: 100% !important;
+    }
+    
+    .section-title-2 {
+        font-size: 1.3rem;
+    }
+    
+    .research-findings-section {
+        padding: 0.8rem;
+    }
+    
+    .finding-title {
+        font-size: 0.95rem;
+    }
+    
+    .barrier-method {
+        font-size: 0.85rem;
+    }
+    
+    .barrier-description {
+        font-size: 0.75rem;
+    }
+    
+    .insights-title {
+        font-size: 1rem;
+    }
+    
+    .number {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================================================
    Iteration Metrics Styling
    ========================================================================== */
 .iteration-metrics {
