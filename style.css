@@ -467,7 +467,7 @@ footer {
    Portfolio Pages
    ========================================================================== */
 .portfolio-header {
-    padding: 6rem 2rem 6rem;
+    padding: 0rem 2rem 6rem;
     background-color: transparent;
     text-align: center;
     position: relative;
@@ -2873,7 +2873,7 @@ button:focus {
 .hero-content-area {
     flex: 1;
     position: relative;
-    min-height: 280px;
+    min-height: 200px;
     margin-bottom: 0;
     max-width: 740px;
 }
