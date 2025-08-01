@@ -59,7 +59,7 @@
             <div class="hero-content-area">
                 <div class="tab-content active" id="who-am-i">
                     <h1>Hi, I am Xinglong / Mark who believe great design comes from empathetic listening.</h1>
-                    <p class="hero-links">Please scroll down to see my works.</p>
+                    <p class="hero-links"></p>
                 </div>
 
                 <div class="tab-content" id="ux-designer">
@@ -84,21 +84,26 @@
 
                 <div class="tab-content" id="game-designer">
                     <h1>I design gamified incentives to cultivate deep, lasting user engagement and loyalty.</h1>
-                    <p class="hero-links">Discover my <a href="https://www.linkedin.com/feed/update/urn:li:activity:7307816756448821249/" target="_blank" class="content-link">guest lecture at UofT</a>.</p>
+                    <p class="hero-links">Discover my <a href="https://www.linkedin.com/feed/update/urn:li:activity:7307816756448821249/" target="_blank" class="content-link">guest lecture at UofT</a> and <a href="game-design.html" class="content-link">game works</a>.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
     <main>
-        <section class="portfolio-header" style="padding:0rem 2rem 6rem;">
+        <section class="portfolio-header">
             <h1>My Crafts</h1>
             <p>Great design comes from empathetic listening.</p>
         </section>
-
         
-
         <section id="portfolio" class="portfolio-grid">
 
             <!-- Project 1 -->
@@ -485,6 +490,17 @@
         
         document.querySelectorAll('.portfolio-item-link').forEach(item => {
             observer.observe(item);
+        });
+
+        // Scroll indicator functionality
+        document.querySelector('.scroll-arrow').addEventListener('click', function() {
+            const mainSection = document.querySelector('main');
+            if (mainSection) {
+                mainSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     </script>
 </body>

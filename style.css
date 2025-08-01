@@ -21,7 +21,7 @@
     --text-muted-color: #959595;
     
     /* Neutral Colors */
-    --gray-light: #EDF2F7;
+    --gray-light: #f5f5f7;
     --gray: #E2E8F0;
     
     /* Component Colors */
@@ -233,6 +233,70 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
+/* Scroll Down Indicator */
+.scroll-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.scroll-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--gray-light);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(3px);
+}
+
+.scroll-arrow i {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.scroll-arrow:hover i {
+    color: white;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-indicator {
+        padding: 1.5rem 0;
+    }
+    
+    .scroll-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .scroll-arrow i {
+        font-size: 1rem;
+    }
+}
+
 .description {
     font-family: var(--body-text-font);
     font-size: 1rem;
@@ -396,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .contact {
     background-color: var(--gray-light);
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
@@ -458,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: white;
+    background-color: var(--gray-light);
     color: var(--secondary-text-color);
     border-top: 1px solid var(--gray);
 }
