@@ -63,11 +63,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 p {
-  font-size: 1rem
+  font-size: 1.2rem
 }
 
 h1 {
@@ -85,7 +85,7 @@ h3 {
     color: var(--game-text);
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -159,7 +159,7 @@ h2 {
 
 .description {
     font-family: var(--game-body-font);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--secondary-text-color);
     margin-bottom: 2.5rem;
     max-width: 600px;
@@ -303,7 +303,7 @@ h2 {
     padding: 1.2rem 1.2rem 0.6rem;
     margin: 0;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -496,7 +496,7 @@ button:focus {
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.5rem 0;
     letter-spacing: 0.5px;
 }
@@ -794,7 +794,6 @@ button:focus {
   margin-top: 3rem;
   position: relative;
   z-index: 50; /* Lower than mission sidebar (z-index: 100) */
-  margin-left: 320px; /* Account for fixed sidebar */
   width: calc(100% - 320px);
 }
 
@@ -859,7 +858,7 @@ button:focus {
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   color: var(--game-text-muted);
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   z-index: 5;
   white-space: nowrap;
@@ -994,7 +993,7 @@ button:focus {
 }
 
 .project-description {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: var(--game-text);
 }
@@ -1048,7 +1047,7 @@ button:focus {
     color: var(--game-text);
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -1073,7 +1072,7 @@ button:focus {
 .iteration-list li,
 .outcomes-list li,
 .improvement-list li {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.75rem;
     line-height: 1.5;
     position: relative;
@@ -1364,7 +1363,7 @@ button:focus {
 .contact-link {
     display: flex;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: transform 0.3s ease;
 }
 
@@ -1512,13 +1511,13 @@ button:focus {
 }
 
 .project-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
 
 .project-content ul {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
 }
 
@@ -1552,7 +1551,7 @@ button:focus {
     }
     
     .project-content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .project-info h3 {
@@ -1933,7 +1932,7 @@ button:focus {
 
 .blog-header p {
     font-family: var(--game-body-font);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--game-text-muted);
     margin-top: 1.5rem;
     margin-bottom: 0;
@@ -2295,7 +2294,7 @@ button:focus {
 }
 
 .post-share h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.75rem;
     color: var(--game-text);
     text-align: left;
@@ -2308,7 +2307,7 @@ button:focus {
 
 .share-link {
     color: var(--game-text-muted);
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
     width: 36px;
     height: 36px;
@@ -2789,7 +2788,7 @@ button:focus {
     }
     
     .category-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .mission-item {
@@ -2802,5 +2801,194 @@ button:focus {
     
     .main-content .game-card {
         margin-bottom: 0;
+    }
+}
+
+/* Image Showcase Frame Styles */
+.image-showcase-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0 10rem 0;
+}
+
+.image-showcase-frame {
+    border-radius: 12px;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 340px;
+    min-height: 220px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.showcase-image {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.showcase-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.showcase-tab {
+    background: none;
+    border: none;
+    color: var(--game-text-muted);
+    font-family: var(--game-header-font);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    outline: none;
+}
+
+.showcase-tab.active {
+    color: var(--game-accent-alt);
+}
+
+.showcase-tab.active::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--game-accent-alt);
+    border-radius: 2px;
+    margin-top: 6px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+.showcase-tab:focus {
+    color: var(--game-accent-alt);
+    outline: 2px solid var(--game-accent-alt);
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .image-showcase-frame {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+        min-width: 0;
+        max-width: 98vw;
+    }
+    .showcase-image {
+        max-width: 98vw;
+        max-height: 220px;
+    }
+    .showcase-tabs {
+        gap: 1.2rem;
+    }
+}
+
+/* Remove blue-ish focus outline from showcase-tab buttons for mouse users, but keep for keyboard navigation */
+.showcase-tab:focus {
+    outline: none;
+}
+
+.showcase-tab:focus-visible {
+    outline: 2px solid var(--game-accent-alt);
+    outline-offset: 2px;
+}
+
+/* Design Goal Section Styles - Card Version */
+.design-goal-section {
+    background: var(--game-bg-dark);
+    padding: 3.5rem 0 2.5rem 0;
+    margin-bottom: 2.5rem;
+}
+
+.design-goal-title {
+    font-family: var(--game-header-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--game-text);
+    margin-left: 3.5rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.design-goal-columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.design-goal-col {
+    flex: 1 1 0;
+    min-width: 220px;
+    height: 190px;
+    background: #0E1915;
+    padding: 2rem 2rem 1.5rem 2rem;
+    color: var(--game-text);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 10px;
+}
+
+.design-goal-col h3 {
+    font-family: var(--game-header-font);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0rem;
+    color: var(--game-text);
+    letter-spacing: 0.01em;
+}
+
+.design-goal-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.design-goal-col li {
+    font-family: var(--game-body-font);
+    font-size: 1.1rem;
+    color: var(--game-text);
+    margin-bottom: 0.7rem;
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .design-goal-columns {
+        gap: 1.2rem;
+        padding: 0 1rem;
+    }
+    .design-goal-title {
+        margin-left: 1.5rem;
+    }
+    .design-goal-col {
+        padding: 1.2rem 1rem 1rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .design-goal-columns {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 0 0.5rem;
+    }
+    .design-goal-title {
+        margin-left: 0.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+    .design-goal-col {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
     }
 }

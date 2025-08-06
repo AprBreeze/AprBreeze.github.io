@@ -109,3 +109,20 @@ elementsToAnimate.forEach(selector => {
         observer.observe(item);
     });
 });
+
+// Image Showcase Tab Switching (supports multiple showcase frames)
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.image-showcase-section').forEach(section => {
+        const tabs = section.querySelectorAll('.showcase-tab');
+        const showcaseImg = section.querySelector('.showcase-image');
+        if (tabs.length && showcaseImg) {
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    showcaseImg.src = this.getAttribute('data-img');
+                });
+            });
+        }
+    });
+});
