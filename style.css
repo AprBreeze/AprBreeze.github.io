@@ -124,8 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -653,7 +653,7 @@ footer {
     margin-bottom: 0.5rem;
     line-height: 1.6;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 
@@ -4624,7 +4624,7 @@ button:focus {
 
 .metric-label {
     font-family: var(--body-text-font);
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--secondary-text-color);
     line-height: 1.4;
     flex: 1;
