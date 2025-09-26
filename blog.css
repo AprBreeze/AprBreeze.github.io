@@ -61,19 +61,12 @@ body.blog-body {
 }
 
 .logo {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--game-text);
-  transition: transform 0.3s ease;
-  letter-spacing: 1px;
-  position: relative;
-  background: var(--game-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
-  cursor: pointer;
+    height: 2.4rem; 
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 

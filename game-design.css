@@ -467,17 +467,10 @@ button:focus {
 }
 
 .logo {
-    font-family: var(--game-header-font);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-color);
+    height: 2.4rem; 
+    vertical-align: middle;
     transition: transform 0.3s ease;
-    letter-spacing: 1px;
     position: relative;
-    background: var(--game-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-decoration: none;
     cursor: pointer;
 }
@@ -2667,6 +2660,14 @@ button:focus {
     box-shadow: 0 0 20px rgba(97, 239, 206, 0.2);
     transform: scale(1.02);
 }
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
 
 /* ==========================================================================
    Mission Panel Responsive Design
