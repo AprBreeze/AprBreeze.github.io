@@ -1,0 +1,56 @@
+/* Video Walkthrough Styles for Persona 5 X */
+/* Only minimal styles needed - uses existing game-design.css classes */
+
+.video-container-main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    position: relative;
+    padding-bottom: 40%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-container-main iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.video-container-side {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.video-container-side iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-container-main {
+        margin-bottom: 1.5rem;
+    }
+    
+    .video-container-side {
+        margin-bottom: 0.75rem;
+    }
+}

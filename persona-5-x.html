@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persona 5 The Phantom X</title>
     <link rel="stylesheet" href="game-design.css">
+    <link rel="stylesheet" href="persona-5-x-videos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +37,7 @@
         <section class="project-overview">
             <div class="project-container">
                 <div class="project-description">
-                    <h2>Internship Overview</h2>
+                    <h2>Internship Summary</h2>
                     <p>🗺️ Designed and delivered level blockout for a main quest level and a side level of palace discovery content</p>
                     <p>🎬 Designed and implemented the camera control and cinematic scripting for a main quest level.</p>
                     <p>🛠️ Designed enemy encounters and implemented the behavior tree of puzzle mechanics and encounters using in-house dev tools.</p>
@@ -48,26 +49,64 @@
         </section>
 
         <section class="project-section">
+            <div class="project-container">
+                <h2 class="section-title">Main Quest Level - 3D Scene</h2>
+                <div class="section-content">
+                    <div class="blockout-gallery">
+                        <img src="image/P5X/snfj.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj2.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj3.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj4.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
             <h2>Video Walkthrough</h2>
-            <h3>Main Quest</h3>
-            <iframe style="width: 65%; height: 400px" src="//player.bilibili.com/player.html?isOutside=true&aid=115264926515266&bvid=BV15ontz6EEB&cid=32628018246&p=3&t=888&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <h3>Side Discovery</h3>
-            <iframe style="width: 49%; height: 400px" src="//player.bilibili.com/player.html?isOutside=true&aid=115263768957676&bvid=BV1J4n4zGE8f&cid=32640994939&p=6&t=80&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            <image class="section-image" src="/image/P5X/mini map 2f side quest.png"></image>
+
+            <!-- Main Quest Video -->
+            <h3 style="text-align: center;">Main Quest Walkthrough</h3>
+            <div class="video-container-main">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rUY1MssJEhw?si=uHaU651IGfZTFCRp&amp;start=12300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <h3 style="text-align: center;">Side Discovery</h3>
+            <div class="video-container-main">
+                <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115263768957676&bvid=BV1J4n4zGE8f&cid=32640994939&p=6&t=80&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+            </div>
+
+            <h3 style="text-align: center;">Side Discovery 2D Layout</h3>
+            <div style="text-align: center;">
+                <img class="section-image" style = "max-width: 800px" src="/image/P5X/mini map 2f side quest.png" alt="Level 2F Side Quest Mini-map" style="margin: 0 auto; display: block;">
+            </div>
+
+
         </section>
 
         <section class="project-section">
             <h2>More Design Details Work In Progress</h2>
         </section>
-
-
         
     </main>
     
 
-
-
-
+    <!-- Lightbox for gallery images -->
+<div id="gallery-lightbox" class="lightbox">
+    <div class="lightbox-content">
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+    <button id="lightbox-close" class="lightbox-close">&times;</button>
+    <div class="lightbox-nav">
+        <button id="lightbox-prev" class="lightbox-btn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="lightbox-next" class="lightbox-btn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
 
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
