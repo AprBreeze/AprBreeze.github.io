@@ -53,7 +53,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 300;
 }
 
@@ -893,7 +893,7 @@ footer {
 .case-study-container {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 40px 0px;
+    padding: 40px 2rem;
     position: relative;
 }
 
@@ -1796,12 +1796,12 @@ button:focus {
     object-fit: cover;
     margin: 0px 0;
     text-align: center;
+    padding: 1rem 0 1rem 0;
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
-    border-radius: 28px;
 }
 
 .full-width-img {
