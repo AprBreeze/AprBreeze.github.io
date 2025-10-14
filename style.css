@@ -17,6 +17,7 @@
     --accent-color: #FF6B6B;
     --text-color: #141414;
     --secondary-text-color: #5d5d5d;
+    --text-color-reverse: #ffffff;
     --background-color: #ffffff;
     --text-muted-color: #959595;
     
@@ -4366,7 +4367,7 @@ button:focus {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: .8rem;
 }
 
 .finding-number {
@@ -4386,6 +4387,15 @@ button:focus {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-color);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.finding-title-2 {
+    font-family: var(--header-text-font);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color-reverse);
     margin: 0;
     line-height: 1.3;
 }
@@ -4440,6 +4450,14 @@ button:focus {
     font-family: var(--body-text-font);
     font-size: 1rem;
     color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.finding-description-2 p {
+    font-family: var(--body-text-font);
+    font-size: 1rem;
+    color: var(--text-color-reverse);
     line-height: 1.6;
     margin: 0;
 }
