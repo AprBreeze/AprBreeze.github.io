@@ -192,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1400px;
     gap: 4rem;
     margin: 0 auto;
+    align-items: center;
 }
 
 .hero-image-container {
@@ -219,8 +220,10 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     background-color: var(--background-color);
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    gap: 1.5rem;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .hero h1 {
@@ -231,7 +234,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     position: relative;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin: 0 0 0.5rem 0;
+    align-self: flex-start;
 }
 
 /* Scroll Down Indicator */
@@ -1920,7 +1924,8 @@ button:focus {
    Interactive Flip Cards
    ========================================================================== */
 .fun-facts-section {
-    margin-bottom: 0.5rem;
+    width: 100%;
+    margin: 0;
 }
 
 .cards-section {
