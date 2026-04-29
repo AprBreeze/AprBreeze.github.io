@@ -54,14 +54,14 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 1.1rem;
+    font-size: 17px;
     font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-text-font);
     line-height: 1.2;
-    margin-bottom: 0.5rem;
+    margin-bottom: 7px;
 }
 
 /* ==========================================================================
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 27px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
     font-family: var(--header-text-font);
-    font-size: 1.4rem;
+    font-size: 25px;
     font-weight: 300;
     color: var(--text-color);
     transition: transform 0.3s ease;
@@ -97,11 +97,17 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
+.logo-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 48px;
 }
 
 .nav-links a {
@@ -111,12 +117,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
-    font-size: 1rem;
-    padding: 0.5rem 0;
+    font-size: 17px;
+    padding: 7px 0;
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 14px;
 }
 
 .nav-links a:hover,
@@ -125,8 +131,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-links a img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -190,7 +196,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     min-height: calc(90vh - 72px);
     max-width: 1400px;
-    gap: 4rem;
+    gap: 77px;
     margin: 0 auto;
     align-items: center;
 }
@@ -215,26 +221,26 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 2rem;
+    padding: 57px 37px;
     position: relative;
     z-index: 1;
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 27px;
     align-items: flex-start;
     justify-content: center;
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 40px;
     color: var(--text-color);
     font-weight: 400;
     letter-spacing: -0.5px;
     line-height: 1.2;
     position: relative;
     display: inline-block;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 7px 0;
     align-self: flex-start;
 }
 
@@ -267,7 +273,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .scroll-arrow i {
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 21px;
     transition: color 0.3s ease;
 }
 
@@ -289,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .scroll-indicator {
-        padding: 1.5rem 0;
+        padding: 27px 0;
     }
     
     .scroll-arrow {
@@ -298,15 +304,15 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .scroll-arrow i {
-        font-size: 1rem;
+        font-size: 17px;
     }
 }
 
 .description {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
-    margin-bottom: 2.5rem;
+    margin-bottom: 47px;
     max-width: 600px;
     line-height: 1.8;
     font-weight: 300;
@@ -318,7 +324,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .cta-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 17px;
     justify-content: flex-start;
     flex-wrap: wrap;
 }
@@ -357,15 +363,15 @@ h1, h2, h3, h4, h5, h6 {
    Work Preview Section
    ========================================================================== */
 .work-preview {
-    padding: 6rem 2rem;
+    padding: 117px 37px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .work-preview h2 {
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2rem;
+    margin-bottom: 57px;
+    font-size: 37px;
     color: var(--text-color);
     font-weight: 400;
     position: relative;
@@ -385,12 +391,12 @@ h1, h2, h3, h4, h5, h6 {
 .work-categories {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 97px;
 }
 
 .category h3 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 27px;
+    margin-bottom: 37px;
     color: var(--text-color);
     font-weight: 400;
 }
@@ -398,8 +404,8 @@ h1, h2, h3, h4, h5, h6 {
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 2rem;
+    gap: 47px;
+    margin-bottom: 37px;
 }
 
 .work-item {
@@ -420,18 +426,18 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .work-item h4 {
-    padding: 1.2rem 1.2rem 0.6rem;
+    padding: 21px 21px 9px;
     margin: 0;
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 19px;
     font-weight: 500;
     font-family: var(--header-text-font);
 }
 
 .work-item p {
-    padding: 0 1.2rem 1.5rem;
+    padding: 0 21px 27px;
     color: var(--secondary-text-color);
-    font-size: 1rem;
+    font-size: 17px;
     line-height: 1.6;
 }
 
@@ -440,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color: var(--secondary-color);
     font-weight: 500;
-    margin-top: 1rem;
+    margin-top: 17px;
     transition: all 0.3s ease;
     position: relative;
 }
@@ -465,13 +471,13 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .contact {
     background-color: var(--gray-light);
-    padding: 3rem 2rem;
+    padding: 57px 37px;
     text-align: center;
 }
 
 .contact h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 27px;
+    font-size: 37px;
     color: var(--text-color);
     font-weight: 700;
     position: relative;
@@ -497,13 +503,13 @@ h1, h2, h3, h4, h5, h6 {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
+    gap: 37px;
+    margin-top: 17px;
 }
 
 .social-link {
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 27px;
     transition: all 0.3s ease;
     width: 50px;
     height: 50px;
@@ -536,7 +542,7 @@ footer {
    Portfolio Pages
    ========================================================================== */
 .portfolio-header {
-    padding: 6rem 2rem 6rem;
+    padding: 117px 37px 117px;
     background-color: transparent;
     text-align: center;
     position: relative;
@@ -544,36 +550,36 @@ footer {
 }
 
 .portfolio-header h1 {
-    font-size: 2.8rem;
+    font-size: 44px;
     color: var(--text-color);
     font-weight: 400;
     letter-spacing: -0.5px;
     line-height: 1.2;
     position: relative;
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: 17px;
 }
 
 .portfolio-header p {
     max-width: 500px;
     margin: 0 auto;
     color: var(--secondary-text-color);
-    font-size: 1rem;
+    font-size: 17px;
     line-height: 1.5;
     font-weight: 300;
 }
 
 .portfolio-grid {
     max-width: 1400px;
-    margin: 4rem auto;
-    padding: 0 2rem;
+    margin: 77px auto;
+    padding: 0 37px;
 }
 
 .portfolio-item-link {
     text-decoration: none;
     color: inherit;
     display: block;
-    margin-bottom: 6rem;
+    margin-bottom: 117px;
     transition: opacity 0.3s ease;
 }
 
@@ -585,7 +591,7 @@ footer {
 .portfolio-item {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 4rem;
+    gap: 77px;
     align-items: start;
     background: transparent;
     border: none;
@@ -637,17 +643,17 @@ footer {
     font-family: var(--header-text-font);
     color: var(--secondary-color);
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 7px;
     text-transform: uppercase;
-    font-size: 0.75rem;
+    font-size: 14px;
     letter-spacing: 1.5px;
     display: inline-block;
 }
 
 .portfolio-content h2 {
     font-family: var(--header-text-font);
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    font-size: 24px;
+    margin-bottom: 17px;
     color: var(--text-color);
     font-weight: 500;
     line-height: 1.2;
@@ -655,24 +661,24 @@ footer {
 
 .project-description {
     color: var(--text-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 7px;
     line-height: 1.6;
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 17px;
 }
 
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 7px;
 }
 
 .tag {
     font-family: var(--body-text-font);
     color: var(--text-color);
-    font-size: 1rem;
-    padding: 0.3rem 0.8rem;
+    font-size: 17px;
+    padding: 3px 13px;
     background-color: transparent;
     border: 1px solid var(--gray);
     border-radius: 28px;
@@ -696,7 +702,7 @@ footer {
 @media (max-width: 968px) {
     .portfolio-item {
         grid-template-columns: 1fr !important;
-        gap: 2rem;
+        gap: 37px;
     }
 
     .portfolio-item:nth-child(even) .portfolio-image,
@@ -705,11 +711,11 @@ footer {
     }
 
     .portfolio-content h2 {
-        font-size: 1.6rem;
+        font-size: 24px;
     }
 
     .portfolio-header h1 {
-        font-size: 2.5rem;
+        font-size: 42px;
     }
     
     .hero-split {
@@ -723,41 +729,41 @@ footer {
     
     .hero-content {
         flex: 1;
-        padding: 2rem 4rem;
+        padding: 37px 77px;
         background-color: var(--background-color);
     }
     
     .cta-buttons {
         flex-direction: row;
         justify-content: center;
-        gap: 1rem;
-        margin-bottom: 2rem;
+        gap: 17px;
+        margin-bottom: 37px;
     }
 }
 
 @media (max-width: 768px) {
     .portfolio-header {
-        padding: 5rem 1.5rem 3rem;
+        padding: 97px 27px 57px;
     }
     
     .portfolio-header h1 {
         font-family: var(--header-text-font);
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
+        font-size: 33px;
+        margin-bottom: 12px;
     }
     
     .portfolio-header p {
-        font-size: 1rem;
-        padding: 0 1rem;
+        font-size: 17px;
+        padding: 0 17px;
     }
 
     .portfolio-item {
         grid-template-columns: 1fr !important;
-        gap: 1.5rem;
+        gap: 27px;
     }
 
     .portfolio-item-link {
-        margin-bottom: 4rem;
+        margin-bottom: 77px;
     }
 
     .portfolio-item-link:hover {
@@ -765,62 +771,62 @@ footer {
     }
 
     .portfolio-content h2 {
-        font-size: 1.4rem;
+        font-size: 21px;
     }
 
     .prototype-showcase {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 47px;
     }
     
     .hero-content {
-        padding: 2rem;
+        padding: 37px;
     }
 }
 
 @media (max-width: 480px) {
     .portfolio-header {
-        padding: 4rem 1rem 2rem;
+        padding: 77px 17px 37px;
     }
     
     .portfolio-header h1 {
-        font-size: 1.8rem;
+        font-size: 29px;
     }
     
     .portfolio-header p {
-        font-size: 0.95rem;
+        font-size: 16px;
     }
 
     .portfolio-item {
         grid-template-columns: 1fr !important;
-        gap: 1rem;
+        gap: 17px;
     }
 
     .portfolio-item-link {
-        margin-bottom: 3rem;
+        margin-bottom: 57px;
     }
 
     .portfolio-content h2 {
-        font-size: 1.2rem;
+        font-size: 18px;
     }
 
     .project-description {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
 
     .prototype-showcase {
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size: 37px;
     }
     
     .cta-buttons {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 37px;
     }
     
     .cta-primary,
@@ -881,14 +887,14 @@ footer {
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 47px;
     color: var(--ipet-text);
     margin-bottom: 15px;
     font-weight: 500;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 19px;
     color: var(--ipet-text);
     margin-bottom: 20px;
     max-width: 500px;
@@ -898,7 +904,7 @@ footer {
 .case-study-container {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 40px 2rem;
+    padding: 40px 37px;
     position: relative;
 }
 
@@ -915,7 +921,7 @@ footer {
     grid-column: 1 / -1;
     color: var(--ipet-accent);
     margin-top: 0;
-    font-size: 1.8rem;
+    font-size: 33px;
 }
 
 .info-item {
@@ -923,7 +929,7 @@ footer {
     min-width: 150px; /* Minimum width to prevent squishing */
     padding-right: 20px; /* Space between items */
     /* Adjust font-size for these values if they look too large/small */
-    font-size: 1rem; /* Slightly smaller than body text for these details */
+    font-size: 16px; /* Slightly smaller than body text for these details */
     color: var(--text-color-primary); /* Main text color for the values */
 }
 
@@ -965,7 +971,7 @@ footer {
 .subsection-title {
     font-family: var(--header-text-font);
     color: var(--ipet-text);
-    font-size: 1.2rem;
+    font-size: 21px;
     margin: 12px 0 8px;
 }
 
@@ -1024,7 +1030,7 @@ footer {
 }
 
 .quote-text {
-    font-size: 1.05rem;
+    font-size: 18px;
     line-height: 1.7;
     color: var(--ipet-text);
 }
@@ -1069,7 +1075,7 @@ footer {
 
 .analysis-subtitle {
     color: var(--ipet-accent);
-    font-size: 1.1rem;
+    font-size: 19px;
     margin-bottom: 15px;
 }
 
@@ -1119,7 +1125,7 @@ footer {
 
 .quote-box p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 16px;
     line-height: 1.5;
 }
 
@@ -1148,7 +1154,7 @@ footer {
     color: white;
     padding: 8px 15px;
     border-radius: 28px;
-    font-size: 0.9rem;
+    font-size: 15px;
     font-weight: 500;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1262,7 +1268,7 @@ footer {
     color: #FF9F40;
     margin: 0;
     margin-right: 10px;
-    font-size: 1.1rem;
+    font-size: 19px;
     min-width: 100px;
 }
 
@@ -1277,7 +1283,7 @@ footer {
 }
 
 .stats-text {
-    font-size: 1rem;
+    font-size: 17px;
     color: #666;
     margin-bottom: 10px;
 }
@@ -1296,7 +1302,7 @@ footer {
 }
 
 .person-icon {
-    font-size: 0.8rem;
+    font-size: 13px;
     width: 24px;
     height: 24px;
     display: inline-flex;
@@ -1327,13 +1333,13 @@ footer {
 }
 
 .payment-label {
-    font-size: 1rem;
+    font-size: 17px;
     color: #666;
     margin-right: 10px;
 }
 
 .payment-icon {
-    font-size: 0.6rem;
+    font-size: 9px;
     width: 20px;
     height: 20px;
 }
@@ -1395,7 +1401,7 @@ footer {
     font-style: italic;
     color: #666;
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .image-row {
@@ -1478,7 +1484,7 @@ footer {
     width: 100%;
     text-align: center;
     color: var(--secondary-text-color);
-    font-size: 1.1rem;
+    font-size: 19px;
     line-height: 1.5;
     font-weight: 400;
     opacity: 0;
@@ -1635,7 +1641,7 @@ button:focus {
 @media (max-width: 968px) {
     .portfolio-item {
         grid-template-columns: 1fr !important;
-        gap: 2rem;
+        gap: 37px;
     }
 
     .portfolio-item:nth-child(even) .portfolio-image,
@@ -1644,11 +1650,11 @@ button:focus {
     }
 
     .portfolio-content h2 {
-        font-size: 1.6rem;
+        font-size: 24px;
     }
 
     .portfolio-header h1 {
-        font-size: 2.5rem;
+        font-size: 42px;
     }
     
     .hero-split {
@@ -1662,41 +1668,41 @@ button:focus {
     
     .hero-content {
         flex: 1;
-        padding: 2rem 4rem;
+        padding: 37px 77px;
     }
     
     .cta-buttons {
         flex-direction: row;
         justify-content: center;
-        gap: 1rem;
-        margin-bottom: 2rem;
+        gap: 17px;
+        margin-bottom: 37px;
     }
 }
 
 @media (max-width: 768px) {
     /* Portfolio styles */
     .portfolio-header {
-        padding: 5rem 1.5rem 3rem;
+        padding: 97px 27px 57px;
     }
     
     .portfolio-header h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.75rem;
+        font-size: 37px;
+        margin-bottom: 12px;
     }
     
     .portfolio-header p {
-        font-size: 1rem;
-        padding: 0 1rem;
+        font-size: 17px;
+        padding: 0 17px;
     }
 
     .portfolio-item {
         grid-template-columns: 1fr !important;
-        gap: 1.5rem;
+        gap: 27px;
     }
 
     /* Hero section */
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 47px;
     }
     
     /* iPet specific */
@@ -1715,7 +1721,7 @@ button:focus {
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 37px;
     }
     
     .case-study-container {
@@ -1764,30 +1770,30 @@ button:focus {
     }
     
     .hero-content {
-        padding: 2rem;
+        padding: 37px;
     }
 }
 
 @media (max-width: 480px) {
     .portfolio-header {
-        padding: 4rem 1rem 2rem;
+        padding: 77px 17px 37px;
     }
     
     .portfolio-header h1 {
-        font-size: 1.8rem;
+        font-size: 29px;
     }
     
     .portfolio-header p {
-        font-size: 0.95rem;
+        font-size: 16px;
     }
 
     .portfolio-item {
         grid-template-columns: 1fr !important;
-        gap: 1rem;
+        gap: 17px;
     }
     
     .hero h1 {
-        font-size: 2rem;
+        font-size: 37px;
     }
     
     .process-step {
@@ -1801,7 +1807,7 @@ button:focus {
     object-fit: cover;
     margin: 0px 0;
     text-align: center;
-    padding: 1rem 0 1rem 0;
+    padding: 17px 0 17px 0;
 }
 
 .image-container img {
@@ -1821,7 +1827,7 @@ button:focus {
     display: flex; /* 启用 Flexbox 布局 */
     align-items: flex-start; /* 让两列顶部对齐 */
     gap: 8px;
-    margin: 2rem 0 2rem;
+    margin: 37px 0 37px;
 }
 
 .content-wrapper {
@@ -1836,7 +1842,7 @@ button:focus {
 
 .section-title {
     color: var(--ipet-accent);
-    font-size: 1.8rem;
+    font-size: 33px;
     position: relative;
     padding-bottom: 12px;
     padding-top: 200px;
@@ -1844,7 +1850,7 @@ button:focus {
 
 .section-title-2 {
     color: var(--text-color-header);
-    font-size: 2.4rem;
+    font-size: 37px;
     position: relative;
     padding-bottom: 12px;
     font-weight: 500;
@@ -1936,13 +1942,13 @@ button:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
-    gap: 1rem;
+    margin-bottom: 27px;
+    gap: 17px;
 }
 
 .intro-text {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
     margin-bottom: 0;
     font-weight: 400;
@@ -1952,9 +1958,9 @@ button:focus {
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1rem;
+    gap: 17px;
     max-width: 600px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 7px;
 }
 
 .flip-card {
@@ -2002,20 +2008,20 @@ button:focus {
     background: white;
     color: var(--text-color);
     transform: rotateY(180deg);
-    padding: 0.5rem;
+    padding: 7px;
 
 }
 
 .question-mark {
     font-family: var(--header-text-font);
-    font-size: 2rem;
+    font-size: 37px;
     font-weight: 600;
     color: var(--secondary-color);
 }
 
 .flip-card-back p {
     font-family: var(--body-text-font);
-    font-size: 0.9rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3;
     margin: 0;
@@ -2037,7 +2043,7 @@ button:focus {
     .intro-section {
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 17px;
     }
     
     .experience-gauge-container {
@@ -2050,7 +2056,7 @@ button:focus {
     
     .cards-container {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 0.8rem;
+        gap: 13px;
     }
     
     .flip-card {
@@ -2058,17 +2064,17 @@ button:focus {
     }
     
     .question-mark {
-        font-size: 1.8rem;
+        font-size: 33px;
     }
     
     .flip-card-back p {
-        font-size: 0.75rem;
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .intro-section {
-        gap: 0.8rem;
+        gap: 13px;
     }
     
     .experience-gauge-container {
@@ -2077,7 +2083,7 @@ button:focus {
     
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.6rem;
+        gap: 9px;
     }
     
     .flip-card {
@@ -2085,12 +2091,12 @@ button:focus {
     }
     
     .question-mark {
-        font-size: 1.6rem;
+        font-size: 29px;
     }
     
     .flip-card-back p {
-        font-size: 0.7rem;
-        padding: 0.2rem;
+        font-size: 11px;
+        padding: 1px;
     }
 }
 
@@ -2100,21 +2106,21 @@ button:focus {
 
 .data-insights-section {
     background-color: var(--background-color);
-    margin: 2rem 0;
+    margin: 37px 0;
 }
 
 .insights-title {
     font-family: var(--header-text-font);
-    font-size: 1.6rem;
+    font-size: 25px;
     font-weight: 600;
     color: var(--text-color);
-    margin-bottom: 1rem;
+    margin-bottom: 17px;
     line-height: 1.3;
 }
 
 .data-visualization {
     display: flex;
-    gap: 2rem;
+    gap: 37px;
     align-items: flex-start;
 }
 
@@ -2122,53 +2128,53 @@ button:focus {
     flex: 0 0 200px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 37px;
 }
 
 .year-stat {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 7px;
 }
 
 .year {
     font-family: var(--header-text-font);
-    font-size: 0.9rem;
+    font-size: 15px;
     color: var(--secondary-text-color);
     font-weight: 500;
 }
 
 .total-downloads {
     font-family: var(--body-text-font);
-    font-size: 0.85rem;
+    font-size: 14px;
     color: var(--secondary-text-color);
 }
 
 .download-number {
     display: flex;
     align-items: baseline;
-    gap: 0.5rem;
+    gap: 7px;
 }
 
 .number {
     font-family: var(--header-text-font);
-    font-size: 2.5rem;
+    font-size: 47px;
     font-weight: 600;
     color: var(--text-color);
 }
 
 .trend-down {
-    font-size: 1.5rem;
+    font-size: 27px;
     color: #FFA500;
     font-weight: bold;
 }
 
 .comparison {
-    margin-top: 0.5rem;
+    margin-top: 7px;
 }
 
 .comparison-text {
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
 }
 
@@ -2195,7 +2201,7 @@ button:focus {
 @media (max-width: 968px) {
     .data-visualization {
         flex-direction: column;
-        gap: 2rem;
+        gap: 37px;
     }
     
     .stats-summary {
@@ -2209,14 +2215,14 @@ button:focus {
     }
     
     .insights-title {
-        font-size: 1.3rem;
+        font-size: 23px;
     }
 }
 
 @media (max-width: 768px) {
     
     .insights-title {
-        font-size: 1.3rem;
+        font-size: 23px;
     }
     
     .chart-container {
@@ -2247,12 +2253,12 @@ button:focus {
     margin-bottom: 10px;
     font-family: var(--header-text-font);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 17px;
 }
 
 .focus-area-card p {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 17px;
     line-height: 1.5;
     margin: 0;
 }
@@ -2301,7 +2307,7 @@ button:focus {
 }
 
 .stat-number {
-    font-size: 2.5rem;
+    font-size: 47px;
     font-weight: 700;
     color: var(--ipet-accent);
     line-height: 1;
@@ -2309,7 +2315,7 @@ button:focus {
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
     margin-top: 5px;
     font-family: var(--header-text-font);
@@ -2335,7 +2341,7 @@ button:focus {
 }
 
 .insight-icon i {
-    font-size: 1.5rem;
+    font-size: 27px;
     color: var(--ipet-text);
 }
 
@@ -2363,7 +2369,7 @@ button:focus {
     }
     
     .stat-number {
-        font-size: 2rem;
+        font-size: 37px;
     }
 }
 
@@ -2379,7 +2385,7 @@ button:focus {
 
 /* Research Approach Visual Enhancements */
 .approach-description {
-    font-size: 1rem;
+    font-size: 17px;
     margin-bottom: 25px;
     line-height: 1.6;
 }
@@ -2423,7 +2429,7 @@ button:focus {
 }
 
 .audience-icon i {
-    font-size: 1.2rem;
+    font-size: 21px;
     color: var(--ipet-text);
 }
 
@@ -2431,12 +2437,12 @@ button:focus {
     margin: 0 0 5px 0;
     color: var(--text-color);
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 18px;
 }
 
 .audience-details p {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 16px;
     color: var(--secondary-text-color);
 }
 
@@ -2453,7 +2459,7 @@ button:focus {
     }
     
     .approach-description {
-        font-size: 1rem;
+        font-size: 17px;
     }
 }
 
@@ -2496,7 +2502,7 @@ button:focus {
 }
 
 .persona-name {
-    font-size: 1.8rem;
+    font-size: 33px;
     margin: 0 0 10px 0;
     color: var(--ipet-accent);
     font-weight: 600;
@@ -2505,7 +2511,7 @@ button:focus {
 
 .persona-tagline {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 19px;
     color: var(--text-color);
     margin: 0;
     line-height: 1.5;
@@ -2544,20 +2550,20 @@ button:focus {
 
 .info-icon i {
     color: var(--ipet-text);
-    font-size: 1.2rem;
+    font-size: 21px;
 }
 
 .persona-info-item h4 {
     margin: 0 0 5px 0;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .persona-info-item p {
     margin: 0;
     color: var(--secondary-text-color);
-    font-size: 0.9rem;
+    font-size: 15px;
 }
 
 .persona-traits {
@@ -2578,7 +2584,7 @@ button:focus {
     align-items: center;
     gap: 10px;
     margin: 0 0 5px 0;
-    font-size: 1.05rem;
+    font-size: 18px;
     color: var(--ipet-text);
     font-weight: 600;
 }
@@ -2589,7 +2595,7 @@ button:focus {
 
 .trait-item p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
     padding-left: 26px;
 }
@@ -2623,7 +2629,7 @@ button:focus {
 }
 
 .iteration-intro p {
-    font-size: 1.1rem;
+    font-size: 19px;
     color: var(--secondary-text-color);
     max-width: 700px;
     margin: 0 auto;
@@ -2667,12 +2673,12 @@ button:focus {
     border-radius: 50%;
     margin-bottom: 15px;
     color: white;
-    font-size: 1.3rem;
+    font-size: 23px;
 }
 
 .change-title {
     font-family: var(--header-text-font);
-    font-size: 1.1rem;
+    font-size: 19px;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 10px;
@@ -2680,7 +2686,7 @@ button:focus {
 }
 
 .change-description {
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
     line-height: 1.6;
     margin: 0;
@@ -2702,7 +2708,7 @@ button:focus {
     left: 20px;
     background-color: white;
     padding: 5px 10px;
-    font-size: 1.2rem;
+    font-size: 21px;
     border-radius: 15px;
     border: 2px solid var(--ipet-accent);
 }
@@ -2710,14 +2716,14 @@ button:focus {
 .iteration-summary h4 {
     color: var(--ipet-accent);
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 19px;
     font-weight: 600;
     margin-top: 10px;
 }
 
 .iteration-summary p {
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 17px;
     line-height: 1.6;
     margin: 0;
 }
@@ -2737,15 +2743,15 @@ button:focus {
     .change-icon {
         width: 45px;
         height: 45px;
-        font-size: 1.2rem;
+        font-size: 21px;
     }
     
     .change-title {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .change-description {
-        font-size: 0.95rem;
+        font-size: 16px;
     }
 }
 
@@ -2776,19 +2782,19 @@ button:focus {
     background: linear-gradient(135deg, var(--ipet-accent), var(--ipet-primary));
     border-radius: 50%;
     color: white;
-    font-size: 1.3rem;
+    font-size: 23px;
 }
 
 .methodology-title {
     font-family: var(--header-text-font);
-    font-size: 1.3rem;
+    font-size: 23px;
     font-weight: 600;
     color: var(--text-color);
     margin: 0;
 }
 
 .methodology-description {
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
     line-height: 1.6;
     margin-bottom: 30px;
@@ -2810,7 +2816,7 @@ button:focus {
 
 .stat-number {
     font-family: var(--header-text-font);
-    font-size: 2.5rem;
+    font-size: 47px;
     font-weight: 700;
     color: var(--ipet-accent);
     line-height: 1;
@@ -2818,7 +2824,7 @@ button:focus {
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
     margin-top: 5px;
     font-weight: 500;
@@ -2842,7 +2848,7 @@ button:focus {
 
 .insight-card h5 {
     font-family: var(--header-text-font);
-    font-size: 1.05rem;
+    font-size: 18px;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 10px;
@@ -2850,7 +2856,7 @@ button:focus {
 }
 
 .insight-card p {
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
     line-height: 1.5;
     margin: 0;
@@ -2864,7 +2870,7 @@ button:focus {
     background-color: white;
     padding: 3px 8px;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 17px;
     border: 2px solid var(--ipet-accent);
 }
 
@@ -2884,11 +2890,11 @@ button:focus {
     .methodology-icon {
         width: 45px;
         height: 45px;
-        font-size: 1.2rem;
+        font-size: 21px;
     }
     
     .methodology-title {
-        font-size: 1.2rem;
+        font-size: 21px;
     }
     
     .testing-stats {
@@ -2897,7 +2903,7 @@ button:focus {
     }
     
     .stat-number {
-        font-size: 2rem;
+        font-size: 37px;
     }
     
     .testing-insights-grid {
@@ -2917,7 +2923,7 @@ button:focus {
 .hero-tabs {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 1px;
     flex: 0 0 200px;
     margin-bottom: 0;
 }
@@ -2926,14 +2932,14 @@ button:focus {
     font-family: var(--header-text-font);
     background: none;
     border: none;
-    font-size: 0.9rem;
+    font-size: 15px;
     color: var(--text-muted-color);
     cursor: pointer;
     white-space: nowrap;
     position: relative;
     font-weight: 600;
     text-align: left;
-    padding: 0.3rem 0;
+    padding: 3px 0;
 }
 
 .tab-button.active {
@@ -2963,7 +2969,7 @@ button:focus {
 }
 
 .tab-content h1 {
-    font-size: 2.3rem;
+    font-size: 38px;
     color: var(--text-color);
     font-weight: 500;
     letter-spacing: -0.5px;
@@ -2974,7 +2980,7 @@ button:focus {
 
 .tab-content .hero-links {
     font-family: var(--body-text-font);
-    font-size: 1.4rem;
+    font-size: 19px;
     color: var(--secondary-text-color);
     margin-bottom: 0;
     max-width: 700px;
@@ -2998,11 +3004,11 @@ button:focus {
 @media (max-width: 968px) {
     .hero-content {
         max-width: 80%;
-        padding: 1rem;
+        padding: 17px;
     }
     
     .tab-content h1 {
-        font-size: 1.8rem;
+        font-size: 33px;
         color: var(--text-color);
         font-weight: 500;
         letter-spacing: -0.5px;
@@ -3016,7 +3022,7 @@ button:focus {
     }
 
     .tab-content .hero-links {
-        font-size: 0.8rem;
+        font-size: 15px;
     }
     
  
@@ -3025,21 +3031,21 @@ button:focus {
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
-        padding: 1rem;
+        padding: 17px;
     }
     
     .hero-tabs {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 0.2rem;
-        margin-bottom: 0rem;
+        gap: 1px;
+        margin-bottom: -3px;
         max-width: 440px;
         max-height: 120px;
     }
     
     .tab-button {
-        font-size: 0.75rem;
-        padding: 0rem 1.2rem 0 0rem;
+        font-size: 12px;
+        padding: -3px 21px 0 -3px;
     }
     
     .hero-content-area {
@@ -3048,32 +3054,32 @@ button:focus {
     }
     
     .tab-content h1 {
-        font-size: 1.6rem;
+        font-size: 29px;
         text-align: left;
     }
 
     .tab-content .hero-links {
-        font-size: 0.8rem;
+        font-size: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .hero-content {
-        padding: 1rem;
+        padding: 17px;
         min-width: 320px;
     }
     
     .hero-tabs {
         flex-wrap: wrap;
-        gap: 0.2rem;
-        margin-bottom: 0rem;
+        gap: 1px;
+        margin-bottom: -3px;
         max-width: 300px;
         max-height: 120px;
     }
     
     .tab-button {
-        font-size: 0.75rem;
-        padding: 0rem 1.2rem 0 0rem;
+        font-size: 12px;
+        padding: -3px 21px 0 -3px;
     }
     
     .hero-content-area {
@@ -3082,12 +3088,12 @@ button:focus {
     }
     
     .tab-content h1 {
-        font-size: 1rem;
+        font-size: 19px;
         text-align: left;
     }
 
     .tab-content .hero-links {
-        font-size: 0.8rem;
+        font-size: 15px;
     }
 }
 
@@ -3134,7 +3140,7 @@ button:focus {
 
 .metric-number {
     font-family: var(--header-text-font);
-    font-size: 3rem;
+    font-size: 57px;
     font-weight: 700;
     min-width: 120px;
     text-align: center;
@@ -3157,7 +3163,7 @@ button:focus {
 }
 
 .metric-label i {
-    font-size: 1.5rem;
+    font-size: 27px;
     color: var(--ipet-accent);
     width: 30px;
     text-align: center;
@@ -3165,7 +3171,7 @@ button:focus {
 
 .metric-label span {
     font-family: var(--header-text-font);
-    font-size: 1.3rem;
+    font-size: 23px;
     font-weight: 600;
     color: var(--text-color);
 }
@@ -3182,16 +3188,16 @@ button:focus {
     }
     
     .metric-number {
-        font-size: 2.5rem;
+        font-size: 47px;
         min-width: 100px;
     }
     
     .metric-label span {
-        font-size: 1.1rem;
+        font-size: 19px;
     }
     
     .metric-label i {
-        font-size: 1.3rem;
+        font-size: 23px;
     }
 }
 
@@ -3221,24 +3227,24 @@ button:focus {
 @media (max-width: 968px) {
     .horizontal-section {
         flex-direction: column;
-        gap: 1.5rem;
-        margin: 1.5rem 0;
+        gap: 27px;
+        margin: 27px 0;
     }
     
     .content-wrapper {
         flex: none;
         max-width: 100% !important;
-        margin-bottom: 1rem;
+        margin-bottom: 17px;
     }
     
     .section-title-2 {
-        font-size: 2rem;
+        font-size: 33px;
         padding-bottom: 8px;
     }
     
     .data-visualization {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 27px;
     }
     
     .stats-summary {
@@ -3255,103 +3261,103 @@ button:focus {
 /* Mobile landscape and tablet portrait */
 @media (max-width: 768px) {
     .case-study-container {
-        padding: 30px 1.5rem;
+        padding: 30px 27px;
     }
     
     .horizontal-section {
         flex-direction: column;
-        gap: 1rem;
-        margin: 1rem 0;
+        gap: 17px;
+        margin: 17px 0;
     }
     
     .content-wrapper {
         flex: none;
         max-width: 100%;
-        margin-bottom: 0.8rem;
+        margin-bottom: 13px;
     }
     
     .section-title-2 {
-        font-size: 1.8rem;
+        font-size: 33px;
         padding-bottom: 6px;
-        margin-bottom: 0.8rem;
+        margin-bottom: 13px;
     }
     
     .barriers-grid {
         flex-direction: column;
-        gap: 1rem;
+        gap: 17px;
     }
     
     .barrier-item {
-        gap: 0.8rem;
+        gap: 13px;
     }
     
     .barrier-icon {
-        font-size: 1.3rem;
-        width: 2rem;
-        height: 2rem;
+        font-size: 23px;
+        width: 37px;
+        height: 37px;
         flex-shrink: 0;
     }
     
     .research-findings-section {
-        padding: 1.5rem;
-        margin: 1.5rem 0;
+        padding: 27px;
+        margin: 27px 0;
     }
     
     .finding-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.8rem;
+        gap: 13px;
     }
     
     .finding-number {
-        font-size: 1rem;
-        padding: 0.4rem 0.6rem;
-        min-width: 2rem;
+        font-size: 17px;
+        padding: 5px 9px;
+        min-width: 37px;
     }
     
     .finding-title {
-        font-size: 1.1rem;
+        font-size: 19px;
     }
     
     .user-quotes {
-        margin-bottom: 1rem;
+        margin-bottom: 17px;
     }
     
     .quote-item {
-        padding-left: 2rem;
-        margin-bottom: 0.8rem;
+        padding-left: 37px;
+        margin-bottom: 13px;
     }
     
     .quote-item::before {
-        font-size: 1rem;
-        width: 1.5rem;
-        height: 1.5rem;
+        font-size: 17px;
+        width: 27px;
+        height: 27px;
     }
     
     .collapsible-header {
-        padding: 0.8rem 1rem;
+        padding: 13px 17px;
     }
     
     .collapsible-title {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .collapsible-inner {
-        padding: 1rem;
+        padding: 17px;
     }
     
     .method-title {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
     
     .method-section p,
     .method-list li {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
     
     /* Data insights section */
     .insights-title {
-        font-size: 1.3rem;
+        font-size: 23px;
     }
     
     .chart-img {
@@ -3372,116 +3378,116 @@ button:focus {
 /* Mobile portrait */
 @media (max-width: 480px) {
     .case-study-container {
-        padding: 20px 1rem;
+        padding: 20px 17px;
     }
     
     .horizontal-section {
-        gap: 0.8rem;
-        margin: 0.8rem 0;
+        gap: 13px;
+        margin: 13px 0;
     }
     
     .section-title-2 {
-        font-size: 1.5rem;
+        font-size: 27px;
         padding-bottom: 4px;
-        margin-bottom: 0.6rem;
+        margin-bottom: 9px;
     }
     
     .research-findings-section {
-        padding: 1rem;
-        margin: 1rem 0;
+        padding: 17px;
+        margin: 17px 0;
     }
     
     .finding-item {
-        margin-bottom: 1.5rem;
+        margin-bottom: 27px;
     }
     
     .finding-title {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .barrier-item {
-        gap: 0.6rem;
+        gap: 9px;
     }
     
     .barrier-icon {
-        font-size: 1.2rem;
-        width: 1.8rem;
-        height: 1.8rem;
+        font-size: 21px;
+        width: 33px;
+        height: 33px;
     }
     
     .barrier-method {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
     
     .barrier-description {
-        font-size: 0.8rem;
+        font-size: 13px;
     }
     
     .quote-text {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
     
     .quote-item {
-        padding-left: 1.8rem;
+        padding-left: 33px;
     }
     
     .quote-item::before {
-        font-size: 0.9rem;
-        width: 1.3rem;
-        height: 1.3rem;
+        font-size: 15px;
+        width: 23px;
+        height: 23px;
     }
     
     .collapsible-header {
-        padding: 0.6rem 0.8rem;
+        padding: 9px 13px;
     }
     
     .collapsible-inner {
-        padding: 0.8rem;
+        padding: 13px;
     }
     
     .method-list {
-        padding-left: 1.2rem;
+        padding-left: 21px;
     }
     
     .method-section p,
     .method-list li {
-        font-size: 0.85rem;
+        font-size: 14px;
     }
     
     /* Data insights section */
     .insights-title {
-        font-size: 1.1rem;
+        font-size: 19px;
         line-height: 1.4;
     }
     
     .number {
-        font-size: 2rem;
+        font-size: 37px;
     }
     
     .trend-down {
-        font-size: 1.2rem;
+        font-size: 21px;
     }
     
     /* Project info section */
     .project-info {
         flex-direction: column;
-        gap: 1rem;
+        gap: 17px;
     }
     
     .info-item {
         min-width: unset;
         padding-right: 0;
-        margin-bottom: 0.8rem;
+        margin-bottom: 13px;
     }
     
     .info-label {
-        font-size: 0.9rem;
+        font-size: 15px;
         margin-bottom: 3px;
     }
     
     /* Image containers */
     .image-container {
-        margin: 1rem 0 !important;
+        margin: 17px 0 !important;
         text-align: center !important;
     }
     
@@ -3497,7 +3503,7 @@ button:focus {
 /* Extra small screens */
 @media (max-width: 320px) {
     .case-study-container {
-        padding: 15px 0.8rem;
+        padding: 15px 13px;
     }
     
     .content-wrapper {
@@ -3505,31 +3511,31 @@ button:focus {
     }
     
     .section-title-2 {
-        font-size: 1.3rem;
+        font-size: 23px;
     }
     
     .research-findings-section {
-        padding: 0.8rem;
+        padding: 13px;
     }
     
     .finding-title {
-        font-size: 0.95rem;
+        font-size: 16px;
     }
     
     .barrier-method {
-        font-size: 0.85rem;
+        font-size: 14px;
     }
     
     .barrier-description {
-        font-size: 0.75rem;
+        font-size: 12px;
     }
     
     .insights-title {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .number {
-        font-size: 1.8rem;
+        font-size: 33px;
     }
 }
 
@@ -3579,7 +3585,7 @@ button:focus {
 }
 
 .metric-icon {
-    font-size: 2.5rem;
+    font-size: 47px;
     font-weight: bold;
     margin-bottom: 10px;
     line-height: 1;
@@ -3595,7 +3601,7 @@ button:focus {
 
 .metric-value {
     font-family: var(--header-text-font);
-    font-size: 2.8rem;
+    font-size: 53px;
     font-weight: 700;
     margin-bottom: 8px;
     line-height: 1;
@@ -3611,7 +3617,7 @@ button:focus {
 
 .metric-desc {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
     font-weight: 500;
     line-height: 1.3;
@@ -3630,15 +3636,15 @@ button:focus {
     }
     
     .metric-icon {
-        font-size: 2rem;
+        font-size: 37px;
     }
     
     .metric-value {
-        font-size: 2.2rem;
+        font-size: 41px;
     }
     
     .metric-desc {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
 }
 
@@ -3653,11 +3659,11 @@ button:focus {
     }
     
     .metric-icon {
-        font-size: 1.8rem;
+        font-size: 33px;
     }
     
     .metric-value {
-        font-size: 2rem;
+        font-size: 37px;
     }
 }
 
@@ -3721,7 +3727,7 @@ button:focus {
 
 .metric-name {
     font-family: var(--header-text-font);
-    font-size: 0.8rem;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-color);
     text-align: center;
@@ -3767,7 +3773,7 @@ button:focus {
 
 .bar-label-vertical {
     font-family: var(--header-text-font);
-    font-size: 0.8rem;
+    font-size: 13px;
     font-weight: 600;
     color: var(--ipet-accent);
     white-space: nowrap;
@@ -3819,7 +3825,7 @@ button:focus {
     }
     
     .metric-name {
-        font-size: 0.9rem;
+        font-size: 15px;
         min-height: 35px;
         margin-top: 12px;
     }
@@ -3830,7 +3836,7 @@ button:focus {
     }
     
     .bar-label-vertical {
-        font-size: 0.7rem;
+        font-size: 11px;
         top: -22px;
     }
     
@@ -3863,7 +3869,7 @@ button:focus {
     }
     
     .metric-name {
-        font-size: 0.8rem;
+        font-size: 13px;
         min-height: 30px;
         margin-top: 10px;
     }
@@ -3873,7 +3879,7 @@ button:focus {
     }
     
     .bar-label-vertical {
-        font-size: 0.65rem;
+        font-size: 10px;
         top: -20px;
     }
     
@@ -3901,9 +3907,9 @@ button:focus {
 
 .gauge-label {
     font-family: var(--body-text-font);
-    font-size: 0.9rem;
+    font-size: 15px;
     color: var(--secondary-text-color);
-    margin-bottom: 0.8rem;
+    margin-bottom: 13px;
     font-weight: 400;
     display: none;
 }
@@ -3951,7 +3957,7 @@ button:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: var(--header-text-font);
-    font-size: 0.8rem;
+    font-size: 13px;
     font-weight: 600;
     color: var(--text-color);
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
@@ -3961,14 +3967,14 @@ button:focus {
 
 .achievement-text {
     font-family: var(--header-text-font);
-    font-size: 1.1rem;
+    font-size: 19px;
     font-weight: 600;
     color: var(--secondary-color);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px) scale(0.9);
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin-top: 0.5rem;
+    margin-top: 7px;
 }
 
 .achievement-text.show {
@@ -4007,15 +4013,15 @@ button:focus {
     }
     
     .gauge-text {
-        font-size: 0.75rem;
+        font-size: 12px;
     }
     
     .achievement-text {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .gauge-label {
-        font-size: 0.85rem;
+        font-size: 14px;
     }
 }
 
@@ -4026,11 +4032,11 @@ button:focus {
     }
     
     .gauge-text {
-        font-size: 0.7rem;
+        font-size: 11px;
     }
     
     .achievement-text {
-        font-size: 0.95rem;
+        font-size: 16px;
     }
 }
 
@@ -4043,14 +4049,14 @@ button:focus {
 
 .achievement-text {
     font-family: var(--header-text-font);
-    font-size: 1.1rem;
+    font-size: 19px;
     font-weight: 600;
     color: var(--secondary-color);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px) scale(0.9);
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin-top: 0.5rem;
+    margin-top: 7px;
     display: none;
 }
 
@@ -4065,7 +4071,7 @@ button:focus {
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(62, 142, 222, 0.3);
     font-family: var(--header-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 600;
     z-index: 10000;
     transform: translateX(100%);
@@ -4104,7 +4110,7 @@ button:focus {
     .achievement-popup {
         bottom: 20px;
         right: 20px;
-        font-size: 0.9rem;
+        font-size: 15px;
         padding: 12px 16px;
         max-width: 250px;
     }
@@ -4114,7 +4120,7 @@ button:focus {
     .achievement-popup {
         bottom: 15px;
         right: 15px;
-        font-size: 0.85rem;
+        font-size: 14px;
         padding: 10px 14px;
         max-width: 220px;
     }
@@ -4159,7 +4165,7 @@ button:focus {
     padding: 15px;
     background: white;
     font-family: var(--body-text-font);
-    font-size: 0.9rem;
+    font-size: 15px;
     color: var(--text-color);
     line-height: 1.4;
     border-radius: 0 0 10px 10px;
@@ -4181,7 +4187,7 @@ button:focus {
     }
     
     .hover-image-description {
-        font-size: 0.8rem;
+        font-size: 13px;
         padding: 12px;
     }
 }
@@ -4193,7 +4199,7 @@ button:focus {
     }
     
     .hover-image-description {
-        font-size: 0.75rem;
+        font-size: 12px;
         padding: 10px;
     }
 }
@@ -4202,7 +4208,7 @@ button:focus {
    Collapsible Section Styling
    ========================================================================== */
 .collapsible-section {
-    margin: 1.5rem 0;
+    margin: 27px 0;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
@@ -4210,7 +4216,7 @@ button:focus {
 
 .collapsible-header {
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: 17px 27px;
     background-color: #f8f9fa;
     border: none;
     cursor: pointer;
@@ -4227,14 +4233,14 @@ button:focus {
 
 .collapsible-title {
     font-family: var(--header-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 600;
     color: var(--text-color);
     text-align: left;
 }
 
 .collapsible-arrow {
-    font-size: 0.9rem;
+    font-size: 15px;
     color: var(--secondary-text-color);
     transition: transform 0.3s ease;
 }
@@ -4256,19 +4262,19 @@ button:focus {
 }
 
 .collapsible-inner {
-    padding: 1.5rem;
+    padding: 27px;
 }
 
 .method-subtitle {
     font-family: var(--header-text-font);
-    font-size: 1.1rem;
+    font-size: 19px;
     font-weight: 600;
     color: var(--ipet-accent);
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 27px 0;
 }
 
 .method-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 27px;
 }
 
 .method-section:last-child {
@@ -4277,32 +4283,32 @@ button:focus {
 
 .method-title {
     font-family: var(--header-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 600;
     color: var(--text-color);
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 13px 0;
 }
 
 .method-list {
     list-style-type: disc;
-    padding-left: 1.5rem;
-    margin: 0.8rem 0;
+    padding-left: 27px;
+    margin: 13px 0;
 }
 
 .method-list li {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
     line-height: 1.6;
-    margin-bottom: 0.5rem;
+    margin-bottom: 7px;
 }
 
 .method-section p {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
     line-height: 1.6;
-    margin: 0 0 1rem 0;
+    margin: 0 0 17px 0;
 }
 
 .method-section p:last-child {
@@ -4312,42 +4318,42 @@ button:focus {
 /* Responsive adjustments for collapsible section */
 @media (max-width: 768px) {
     .collapsible-header {
-        padding: 0.8rem 1rem;
+        padding: 13px 17px;
     }
     
     .collapsible-title {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .collapsible-inner {
-        padding: 1rem;
+        padding: 17px;
     }
     
     .method-subtitle {
-        font-size: 1rem;
+        font-size: 17px;
     }
     
     .method-title {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
     
     .method-section p,
     .method-list li {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .collapsible-header {
-        padding: 0.6rem 0.8rem;
+        padding: 9px 13px;
     }
     
     .collapsible-inner {
-        padding: 0.8rem;
+        padding: 13px;
     }
     
     .method-list {
-        padding-left: 1.2rem;
+        padding-left: 21px;
     }
 }
 
@@ -4355,13 +4361,13 @@ button:focus {
    Research Findings Section Styling
    ========================================================================== */
 .research-findings-section {
-    margin: 2rem 0;
+    margin: 37px 0;
     border-radius: 16px;
-    padding: 2rem;
+    padding: 37px;
 }
 
 .finding-item {
-    margin-bottom: 2.5rem;
+    margin-bottom: 47px;
 }
 
 .finding-item:last-child {
@@ -4371,25 +4377,25 @@ button:focus {
 .finding-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: .8rem;
+    gap: 17px;
+    margin-bottom: 13px;
 }
 
 .finding-number {
     background-color: var(--EO-ux-service-design-theme);
     color: black;
     font-family: var(--header-text-font);
-    font-size: 1.2rem;
+    font-size: 21px;
     font-weight: 700;
-    padding: 0.5rem 0.8rem;
+    padding: 7px 13px;
     border-radius: 8px;
-    min-width: 2.5rem;
+    min-width: 47px;
     text-align: center;
 }
 
 .finding-title {
     font-family: var(--header-text-font);
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: 600;
     color: var(--text-color);
     margin: 0;
@@ -4398,7 +4404,7 @@ button:focus {
 
 .finding-title-2 {
     font-family: var(--header-text-font);
-    font-size: 1.3rem;
+    font-size: 21px;
     font-weight: 600;
     color: var(--text-color-reverse);
     margin: 0;
@@ -4407,21 +4413,21 @@ button:focus {
 
 .barriers-grid {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+    gap: 37px;
+    margin-bottom: 27px;
 }
 
 .barrier-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 17px;
     flex: 1;
 }
 
 .barrier-icon {
-    font-size: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    font-size: 27px;
+    width: 47px;
+    height: 47px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4430,30 +4436,30 @@ button:focus {
 .barrier-content {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 3px;
 }
 
 .barrier-method {
     font-family: var(--header-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 600;
     color: var(--text-color);
 }
 
 .barrier-description {
     font-family: var(--body-text-font);
-    font-size: 0.9rem;
+    font-size: 15px;
     color: var(--secondary-text-color);
     line-height: 1.4;
 }
 
 .finding-description {
-    margin-bottom: 1.5rem;
+    margin-bottom: 27px;
 }
 
 .finding-description p {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
@@ -4461,19 +4467,19 @@ button:focus {
 
 .finding-description-2 p {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color-reverse);
     line-height: 1.6;
     margin: 0;
 }
 
 .user-quotes {
-    margin-bottom: 1.5rem;
+    margin-bottom: 27px;
 }
 
 .quote-item {
-    margin-bottom: 1rem;
-    padding-left: 2.5rem;
+    margin-bottom: 17px;
+    padding-left: 47px;
     position: relative;
 }
 
@@ -4482,9 +4488,9 @@ button:focus {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 1.2rem;
-    width: 2rem;
-    height: 2rem;
+    font-size: 21px;
+    width: 37px;
+    height: 37px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4497,43 +4503,43 @@ button:focus {
 
 .quote-text {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     font-style: italic;
     color: var(--text-color);
-    margin: 0 0 0.3rem 0;
+    margin: 0 0 3px 0;
     line-height: 1.5;
 }
 
 .quote-source {
     font-family: var(--body-text-font);
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--text-muted-color);
 }
 
 .stat-highlight {
     background-color: white;
-    padding: 1rem;
+    padding: 17px;
     border-radius: 8px;
 }
 
 .stat-highlight p {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--text-color);
-    margin: 0 0 0.3rem 0;
+    margin: 0 0 3px 0;
     line-height: 1.5;
 }
 
 .stat-number {
     font-family: var(--header-text-font);
-    font-size: 1.2rem;
+    font-size: 21px;
     font-weight: 700;
     color: var(--ipet-accent);
 }
 
 .stat-source {
     font-family: var(--body-text-font);
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--text-muted-color);
 }
 
@@ -4545,61 +4551,61 @@ button:focus {
 /* Responsive adjustments for research findings */
 @media (max-width: 768px) {
     .research-findings-section {
-        padding: 1.5rem;
-        margin: 1.5rem 0;
+        padding: 27px;
+        margin: 27px 0;
     }
     
     .barriers-grid {
         flex-direction: column;
-        gap: 1rem;
+        gap: 17px;
     }
     
     .finding-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.8rem;
+        gap: 13px;
     }
     
     .finding-number {
-        font-size: 1rem;
-        padding: 0.4rem 0.6rem;
-        min-width: 2rem;
+        font-size: 17px;
+        padding: 5px 9px;
+        min-width: 37px;
     }
     
     .finding-title {
-        font-size: 1.1rem;
+        font-size: 20px;
     }
     
     .barrier-item {
-        gap: 0.8rem;
+        gap: 13px;
     }
     
     .barrier-icon {
-        font-size: 1.3rem;
-        width: 2rem;
-        height: 2rem;
+        font-size: 23px;
+        width: 37px;
+        height: 37px;
     }
 }
 
 @media (max-width: 480px) {
     .research-findings-section {
-        padding: 1rem;
+        padding: 17px;
     }
     
     .finding-item {
-        margin-bottom: 2rem;
+        margin-bottom: 37px;
     }
     
     .finding-title {
-        font-size: 1rem;
+        font-size: 18px;
     }
     
     .quote-text {
-        font-size: 0.9rem;
+        font-size: 15px;
     }
     
     .stat-highlight {
-        padding: 0.8rem;
+        padding: 13px;
     }
 }
 
@@ -4607,35 +4613,35 @@ button:focus {
    Design Impact Section Styling
    ========================================================================== */
 .design-impact {
-    margin: 0.5rem 0;
+    margin: 7px 0;
     padding: 0;
 }
 
 .impact-title {
     font-family: var(--header-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 600;
     color: var(--text-color);
-    margin-bottom: 1rem;
+    margin-bottom: 17px;
     margin-top: 0;
 }
 
 .impact-metrics {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 7px;
 }
 
 .metric-item {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 5px;
     width: 50%;
 }
 
 .index-metric-value {
     font-family: var(--header-text-font);
-    font-size: 1.4rem;
+    font-size: 25px;
     font-weight: 700;
     min-width: 94px;
     text-align: left;
@@ -4646,7 +4652,7 @@ button:focus {
 
 .metric-label {
     font-family: var(--body-text-font);
-    font-size: 1rem;
+    font-size: 17px;
     color: var(--secondary-text-color);
     line-height: 1.4;
     flex: 1;
@@ -4655,39 +4661,39 @@ button:focus {
 /* Responsive adjustments for design impact */
 @media (max-width: 768px) {
     .design-impact {
-        margin: 1.2rem 0;
+        margin: 21px 0;
     }
     
     .metric-value {
-        font-size: 1.5rem;
+        font-size: 27px;
         min-width: 50px;
     }
     
     .metric-label {
-        font-size: 0.8rem;
+        font-size: 13px;
     }
     
     .impact-metrics {
-        gap: 0.6rem;
+        gap: 9px;
     }
 }
 
 @media (max-width: 480px) {
     .design-impact {
-        margin: 1rem 0;
+        margin: 17px 0;
     }
     
     .metric-item {
-        gap: 0.4rem;
+        gap: 5px;
     }
     
     .metric-value {
-        font-size: 1.3rem;
+        font-size: 23px;
         min-width: 45px;
     }
     
     .metric-label {
-        font-size: 0.8rem;
+        font-size: 13px;
     }
 }
 
