@@ -561,7 +561,7 @@ footer {
 }
 
 .portfolio-header p {
-    max-width: 500px;
+    max-width: 1200px;
     margin: 0 auto;
     color: var(--secondary-text-color);
     font-size: 17px;
@@ -4629,13 +4629,13 @@ button:focus {
 .impact-metrics {
     display: flex;
     flex-direction: row;
-    gap: 7px;
+    gap: 40px;
 }
 
 .metric-item {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
     width: 50%;
 }
 
@@ -4643,7 +4643,7 @@ button:focus {
     font-family: var(--header-text-font);
     font-size: 25px;
     font-weight: 700;
-    min-width: 94px;
+    min-width: 80px;
     text-align: left;
     line-height: 1;
     color: var(--secondary-color);
@@ -4684,7 +4684,7 @@ button:focus {
     }
     
     .metric-item {
-        gap: 5px;
+        gap: 10px;
     }
     
     .metric-value {
