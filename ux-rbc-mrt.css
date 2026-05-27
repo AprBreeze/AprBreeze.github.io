@@ -1,0 +1,31 @@
+/* ==========================================================================
+   RBC MRT — Research Findings Section overrides
+   Loaded after style.css for ux-rbc-mrt.html only.
+   Copied from style.css; padding-left set to 0.
+   ========================================================================== */
+
+.research-findings-section {
+    margin: 37px 0;
+    border-radius: 16px;
+    padding: 37px 37px 37px 0;
+}
+
+@media (max-width: 768px) {
+    .research-findings-section {
+        padding: 27px 27px 27px 0;
+        margin: 27px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-findings-section {
+        padding: 17px 17px 17px 0;
+        margin: 17px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .research-findings-section {
+        padding: 13px 13px 13px 0;
+    }
+}

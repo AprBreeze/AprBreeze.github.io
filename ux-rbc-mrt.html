@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting Accessibility Service Design - April Breeze</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ux-rbc-mrt.css">
     <link rel="stylesheet" href="rbc-password-gate.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -99,10 +100,13 @@
         <section class="section">
             <section class="horizontal-section">
                 <div class="content-wrapper" style="max-width: 25%;">
-                    <h2 class="section-title-2">Client Interview</h2>
+                    <h2 class="section-title-2">Business Requirements</h2>
                 </div>
                 <div style="flex: 1; margin-left: 2rem;">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                    <p>Analytics revealed considerable user drop-off on the MRT landing page. <br>Business insights indicated that clients lacked confidence in the online process and were unconvinced of the digital tool's benefits.</p>
+                    <p><br>To mitigate this, the business goals were to:
+                        <br><br><span class="highlight-2">Build Digital Trust:</span> Reinforce credibility early to boost client confidence in online renewals.
+                        <br><br><span class="highlight-2">Increase Tool Adoption:</span> Increase conversion from the landing page into the actual tool to reduce branch advisor workload during peak season.</p>
                 </div>
             </section>
         </section>
@@ -119,6 +123,36 @@
     </div>
 
 
+    <div class="case-study-container">
+        <!-- Problem Section -->
+        <section class="section">
+            <section class="horizontal-section">
+                <div class="content-wrapper" style="max-width: 25%;">
+                    <h2 class="section-title-2">Business wants...</h2>
+                </div>
+                <div style="flex: 1; margin-left: 2rem;">
+                    <p>Spaceholder text for the goal of the business </p>
+                </div>
+            </section>
+        </section>
+    </div>
+
+
+    <div class="case-study-container">
+        <!-- Problem Section -->
+        <section class="section">
+            <section class="horizontal-section">
+                <div class="content-wrapper" style="max-width: 25%;">
+                    <h2 class="section-title-2">Users want...</h2>
+                </div>
+                <div style="flex: 1; margin-left: 2rem;">
+                    <p>Spaceholder text for the what is in it for the user? </p>
+                </div>
+            </section>
+        </section>
+    </div>
+
+
     <div class="case-study-container" style="background-color: black; max-width: 100%;">
         <div class="case-study-container">
         <section class="horizontal-section" style="margin: 0px 0px 0px 0px;">
@@ -126,12 +160,20 @@
                 <h2 class="section-title-2" style="color: white;">Problem Definition</h2>
             </div>
             <div style="flex: 1; margin-left: 2rem;">
-                <p style="color: white;">How might we...</p>
+                <p style="color: white; font-size: calc(1em + 5px)"> <span class="highlight-2">How might we</span> redesign the entry page to clearly communicate the benefits of online renewal and build user trust, without compromising the simple, low-effort experience?</span></p>
             </div>
         </section>
         </div>
     </div>
 
+
+    <div class="case-study-container" style="background-color: #006AC3; max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+        <section style="text-align: center; margin: 60px 0 60px 0;">
+            <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: rgb(255, 255, 255);">Design Phase 3: Ideate</h1>
+        </section>
+        </div>
+    </div>
 
     <div class="case-study-container">
         <section class="horizontal-section" style="margin-top: 60px;">
@@ -139,7 +181,41 @@
                 <h2 class="section-title-2">Solution Proposal</h2>
             </div>
             <div style="flex: 1; margin-left: 2rem;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+                <div class="research-findings-section" style="margin-top: 0px; padding-top: 0px;">
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <h3 class="finding-title"><span class="highlight-2" style="color: #006AC3;">Option 1:</span> The Two-Step Split (Selected)</h3>
+                        </div>
+                        <p>Separate marketing value from account data into two distinct screens.</p>
+
+                        <p><br><span class="highlight-2">Step 1:</span> Full-screen focus on digital benefits, FAQs, and trust indicators.</p>
+
+                        <p><span class="highlight-2">Step 2:</span> Deep dive into current mortgage details.</p>
+
+                        <p><br><span class="highlight-2">UX Rationale:</span> Eliminates visual competition; guarantees users absorb trust-building context before seeing sensitive financial numbers.</p>
+
+                        <div class="image-container" style="margin: 0rem 0; text-align: left;">
+                            <img src="image/rbc/split landing purple.png" alt="Option 1: Two-step split prototype screens" style="border-radius: 0px; width: 70%; height: auto;">
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <h3 class="finding-title"><span class="highlight-2" style="color: #006AC3;">Option 2:</span> Single-Page Accordion</h3>
+                        </div>
+                        <p>Maintain a single-page structure but prioritize layout hierarchy.</p>
+
+                        <p><br><span class="highlight-2">Top of Page:</span> Marketing content displayed prominently by default.</p>
+
+                        <p><span class="highlight-2">Bottom of Page:</span> Mortgage details collapsed into an expandable accordion.</p>
+
+                        <p><br><span class="highlight-2">UX Rationale:</span> Keeps the step-count minimal while attempting to push marketing content first, relying on user curiosity to expand details.</p>
+
+                        <div class="image-container" style="margin: 0rem 0; text-align: left;">
+                            <img src="image/rbc/accordion purple.png" alt="Option 2: Single-page accordion prototype screens" style="border-radius: 0px; width: 70%; height: auto;">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
