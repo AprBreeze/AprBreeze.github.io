@@ -29,3 +29,12 @@
         padding: 13px 13px 13px 0;
     }
 }
+
+/* User Testing — Option 1 / Option 2 side-by-side (uses .barriers-grid from style.css) */
+.user-testing-ab-grid .finding-item {
+    margin-bottom: 0;
+}
+
+.user-testing-ab-grid .user-quotes {
+    margin-bottom: 0;
+}
