@@ -291,11 +291,16 @@
                 <h2 class="section-title-2">Research Prototype</h2>
                 <p> > Fully interactive <br> > Ready to deploy in Maze <br> > White labeled for research use <br> > Welcome to Purple Bank :) </p>
             </div>
-            <div style="flex: 1; margin-left: 2rem;"> 
-                <div class="image-container" style="margin: 0rem 0;">
-                    <video autoplay loop muted playsinline style="border-radius: 0px; width: 30%; height: auto; display: block;">
-                        <source src="image/rbc/mrt whole flow.mp4" type="video/mp4">
-                    </video>
+            <div style="flex: 1; margin-left: 2rem;">
+                <div style="display: flex; gap: 27px; align-items: flex-start;">
+                    <div class="image-container" style="margin: 0; padding: 0; flex: 0 0 30%;">
+                        <video autoplay loop muted playsinline style="border-radius: 0px; width: 100%; height: auto; display: block;">
+                            <source src="image/rbc/mrt whole flow.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="image-container" style="margin: 0; padding: 0; flex: 1;">
+                        <img src="image/rbc/prototype whole flow figma.png" alt="Research prototype static screen" style="width: 100%; height: auto; border-radius: 0px;">
+                    </div>
                 </div>
             </div>
         </section>
@@ -426,48 +431,53 @@
                 <h2 class="section-title-2">High Fidelity Prototype</h2>
             </div>
             <div style="flex: 1; margin-left: 2rem;">
+
+                <h4 style="font-family: var(--header-text-font); font-size: 18px; font-weight: 600;">Responsive Design</h4>
                 <p>With option 1 validated through research, I designed the responsive versions of the split landing screen across three platforms.</p>
 
-                <h4 style="font-family: var(--header-text-font); font-size: 18px; font-weight: 600; margin-top: 30px;">Responsive Design</h4>
-
-                <div class="deliver-device-grid" style="margin-top: 16px;">
-
-                    <div class="deliver-device-card">
-                        <div class="deliver-device-icon"><i class="fas fa-desktop"></i></div>
-                        <span class="barrier-method">Desktop</span>
-                        <span class="barrier-description">Web browser</span>
-                        <div class="image-container" style="margin: 0; padding: 0;">
-                            <img src="image/rbc/desktop-hifi.png" alt="Desktop high-fidelity prototype" style="width: 100%; height: auto; border-radius: 8px;">
+                <!-- Desktop row — 2 screens -->
+                <div class="screen-group">
+                    <div class="screen-group-header">Desktop</div>
+                    <div class="screen-group-images">
+                        <div class="image-container" style="flex: 1; margin: 0; padding: 0;">
+                            <img src="image/rbc/split landing OLB desktop 1.png" alt="Desktop screen 1" class="lightbox-img" style="width: 100%; height: auto; border-radius: 0px;">
+                        </div>
+                        <div class="image-container" style="flex: 1; margin: 0; padding: 0;">
+                            <img src="image/rbc/split landing OLB desktop 2.png" alt="Desktop screen 2" class="lightbox-img" style="width: 100%; height: auto; border-radius: 0px;">
                         </div>
                     </div>
-
-                    <div class="deliver-device-card">
-                        <div class="deliver-device-icon"><i class="fas fa-mobile-alt"></i></div>
-                        <span class="barrier-method">Mobile – Authenticated</span>
-                        <span class="barrier-description">RBC mobile banking app</span>
-                        <div class="image-container" style="margin: 0; padding: 0;">
-                            <img src="image/rbc/mobile-auth-hifi.png" alt="Mobile authenticated high-fidelity prototype" style="width: 100%; height: auto; border-radius: 8px;">
-                        </div>
-                    </div>
-
-                    <div class="deliver-device-card">
-                        <div class="deliver-device-icon"><i class="fas fa-globe"></i></div>
-                        <span class="barrier-method">Mobile – Unauthenticated</span>
-                        <span class="barrier-description">Mobile web browser</span>
-                        <div class="image-container" style="margin: 0; padding: 0;">
-                            <img src="image/rbc/mobile-unauth-hifi.png" alt="Mobile unauthenticated high-fidelity prototype" style="width: 100%; height: auto; border-radius: 8px;">
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Mobile Authenticated + Unauthenticated — two groups side by side -->
+                <div style="display: flex; gap: 20px; margin-top: 27px;">
+                    <div class="screen-group" style="flex: 1; margin-top: 0;">
+                        <div class="screen-group-header">Mobile – Authenticated</div>
+                        <div class="screen-group-images">
+                            <div class="image-container" style="flex: 1; margin: 0; padding: 0;">
+                                <img src="image/rbc/split landing webapp 1.png" alt="Mobile authenticated screen 1" class="lightbox-img" style="width: 100%; height: auto; border-radius: 0px;">
+                            </div>
+                            <div class="image-container" style="flex: 1; margin: 0; padding: 0;">
+                                <img src="image/rbc/split landing webapp 2.png" alt="Mobile authenticated screen 2" class="lightbox-img" style="width: 100%; height: auto; border-radius: 0px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-group" style="flex: 1; margin-top: 0;">
+                        <div class="screen-group-header">Mobile – Unauthenticated</div>
+                        <div class="screen-group-images">
+                            <div class="image-container" style="flex: 1; margin: 0; padding: 0;">
+                                <img src="image/rbc/split landing OLB mobile 1.png" alt="Mobile unauthenticated screen 1" class="lightbox-img" style="width: 100%; height: auto; border-radius: 0px;">
+                            </div>
+                            <div class="image-container" style="flex: 1; margin: 0; padding: 0;">
+                                <img src="image/rbc/split landing OLB mobile 2.png" alt="Mobile unauthenticated screen 2" class="lightbox-img" style="width: 100%; height: auto; border-radius: 0px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                 <h4 style="font-family: var(--header-text-font); font-size: 18px; font-weight: 600; margin-top: 37px;">Visual Design</h4>
 
                 <p style="margin-top: 12px;">All three versions were built using the RBC component library, ensuring a consistent visual language across every touchpoint.</p>
-                <div class="deliver-tags">
-                    <span class="tag">RBC Component Library</span>
-                    <span class="tag">Responsive Design</span>
-                </div>
             </div>
         </section>
 
@@ -477,12 +487,13 @@
                 <h2 class="section-title-2">Collaboration</h2>
             </div>
             <div style="flex: 1; margin-left: 2rem;">
+                <p style="margin-bottom: 30px;">Every detail was intentionally crafted and cross-functionally reviewed to deliver a polished, cohesive experience.</p>
                 <table class="deliver-table">
                     <thead>
                         <tr>
-                            <th>UX Designer</th>
-                            <th>Visual Designer</th>
-                            <th>Content Designer</th>
+                            <th>🧩 UX Designer</th>
+                            <th>🎨 Visual Designer</th>
+                            <th>✍️ Content Designer</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -493,7 +504,6 @@
                         </tr>
                     </tbody>
                 </table>
-                <p style="margin-top: 30px;">Every detail was intentionally crafted and cross-functionally reviewed to deliver a polished, cohesive experience.</p>
             </div>
         </section>
 
@@ -562,10 +572,31 @@
         <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
     </footer>
 
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+        <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+    </div>
+
     <script src="ux-interact.js"></script>
     <script src="rbc-password-gate.js"></script>
     
     <script>
+        document.querySelectorAll('.lightbox-img').forEach(img => {
+            img.addEventListener('click', () => {
+                document.getElementById('lightbox-img').src = img.src;
+                document.getElementById('lightbox').classList.add('active');
+            });
+        });
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
         function toggleCollapsible(button) {
             const content = button.nextElementSibling;
             const arrow = button.querySelector('.collapsible-arrow');
