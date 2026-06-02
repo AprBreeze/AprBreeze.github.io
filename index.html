@@ -11,6 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <meta name="description" content="Xinglong Zhou - UX Designer and Game Designer Portfolio">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .work-grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 27px;
+        }
+        .work-grid-3 .work-item {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
+        }
+        .work-grid-3 .work-item a {
+            display: block;
+        }
+        .work-grid-3 .work-item img {
+            height: 200px;
+            border-radius: 16px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .work-grid-3 .work-item:hover img {
+            opacity: 0.85;
+            transform: translateY(-3px);
+        }
+        .work-grid-3 .work-item h4 {
+            font-family: var(--header-text-font);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 13px 0 0;
+            margin: 0;
+            color: var(--text-color);
+        }
+        @media (max-width: 768px) {
+            .work-grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
 </head>
 <body>
@@ -128,21 +165,25 @@
         <div class="work-categories">
             <div class="category ux-design-section">
                 <h3>UX Design</h3>
-                <div class="work-grid">
+                <div class="work-grid work-grid-3">
                     <div class="work-item ux-design">
-                        <a href="ux-service-design.html" style="text-decoration: none;">
-                            <img src="image/Service Design/Elections Ontario Thumbnail 3.png" alt="Elections Ontario Project">
-                            <h4>Elections Ontario Accessibility Overhaul</h4>
-                            <p>Redesigned the EO voting app for optimizing accessible delivery while ensuring service visibility and easier management for providers.</p>
+                        <a href="ux-rbc-mrt.html" style="text-decoration: none;">
+                            <img src="image/rbc/Thumbnail Pics MRT.png" alt="RBC MRT - Mobile Banking UX Enhancement">
+                            <h4>RBC MRT - Mobile Banking Enhancement</h4>
                         </a>
                     </div>
                     
                     <div class="work-item ux-design">
-                        <a href="UX-project-1.html" style="text-decoration: none;">
-                            <img src="image/ipet-thumbnail cover 2.png" alt="iPet - Pet Interpreter App Course Project 2024">
-                            <h4>iPet - Pet Interpreter App</h4>
-                            <p>iPet is an AI-powered app designed to help pet owners interpret their pets' behaviors 
-                                and provide effective care.</p>
+                        <a href="ux-service-design.html" style="text-decoration: none;">
+                            <img src="image/Service Design/Elections Ontario Thumbnail 3.png" alt="Elections Ontario Project">
+                            <h4>Elections Ontario Accessibility Overhaul</h4>
+                        </a>
+                    </div>
+
+                    <div class="work-item ux-design">
+                        <a href="ux-coffeeshop.html" style="text-decoration: none;">
+                            <img src="image/coffee/coffee-thumbnail.png" alt="IA Research & Usability Enhancement for Coffee E-commerce">
+                            <h4>IA Research & Usability Enhancement for Coffee E-commerce</h4>
                         </a>
                     </div>
 
