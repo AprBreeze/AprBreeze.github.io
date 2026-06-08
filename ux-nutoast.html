@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuToast Website Redesign - April Breeze</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ux-nutoast.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+</head>
+<body>
+
+    <!-- =====================================================================
+         Navigation
+         ===================================================================== -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="ux-design.html" class="logo">
+                <img src="image/Logo.svg" alt="Xinglong Logo" class="logo-image">
+            </a>
+            <ul class="nav-links">
+                <li><a href="ux-design.html"><img src="image/Icon/icon-works.png" alt="Works"> Works</a></li>
+                <li><a href="index.html"><img src="image/Icon/icon-about-me.png" alt="About Me"> About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =====================================================================
+         Hero Banner (21:9 placeholder)
+         ===================================================================== -->
+    <div class="image-container" style="margin: 0;">
+        <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 21/9; display: flex; align-items: center; justify-content: center;">
+            <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: NuToast project hero banner]</p>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Portfolio Header
+         ===================================================================== -->
+    <section class="portfolio-header">
+        <h1>NuToast Website Redesign</h1>
+        <p>Turning a high-traffic B2B website into a lead conversion engine</p>
+    </section>
+
+    <!-- =====================================================================
+         Project Info + Quick Summary
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <div class="project-info">
+            <div class="info-item">
+                <span class="info-label">Role</span>
+                UX Researcher, UX Designer
+            </div>
+            <div class="info-item">
+                <span class="info-label">Duration</span>
+                12 weeks (Jan–Mar 2026)
+            </div>
+            <div class="info-item">
+                <span class="info-label">Team</span>
+                5 Designers
+            </div>
+            <div class="info-item">
+                <span class="info-label">Methods</span>
+                IA Audit, Stakeholder Interviews, Competitor Benchmark, High-Fidelity Design, WordPress Development, Usability Testing
+            </div>
+        </div>
+
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Quick Summary</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p>NuToast is a global B2B nut ingredient supplier. Despite steady website traffic, very few visitors converted into sales inquiries. We ran a full-cycle UX redesign: research, information architecture, visual design, WordPress implementation, and usability testing — all within 12 weeks.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =====================================================================
+         Phase Divider 1 — Discover
+         ===================================================================== -->
+    <div class="case-study-container" style="background-color: var(--green-base); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: white;">Phase 1: Discover</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Discover — The Problem
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Visitors were leaving before seeing what NuToast sells</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p style="font-size: 19px; font-weight: 500; margin-bottom: 1.5rem;">The site had traffic. It didn't have conversions.</p>
+
+                <div class="stats-row">
+                    <div class="stat-block">
+                        <span class="stat-number">2,413</span>
+                        <span class="stat-label">avg. monthly visitors</span>
+                    </div>
+                    <div class="stat-block">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">left without passing the homepage</span>
+                    </div>
+                    <div class="stat-block">
+                        <span class="stat-number">1 in 5</span>
+                        <span class="stat-label">reached the contact page</span>
+                    </div>
+                </div>
+
+                <blockquote class="nutoast-blockquote">
+                    Despite steady traffic, NuToast's website wasn't converting visitors into leads. Procurement buyers — the primary audience — were dropping off before they could evaluate a single product or reach the contact page.
+                </blockquote>
+
+                <div class="image-container" style="margin: 2rem 0;">
+                    <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: visitor drop-off funnel diagram]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Discover — Research
+             ===================================================================== -->
+        <section class="horizontal-section">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">How We Found the Root Cause</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p style="margin-bottom: 1rem;">Three rounds of research. Three structural problems.</p>
+
+                <blockquote class="nutoast-blockquote">
+                    We ran an IA audit, stakeholder interviews with procurement and sales professionals (3–5 years experience), and a competitor benchmark against Callebaut, MEC3, and Master Martini.
+                </blockquote>
+
+                <div class="research-findings-section" style="margin-top: 30px; padding-top: 0;">
+
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <span class="finding-number">01</span>
+                            <h3 class="finding-title">Product information was buried</h3>
+                        </div>
+                        <div class="finding-description">
+                            <p>Product categories sat below events, a promo video, and an About section. Procurement buyers had to scroll past 5 unrelated blocks before they could evaluate what NuToast sells.</p>
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <span class="finding-number">02</span>
+                            <h3 class="finding-title">Trust signals were hidden</h3>
+                        </div>
+                        <div class="finding-description">
+                            <p>Certifications and production quality info were confined to the About page — missing from the homepage and product pages where procurement actually evaluates suppliers.</p>
+                        </div>
+                    </div>
+
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <span class="finding-number">03</span>
+                            <h3 class="finding-title">The contact form gave sales nothing to work with</h3>
+                        </div>
+                        <div class="finding-description">
+                            <p>The generic form collected basic contact info and a free-text message box. Sales had to follow up just to understand what the inquiry was about.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="image-container" style="margin: 2rem 0;">
+                    <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: IA audit annotated screenshots]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =====================================================================
+         Phase Divider 2 — Define & Design
+         ===================================================================== -->
+    <div class="case-study-container" style="background-color: var(--green-base); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: white;">Phase 2: Define &amp; Design</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Define & Design — Three Interventions
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Three Problems. Three Interventions.</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p>Each decision maps directly to a validated research finding.</p>
+
+                <div class="research-findings-section" style="margin-top: 30px; padding-top: 0;">
+
+                    <!-- Intervention 01 -->
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <span class="finding-number">Objective 01</span>
+                            <h3 class="finding-title">Make it obvious what NuToast sells</h3>
+                        </div>
+                        <div class="finding-description">
+                            <p><span class="before-label">BEFORE</span><br>
+                            Product categories placed below a promo video, events, and an About section — procurement had to scroll past 5 unrelated blocks to find them.</p>
+
+                            <p style="margin-top: 1rem;"><span class="after-label">AFTER</span><br>
+                            Product categories shown immediately below the hero. Each card links directly to a product page. Key specs surfaced in the hero of every product detail page using scannable bullet cards.</p>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: var(--text-secondary);">Buyers ask "do they make what I need?" first. If the answer isn't visible in seconds, they leave.</p>
+                        </div>
+                        <div class="image-container" style="margin: 1.5rem 0;">
+                            <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: Homepage before/after — product category placement]</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intervention 02 -->
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <span class="finding-number">Objective 02</span>
+                            <h3 class="finding-title">Build trust where buyers actually look</h3>
+                        </div>
+                        <div class="finding-description">
+                            <p><span class="before-label">BEFORE</span><br>
+                            Certifications and factory images existed only on the About page. The homepage hero was a logo and tagline — no scale, no proof of legitimacy.</p>
+
+                            <p style="margin-top: 1rem;"><span class="after-label">AFTER</span><br>
+                            Key numbers added to the hero. Certifications shown on product listing and detail pages. Factory images expanded into a navigable carousel.</p>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: var(--text-secondary);">Credibility wasn't missing — it was in the wrong place.</p>
+                        </div>
+                        <div class="image-container" style="margin: 1.5rem 0;">
+                            <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: Trust signal distribution across pages — before/after]</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intervention 03 -->
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <span class="finding-number">Objective 03</span>
+                            <h3 class="finding-title">Collect the right information upfront</h3>
+                        </div>
+                        <div class="finding-description">
+                            <p><span class="before-label">BEFORE</span><br>
+                            Generic form: name, email, free-text message. No structure. Sales had to follow up just to understand the inquiry.</p>
+
+                            <p style="margin-top: 1rem;"><span class="after-label">AFTER</span><br>
+                            Structured fields added: role, region, product interest (required), estimated order volume. Every submission arrives ready for sales to qualify.</p>
+
+                            <p style="margin-top: 1rem; font-style: italic; color: var(--text-secondary);">A generic form puts the qualification burden on sales. Structured fields shift that burden to the form itself.</p>
+                        </div>
+                        <div class="image-container" style="margin: 1.5rem 0;">
+                            <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: Contact form before/after comparison]</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =====================================================================
+         Phase Divider 3 — Build
+         ===================================================================== -->
+    <div class="case-study-container" style="background-color: var(--green-base); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: white;">Phase 3: Build</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Build — Implementation
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">From Figma to a Live WordPress Site</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p>We didn't stop at a prototype. The full redesign was built as a live WordPress site on a staging environment, with the complete design system implemented across all pages.</p>
+
+                <div class="image-container" style="margin: 2rem 0;">
+                    <div style="background-color: #E8E8E8; width: 100%; aspect-ratio: 16/9; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <p style="color: #999; font-size: 14px;">[IMAGE PLACEHOLDER: WordPress live site screenshots]</p>
+                    </div>
+                </div>
+
+                <div class="research-findings-section" style="margin-top: 0; padding-top: 0;">
+
+                    <!-- Deliverables -->
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <h3 class="finding-title">Deliverables</h3>
+                        </div>
+                        <div class="finding-description">
+                            <div class="deliverables-grid">
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Live WordPress Build</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">High-Fidelity Figma Prototype</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Visual Design System</span>
+                                        <span class="barrier-description">Color, typography, components</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Sitemap &amp; Information Architecture</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Interaction &amp; Design Specification</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Usability Testing Report</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Competitor Benchmarking Report</span>
+                                    </div>
+                                </div>
+                                <div class="barrier-item">
+                                    <div class="barrier-icon">✅</div>
+                                    <div class="barrier-content">
+                                        <span class="barrier-method">Stakeholder Interview Insights</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Honest Tradeoffs -->
+                    <div class="finding-item">
+                        <div class="finding-header">
+                            <h3 class="finding-title">Honest Tradeoffs</h3>
+                        </div>
+                        <div class="finding-description">
+
+                            <div style="margin-bottom: 20px;">
+                                <p style="font-weight: 600; margin-bottom: 4px;">Hero video → static image</p>
+                                <p>Video caused loading delays. Replaced with static image for reliable performance.</p>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <p style="font-weight: 600; margin-bottom: 4px;">Multi-select filters → not in staging</p>
+                                <p>Requires a paid plugin on the main account. Design is ready; implementation follows migration.</p>
+                            </div>
+
+                            <div>
+                                <p style="font-weight: 600; margin-bottom: 4px;">Responsive design → out of scope</p>
+                                <p>Desktop-first by agreement with the client.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =====================================================================
+         Phase Divider 4 — Test
+         ===================================================================== -->
+    <div class="case-study-container" style="background-color: var(--green-base); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: white;">Phase 4: Test</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Test — Key Success Metrics
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Key Success Metrics</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p style="font-size: 19px; font-weight: 500; margin-bottom: 1.5rem;">The redesign worked.</p>
+
+                <div class="stats-row">
+                    <div class="stat-block">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">task completion rate across all 5 participants</span>
+                    </div>
+                    <div class="stat-block">
+                        <span class="stat-number">4 / 5</span>
+                        <span class="stat-label">average confidence rating to initiate contact</span>
+                    </div>
+                </div>
+
+                <p style="font-style: italic; color: var(--text-secondary);">Tested with 5 NuToast sales and marketing professionals via WordPress prototype and think-aloud protocol.</p>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             Test — User Testing Quotes
+             ===================================================================== -->
+        <section class="horizontal-section">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">What Users Said</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <div class="user-quotes">
+
+                    <div class="quote-item">
+                        <p class="quote-text">"The design feels professional, but it still makes the products look good enough to eat."</p>
+                        <p class="quote-source">— Participant 4</p>
+                    </div>
+
+                    <div class="quote-item">
+                        <p class="quote-text">"I can see the certifications, the factory, the numbers. It all feels transparent."</p>
+                        <p class="quote-source">— Participant 2</p>
+                    </div>
+
+                    <div class="quote-item">
+                        <p class="quote-text">"After seeing this page, I'd feel confident reaching out. Everything I need is right here."</p>
+                        <p class="quote-source">— Participants 1, 3 &amp; 5</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- =====================================================================
+         Dark Background — Impact & Reflection
+         ===================================================================== -->
+    <div style="background-color: #000000; max-width: 100%; padding: 30px;">
+        <div class="case-study-container">
+
+            <section class="horizontal-section">
+                <div class="content-wrapper" style="max-width: 25%;">
+                    <h2 class="section-title-2" style="color: white;">Impact</h2>
+                </div>
+                <div style="flex: 1; margin-left: 2rem;">
+                    <div class="research-findings-section" style="margin-top: 0; padding-top: 0;">
+
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <h3 class="finding-title-2">Product visibility</h3>
+                            </div>
+                            <div class="finding-description-2">
+                                <p>Procurement buyers can now assess product fit within seconds of landing on the homepage — the single biggest factor in whether they stay or leave.</p>
+                            </div>
+                        </div>
+
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <h3 class="finding-title-2">Credibility where it matters</h3>
+                            </div>
+                            <div class="finding-description-2">
+                                <p>Trust signals are now distributed across the homepage, product listing, and product detail pages instead of confined to one About page.</p>
+                            </div>
+                        </div>
+
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <h3 class="finding-title-2">Sales-ready inquiries</h3>
+                            </div>
+                            <div class="finding-description-2">
+                                <p>Every contact form submission arrives with structured context — role, product interest, order volume — so sales can qualify and respond without chasing basics.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="horizontal-section" style="margin-top: 60px;">
+                <div class="content-wrapper" style="max-width: 25%;">
+                    <h2 class="section-title-2" style="color: white;">Reflection</h2>
+                </div>
+                <div style="flex: 1; margin-left: 2rem;">
+                    <div class="research-findings-section" style="margin-top: 0; padding-top: 0;">
+
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <h3 class="finding-title-2">What I'd do differently</h3>
+                            </div>
+                            <div class="finding-description-2">
+                                <p>Recruit external procurement participants for usability testing rather than relying on sales staff as a proxy. Sales understand buyer behavior well, but direct validation with procurement would strengthen the findings.</p>
+                            </div>
+                        </div>
+
+                        <div class="finding-item">
+                            <div class="finding-header">
+                                <h3 class="finding-title-2">What this project confirmed</h3>
+                            </div>
+                            <div class="finding-description-2">
+                                <p>Research-driven design decisions are easier to defend and easier to implement. When every change traces back to a validated finding, the rationale is already built in.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Contact Section
+         ===================================================================== -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         Footer
+         ===================================================================== -->
+    <footer>
+        <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
+    </footer>
+
+    <script src="ux-interact.js"></script>
+    <script>
+        function toggleCollapsible(button) {
+            const content = button.nextElementSibling;
+            const arrow = button.querySelector('.collapsible-arrow');
+            button.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
