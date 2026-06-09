@@ -3298,7 +3298,6 @@ button:focus {
     }
     
     .research-findings-section {
-        padding: 27px;
         margin: 27px 0;
     }
     
@@ -3392,7 +3391,6 @@ button:focus {
     }
     
     .research-findings-section {
-        padding: 17px;
         margin: 17px 0;
     }
     
@@ -3514,7 +3512,6 @@ button:focus {
     }
     
     .research-findings-section {
-        padding: 13px;
     }
     
     .finding-title {
@@ -4362,7 +4359,6 @@ button:focus {
 .research-findings-section {
     margin: 37px 0;
     border-radius: 16px;
-    padding: 37px;
 }
 
 .finding-item {
@@ -4550,7 +4546,6 @@ button:focus {
 /* Responsive adjustments for research findings */
 @media (max-width: 768px) {
     .research-findings-section {
-        padding: 27px;
         margin: 27px 0;
     }
     
@@ -4588,7 +4583,6 @@ button:focus {
 
 @media (max-width: 480px) {
     .research-findings-section {
-        padding: 17px;
     }
     
     .finding-item {

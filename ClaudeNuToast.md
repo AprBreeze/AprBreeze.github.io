@@ -58,8 +58,8 @@ If a pattern already exists in `style.css` (e.g. a card class, a section wrapper
 
 ## Typography
 
-- Headlines: `DM Sans` (Bold / SemiBold) — load from Google Fonts
-- Body: `Roboto` (Regular / Medium) — load from Google Fonts
+- Headlines: "Manrope", sans-serif 
+- Body: 'DM Sans', sans-serif
 - Do not use Inter, Arial, or system fonts
 
 ```html

@@ -142,6 +142,263 @@
 }
 
 /* --------------------------------------------------------------------------
+   Spacers
+   -------------------------------------------------------------------------- */
+.spacer-md {
+    height: 40px;
+}
+
+/* --------------------------------------------------------------------------
+   Finding Eyebrow + Section Heading — source label + split-colour headline
+   -------------------------------------------------------------------------- */
+.finding-eyebrow {
+    font-family: var(--header-text-font);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green-base);
+    margin: 0 0 6px 0;
+}
+
+.finding-section-heading {
+    font-family: var(--header-text-font);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+}
+
+.finding-highlight {
+    color: var(--green-base);
+}
+
+/* --------------------------------------------------------------------------
+   Research Steps Row — 3-card method overview below blockquote
+   -------------------------------------------------------------------------- */
+.research-steps-row {
+    display: flex;
+    gap: 16px;
+    margin: 1.5rem 0;
+}
+
+.research-step-card {
+    flex: 1;
+    background-color: var(--pistachio-light);
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+
+.research-step-label {
+    display: block;
+    font-family: var(--body-text-font);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--neutral-dark);
+    margin-bottom: 8px;
+}
+
+.research-step-title {
+    font-family: var(--header-text-font);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+}
+
+.research-step-desc {
+    font-family: var(--body-text-font);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Interview Meta Cards — PARTICIPANTS / SCREENER / FORMAT row
+   -------------------------------------------------------------------------- */
+.interview-meta-row {
+    display: flex;
+    gap: 16px;
+    margin: 1.5rem 0;
+}
+
+.interview-meta-card {
+    flex: 1;
+    border: 1.5px solid var(--neutral-mid);
+    border-radius: 10px;
+    padding: 16px 20px;
+    background-color: var(--cream);
+}
+
+.interview-meta-title {
+    font-family: var(--header-text-font);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+}
+
+.interview-meta-list {
+    margin: 0;
+    padding-left: 18px;
+    font-family: var(--body-text-font);
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Participant Count Badge — "8/8 participants" pill in finding header
+   -------------------------------------------------------------------------- */
+.participant-count {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-family: var(--header-text-font);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green-darkest);
+    background-color: var(--pistachio-light);
+    border-radius: 20px;
+    padding: 4px 12px;
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Interview Conclusion Block — dark green callout at section end
+   -------------------------------------------------------------------------- */
+.interview-conclusion {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background-color: var(--green-dark);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 2rem;
+}
+
+.interview-conclusion-icon {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--pistachio);
+    background-color: var(--green-darkest);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.interview-conclusion-label {
+    font-family: var(--header-text-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pistachio-light);
+    margin: 0 0 4px 0;
+}
+
+.interview-conclusion-text {
+    font-family: var(--body-text-font);
+    font-size: 15px;
+    color: var(--cream);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.interview-conclusion-text strong {
+    color: white;
+}
+
+/* --------------------------------------------------------------------------
+   Competitor Benchmark Findings — icon + text (left) + screenshot (right)
+   -------------------------------------------------------------------------- */
+.benchmark-finding {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+}
+
+.benchmark-finding-body {
+    flex: 1;
+}
+
+.benchmark-finding-img {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.benchmark-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--pistachio);
+    border-radius: 8px;
+    color: var(--green-darkest);
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.benchmark-img-placeholder {
+    background-color: #E8E8E8;
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+}
+
+.benchmark-screenshot {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/* --------------------------------------------------------------------------
+   Before / After two-column layout (Interventions section)
+   -------------------------------------------------------------------------- */
+.before-after-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.75rem;
+    row-gap: 0.75rem;
+    margin-top: 1.25rem;
+    align-items: start;
+}
+
+.before-after-grid .image-container {
+    margin: 0;
+    padding: 0;
+}
+
+.ba-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0.25rem 0 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+}
+
+/* --------------------------------------------------------------------------
    Responsive — mobile breakpoint (768px)
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -155,5 +412,25 @@
 
     .deliverables-grid .barrier-item {
         flex: 0 0 100%;
+    }
+
+    .research-steps-row {
+        flex-direction: column;
+    }
+
+    .interview-meta-row {
+        flex-direction: column;
+    }
+
+    .before-after-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benchmark-finding {
+        flex-direction: column;
+    }
+
+    .benchmark-finding-img {
+        width: 100%;
     }
 }
