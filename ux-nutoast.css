@@ -320,6 +320,30 @@
 }
 
 /* --------------------------------------------------------------------------
+   Page Label Badge — dark pill before each Before/After grid
+   -------------------------------------------------------------------------- */
+.page-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--green-dark);
+    border-radius: 100px;
+    padding: 7px 16px;
+    margin-bottom: 0;
+    font-family: var(--header-text-font);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.page-label-text {
+    color: var(--cream);
+}
+
+.page-label-highlight {
+    color: var(--pistachio);
+}
+
+/* --------------------------------------------------------------------------
    Competitor Benchmark Findings — icon + text (left) + screenshot (right)
    -------------------------------------------------------------------------- */
 .benchmark-finding {
@@ -380,7 +404,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 1.75rem;
     row-gap: 0.75rem;
-    margin-top: 1.25rem;
+    margin-top: 0.75rem;
     align-items: start;
 }
 
