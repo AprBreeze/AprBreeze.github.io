@@ -12,6 +12,159 @@
     <meta name="description" content="Xinglong Zhou - UX Designer and Game Designer Portfolio">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* ── My Life Gallery ─────────────────────────────────── */
+        .my-life {
+            padding: 117px 37px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .my-life h2 {
+            text-align: center;
+            margin-bottom: 57px;
+            font-size: 37px;
+            color: var(--text-color);
+            font-weight: 400;
+            position: relative;
+        }
+
+        .my-life h2::after {
+            content: '';
+            width: 180px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .life-gallery {
+            columns: 3;
+            column-gap: 14px;
+        }
+
+        /* Each photo wrapper prevents a card from splitting across columns */
+        .life-photo {
+            break-inside: avoid;
+            margin-bottom: 14px;
+        }
+
+        .life-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .life-photo img:hover {
+            opacity: 0.88;
+            transform: scale(1.01);
+        }
+
+        @media (max-width: 768px) {
+            .life-gallery { columns: 2; }
+            .my-life { padding: 77px 27px; }
+        }
+
+        @media (max-width: 480px) {
+            .life-gallery { columns: 1; }
+            .my-life { padding: 57px 17px; }
+        }
+        .life-group {
+            margin-bottom: 57px;
+        }
+
+        .life-group:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ── Back to Top Button ─────────────────────────────── */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            cursor: pointer;
+            border: none;
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .back-to-top i {
+            color: var(--text-color);
+            font-size: 21px;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-top:hover i {
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .back-to-top i { font-size: 17px; }
+        }
+        /* ── End Back to Top Button ──────────────────────────── */
+
+        /* ── End My Life Gallery ─────────────────────────────── */
+
+        /* ── Gauge below label (desktop + mobile) ───────────── */
+        .intro-section {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .experience-gauge-container {
+            flex: none;
+            width: 100%;
+        }
+        /* ── End Gauge below label ───────────────────────────── */
+
+        /* ── Hero Mobile Fixes ───────────────────────────────── */
+        @media (max-width: 768px) {
+            /* Fix gauge height — style.css wrongly enlarges it to 20px on mobile */
+            .experience-gauge {
+                height: 6px;
+                border-radius: 12px;
+            }
+
+            /* Override the 200px forced flex-basis — let the container hug its content */
+            .experience-gauge-container {
+                flex: 0 0 auto;
+                height: auto;
+                min-height: unset;
+                width: 100%;
+            }
+        }
+        /* ── End Hero Mobile Fixes ───────────────────────────── */
+
         .work-grid-3 {
             grid-template-columns: repeat(3, 1fr);
             gap: 27px;
@@ -75,7 +228,7 @@
                 <div class="fun-facts-section">
                     <div class="cards-section">
                         <div class="intro-section">
-                            <p class="intro-text">Fun facts about me...</p>
+                            <p class="intro-text" id="funFactsText" data-text="Fun facts about me...">Fun facts about me...</p>
                             <div class="experience-gauge-container">
                                 <div class="gauge-label">Getting to know me...</div>
                                 <div class="experience-gauge">
@@ -197,6 +350,63 @@
         </div>
     </section>
 
+    <section id="my-life" class="my-life">
+        <h2>My Life</h2>
+        <div class="life-group">
+            <div class="life-gallery">
+                <div class="life-photo"><img src="image/about%20me/people%20(1).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(2).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(3).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(4).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(5).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(6).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(7).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(8).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(9).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(10).jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="life-group">
+            <div class="life-gallery">
+                <div class="life-photo"><img src="image/about%20me/food%20(1).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(2).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(3).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(4).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(5).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(6).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(7).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(8).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(9).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(10).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(11).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(12).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(13).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(14).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(15).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(16).jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="life-group">
+            <div class="life-gallery">
+                <div class="life-photo"><img src="image/about%20me/photo%20(1).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(2).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(3).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(4).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(5).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(6).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(7).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(8).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(9).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(10).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(11).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(12).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/Weixin%20Image_20260611133329_104_317.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
         <div class="contact-content">
@@ -212,13 +422,35 @@
         <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
     </footer>
     
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Achievement Popup Notification -->
     <div class="achievement-popup" id="achievementPopup">
-        🏆Achievement <br> New Friend
+        <span class="popup-label">🏆 Trophy Unlocked</span>
+        <span class="popup-title">New Friend</span>
     </div>
     
     <script src="ux-interact.js"></script>
     <script>
+        // Back to top button — show after scrolling past #my-life
+        const backToTopBtn = document.getElementById('backToTop');
+        const myLifeSection = document.getElementById('my-life');
+
+        window.addEventListener('scroll', () => {
+            if (myLifeSection && window.scrollY > myLifeSection.offsetTop) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
         // Add smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {

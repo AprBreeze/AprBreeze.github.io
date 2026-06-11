@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const achievementText = document.getElementById('achievementText');
     const experienceGauge = document.querySelector('.experience-gauge');
     const achievementPopup = document.getElementById('achievementPopup');
+    const funFactsText = document.getElementById('funFactsText');
     
     let flippedCards = new Set();
     const totalCards = flipCards.length;
@@ -18,17 +19,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update gauge fill
         gaugeFill.setAttribute('data-progress', progressPercent);
         gaugeFill.style.width = progress + '%';
+
+        // Drive rainbow text fill
+        if (funFactsText) {
+            funFactsText.style.setProperty('--rainbow-fill', progress);
+        }
         
         // Check if all cards are flipped
         if (flippedCards.size === totalCards) {
             // Complete the gauge
             gaugeFill.classList.add('complete');
+
+            // Switch to shimmer animation on the title text
+            if (funFactsText) {
+                funFactsText.classList.add('rainbow-complete');
+            }
             
-            // Hide the entire gauge after a brief delay
+            // Show popup notification after gauge fills
             setTimeout(() => {
-                experienceGauge.classList.add('complete');
-                
-                // Show popup notification
                 showAchievementPopup();
             }, 400);
         }
@@ -37,7 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show achievement popup notification
     function showAchievementPopup() {
         achievementPopup.classList.add('show');
-        
+
+        // Scroll to My Life section
+        const myLife = document.getElementById('my-life');
+        if (myLife) {
+            setTimeout(() => {
+                myLife.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 0);
+        }
+
         // Hide popup after 3 seconds
         setTimeout(() => {
             achievementPopup.classList.remove('show');
