@@ -59,7 +59,7 @@
 .stat-number {
     display: block;
     font-family: var(--header-text-font);
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: var(--green-base);
     line-height: 1;
@@ -526,7 +526,7 @@
     }
 
     .stat-number {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     .deliverables-grid .barrier-item {
