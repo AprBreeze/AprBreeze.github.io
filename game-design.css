@@ -995,6 +995,59 @@ button:focus {
     margin-bottom: 1rem;
 }
 
+/* Internship / project summary cards */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.summary-card {
+    background-color: var(--game-bg-lighter);
+    border: 1px solid var(--game-accent-alt);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.summary-card-title {
+    font-family: var(--game-header-font);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--game-accent-alt);
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.summary-card-text {
+    font-family: var(--game-body-font);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--game-text);
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        padding: 1.25rem 1rem;
+    }
+}
+
 /* Project Sections */
 .project-section {
     margin-bottom: 4rem;
