@@ -1013,7 +1013,8 @@ button:focus {
     gap: 0.75rem;
 }
 
-.summary-card-title {
+.summary-card-title,
+.summary-card h4 {
     font-family: var(--game-header-font);
     font-size: 1.15rem;
     font-weight: 700;
@@ -1494,6 +1495,16 @@ button:focus {
     .contact-links {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .horizontal-section {
+        flex-direction: column;
+    }
+
+    .horizontal-section .content-wrapper,
+    .horizontal-section .section-image {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 
