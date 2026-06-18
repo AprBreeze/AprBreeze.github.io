@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const gaugeText = document.getElementById('gaugeText');
     const achievementText = document.getElementById('achievementText');
     const experienceGauge = document.querySelector('.experience-gauge');
-    const achievementPopup = document.getElementById('achievementPopup');
     const funFactsText = document.getElementById('funFactsText');
     
     let flippedCards = new Set();
@@ -37,33 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show popup notification after gauge fills
             setTimeout(() => {
-                showAchievementPopup();
+                showAchievementPopup('my-life');
             }, 400);
         }
-    }
-    
-    // Show achievement popup notification
-    function showAchievementPopup() {
-        achievementPopup.classList.add('show');
-
-        // Scroll to My Life section
-        const myLife = document.getElementById('my-life');
-        if (myLife) {
-            setTimeout(() => {
-                myLife.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 0);
-        }
-
-        // Hide popup after 3 seconds
-        setTimeout(() => {
-            achievementPopup.classList.remove('show');
-            achievementPopup.classList.add('hide');
-            
-            // Clean up hide class after animation
-            setTimeout(() => {
-                achievementPopup.classList.remove('hide');
-            }, 500);
-        }, 3000);
     }
     
     // Add click event listeners to each card

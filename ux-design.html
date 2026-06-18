@@ -54,7 +54,7 @@
                 <button class="tab-button" data-tab="ux-designer">UX Designer</button>
                 <button class="tab-button" data-tab="product-designer">Product Designer</button>
                 <button class="tab-button" data-tab="programmer">Developer.ai</button>
-                <button class="tab-button" data-tab="graphic">Graphic Designer</button>
+                <button class="tab-button" data-tab="graphic">Visual Designer</button>
                 <button class="tab-button" data-tab="game-designer">Game Designer</button>
             </div>
 
@@ -67,7 +67,7 @@
 
                 <div class="tab-content" id="ux-designer">
                     <h1>I break down complex systematic challenges and convert into intuitive user experience impact.</h1>
-                    <p class="hero-links">Examine my conversion rate in <a href="UX-project-1.html" class="content-link">iPet app</a> & <a href="ux-service-design.html" class="content-link">Election Ontario app</a>.</p>
+                    <p class="hero-links">Examine my conversion rate in <a href="ux-rbc-mrt.html" class="content-link">RBC Mortgage Renewal Tool UX Enhancement</a> & <a href="ux-nutoast.html" class="content-link">NuToast B2B website redesign</a>.</p>
                 </div>
                 
                 <div class="tab-content" id="product-designer">
@@ -77,12 +77,12 @@
 
                 <div class="tab-content" id="programmer">
                     <h1>While(Xinglong != Engineer), {Xinglong.capability.understand code && collab with Engineers} returns True.</h1>
-                    <p class="hero-links">In fact, I built <a href="ux-design.html" class="content-link">this portfolio</a> from scratch with AI Copilot.</p>
+                    <p class="hero-links">In fact, I built <a href="#" class="content-link" data-achievement-trigger>this portfolio</a> from scratch with AI Copilot.</p>
                 </div>
 
                 <div class="tab-content" id="graphic">
                     <h1>I like to make useful things also look pleasing, because why not?</h1>
-                    <p class="hero-links">See my visual design in <a href="UX-project-1.html" class="content-link">iPet app</a>.</p>
+                    <p class="hero-links">See my visual design in <a href="ux-nutoast.html" class="content-link">NuToast B2B website redesign</a> & <a href="UX-project-1.html" class="content-link">iPet app</a>.</p>
                 </div>
 
                 <div class="tab-content" id="game-designer">
@@ -328,7 +328,14 @@
     <footer>
         <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
     </footer>
+
+    <!-- Achievement Popup Notification -->
+    <div class="achievement-popup" id="achievementPopup">
+        <span class="popup-label">🏆 Trophy Unlocked</span>
+        <span class="popup-title">You are already here!</span>
+    </div>
     
+    <script src="achievement.js"></script>
     <script>  
         // Hero Tab Switching with Typing Animation
         document.addEventListener('DOMContentLoaded', function() {
