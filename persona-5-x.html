@@ -71,9 +71,14 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Main Quest Level - 3D Scene</h2>
+                <h2 class="section-title">Main Quest Level</h2>
                 <div class="section-content">
                     <div class="blockout-gallery">
+                        <img src="image/P5X/snfj8.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj9.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj7.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj5.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/P5X/snfj6.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
                         <img src="image/P5X/snfj.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
                         <img src="image/P5X/snfj2.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
                         <img src="image/P5X/snfj3.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
@@ -178,17 +183,6 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/rUY1MssJEhw?si=uHaU651IGfZTFCRp&amp;start=12300" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
-            <h3 style="text-align: center;">Side Discovery</h3>
-            <div class="video-container-main">
-                <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115263768957676&bvid=BV1J4n4zGE8f&cid=32640994939&p=6&t=80&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-            </div>
-
-            <h3 style="text-align: center;">Side Discovery 2D Layout</h3>
-            <div style="text-align: center;">
-                <img class="section-image" style = "max-width: 800px" src="/image/P5X/mini map 2f side quest.png" alt="Level 2F Side Quest Mini-map" style="margin: 0 auto; display: block;">
-            </div>
-
-
         </section>
 
         <section class="project-section" id="side-quest-design">
@@ -278,7 +272,55 @@
                     </article>
 
                     <article class="case-study-card">
-                        <h4>2.2 Building Puzzles Out of Modules</h4>
+                        <h4>2.2 Core Puzzle Principle</h4>
+                        <div class="case-study-card-body is-stacked">
+                            <div class="case-study-card-text">
+                                <p>Before designing any specific puzzle, I studied how comparable puzzle games, including several other gacha titles, build moments of intentional misdirection. That research shaped two principles.</p>
+                                <p>The first is feedback. A player should always be able to tell, at a glance, whether an action is moving them closer to the answer. That only works if the puzzle's scope is unambiguous, with no stray elements nearby that could be mistaken for part of the solution.</p>
+                                <p>The second is contradiction. A good puzzle deliberately leads the player toward a first instinct, then makes sure that instinct is wrong. That gap between what feels right and what is actually right becomes the puzzle's core conflict.</p>
+                                <p>The wrong turn itself has to feel safe, not punishing, so it reads as an invitation to rethink rather than a failure to recover from.</p>
+                            </div>
+                            <div class="diagram-frame">
+                                <!-- DIAGRAM COMPONENT: closed puzzle area with positive/negative feedback routing (abstract, no real game content) -->
+                                <svg viewBox="0 0 640 300" role="img" aria-label="Closed puzzle area: a direct route from A to B gives positive feedback, continuing straight to C gives negative feedback, while a routed path from A to C gives positive feedback" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrow-merged-neutral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                            <path d="M0,0 L10,5 L0,10 z" fill="var(--game-text)"></path>
+                                        </marker>
+                                        <marker id="arrow-merged-negative" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                            <path d="M0,0 L10,5 L0,10 z" fill="#ff6b6b"></path>
+                                        </marker>
+                                    </defs>
+
+                                    <text x="26" y="22" fill="var(--game-text)" font-size="13" font-weight="600">Closed Puzzle Area</text>
+                                    <rect x="20" y="40" width="600" height="220" rx="18" fill="none" stroke="var(--game-accent-alt)" stroke-width="2" stroke-dasharray="8 6"></rect>
+
+                                    <line x1="165" y1="110" x2="263" y2="110" stroke="var(--game-text)" stroke-width="2" marker-end="url(#arrow-merged-neutral)"></line>
+                                    <text x="214" y="64" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="600">Positive Feedback</text>
+
+                                    <line x1="375" y1="110" x2="473" y2="110" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-merged-negative)"></line>
+                                    <line x1="416" y1="102" x2="432" y2="118" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round"></line>
+                                    <line x1="432" y1="102" x2="416" y2="118" stroke="#ff6b6b" stroke-width="3" stroke-linecap="round"></line>
+                                    <text x="424" y="64" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="600">Negative Feedback</text>
+
+                                    <path d="M 110 142 C 110 210, 530 210, 530 142" fill="none" stroke="var(--game-text)" stroke-width="2" marker-end="url(#arrow-merged-neutral)"></path>
+                                    <text x="320" y="222" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="600">Positive Feedback</text>
+
+                                    <rect x="55" y="78" width="110" height="64" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="110" y="116" text-anchor="middle" fill="var(--game-text)" font-size="18" font-weight="700">A</text>
+
+                                    <rect x="265" y="78" width="110" height="64" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="320" y="116" text-anchor="middle" fill="var(--game-text)" font-size="18" font-weight="700">B</text>
+
+                                    <rect x="475" y="78" width="110" height="64" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="530" y="116" text-anchor="middle" fill="var(--game-text)" font-size="18" font-weight="700">C</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <h4>2.3 Building Puzzles Out of Modules</h4>
                         <div class="case-study-card-body">
                             <div class="case-study-card-text">
                                 <p>I build small, self-contained puzzle modules first, then assemble them into the full quest. Each module solves one idea on its own, which makes it easy to test in isolation, swap out if it doesn't land, or reuse elsewhere.</p>
@@ -315,7 +357,7 @@
                     </article>
 
                     <article class="case-study-card">
-                        <h4>2.3 Script Before Space</h4>
+                        <h4>2.4 Script Before Space</h4>
                         <div class="case-study-card-body is-stacked">
                             <div class="case-study-card-text">
                                 <p>I write dialogue and narrative beats before laying out the physical space. Text is the cheapest thing to revise, and writing it first forces me to know what feeling a room is supporting before I commit to its geometry.</p>
@@ -355,7 +397,7 @@
                     </article>
 
                     <article class="case-study-card">
-                        <h4>2.4 Designing Behavior Tree Logic</h4>
+                        <h4>2.5 Designing Behavior Tree Logic</h4>
                         <div class="case-study-card-body">
                             <div class="case-study-card-text">
                                 <p>Mechanisms in P5X talk to each other through behavior trees, and a chunk of my time went into untangling that logic: selectors, sequences, parallel branches, and how a change in one node ripples into the next.</p>
@@ -396,7 +438,7 @@
                     </article>
 
                     <article class="case-study-card">
-                        <h4>2.5 Letting Testing Find What the Document Couldn't</h4>
+                        <h4>2.6 Letting Testing Find What the Document Couldn't</h4>
                         <div class="case-study-card-body">
                             <div class="case-study-card-text">
                                 <p>Every quest taught me something during playtesting that the design document hadn't surfaced. A floating object needed a physical platform once art got involved.</p>
@@ -453,13 +495,17 @@
 
                     <h3>Part 4 — Final Result</h3>
                     <p>Here's how these quests actually played out once they shipped.</p>
-                    <div class="case-study-video-wrapper">
-                        <!-- PLACEHOLDER ASSET: replace src below with the real multi-quest highlight reel -->
-                        <video class="case-study-video" controls preload="metadata">
-                            <source src="/assets/p5x-highlight.mp4" type="video/mp4">
-                            Your browser does not support embedded video.
-                        </video>
+
+                    <h4 style="text-align: center;">Side Discovery</h4>
+                    <div class="video-container-main">
+                        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115263768957676&bvid=BV1J4n4zGE8f&cid=32640994939&p=6&t=80&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
                     </div>
+
+                    <h4 style="text-align: center;">Side Discovery 2D Layout</h4>
+                    <div style="text-align: center;">
+                        <img class="section-image" style="max-width: 800px; margin: 0 auto; display: block;" src="/image/P5X/mini map 2f side quest.png" alt="Level 2F Side Quest Mini-map">
+                    </div>
+
 
                 </div>
             </div>
