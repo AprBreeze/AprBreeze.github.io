@@ -190,6 +190,280 @@
 
 
         </section>
+
+        <section class="project-section" id="side-quest-design">
+            <div class="project-container">
+                <h2 class="section-title">Persona 5: The Phantom X — Side Quest Design</h2>
+                <div class="section-content">
+
+                    <h3>Part 1 — Overview</h3>
+                    <div class="horizontal-section">
+                        <div class="content-wrapper">
+                            <p>On Persona 5: The Phantom X, I worked as a level designer on three side quests inside the Chapter 4 palace: a narrative puzzle in the Girl's Room, a mechanism loop puzzle, and a long exploration quest in the Private Domain area.</p>
+                            <p>I owned each one from puzzle logic through dialogue, camera, and final configuration.</p>
+                        </div>
+                        <div class="diagram-frame">
+                            <!-- DIAGRAM COMPONENT: scope map (abstract, no real game content) -->
+                            <svg viewBox="0 0 640 250" role="img" aria-label="Scope map: Chapter 4 Palace branches into three side quests" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <marker id="arrow-scope" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                                        <path d="M0,0 L10,5 L0,10 z" fill="var(--game-accent)"></path>
+                                    </marker>
+                                </defs>
+
+                                <line x1="320" y1="76" x2="105" y2="150" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-scope)"></line>
+                                <line x1="320" y1="76" x2="320" y2="150" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-scope)"></line>
+                                <line x1="320" y1="76" x2="535" y2="150" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-scope)"></line>
+
+                                <rect x="230" y="20" width="180" height="56" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent-alt)" stroke-width="2"></rect>
+                                <text x="320" y="44" text-anchor="middle" fill="var(--game-text)" font-size="14" font-weight="700">Chapter 4</text>
+                                <text x="320" y="62" text-anchor="middle" fill="var(--game-text)" font-size="14" font-weight="700">Palace</text>
+
+                                <rect x="20" y="150" width="170" height="80" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                <text x="105" y="180" text-anchor="middle" fill="var(--game-text)" font-size="13" font-weight="600">Girl's Room</text>
+                                <text x="105" y="202" text-anchor="middle" fill="var(--game-accent-alt)" font-size="10" letter-spacing="0.5">NARRATIVE PUZZLE</text>
+
+                                <rect x="235" y="150" width="170" height="80" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                <text x="320" y="180" text-anchor="middle" fill="var(--game-text)" font-size="13" font-weight="600">Mechanism Loop</text>
+                                <text x="320" y="202" text-anchor="middle" fill="var(--game-accent-alt)" font-size="10" letter-spacing="0.5">LOGIC PUZZLE</text>
+
+                                <rect x="450" y="150" width="170" height="80" rx="10" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                <text x="535" y="180" text-anchor="middle" fill="var(--game-text)" font-size="13" font-weight="600">Private Domain</text>
+                                <text x="535" y="202" text-anchor="middle" fill="var(--game-accent-alt)" font-size="10" letter-spacing="0.5">LONG-FORM EXPLORATION</text>
+                            </svg>
+                            <p class="diagram-caption">Quest scope — Chapter 4 Palace</p>
+                        </div>
+                    </div>
+
+                    <h3>Part 2 — Design Thinking</h3>
+
+                    <article class="case-study-card">
+                        <h4>2.1 Starting From What the Player Needs</h4>
+                        <div class="case-study-card-body is-stacked">
+                            <div class="case-study-card-text">
+                                <p>Before I touch a single mechanic, I try to name what the player actually needs in that moment. In P5X that meant light cognitive load paired with narrative texture, since side quests exist to give players a breather between main story beats, not to test their patience.</p>
+                                <p>I research comparable puzzle references, then translate that target into a concrete design goal before sketching anything. That target became my filter for later decisions, including which mechanics to cut when they got too expensive to feel worth it.</p>
+                            </div>
+                            <div class="diagram-frame">
+                                <!-- DIAGRAM COMPONENT: design process arc (HTML/CSS, no real game content) -->
+                                <div class="process-steps">
+                                    <div class="process-step">
+                                        <div class="process-node">Empathize</div>
+                                        <p class="process-note">Name what the player needs right now</p>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-step">
+                                        <div class="process-node">Define</div>
+                                        <p class="process-note">Translate that need into a concrete goal</p>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-step">
+                                        <div class="process-node">Ideate</div>
+                                        <p class="process-note">Research comparable puzzle references</p>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-step">
+                                        <div class="process-node">Prototype</div>
+                                        <p class="process-note">Sketch and build toward the goal</p>
+                                    </div>
+                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-step">
+                                        <div class="process-node">Evaluate</div>
+                                        <p class="process-note">Use the goal as a filter for what to cut</p>
+                                    </div>
+                                </div>
+                                <p class="diagram-caption">Design process arc</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <h4>2.2 Building Puzzles Out of Modules</h4>
+                        <div class="case-study-card-body">
+                            <div class="case-study-card-text">
+                                <p>I build small, self-contained puzzle modules first, then assemble them into the full quest. Each module solves one idea on its own, which makes it easy to test in isolation, swap out if it doesn't land, or reuse elsewhere.</p>
+                                <p>This habit paid off most on the longer quests, where a single room needing rework didn't mean reworking the whole sequence.</p>
+                            </div>
+                            <div class="diagram-frame">
+                                <!-- DIAGRAM COMPONENT: module blocks (abstract, no real game content) -->
+                                <svg viewBox="0 0 380 260" role="img" aria-label="Three puzzle modules combining into one assembled quest sequence" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrow-modules" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                            <path d="M0,0 L10,5 L0,10 z" fill="var(--game-accent)"></path>
+                                        </marker>
+                                    </defs>
+
+                                    <rect x="10" y="15" width="100" height="55" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="60" y="47" text-anchor="middle" fill="var(--game-text)" font-size="13" font-weight="600">Module A</text>
+
+                                    <rect x="140" y="15" width="100" height="55" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="190" y="47" text-anchor="middle" fill="var(--game-text)" font-size="13" font-weight="600">Module B</text>
+
+                                    <rect x="270" y="15" width="100" height="55" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="320" y="47" text-anchor="middle" fill="var(--game-text)" font-size="13" font-weight="600">Module C</text>
+
+                                    <line x1="60" y1="70" x2="130" y2="165" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-modules)"></line>
+                                    <line x1="190" y1="70" x2="190" y2="165" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-modules)"></line>
+                                    <line x1="320" y1="70" x2="250" y2="165" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-modules)"></line>
+
+                                    <rect x="60" y="170" width="260" height="70" rx="10" fill="none" stroke="var(--game-accent-alt)" stroke-width="2" stroke-dasharray="6 5"></rect>
+                                    <text x="190" y="210" text-anchor="middle" fill="var(--game-accent-alt)" font-size="13" font-weight="700">Assembled Quest</text>
+                                </svg>
+                                <p class="diagram-caption">Modular assembly</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <h4>2.3 Script Before Space</h4>
+                        <div class="case-study-card-body is-stacked">
+                            <div class="case-study-card-text">
+                                <p>I write dialogue and narrative beats before laying out the physical space. Text is the cheapest thing to revise, and writing it first forces me to know what feeling a room is supporting before I commit to its geometry.</p>
+                                <p>Every quest followed the same order: script, then space, then mechanics, then iteration, each stage getting more expensive to change than the last.</p>
+                            </div>
+                            <div class="diagram-frame">
+                                <!-- DIAGRAM COMPONENT: script-to-iteration flow with cost curve (abstract, no real game content) -->
+                                <svg viewBox="0 0 640 230" role="img" aria-label="Production order from script draft to iteration, with cost of change increasing across stages" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrow-flow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                            <path d="M0,0 L10,5 L0,10 z" fill="var(--game-accent)"></path>
+                                        </marker>
+                                    </defs>
+
+                                    <rect x="10" y="20" width="120" height="50" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="70" y="50" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="600">Script Draft</text>
+
+                                    <rect x="180" y="20" width="120" height="50" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="240" y="50" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="600">Spatial Layout</text>
+
+                                    <rect x="350" y="20" width="120" height="50" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="410" y="50" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="600">Mechanism Config</text>
+
+                                    <rect x="520" y="20" width="110" height="50" rx="8" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="575" y="50" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="600">Iteration</text>
+
+                                    <line x1="130" y1="45" x2="178" y2="45" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-flow)"></line>
+                                    <line x1="300" y1="45" x2="348" y2="45" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-flow)"></line>
+                                    <line x1="470" y1="45" x2="518" y2="45" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-flow)"></line>
+
+                                    <path d="M 30 200 Q 250 190, 400 145 T 600 90" fill="none" stroke="var(--game-accent-alt)" stroke-width="2"></path>
+                                    <text x="615" y="85" text-anchor="end" fill="var(--game-accent-alt)" font-size="11" font-weight="600">Cost to change ↑</text>
+                                </svg>
+                                <p class="diagram-caption">Production order &amp; rising cost of change</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <h4>2.4 Designing Behavior Tree Logic</h4>
+                        <div class="case-study-card-body">
+                            <div class="case-study-card-text">
+                                <p>Mechanisms in P5X talk to each other through behavior trees, and a chunk of my time went into untangling that logic: selectors, sequences, parallel branches, and how a change in one node ripples into the next.</p>
+                                <p>A representative example: a puzzle where lighting the correct lantern color sends a guard away, which only then increments a chest's interaction count from zero to one, unlocking it. Cases like that taught me to think in states and transitions, not just trigger and effect.</p>
+                            </div>
+                            <div class="diagram-frame">
+                                <!-- DIAGRAM COMPONENT: abstract behavior tree (square = condition, diamond = selector; no real game content) -->
+                                <svg viewBox="0 0 440 320" role="img" aria-label="Abstract behavior tree: a selector and sequence routing between condition and result nodes" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrow-tree" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                            <path d="M0,0 L10,5 L0,10 z" fill="var(--game-accent)"></path>
+                                        </marker>
+                                    </defs>
+
+                                    <line x1="210" y1="70" x2="100" y2="138" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-tree)"></line>
+                                    <line x1="210" y1="70" x2="320" y2="135" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-tree)"></line>
+                                    <line x1="330" y1="193" x2="295" y2="248" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-tree)"></line>
+                                    <line x1="330" y1="193" x2="385" y2="248" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-tree)"></line>
+
+                                    <polygon points="210,10 265,40 210,70 155,40" fill="var(--game-card-bg)" stroke="var(--game-accent-alt)" stroke-width="2"></polygon>
+                                    <text x="210" y="44" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="700">Selector</text>
+
+                                    <rect x="30" y="140" width="110" height="50" rx="6" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="85" y="170" text-anchor="middle" fill="var(--game-text)" font-size="12" font-weight="600">Condition A</text>
+
+                                    <polygon points="330,137 380,165 330,193 280,165" fill="var(--game-card-bg)" stroke="var(--game-accent-alt)" stroke-width="2"></polygon>
+                                    <text x="330" y="169" text-anchor="middle" fill="var(--game-text)" font-size="11" font-weight="700">Sequence</text>
+
+                                    <rect x="240" y="250" width="90" height="50" rx="6" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></rect>
+                                    <text x="285" y="280" text-anchor="middle" fill="var(--game-text)" font-size="11.5" font-weight="600">Condition B</text>
+
+                                    <rect x="350" y="250" width="90" height="50" rx="6" fill="var(--game-card-bg)" stroke="var(--game-accent-alt)" stroke-width="2"></rect>
+                                    <text x="395" y="280" text-anchor="middle" fill="var(--game-accent-alt)" font-size="11.5" font-weight="700">Result B</text>
+                                </svg>
+                                <p class="diagram-caption">Behavior tree logic (square = condition, diamond = selector)</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="case-study-card">
+                        <h4>2.5 Letting Testing Find What the Document Couldn't</h4>
+                        <div class="case-study-card-body">
+                            <div class="case-study-card-text">
+                                <p>Every quest taught me something during playtesting that the design document hadn't surfaced. A floating object needed a physical platform once art got involved.</p>
+                                <p>A puzzle state read as a bug instead of a clue until I rewrote the failure feedback to be specific instead of vague. I treat early playtests as the real first draft of a puzzle, not a final check.</p>
+                            </div>
+                            <div class="diagram-frame">
+                                <!-- DIAGRAM COMPONENT: closed feedback loop (abstract, no real game content) -->
+                                <svg viewBox="0 0 340 320" role="img" aria-label="Closed feedback loop: design, build, test, feedback, iterate" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <marker id="arrow-loop" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                            <path d="M0,0 L10,5 L0,10 z" fill="var(--game-accent)"></path>
+                                        </marker>
+                                    </defs>
+
+                                    <line x1="202.4" y1="73.5" x2="251.7" y2="109.4" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-loop)"></line>
+                                    <line x1="271.7" y1="170.9" x2="252.9" y2="229.1" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-loop)"></line>
+                                    <line x1="200.5" y1="267.1" x2="139.5" y2="267.1" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-loop)"></line>
+                                    <line x1="87.1" y1="229.1" x2="68.3" y2="170.9" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-loop)"></line>
+                                    <line x1="88.3" y1="109.4" x2="137.6" y2="73.5" stroke="var(--game-border)" stroke-width="2" marker-end="url(#arrow-loop)"></line>
+
+                                    <circle cx="170" cy="50" r="38" fill="var(--game-card-bg)" stroke="var(--game-accent-alt)" stroke-width="2"></circle>
+                                    <text x="170" y="55" text-anchor="middle" fill="var(--game-text)" font-size="12" font-weight="600">Design</text>
+
+                                    <circle cx="284.1" cy="132.9" r="38" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></circle>
+                                    <text x="284.1" y="137.9" text-anchor="middle" fill="var(--game-text)" font-size="12" font-weight="600">Build</text>
+
+                                    <circle cx="240.5" cy="267.1" r="38" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></circle>
+                                    <text x="240.5" y="272.1" text-anchor="middle" fill="var(--game-text)" font-size="12" font-weight="600">Test</text>
+
+                                    <circle cx="99.5" cy="267.1" r="38" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></circle>
+                                    <text x="99.5" y="272.1" text-anchor="middle" fill="var(--game-text)" font-size="12" font-weight="600">Feedback</text>
+
+                                    <circle cx="55.9" cy="132.9" r="38" fill="var(--game-card-bg)" stroke="var(--game-accent)" stroke-width="2"></circle>
+                                    <text x="55.9" y="137.9" text-anchor="middle" fill="var(--game-text)" font-size="12" font-weight="600">Iterate</text>
+                                </svg>
+                                <p class="diagram-caption">Playtesting feedback loop</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <h3>Part 3 — What Stuck With Me</h3>
+                    <ul class="outcomes-list">
+                        <li><span class="highlight">Remind, not recall.</span> Tell the player what a tool does the moment they need it, instead of expecting them to remember a rule from ten minutes earlier.</li>
+                        <li><span class="highlight">Separate what can't change from what can.</span> Cross-department work goes smoothly when I'm clear about my non-negotiables and leave everything else open to other teams' expertise.</li>
+                        <li><span class="highlight">Design isn't validated until someone else plays it.</span> The clearest problems and the best ideas both showed up during testing, not at my desk.</li>
+                        <li><span class="highlight">One task at a time.</span> A sticky note system that lives outside my screen does more for my focus than trying to multitask inside it.</li>
+                    </ul>
+
+                    <figure class="case-study-photo">
+                        <!-- PLACEHOLDER ASSET: replace src below with the real sticky-note-system photo -->
+                        <img src="/assets/sticky-note-system.jpg" alt="Photo of the sticky note system used to manage focus, one task at a time">
+                        <figcaption>The sticky note system mentioned above</figcaption>
+                    </figure>
+
+                    <h3>Part 4 — Final Result</h3>
+                    <p>Here's how these quests actually played out once they shipped.</p>
+                    <div class="case-study-video-wrapper">
+                        <!-- PLACEHOLDER ASSET: replace src below with the real multi-quest highlight reel -->
+                        <video class="case-study-video" controls preload="metadata">
+                            <source src="/assets/p5x-highlight.mp4" type="video/mp4">
+                            Your browser does not support embedded video.
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         
     </main>
     

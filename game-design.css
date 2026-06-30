@@ -1512,7 +1512,8 @@ button:focus {
     }
 
     .horizontal-section .content-wrapper,
-    .horizontal-section .section-image {
+    .horizontal-section .section-image,
+    .horizontal-section .diagram-frame {
         flex: 1 1 100%;
         max-width: 100%;
     }
@@ -3065,5 +3066,205 @@ button:focus {
     }
     .design-goal-col {
         padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+}
+
+/* ==========================================================================
+   Side Quest Case Study — Cards & Diagram Components
+   ========================================================================== */
+
+.case-study-card {
+    background-color: var(--game-bg-lighter);
+    border: 1px solid var(--game-border);
+    border-radius: 12px;
+    padding: 1.75rem 1.75rem 1.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.case-study-card:last-child {
+    margin-bottom: 0;
+}
+
+.case-study-card h4 {
+    font-family: var(--game-header-font);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--game-accent-alt);
+    margin: 0 0 1rem;
+}
+
+.case-study-card-body {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.case-study-card-body.is-stacked {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+}
+
+.case-study-card-text {
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+.case-study-card-body.is-stacked .case-study-card-text {
+    max-width: 100%;
+}
+
+.case-study-card-text p {
+    margin-bottom: 0.85rem;
+    color: var(--game-text);
+}
+
+.case-study-card-text p:last-child {
+    margin-bottom: 0;
+}
+
+.diagram-frame {
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    background-color: var(--game-bg-darker);
+    border: 1px solid var(--game-border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-card-body.is-stacked .diagram-frame {
+    max-width: 100%;
+}
+
+.diagram-frame svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+
+.diagram-caption {
+    font-size: 0.8rem;
+    color: var(--game-text-muted);
+    text-align: center;
+    margin-top: 0.85rem;
+    margin-bottom: 0;
+    letter-spacing: 0.02em;
+}
+
+/* Process arc diagram (HTML/CSS based component) */
+.process-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.process-step {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.process-node {
+    background-color: var(--game-card-bg);
+    border: 1.5px solid var(--game-accent);
+    color: var(--game-accent-alt);
+    font-family: var(--game-header-font);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.4rem;
+    border-radius: 50px;
+    width: 100%;
+    letter-spacing: 0.02em;
+}
+
+.process-note {
+    font-size: 0.72rem;
+    color: var(--game-text-muted);
+    line-height: 1.45;
+    margin: 0;
+    padding: 0 0.2rem;
+}
+
+.process-arrow {
+    flex: 0 0 auto;
+    color: var(--game-accent);
+    font-size: 1.1rem;
+    padding-top: 0.5rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+    .process-steps {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        padding: 0.1rem 0;
+        align-self: center;
+    }
+}
+
+/* Part 3 — photo component */
+.case-study-photo {
+    margin: 1.5rem 0 0;
+    text-align: center;
+}
+
+.case-study-photo img {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.case-study-photo figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--game-text-muted);
+}
+
+/* Part 4 — native video embed component */
+.case-study-video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: var(--game-bg-darker);
+}
+
+.case-study-video {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .case-study-card-body {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .case-study-card-body .case-study-card-text,
+    .case-study-card-body .diagram-frame {
+        max-width: 100%;
+        flex: 1 1 100%;
     }
 }
