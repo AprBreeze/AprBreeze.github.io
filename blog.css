@@ -346,6 +346,24 @@ body.blog-body {
     display: block;
 }
 
+/* Disclaimer note shown at the top of a post's content */
+.post-disclaimer {
+    margin: 0 0 2rem;
+    padding: 1rem 1.5rem;
+    background-color: rgba(97, 239, 206, 0.08);
+    border: 1px solid rgba(97, 239, 206, 0.25);
+    border-radius: 6px;
+    color: var(--game-text-muted);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.post-disclaimer i {
+    color: var(--game-accent-alt);
+    margin-right: 0.5rem;
+}
+
 /* Post Content */
 .blog-post-content {
     margin-bottom: 3rem;

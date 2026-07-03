@@ -103,6 +103,27 @@
             font-weight: 700;
             font-size: 1.2rem;
         }
+
+        .video-blog-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.5rem 0.9rem;
+            font-family: 'Sofia Sans Semi Condensed', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--game-text);
+            text-decoration: none;
+            background-color: rgba(77, 91, 206, 0.1);
+            border: 1px solid rgba(77, 91, 206, 0.2);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .video-blog-link:hover {
+            color: var(--game-accent);
+        }
     </style>
 </head>
 <body class="blog-body">
@@ -170,11 +191,22 @@
                     <div class="video-showcase">
                         <div class="video-card">
                             <div class="video-embed">
+                                <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=941047850&bvid=BV1XW4y1m7Xo&cid=777513464&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 100%;"></iframe>
+                            </div>
+                            <h3>【设计解构】《APEX英雄》游戏设计如何保持热度不减。</h3>
+                            <p class="video-title-en">How System Design in APEX Kept High Player Engagement?</p>
+                            <p class="video-description">An analysis of the core systems Apex Legends layers on top of its combat loop, exploring how badges, legend design, and ability-based loot work together to keep players engaged.</p>
+                            <a href="apex-design-part1-badges-legends-loot.html" class="video-blog-link">Read the blog post in English <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-embed">
                                 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=686578636&bvid=BV1pU4y1Y7eR&cid=794206197&p=1&t=24" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 100%;"></iframe>
                             </div>
                             <h3>【设计解构】进化甲的秘密。《APEX英雄》</h3>
                             <p class="video-title-en">APEX LEGENDS EVO Shield Design Analysis</p>
                             <p class="video-description">A deep dive into the design philosophy behind Apex Legends' EVO Shield system, exploring how this mechanic enhances player progression and combat engagement.</p>
+                            <a href="apex-design-part2-ttk-evolving-shield.html" class="video-blog-link">Read the blog post in English <i class="fas fa-arrow-right"></i></a>
                         </div>
                         
                         <div class="video-card">

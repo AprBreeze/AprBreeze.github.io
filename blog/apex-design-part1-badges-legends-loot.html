@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How System Design in APEX Kept High Player Engagement - Xinglong's Blog</title>
+    <link rel="stylesheet" href="../blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="icon" href="../image/Logo-black-bg.svg" type="image/svg">
+    <meta name="description" content="Part 1 of a design analysis on why Apex Legends keeps players engaged: badges and scoreboards, legend diversity, and how folding loot into abilities controls randomness.">
+    <style>
+        /* Override the opacity: 0 to make content visible immediately */
+        .post-section {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body class="blog-body">
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="../game-design.html" class="logo">
+                <img src="../image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../game-design.html">Game & Level Design</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../game-base.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="blog-container">
+        <article class="blog-single">
+            <header class="blog-post-header">
+                <div class="post-meta">
+                    <span class="post-date">July 2021</span>
+                    <span class="post-tags">
+                        <span class="tag">Game Design</span>
+                        <span class="tag">Apex Legends</span>
+                    </span>
+                </div>
+                <h1 class="post-title">How System Design in APEX Kept High Player Engagement</h1>
+                <div class="post-featured-image">
+                    <img src="../image/game/apex%20system%20design.jpg" alt="Apex Legends System Design cover art">
+                </div>
+            </header>
+
+            <div class="blog-post-content">
+                <div class="post-disclaimer">
+                    <p><i class="fas fa-circle-info"></i>This piece is adapted from a video script I originally wrote back in 2021. Some systems and specific numbers may have changed since then, but it still reflects the design thinking behind the original analysis.</p>
+                </div>
+
+                <section class="post-section">
+                    <p>According to a report from Dexerto, Apex Legends had a landmark fiscal year in 2022. For a game that launched back in 2019, it still commands a large and active core player base, and FY2022 was in fact the year the game brought in the most new players since launch.</p>
+                    <p>Seasonal events, heirloom drops, and battle passes all help keep players engaged, but none of that matters if the underlying gameplay isn't good. A game survives long term because of a play loop that's genuinely replayable and worth investing time in. For a first person battle royale shooter, I'd argue that fun comes down to three core pleasures: the randomness of looting, the tension of engagements, and the strategy of survival. Apex balances these three elements carefully across a huge number of small design decisions, and that balance is what lets its core loop hold up over time. This piece is the first in a short series looking at how.</p>
+                </section>
+
+                <section class="post-section">
+                    <h2>Badges and Scoreboards: Turning Skill Into a Visible Target</h2>
+                    <p>The most surface level, most obvious system in Apex is one players see before the match even starts, back in the drop ship: the badge and scoreboard system.</p>
+                    <p>Before a single shot is fired, Apex shows players a rundown of their squad's stats per legend and a badge case. Lifetime kills is one of the clearest signals of a player's experience and skill level, and the badges speak for themselves. Countless players die and respawn over and over chasing the next tier of badge. Damage badges (the 2K badge, the 2.5K badge, and so on up to the 4K badge, informally known as the "double hatchet") and the 20 Bomb kill badge have become long running goals for competitive players. These are some of the hardest badges in the game to earn: a full suit of the best armor in the game only gives a player 225 combined shield and health, so reaching 4,000 cumulative damage in one match, or getting more than 20 kills out of 60 total players in a lobby, is genuinely difficult.</p>
+                    <p>That difficulty is the point. Apex sets these as official benchmarks so players who enjoy the grind always have something to chase, and a way to show it off once they get there. A new player works toward the 2K badge, and once they clear it, the 2.5K badge, only 500 damage away, becomes the obvious next target. Every skill level has its own next milestone, and rarer badges give players more reason to keep logging hours, not to mention something to flex on other players with.</p>
+                    <p>The flip side is that because these badges are genuinely hard to earn in fair matches, they've also incentivized cheating, boosting, and lobby stomping (deliberately queuing into much weaker lobbies). That's a real problem, but it's common across competitive shooters and hard to isolate as a badge specific effect, so it's outside the scope of this piece.</p>
+                    <p>Giving players goals and challenges is close to a universal principle in game design, and Apex's badge system leans hard on competitiveness and the desire to clear the next hurdle. It converts the simple act of playing more into a steady stream of achievable milestones.</p>
+                </section>
+
+                <section class="post-section">
+                    <h2>Legend Diversity: Making Team Composition a Real Decision</h2>
+                    <p>Character differentiation is the next layer. Every legend in Apex differs in silhouette, hitbox size, and tactical kit, and squads can't run duplicate legends. That single restriction forces real composition decisions: a squad might build around aggressive, fight seeking legends to force engagements, or lean into a defensive "turtle" comp anchored by Wattson, Caustic, and Rampart to hold down a building.</p>
+                    <p>Because tactical abilities vary so much from legend to legend, they add real tactical and strategic variety to a genre that can otherwise blur together fast. Every fight forces a squad to react differently depending on both the enemy composition and their own, which adds a layer of strategic depth that a lot of FPS battle royales lack.</p>
+                </section>
+
+                <section class="post-section">
+                    <h2>Fewer Loot Items, More Built-In Abilities</h2>
+                    <p>One thing that stands out about Apex compared to other shooters is how few tactical items are actually available to loot. Most of that functionality has instead been folded into the legend ability system in a more varied form. That's also, I think, why Apex rarely gives legends abilities with high direct lethality: the point of the ability system isn't to raise any one legend's damage ceiling, it's to add battlefield read and real time decision making to combat.</p>
+                    <p>Everything else about Apex's design points toward the same goal: encourage team play and reduce how much individual skill alone can swing a fight. That makes the game easier to balance and narrows the gap between skill tiers, which lowers the barrier to entry (more on that another time).</p>
+                    <p>Back to abilities specifically: because tactical items were folded into legend kits, every player drops into the map already equipped with their own tactical tool. That cuts down on early game loot time, speeds up the pace of a match, and puts more weight on positioning, target selection, and overall play rather than what you happen to find on the ground. It's Respawn subtracting from the blunt randomness of early battle royale design: keep the fun of randomness, but compress it into a controllable range, which raises competitive fairness. In plain terms, an average player can no longer blame a bad landing spot as often, and a great player is less often blindsided by a random gear disadvantage.</p>
+                </section>
+
+                <section class="post-section conclusion">
+                    <p>That same design philosophy, preserving the thrill of randomness while keeping it within controllable bounds, runs all the way through one of Apex's most important systems: the EVO Shield. That's where the next piece in this series picks up.</p>
+                </section>
+            </div>
+
+            <div class="post-footer">
+                <div class="author-bio">
+                    <div class="author-info">
+                        <h3>Written by Xinglong Zhou</h3>
+                    </div>
+                </div>
+
+                <div class="post-navigation">
+                    <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+                    <a href="apex-design-part2-ttk-evolving-shield.html" class="next-post">Part 2: The Magic of EVO Shield <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+
+
+        <div id="back-to-top" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <p>Looking forward to working together! Let's connect and create something amazing!</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="../script.js"></script>
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Add animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.post-section, .related-posts .blog-post').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
