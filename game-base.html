@@ -37,7 +37,7 @@
                 <div class="fun-facts-section">
                     <div class="cards-section">
                         <div class="intro-section">
-                            <p class="intro-text">Fun facts about me...</p>
+                            <p class="intro-text" id="funFactsText" data-text="Fun facts about me...">Fun facts about me...</p>
                             <!-- Experience Gauge -->
                             <div class="experience-gauge-container">
                                 <div class="gauge-label">Getting to know me...</div>
@@ -139,14 +139,71 @@
                         </a>
                     </div>
                     <div class="work-item game-design">
-                        <a href="perfect-world-intern.html" style="text-decoration: none;">
-                            <img src="image/INCARNATION.png" alt="Perfect World Intern">
-                            <h4>Perfect World Level Designer Intern</h4>
-                            <p>Prototyped 5 open-world exploration gameplay challenges, drafting exploration level metrics for an open-world project.</p> 
+                        <a href="persona-5-x.html" style="text-decoration: none;">
+                            <img src="image/P5X/P5X-cover.jpg" alt="Persona 5 The Phantom X">
+                            <h4>Persona 5 The Phantom X</h4>
+                            <p>Designed a main quest level and several side quest contents for this globally released mobile F2P J-RPG, including level blockout, scripting dialogue, and cinematic implementation.</p>
                         </a>
                     </div>
                 </div>
                 <a href="game-design.html" class="see-more">See all game design and level design work →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="my-life" class="my-life">
+        <h2>My Life</h2>
+        <div class="life-group">
+            <div class="life-gallery">
+                <div class="life-photo"><img src="image/about%20me/people%20(1).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(2).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(3).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(4).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(5).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(6).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(7).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(8).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(9).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/people%20(10).jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="life-group">
+            <div class="life-gallery">
+                <div class="life-photo"><img src="image/about%20me/food%20(1).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(2).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(3).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(4).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(5).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(6).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(7).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(8).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(9).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(10).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(11).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(12).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(13).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(14).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(15).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/food%20(16).jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="life-group">
+            <div class="life-gallery">
+                <div class="life-photo"><img src="image/about%20me/photo%20(1).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(2).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(3).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(4).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(5).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(6).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(7).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(8).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(9).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(10).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(11).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/photo%20(12).jpg" alt=""></div>
+                <div class="life-photo"><img src="image/about%20me/Weixin%20Image_20260611133329_104_317.png" alt=""></div>
             </div>
         </div>
     </section>
@@ -167,9 +224,15 @@
         <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
     </footer>
     
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- Achievement Popup Notification -->
     <div class="achievement-popup" id="achievementPopup">
-        🏆Achievement <br> New Friend
+        <span class="popup-label">🏆 Trophy Unlocked</span>
+        <span class="popup-title">New Friend</span>
     </div>
     
     <script>
@@ -179,6 +242,7 @@
         const gaugeFill = document.getElementById('gaugeFill');
         const gaugeText = document.getElementById('gaugeText');
         const achievementPopup = document.getElementById('achievementPopup');
+        const funFactsText = document.getElementById('funFactsText');
 
         document.querySelectorAll('.flip-card').forEach((card, index) => {
             card.addEventListener('click', function() {
@@ -188,7 +252,7 @@
                     updateGauge();
                     
                     if (flippedCards === totalCards) {
-                        setTimeout(showAchievement, 500);
+                        setTimeout(() => showAchievement('my-life'), 500);
                     }
                 }
             });
@@ -199,20 +263,59 @@
             gaugeFill.style.width = percentage + '%';
             gaugeFill.setAttribute('data-progress', percentage.toFixed(2));
             gaugeText.textContent = `${flippedCards}/${totalCards}`;
+
+            // Drive rainbow text fill on the "Fun facts about me..." label
+            if (funFactsText) {
+                funFactsText.style.setProperty('--rainbow-fill', percentage);
+            }
             
             if (flippedCards === totalCards) {
                 gaugeFill.classList.add('complete');
+
+                if (funFactsText) {
+                    funFactsText.classList.add('rainbow-complete');
+                }
             }
         }
 
-        function showAchievement() {
+        function showAchievement(scrollToId) {
             achievementPopup.classList.add('show');
+
+            // Auto-scroll to the referenced section once the achievement fires
+            if (scrollToId) {
+                const scrollTarget = document.getElementById(scrollToId);
+                if (scrollTarget) {
+                    setTimeout(() => {
+                        scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 0);
+                }
+            }
             
             setTimeout(() => {
                 achievementPopup.classList.remove('show');
                 achievementPopup.classList.add('hide');
+
+                setTimeout(() => {
+                    achievementPopup.classList.remove('hide');
+                }, 500);
             }, 3000);
         }
+
+        // Back to top button — show after scrolling past #my-life
+        const backToTopBtn = document.getElementById('backToTop');
+        const myLifeSection = document.getElementById('my-life');
+
+        window.addEventListener('scroll', () => {
+            if (myLifeSection && window.scrollY > myLifeSection.offsetTop) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         // Add smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
