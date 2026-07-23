@@ -345,6 +345,29 @@
             let animationQueue = [];
             let isCurrentlyAnimating = false;
             let animationAborted = false;
+
+            // Staggered fly-in for tab buttons (page load)
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const tabFlyInDuration = 450;
+            const tabFlyInStagger = 70;
+
+            if (prefersReducedMotion) {
+                tabButtons.forEach(button => button.classList.add('is-visible'));
+            } else {
+                requestAnimationFrame(() => {
+                    tabButtons.forEach((button, index) => {
+                        button.style.transitionDelay = `${index * tabFlyInStagger}ms`;
+                        button.classList.add('is-visible');
+                    });
+
+                    const clearDelaysAt = (tabButtons.length - 1) * tabFlyInStagger + tabFlyInDuration + 50;
+                    setTimeout(() => {
+                        tabButtons.forEach(button => {
+                            button.style.transitionDelay = '';
+                        });
+                    }, clearDelaysAt);
+                });
+            }
             
             // Store original content for all tabs on load
             const originalContent = new Map();
