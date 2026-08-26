@@ -2975,10 +2975,33 @@ button:focus {
     font-weight: 600;
     text-align: left;
     padding: 3px 0;
+    opacity: 0;
+    transform: translateY(24px);
+    will-change: opacity, transform;
+}
+
+.tab-button.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .tab-button.active {
     color: var(--secondary-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tab-button {
+        opacity: 1;
+        transform: none;
+        will-change: auto;
+    }
+
+    .tab-button.is-visible {
+        transition: none;
+    }
 }
 
 .hero-content-area {
