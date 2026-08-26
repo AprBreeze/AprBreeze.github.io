@@ -221,7 +221,7 @@
 
 
     <footer>
-        <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+        <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
     </footer>
     
     <!-- Back to Top Button -->
@@ -250,9 +250,24 @@
                     this.classList.add('flipped');
                     flippedCards++;
                     updateGauge();
+                    this.setAttribute('aria-label', `Fun fact card ${index + 1} revealed.`);
                     
                     if (flippedCards === totalCards) {
                         setTimeout(() => showAchievement('my-life'), 500);
+                    }
+                }
+            });
+
+            // Keyboard accessibility
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('role', 'button');
+            card.setAttribute('aria-label', `Fun fact card ${index + 1}. Press Enter to reveal.`);
+
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    if (!this.classList.contains('flipped')) {
+                        this.click();
                     }
                 }
             });
