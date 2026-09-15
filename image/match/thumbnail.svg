@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Match AI job search thumbnail placeholder">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Match AI job search thumbnail">
   <!--
-    Temporary thumbnail placeholder for the Match work entry.
-    Swap this file for a real product screenshot at the same 4:3 ratio
-    (for example image/match/thumbnail.png) and update ux-design.html.
+    Thumbnail for the Match work entry, drawn as SVG so it stays crisp at any
+    size. To swap in a real product screenshot instead, replace this file at the
+    same 4:3 ratio (for example image/match/thumbnail.png) and update the src in
+    ux-design.html. No other change is needed.
   -->
   <defs>
     <filter id="matchCardShadow" x="-20%" y="-20%" width="140%" height="140%">
@@ -44,6 +45,4 @@
     <rect x="214" y="646" width="330" height="16" rx="8" fill="#C7C7CC" />
     <rect x="214" y="674" width="400" height="12" rx="6" fill="#D8D8DD" />
   </g>
-
-  <text x="600" y="840" text-anchor="middle" font-family="'DM Sans', Arial, Helvetica, sans-serif" font-size="20" letter-spacing="2.5" fill="#86868B">THUMBNAIL PLACEHOLDER - REPLACE WITH PRODUCT SCREENSHOT</text>
 </svg>
