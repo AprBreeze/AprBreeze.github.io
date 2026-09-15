@@ -3294,6 +3294,13 @@ button:focus {
         max-width: 100% !important;
         margin-bottom: 17px;
     }
+
+    /* Once a two-column section stacks, the desktop 2rem offset on the
+       content column is meaningless and pushes the body text out of line
+       with its section title. Drop it on every stacked layout. */
+    .horizontal-section > div:not(.content-wrapper) {
+        margin-left: 0 !important;
+    }
     
     .section-title-2 {
         font-size: 33px;
