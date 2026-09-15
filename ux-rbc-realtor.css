@@ -1,0 +1,533 @@
+/* ==========================================================================
+   RBC x REALTOR.ca exit card - project-specific styles only.
+   Do NOT modify style.css. All new or project-specific rules live here.
+   Loaded after style.css (and before rbc-password-gate.css) in ux-rbc-realtor.html.
+
+   Colour tokens are lifted from the product captures themselves, since this
+   project has no prototype file to read a :root block from. Sampled values:
+     REALTOR.ca red   #D0191D  (the card band on the result page)
+     RBC blue         #006AC3  (the interface this card had to sit inside)
+     Houseful teal    #00494F  (the card this redesign replaced)
+     page canvas      #F3F7F8  (the RBC pre-approval page background)
+
+   REALTOR.ca red is the accent on this page. It is the project's own brand
+   colour, it passes AA on white at 5.47:1, and it is the whole point of the
+   case study, so it leads. RBC blue appears only where RBC's own surface is
+   being described.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Colour and shape variables
+   -------------------------------------------------------------------------- */
+:root {
+    --realtor-red:         #D0191D;
+    --realtor-red-press:   #A51418; /* darker red, 7.74:1 on white */
+    --realtor-red-soft:    #FDECEC;
+    --realtor-red-line:    rgba(208, 25, 29, 0.24);
+    --realtor-blue:        #006AC3;
+    --realtor-blue-soft:   #EAF2FB;
+    --realtor-teal:        #00494F;
+    --realtor-canvas:      #F3F7F8;
+    --realtor-surface:     #FFFFFF;
+    --realtor-ink:         #1F1F1F;
+    --realtor-ink-2:       #5D5D5D;
+    --realtor-ink-3:       #86868B;
+    /* Small labels and captions are 12-13px, so they need 4.5:1, not the 3.6:1
+       that #86868B gives on white. This is the darkest grey that still reads as
+       secondary text: 5.10:1 on white. --realtor-ink-3 stays for decoration
+       only, such as the flow arrows, which are aria-hidden. */
+    --realtor-label:       #6E6E73;
+    --realtor-line:        rgba(31, 31, 31, 0.10);
+    --realtor-shadow:      0 0 0 1px rgba(31, 31, 31, 0.05), 0 1px 2px rgba(31, 31, 31, 0.04), 0 16px 40px rgba(31, 31, 31, 0.07);
+    --realtor-r-md:        12px;
+    --realtor-r-lg:        18px;
+    --realtor-r-pill:      980px;
+}
+
+/* --------------------------------------------------------------------------
+   Section titles - small red rule marks every section on this page
+   -------------------------------------------------------------------------- */
+.content-wrapper .section-title-2::before {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--realtor-red);
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Links - project red instead of the portfolio blue on this page
+   -------------------------------------------------------------------------- */
+.content-link {
+    color: var(--realtor-red-press);
+}
+
+.content-link:hover {
+    color: var(--realtor-red);
+    text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Lead paragraph - the one line that carries the design decision
+   -------------------------------------------------------------------------- */
+.realtor-lead {
+    font-family: var(--header-text-font);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--realtor-red-press);
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Hero banner - the result page card row, floating over the brand wordmark
+   -------------------------------------------------------------------------- */
+.realtor-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--realtor-canvas);
+    padding: 72px 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Watermark. Sized off the banner width rather than the image, so it reads as
+   a backdrop and not as a label tucked behind the screenshot. The wordmark
+   measures 5.51x its font size, so 21vw keeps it about 15% wider than the
+   banner at every width - that is what keeps it visible past the hero on both
+   sides instead of disappearing behind it. */
+.realtor-banner-watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--header-text-font);
+    font-size: clamp(48px, 21vw, 260px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: rgba(208, 25, 29, 0.09);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Showcase image - on a white surface so it lifts off the watermark */
+.realtor-banner-shot {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+    border-radius: var(--realtor-r-lg);
+    background-color: var(--realtor-surface);
+    box-shadow: var(--realtor-shadow);
+}
+
+/* --------------------------------------------------------------------------
+   Surface card - used sparingly, for product context rather than screenshots
+   -------------------------------------------------------------------------- */
+.realtor-card {
+    background-color: var(--realtor-surface);
+    border-radius: var(--realtor-r-lg);
+    box-shadow: var(--realtor-shadow);
+    padding: 26px 28px;
+    margin-top: 24px;
+}
+
+.realtor-card-label {
+    display: block;
+    font-family: var(--header-text-font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--realtor-label);
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Referral flow - the round trip as a labelled diagram, not a screenshot
+   -------------------------------------------------------------------------- */
+.realtor-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.realtor-flow-step {
+    font-family: var(--header-text-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--realtor-ink-2);
+    background-color: var(--realtor-canvas);
+    border-radius: var(--realtor-r-pill);
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+
+.realtor-flow-step--exit {
+    background-color: var(--realtor-red-soft);
+    color: var(--realtor-red-press);
+}
+
+.realtor-flow-arrow {
+    color: var(--realtor-ink-3);
+    font-size: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Carded figure - white sheet wrapper for diagrams, with a caption slot
+   -------------------------------------------------------------------------- */
+.realtor-figure {
+    margin-top: 26px;
+    background-color: var(--realtor-surface);
+    border-radius: var(--realtor-r-lg);
+    box-shadow: var(--realtor-shadow);
+    padding: 24px 26px;
+}
+
+.realtor-figure-label {
+    display: block;
+    font-family: var(--header-text-font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--realtor-label);
+    margin-bottom: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Margin comparison - the guideline applied as written next to the layout
+   that was submitted as an exception
+   -------------------------------------------------------------------------- */
+.realtor-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.realtor-compare-tag {
+    display: block;
+    font-family: var(--header-text-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--realtor-label);
+    margin-bottom: 10px;
+}
+
+.realtor-compare-item--chosen .realtor-compare-tag {
+    color: var(--realtor-red-press);
+}
+
+/* The card band, reproduced at the same proportion as the real card: a solid
+   brand block with the white wordmark sitting in it. */
+.realtor-mini-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 122px;
+    border-radius: var(--realtor-r-md);
+    background-color: var(--realtor-red);
+}
+
+.realtor-wordmark {
+    font-family: var(--header-text-font);
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+/* Strict guideline: the wordmark scaled to fit its required clear space, which
+   is what made it unreadable. The dashed box is that clear space. */
+.realtor-wordmark--strict {
+    font-size: 14px;
+    border: 1px dashed rgba(255, 255, 255, 0.55);
+    border-radius: 3px;
+    padding: 13px 17px;
+}
+
+.realtor-compare-note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--realtor-ink-2);
+    line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Drop-off - the funnel problem the red card would have worsened
+   -------------------------------------------------------------------------- */
+.realtor-dropoff {
+    display: flex;
+    align-items: stretch;
+}
+
+.realtor-dropoff-stage {
+    flex: 1;
+    border: 1px solid var(--realtor-line);
+    border-radius: var(--realtor-r-md);
+    background-color: var(--realtor-surface);
+    padding: 16px 18px;
+}
+
+.realtor-dropoff-stage--risk {
+    border-color: var(--realtor-red-line);
+    background-color: var(--realtor-red-soft);
+}
+
+.realtor-dropoff-name {
+    display: block;
+    font-family: var(--header-text-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--realtor-ink);
+    line-height: 1.3;
+}
+
+.realtor-dropoff-stage--risk .realtor-dropoff-name {
+    color: var(--realtor-red-press);
+}
+
+.realtor-dropoff-sub {
+    display: block;
+    margin-top: 4px;
+    font-size: 13.5px;
+    color: var(--realtor-ink-2);
+    line-height: 1.4;
+}
+
+.realtor-dropoff-gap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 132px;
+    padding: 0 14px;
+}
+
+.realtor-dropoff-gap-line {
+    width: 100%;
+    height: 2px;
+    background-image: repeating-linear-gradient(90deg, var(--realtor-red) 0 6px, transparent 6px 12px);
+}
+
+.realtor-dropoff-gap-label {
+    margin-top: 8px;
+    font-family: var(--header-text-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--realtor-red-press);
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Options - the two proposals taken to the team, side by side
+   -------------------------------------------------------------------------- */
+.realtor-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.realtor-option {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--realtor-line);
+    border-radius: var(--realtor-r-lg);
+    background-color: var(--realtor-surface);
+    padding: 22px 24px;
+}
+
+.realtor-option--chosen {
+    border-color: var(--realtor-red-line);
+    background-color: #FFFCFC;
+}
+
+.realtor-option-tag {
+    font-family: var(--header-text-font);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--realtor-label);
+}
+
+.realtor-option--chosen .realtor-option-tag {
+    color: var(--realtor-red-press);
+}
+
+.realtor-option-title {
+    font-family: var(--header-text-font);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--realtor-ink);
+    line-height: 1.3;
+    margin: 8px 0 8px;
+}
+
+.realtor-option-body {
+    font-size: 15px;
+    color: var(--realtor-ink-2);
+    line-height: 1.5;
+}
+
+.realtor-option-list {
+    margin: 14px 0 0;
+    padding-left: 18px;
+    font-size: 15px;
+    color: var(--realtor-ink-2);
+    line-height: 1.65;
+}
+
+.realtor-option-badge {
+    align-self: flex-start;
+    margin-top: 18px;
+    font-family: var(--header-text-font);
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: var(--realtor-red);
+    border-radius: var(--realtor-r-pill);
+    padding: 5px 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Screenshots - plain figure, no surface, so the capture keeps its own edges
+   -------------------------------------------------------------------------- */
+.realtor-shot {
+    margin-top: 24px;
+}
+
+.realtor-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--realtor-r-lg);
+    background-color: var(--realtor-surface);
+    box-shadow: var(--realtor-shadow);
+}
+
+/* Captures are portrait and would tower at full column width. Cap them so they
+   read at the size the screen was actually designed for. */
+.realtor-shot--narrow {
+    max-width: 360px;
+}
+
+/* A capture that sits between two paragraphs rather than ending a column, so it
+   needs a bottom gap as well. The global reset leaves the next paragraph flush
+   against it otherwise. */
+.realtor-shot--between {
+    margin-bottom: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 968px) {
+    .realtor-banner {
+        padding: 56px 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .realtor-banner {
+        padding: 40px 17px;
+    }
+
+    .realtor-card,
+    .realtor-figure {
+        padding: 20px;
+    }
+
+    /* .realtor-options is back to a 2-column grid, so it collapses here. */
+    .realtor-compare,
+    .realtor-options {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .realtor-lead {
+        font-size: 18px;
+    }
+
+    .realtor-shot--narrow {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .realtor-flow-arrow {
+        display: none;
+    }
+
+    /* Stack the stages and let the dashed rule act as the divider between them. */
+    .realtor-dropoff {
+        flex-direction: column;
+    }
+
+    .realtor-dropoff-gap {
+        flex: none;
+        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        padding: 14px 0;
+    }
+
+    .realtor-dropoff-gap-line {
+        flex: 1;
+    }
+
+    .realtor-dropoff-gap-label {
+        margin-top: 0;
+    }
+}
+
+/* ==========================================================================
+   Lightbox - click any screenshot to zoom
+   ========================================================================== */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lightbox-img {
+    cursor: zoom-in;
+}

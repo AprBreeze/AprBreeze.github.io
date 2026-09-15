@@ -22,6 +22,9 @@
     --match-surface:     #FFFFFF;
     --match-ink:         #1D1D1F;
     --match-ink-2:       #6E6E73;
+    /* #86868B only reaches 3.6:1 on white, so it fails AA for small text and is
+       kept for decoration only (the flow arrows, the pipeline marker rings).
+       The 13px labels use --match-ink-2 instead, which is 5.1:1. */
     --match-ink-3:       #86868B;
     --match-line:        rgba(29, 29, 31, 0.08);
     --match-shadow:      0 0 0 1px rgba(29, 29, 31, 0.05), 0 1px 2px rgba(29, 29, 31, 0.04), 0 16px 40px rgba(29, 29, 31, 0.06);
@@ -131,7 +134,7 @@
     font-family: var(--header-text-font);
     font-size: 13px;
     font-weight: 600;
-    color: var(--match-ink-3);
+    color: var(--match-ink-2);
     margin-bottom: 14px;
 }
 
