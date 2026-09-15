@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta name="description" content="Match - an AI job search tool that rebuilds the most repetitive stage of the job hunt around your resume.">
+    <meta name="description" content="Match - an AI job search tool that rebuilds the most repetitive stage of the job hunt tailored to your resume.">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
 </head>
 <body>
@@ -30,16 +30,18 @@
 
     <!-- =====================================================================
          Hero banner
-         Placeholder for the full-width product showcase image.
-         To swap it in, replace the .match-banner-frame below with:
-         <img src="image/match/quick showcase - match.png" alt="Match AI job search product showcase" class="full-width-img" style="border-radius: 0px;">
+         The resume step, floating over the Match watermark. Above the fold, so
+         it loads eagerly and reserves its intrinsic size to avoid layout shift.
+         Deliberately NOT a .lightbox-img: the hero is a decorative entrance, not
+         a detail view, so it does not open the zoom overlay.
          ===================================================================== -->
     <div class="match-banner">
-        <div class="match-banner-frame">
-            <span class="match-banner-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-            <span class="match-banner-label">Showcase image placeholder</span>
-            <span class="match-banner-desc">Add the product hero screenshot here (roughly 2400 x 1013)</span>
-        </div>
+        <img src="image/match/resume.png"
+             alt="Match showing a resume being imported to start a job search"
+             class="match-banner-shot"
+             width="1068" height="580"
+             fetchpriority="high"
+             decoding="async">
     </div>
 
     <!-- =====================================================================
@@ -47,7 +49,7 @@
          ===================================================================== -->
     <section class="portfolio-header">
         <h1>Match - AI Job Search</h1>
-        <p>Rebuilding the most repetitive stage of the job hunt around your resume.</p>
+        <p>Rebuilding the most repetitive stage of the job hunt tailored to your resume.</p>
     </section>
 
     <!-- =====================================================================
@@ -126,14 +128,9 @@
                 <p class="match-lead">Resume is the only entry. Everyone has one.</p>
                 <p>No search bar, no query crafting, no keyword guessing. PDF import is parsed to text the model reads reliably, so output quality doesn't depend on how you formatted your file. Paste is there, but tucked behind a link so the common path stays one click.</p>
 
-                <!-- TODO: screenshots - swap the placeholder below for the Resume step capture:
-                     <img src="image/match/01-resume-step.png" alt="Match Resume step and its import dropzone" class="lightbox-img"> -->
+                <!-- Screenshot: the Resume step and its import dropzone. -->
                 <div class="match-shot">
-                    <div class="match-shot-frame">
-                        <span class="match-shot-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-                        <span class="match-shot-label">Screenshot placeholder</span>
-                        <span class="match-shot-desc">The Resume step and its import dropzone</span>
-                    </div>
+                    <img src="image/match/resume.png" alt="Match Resume step and its import dropzone" class="lightbox-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
@@ -151,46 +148,16 @@
                 <p class="match-lead">Most people are capable of roles they would never think to search.</p>
                 <p>The tool reads the resume and proposes titles across the job markets it can evidence, including adjacent lanes you didn't know existed. You keep control: toggle what fits, add your own, cap at three.</p>
 
-                <!-- TODO: screenshots - swap the placeholder below for the Titles step capture:
-                     <img src="image/match/02-titles-step.png" alt="Match Titles step with its suggestion chips" class="lightbox-img"> -->
+                <!-- Screenshot: the Titles step with its suggestion chips. -->
                 <div class="match-shot">
-                    <div class="match-shot-frame">
-                        <span class="match-shot-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-                        <span class="match-shot-label">Screenshot placeholder</span>
-                        <span class="match-shot-desc">The Titles step with its suggestion chips</span>
-                    </div>
+                    <img src="image/match/title search.png" alt="Match Titles step with its suggestion chips" class="lightbox-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
     </div>
 
     <!-- =====================================================================
-         4. One optimized path, none of the knobs
-         ===================================================================== -->
-    <div class="case-study-container">
-        <section class="horizontal-section" style="margin-top: 60px;">
-            <div class="content-wrapper" style="max-width: 25%;">
-                <h2 class="section-title-2">One optimized path</h2>
-            </div>
-            <div style="flex: 1; margin-left: 2rem;">
-                <p class="match-lead">All real configuration stays in the CLI and a separate test page.</p>
-                <p>The product shows only the flow that works: no scores, ranks, LLM toggles, or fetch counts. I tuned against the test surface to find the balanced configuration, then shipped users the result of that tuning instead of the controls.</p>
-
-                <!-- TODO: screenshots - swap the placeholder below for the product flow or the Settings modal capture:
-                     <img src="image/match/03-optimized-path.png" alt="Match product flow with the Settings modal" class="lightbox-img"> -->
-                <div class="match-shot">
-                    <div class="match-shot-frame">
-                        <span class="match-shot-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-                        <span class="match-shot-label">Screenshot placeholder</span>
-                        <span class="match-shot-desc">The product flow, or the Settings modal</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- =====================================================================
-         5. Filter cheap first, ask the model only where judgment matters
+         4. Filter cheap first, ask the model only where judgment matters
          ===================================================================== -->
     <div class="case-study-container">
         <section class="horizontal-section" style="margin-top: 60px;">
@@ -201,21 +168,57 @@
                 <p class="match-lead">Running the model over every posting would burn tokens and hurt output quality.</p>
                 <p>Too much context in one call invites hallucination. So deterministic gates run first, on title, years of experience, and board-level signals. Only the surviving shortlist reaches the model for ranking.</p>
 
-                <!-- TODO: screenshots - swap the placeholder below for the pipeline diagram:
-                     <img src="image/match/04-filter-pipeline.png" alt="Match pipeline: fetch, gates, shortlist, model rank, human pick" class="lightbox-img"> -->
-                <div class="match-shot">
-                    <div class="match-shot-frame">
-                        <span class="match-shot-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-                        <span class="match-shot-label">Screenshot placeholder</span>
-                        <span class="match-shot-desc">The pipeline: fetch, gates, shortlist, model rank, human pick</span>
-                    </div>
-                </div>
+                <!-- Pipeline diagram. The two starred steps are the only model calls. -->
+                <figure class="match-card">
+                    <figcaption class="match-card-label">Pipeline</figcaption>
+                    <ol class="match-pipe">
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Resume Extract</span>
+                        </li>
+                        <li class="match-pipe-step match-pipe-step--ai">
+                            <span class="match-pipe-name">AI Title Recommendation</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Fetch &amp; Dedupe</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Gate A</span>
+                            <span class="match-pipe-note">Years of experience. A hard gate, no model involved.</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Gate B Scoring</span>
+                            <span class="match-pipe-note">A weighted score decides what survives to the next step</span>
+                            <ul class="match-pipe-weights">
+                                <li class="match-pipe-weight" style="--w: 50%;">
+                                    <span class="match-pipe-weight-label">Title fit</span>
+                                    <span class="match-pipe-weight-num">50%</span>
+                                </li>
+                                <li class="match-pipe-weight" style="--w: 30%;">
+                                    <span class="match-pipe-weight-label">Years of experience fit</span>
+                                    <span class="match-pipe-weight-num">30%</span>
+                                </li>
+                                <li class="match-pipe-weight" style="--w: 20%;">
+                                    <span class="match-pipe-weight-label">Description richness</span>
+                                    <span class="match-pipe-weight-num">20%</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="match-pipe-step match-pipe-step--ai">
+                            <span class="match-pipe-name">AI Filter</span>
+                            <span class="match-pipe-note">Only the surviving shortlist reaches the model for ranking</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Result</span>
+                        </li>
+                    </ol>
+                    <p class="match-pipe-legend">The pipeline is designed to increase token efficiency while not compromising the output quality.</p>
+                </figure>
             </div>
         </section>
     </div>
 
     <!-- =====================================================================
-         6. Results that admit uncertainty
+         5. Results that admit uncertainty
          ===================================================================== -->
     <div class="case-study-container">
         <section class="horizontal-section" style="margin-top: 60px;">
@@ -226,21 +229,16 @@
                 <p class="match-lead">Best Match is the model's shortlist. Backup Jobs holds everything the filters set aside.</p>
                 <p>Backup exists because filters can be wrong, and a wrong filter shouldn't hide a role you could have landed. Each row is title, company, location, board, and one plain sentence on why.</p>
 
-                <!-- TODO: screenshots - swap the placeholder below for the results list capture:
-                     <img src="image/match/05-results-list.png" alt="Match results list with Best Match and Backup Jobs tabs" class="lightbox-img"> -->
+                <!-- Screenshot: the results list with both tabs and the why lines. -->
                 <div class="match-shot">
-                    <div class="match-shot-frame">
-                        <span class="match-shot-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-                        <span class="match-shot-label">Screenshot placeholder</span>
-                        <span class="match-shot-desc">The results list with both tabs and the why lines</span>
-                    </div>
+                    <img src="image/match/result.png" alt="Match results list with Best Match and Backup Jobs tabs" class="lightbox-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
     </div>
 
     <!-- =====================================================================
-         7. Open source, your own key
+         6. Open source, your own key
          ===================================================================== -->
     <div class="case-study-container">
         <section class="horizontal-section" style="margin-top: 60px;">
@@ -251,14 +249,29 @@
                 <p class="match-lead">I want this to be a tool people can adapt, so every AI step sits behind one transport.</p>
                 <p>It runs against a local CLI or any OpenAI-compatible API, with your own key. No vendor lock-in, and no shared service holding your resume.</p>
 
-                <!-- TODO: screenshots - swap the placeholder below for the Settings modal capture:
-                     <img src="image/match/06-settings-modal.png" alt="Match Settings modal with API key, base URL, and model" class="lightbox-img"> -->
+                <!-- Screenshot: the Settings modal with API key, base URL, and model. -->
                 <div class="match-shot">
-                    <div class="match-shot-frame">
-                        <span class="match-shot-icon" aria-hidden="true"><i class="fa-regular fa-image"></i></span>
-                        <span class="match-shot-label">Screenshot placeholder</span>
-                        <span class="match-shot-desc">The Settings modal with API key, base URL, and model</span>
-                    </div>
+                    <img src="image/match/API settings modal.png" alt="Match Settings modal with API key, base URL, and model" class="lightbox-img" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         7. One optimized path, none of the knobs
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">One optimized path</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">All real configuration stays in the CLI and a separate test page.</p>
+                <p>The product shows only the flow that works: no scores, ranks, LLM toggles, or fetch counts. I tuned against the test surface to find the balanced configuration, then shipped users the result of that tuning instead of the controls.</p>
+
+                <!-- Screenshot: the product flow, or the Settings modal. -->
+                <div class="match-shot">
+                    <img src="image/match/test.png" alt="Match product flow with the Settings modal" class="lightbox-img" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>

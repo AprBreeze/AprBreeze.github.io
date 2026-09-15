@@ -68,7 +68,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Hero banner - full-width placeholder for the product showcase image
+   Hero banner - the product showcase floating over the Match watermark
    -------------------------------------------------------------------------- */
 .match-banner {
     width: 100%;
@@ -82,6 +82,9 @@
     overflow: hidden;
 }
 
+/* Watermark. Sized so it extends past the showcase image on both sides at every
+   width, so it reads as a backdrop rather than being hidden behind the
+   screenshot. Measured against the image's 780px cap. */
 .match-banner::before {
     content: 'Match';
     position: absolute;
@@ -90,7 +93,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--header-text-font);
-    font-size: clamp(90px, 24vw, 300px);
+    font-size: clamp(120px, 38vw, 420px);
     font-weight: 700;
     letter-spacing: -0.045em;
     line-height: 1;
@@ -99,44 +102,17 @@
     user-select: none;
 }
 
-.match-banner-frame {
+/* Showcase image - on a Match surface so it lifts off the watermark */
+.match-banner-shot {
     position: relative;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-    padding: 48px 64px;
-    border: 1.5px dashed rgba(14, 138, 133, 0.4);
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: auto;
     border-radius: var(--match-r-lg);
-    background-color: rgba(255, 255, 255, 0.62);
-}
-
-.match-banner-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    background-color: var(--match-teal-soft);
-    color: var(--match-teal-ink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    margin-bottom: 4px;
-}
-
-.match-banner-label {
-    font-family: var(--header-text-font);
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--match-teal-ink);
-}
-
-.match-banner-desc {
-    font-size: 15px;
-    color: var(--match-ink-2);
-    line-height: 1.5;
+    background-color: var(--match-surface);
+    box-shadow: var(--match-shadow);
 }
 
 /* --------------------------------------------------------------------------
@@ -197,45 +173,144 @@
     margin-top: 24px;
 }
 
-.match-shot-frame {
-    background-color: var(--match-canvas);
-    border: 1.5px dashed rgba(14, 138, 133, 0.4);
+/* Product screenshots - Match surface treatment: white card, soft shadow */
+.match-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
     border-radius: var(--match-r-lg);
-    min-height: 320px;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
+    background-color: var(--match-surface);
+    box-shadow: var(--match-shadow);
 }
 
-.match-shot-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    background-color: var(--match-teal-soft);
-    color: var(--match-teal-ink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    margin-bottom: 4px;
+/* --------------------------------------------------------------------------
+   Pipeline diagram - "Filter cheap first"
+   A vertical rail rather than a chip strip, so it reads as a different figure
+   from the horizontal Product flow card above. The rail also leaves room for
+   per-step detail (the Gate B weights) without cramping a row, and it needs no
+   width maths, so it holds up on mobile untouched.
+   -------------------------------------------------------------------------- */
+.match-pipe {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.match-shot-label {
+.match-pipe-step {
+    position: relative;
+    padding: 9px 0 9px 34px;
+}
+
+/* Rail segment: runs from this step's marker down to the next step's marker.
+   Drops into the next item's 9px top padding, which keeps it continuous.
+   Offsets are fixed, so any row height works, including the tall Gate B row. */
+.match-pipe-step::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 31px;
+    bottom: -15px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: var(--match-line);
+}
+
+.match-pipe-step:last-child::after {
+    content: none;
+}
+
+/* Marker. Falls back to the canvas tint so a marker reads as an outline,
+   never as a filled block, when the rail meets it. */
+.match-pipe-step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--match-surface);
+    box-shadow: inset 0 0 0 2px var(--match-ink-3);
+    z-index: 1;
+}
+
+/* The two model calls - the only teal elements in the diagram */
+.match-pipe-step--ai::before {
+    background-color: var(--match-teal);
+    box-shadow: 0 0 0 3px var(--match-teal-soft), inset 0 0 0 2px var(--match-teal);
+}
+
+.match-pipe-name {
+    display: block;
     font-family: var(--header-text-font);
     font-size: 15px;
     font-weight: 700;
+    color: var(--match-ink);
+    line-height: 1.35;
+}
+
+.match-pipe-step--ai .match-pipe-name {
     color: var(--match-teal-ink);
 }
 
-.match-shot-desc {
-    font-size: 15px;
+.match-pipe-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--match-ink-2);
+    line-height: 1.45;
+}
+
+/* Gate B weights. A number plus a proportional rule with no background track,
+   so the relative weight is scannable without turning into a dashboard bar. */
+.match-pipe-weights {
+    display: grid;
+    gap: 7px;
+    max-width: 340px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.match-pipe-weight {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: 12px;
+}
+
+.match-pipe-weight::after {
+    content: '';
+    grid-column: 1 / -1;
+    width: var(--w, 100%);
+    height: 2px;
+    margin-top: 4px;
+    border-radius: 1px;
+    background-color: var(--match-teal);
+    opacity: 0.55;
+}
+
+.match-pipe-weight-label {
+    font-size: 13.5px;
+    color: var(--match-ink-2);
+    line-height: 1.4;
+}
+
+.match-pipe-weight-num {
+    font-family: var(--header-text-font);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--match-ink);
+    font-variant-numeric: tabular-nums;
+}
+
+.match-pipe-legend {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--match-line);
+    font-size: 13px;
     color: var(--match-ink-2);
     line-height: 1.5;
-    max-width: 460px;
 }
 
 /* --------------------------------------------------------------------------
@@ -267,25 +342,12 @@
         min-height: 340px;
         padding: 56px 27px;
     }
-
-    .match-banner-frame {
-        padding: 40px 32px;
-    }
 }
 
 @media (max-width: 768px) {
     .match-banner {
         min-height: 260px;
         padding: 40px 17px;
-    }
-
-    .match-banner-frame {
-        padding: 32px 20px;
-    }
-
-    .match-shot-frame {
-        min-height: 220px;
-        padding: 28px 20px;
     }
 
     .match-card {
