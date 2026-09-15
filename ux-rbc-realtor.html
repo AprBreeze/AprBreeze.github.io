@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBC &times; REALTOR.ca Exit Card - April Breeze</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ux-rbc-realtor.css">
+    <link rel="stylesheet" href="rbc-password-gate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Redesigning a partner-branded exit card for RBC's mortgage pre-approval tool when REALTOR.ca's brand guidelines and the funnel disagreed.">
+    <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+</head>
+<body>
+    <div id="password-gate" aria-hidden="false">
+        <div class="password-modal" role="dialog" aria-modal="true" aria-labelledby="password-gate-title">
+            <h2 id="password-gate-title">Protected Work</h2>
+            <input id="password-input" type="password" placeholder="Enter password" autocomplete="off">
+            <p id="password-error" class="password-error" aria-live="polite"></p>
+            <div class="password-actions">
+                <button id="password-submit" type="button" class="cta-primary">Submit</button>
+                <button id="password-home" type="button" class="cta-secondary">Return to Home</button>
+            </div>
+            <p class="caption">This work is password protected. <br> Please refer to my resume for the password.</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="ux-design.html" class="logo">
+                <img src="image/Logo.svg" alt="Xinglong Logo" class="logo-image">
+            </a>
+            <ul class="nav-links">
+                <li><a href="ux-design.html"><img src="image/Icon/icon-works.png" alt="Works"> Works</a></li>
+                <li><a href="index.html"><img src="image/Icon/icon-about-me.png" alt="About Me"> About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =====================================================================
+         Hero banner
+         The card row from the result page, cropped out of the full capture and
+         floating over the REALTOR.ca wordmark. Above the fold, so it loads
+         eagerly and reserves its intrinsic size to avoid layout shift.
+         Deliberately NOT a .lightbox-img: the hero is a decorative entrance,
+         and the full capture it came from opens further down the page.
+         ===================================================================== -->
+    <div class="realtor-banner">
+        <span class="realtor-banner-watermark" aria-hidden="true">REALTOR.ca</span>
+        <img src="image/rbc/PA result realtor cards.png"
+             alt="The REALTOR.ca card on RBC's mortgage pre-approval result page, sitting beside the advisor card"
+             class="realtor-banner-shot"
+             width="960" height="516"
+             fetchpriority="high"
+             decoding="async">
+    </div>
+
+    <!-- =====================================================================
+         Portfolio Header
+         ===================================================================== -->
+    <section class="portfolio-header">
+        <h1>RBC &times; REALTOR.ca Exit Card</h1>
+        <p>Redesigning a partner-branded exit card when the brand guidelines and the funnel disagreed.</p>
+    </section>
+
+    <!-- =====================================================================
+         Project Info
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <div class="project-info">
+            <div class="info-item">
+                <span class="info-label">Role</span>
+                Interaction Designer
+            </div>
+            <div class="info-item">
+                <span class="info-label">Duration</span>
+                2 weeks
+            </div>
+            <div class="info-item">
+                <span class="info-label">Team</span>
+                HomeX
+            </div>
+            <div class="info-item">
+                <span class="info-label">Methods</span>
+                UX Design<br> Prototype<br> Stakeholder Alignment
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         Design Phase dividers
+         A full-bleed accent bar, same markup as ux-rbc-mrt.html, with this
+         project's accent token instead of RBC's blue. The inner container is
+         zeroed so the bar spans the viewport.
+         ===================================================================== -->
+
+    <!-- Design Phase 1 -->
+    <div class="case-study-container" style="background-color: var(--realtor-red); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: #ffffff;">Design Phase 1: Empathize</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- Background -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Background</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="realtor-lead">A partnership card that satisfies brand guidelines</p>
+                <p>During my internship on RBC's Mortgage Pre-Approval Tool team, we ran a referral partnership with REALTOR.ca. Users interested in getting pre-approved could click through from REALTOR.ca straight into our tool, and our agreement required an exit path back.</p>
+
+                <!-- The referral entry, sitting directly under the paragraph that
+                     names the click-through it shows. -->
+                <figure class="realtor-shot">
+                    <img src="image/rbc/PA realtor.jpg" alt="REALTOR.ca's page inviting users to get started with a mortgage from RBC" class="lightbox-img" loading="lazy" decoding="async" width="1874" height="1186">
+                </figure>
+
+                <div class="realtor-card">
+                    <span class="realtor-card-label">Referral round trip</span>
+                    <div class="realtor-flow" aria-label="Referral flow: REALTOR.ca, Pre-approval, Confirmation, Result, Exit card">
+                        <span class="realtor-flow-step">REALTOR.ca</span>
+                        <span class="realtor-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="realtor-flow-step">Pre-approval</span>
+                        <span class="realtor-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="realtor-flow-step">Confirmation</span>
+                        <span class="realtor-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="realtor-flow-step">Result</span>
+                        <span class="realtor-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="realtor-flow-step realtor-flow-step--exit">Exit card</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Where this started -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Where this started</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="realtor-lead">Updating the Houseful cards in our confirmation and result pages</p>
+                <p>The starting point looked simple. My task was to redesign that card to follow REALTOR.ca's branding guidelines instead.</p>
+
+                <!-- The exit slot before the redesign. Portrait capture, so it stays
+                     capped rather than running the full column width. -->
+                <figure class="realtor-shot realtor-shot--narrow">
+                    <img src="image/rbc/PA confirmation houseful.png" alt="The Houseful card in the exit slot on RBC's mortgage pre-approval confirmation page" class="lightbox-img" loading="lazy" decoding="async" width="650" height="1090">
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <!-- Design Phase 2 -->
+    <div class="case-study-container" style="background-color: var(--realtor-red); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: #ffffff;">Design Phase 2: Define</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- Brand guidelines vs. readability -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Brand guidelines vs. readability</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="realtor-lead">REALTOR.ca's wider margins conflicted with our existing card component</p>
+                <p style="margin-bottom: 16px;">Applied strictly, the logo would render too small to read clearly inside our existing card component. That read as unprofessional, and worse, as unusable.</p>
+                <p>I raised it with my mentor and proposed an adjusted layout, then submitted it to REALTOR.ca as a request for an exception to their standard margin rule.</p>
+
+                <figure class="realtor-figure">
+                    <figcaption class="realtor-figure-label">The margin tradeoff</figcaption>
+                    <div class="realtor-compare">
+                        <div class="realtor-compare-item">
+                            <span class="realtor-compare-tag">Guideline applied as written</span>
+                            <div class="realtor-mini-card">
+                                <span class="realtor-wordmark realtor-wordmark--strict">REALTOR.ca</span>
+                            </div>
+                            <p class="realtor-compare-note">The dashed box is the clear space the guideline asks for. Inside a card of this height, the logo loses to its own margins.</p>
+                        </div>
+                        <div class="realtor-compare-item realtor-compare-item--chosen">
+                            <span class="realtor-compare-tag">Submitted as an exception</span>
+                            <div class="realtor-mini-card">
+                                <span class="realtor-wordmark">REALTOR.ca</span>
+                            </div>
+                            <p class="realtor-compare-note">Wider logo, tighter margins. Readable at card size, and it still reads as their mark.</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <!-- Brand colour and drop-off -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Brand colour and drop-off</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="realtor-lead">REALTOR.ca's bold red might worsen the drop-off</p>
+                <p style="margin-bottom: 16px;">Showing that card on the confirmation page risked compounding a problem the team was already tracking. Many users stopped at the confirmation page and never reached the result page, mistakenly assuming the flow had ended.</p>
+                <p>A highly visible red card at that point could add to the drop-off rather than help it.</p>
+
+                <figure class="realtor-figure">
+                    <figcaption class="realtor-figure-label">Where users were stopping</figcaption>
+                    <div class="realtor-dropoff">
+                        <div class="realtor-dropoff-stage realtor-dropoff-stage--risk">
+                            <span class="realtor-dropoff-name">Confirmation</span>
+                            <span class="realtor-dropoff-sub">The exit card sat here. Users read it as the end of the flow.</span>
+                        </div>
+                        <div class="realtor-dropoff-gap">
+                            <span class="realtor-dropoff-gap-line" aria-hidden="true"></span>
+                            <span class="realtor-dropoff-gap-label">Drop-off</span>
+                        </div>
+                        <div class="realtor-dropoff-stage">
+                            <span class="realtor-dropoff-name">Result</span>
+                            <span class="realtor-dropoff-sub">Pre-approval letter, next steps, and the exit path.</span>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <!-- Design Phase 3 -->
+    <div class="case-study-container" style="background-color: var(--realtor-red); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: #ffffff;">Design Phase 3: Ideate</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- Proposing solutions -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Proposing solutions</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="realtor-lead">I brought two options to the team</p>
+                <p style="margin-bottom: 16px;">Option 1 was to keep the card on the confirmation page but recolour it to REALTOR.ca's secondary black, so it stopped competing with RBC's blue. Lower development cost, but it would not meaningfully address the drop-off.</p>
+
+                <!-- Option 1's exploration, between the two options so the variants
+                     read as belonging to the option they were built for. -->
+                <figure class="realtor-shot realtor-shot--between">
+                    <img src="image/rbc/PA other protorypes.png" alt="Four exit card variants explored: REALTOR.ca red in the top row and REALTOR.ca secondary black in the bottom row, each paired with the advisor card" class="lightbox-img" loading="lazy" decoding="async" width="1169" height="616">
+                </figure>
+
+                <p>Option 2 was to remove the exit card from the confirmation page entirely and show it only on the result page. That required new logic to detect REALTOR.ca referrals, and a resize of the remaining card to full width on the confirmation page for visual balance.</p>
+
+                <!-- The wide crop anchors the paragraph above: this is the full-width
+                     resize that paragraph describes. No caption, because it sits
+                     directly under the sentence that names it. -->
+                <figure class="realtor-shot">
+                    <img src="image/rbc/PA confirmation full width only.png" alt="The advisor card running the full width of RBC's mortgage pre-approval confirmation page, with no exit card beside it" class="lightbox-img" loading="lazy" decoding="async" width="883" height="213">
+                </figure>
+
+                <figure class="realtor-figure">
+                    <figcaption class="realtor-figure-label">Two options taken to the team</figcaption>
+                    <div class="realtor-options">
+                        <div class="realtor-option">
+                            <span class="realtor-option-tag">Option 1</span>
+                            <h3 class="realtor-option-title">Recolour the card</h3>
+                            <p class="realtor-option-body">Keep the exit card on the confirmation page, in REALTOR.ca's secondary black.</p>
+                            <ul class="realtor-option-list">
+                                <li>Lower development cost</li>
+                                <li>Would not meaningfully address the drop-off</li>
+                            </ul>
+                        </div>
+
+                        <div class="realtor-option realtor-option--chosen">
+                            <span class="realtor-option-tag">Option 2</span>
+                            <h3 class="realtor-option-title">Move the card to the result page</h3>
+                            <p class="realtor-option-body">Drop the exit card from the confirmation page and show it only once the user reaches results.</p>
+                            <ul class="realtor-option-list">
+                                <li>New logic to detect REALTOR.ca referrals</li>
+                                <li>Remaining card resized to full width for balance</li>
+                            </ul>
+                            <span class="realtor-option-badge">Approved by REALTOR.ca</span>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <!-- Design Phase 4 -->
+    <div class="case-study-container" style="background-color: var(--realtor-red); max-width: 100%; padding: 30px;">
+        <div class="case-study-container" style="padding: 0;">
+            <section style="text-align: center; margin: 60px 0 60px 0;">
+                <h1 class="section-title-2" style="font-weight: 500; padding: 0; color: #ffffff;">Design Phase 4: Prototype &amp; Deliver</h1>
+            </section>
+        </div>
+    </div>
+
+    <!-- Outcome -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Outcome</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="realtor-lead">REALTOR.ca chose option 2 and accepted the margin exception</p>
+                <p>I then worked with our developer and visual designer to select a full-width card design and implement the logic end to end.</p>
+
+                <figure class="realtor-shot">
+                    <img src="image/rbc/PA result realtor.png" alt="RBC's mortgage pre-approval result page showing the REALTOR.ca card beside the advisor card" class="lightbox-img" loading="lazy" decoding="async" width="1461" height="1266">
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox - click a .lightbox-img to zoom, click the backdrop or press Esc to close -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+        <img id="lightbox-img" alt="">
+        <button id="lightbox-close" type="button" aria-label="Close preview">&#10005;</button>
+    </div>
+
+    <script src="ux-interact.js"></script>
+    <script src="rbc-password-gate.js"></script>
+    <script>
+        const lightboxEl = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || '';
+            lightboxEl.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightboxEl.classList.remove('active');
+            lightboxImg.removeAttribute('src');
+        }
+
+        document.querySelectorAll('.lightbox-img').forEach(img => {
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+        });
+
+        // Only the backdrop closes the preview, so clicking the zoomed image keeps it open.
+        lightboxEl.addEventListener('click', e => {
+            if (e.target === lightboxEl) closeLightbox();
+        });
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>
