@@ -1,0 +1,415 @@
+/* ==========================================================================
+   Match - project-specific styles only.
+   Do NOT modify style.css. All new or Match-specific rules live here.
+   Loaded after style.css in ux-match.html.
+
+   Palette and surface treatment come from the Match product design system
+   (AutoApply search): Apple-like gray canvas, white surfaces, one teal accent.
+   Applied here as a light touch on top of the April Breeze portfolio system.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Color and shape variables
+   -------------------------------------------------------------------------- */
+:root {
+    --match-teal:        #0E8A85;
+    --match-teal-hover:  #109A94;
+    --match-teal-press:  #0A6F6B;
+    --match-teal-ink:    #0A6F6B; /* teal dark enough for AA text on white */
+    --match-teal-bright: #5FD3CC; /* teal for text on the dark closing section */
+    --match-teal-soft:   #E6F6F5;
+    --match-canvas:      #F5F5F7;
+    --match-surface:     #FFFFFF;
+    --match-ink:         #1D1D1F;
+    --match-ink-2:       #6E6E73;
+    --match-ink-3:       #86868B;
+    --match-line:        rgba(29, 29, 31, 0.08);
+    --match-shadow:      0 0 0 1px rgba(29, 29, 31, 0.05), 0 1px 2px rgba(29, 29, 31, 0.04), 0 16px 40px rgba(29, 29, 31, 0.06);
+    --match-r-md:        12px;
+    --match-r-lg:        18px;
+    --match-r-pill:      980px;
+}
+
+/* --------------------------------------------------------------------------
+   Section titles - small teal rule marks every section on this page
+   -------------------------------------------------------------------------- */
+.content-wrapper .section-title-2::before {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--match-teal);
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Links - Match teal instead of the portfolio blue on this page
+   -------------------------------------------------------------------------- */
+.content-link {
+    color: var(--match-teal-ink);
+}
+
+.content-link:hover {
+    color: var(--match-teal-press);
+    text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Lead paragraph - the one line that carries the design decision
+   -------------------------------------------------------------------------- */
+.match-lead {
+    font-family: var(--header-text-font);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.45;
+    color: var(--match-teal-ink);
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Hero banner - the product showcase floating over the Match watermark
+   -------------------------------------------------------------------------- */
+.match-banner {
+    width: 100%;
+    background-color: var(--match-canvas);
+    min-height: 420px;
+    padding: 72px 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Watermark. Sized so it extends past the showcase image on both sides at every
+   width, so it reads as a backdrop rather than being hidden behind the
+   screenshot. Measured against the image's 780px cap. */
+.match-banner::before {
+    content: 'Match';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--header-text-font);
+    font-size: clamp(120px, 38vw, 420px);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1;
+    color: rgba(14, 138, 133, 0.07);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Showcase image - on a Match surface so it lifts off the watermark */
+.match-banner-shot {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+    border-radius: var(--match-r-lg);
+    background-color: var(--match-surface);
+    box-shadow: var(--match-shadow);
+}
+
+/* --------------------------------------------------------------------------
+   Surface card - the Match white sheet, used sparingly around product context
+   -------------------------------------------------------------------------- */
+.match-card {
+    background-color: var(--match-surface);
+    border-radius: var(--match-r-lg);
+    box-shadow: var(--match-shadow);
+    padding: 26px 28px;
+    margin-top: 24px;
+}
+
+.match-card-label {
+    display: block;
+    font-family: var(--header-text-font);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--match-ink-3);
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   Flow strip - the four product steps as a labelled diagram (not a screenshot)
+   -------------------------------------------------------------------------- */
+.match-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.match-flow-step {
+    font-family: var(--header-text-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--match-ink-2);
+    background-color: var(--match-canvas);
+    border-radius: var(--match-r-pill);
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+
+.match-flow-step--active {
+    background-color: var(--match-teal-soft);
+    color: var(--match-teal-ink);
+}
+
+.match-flow-arrow {
+    color: var(--match-ink-3);
+    font-size: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Screenshot placeholder - where the product captures go
+   -------------------------------------------------------------------------- */
+.match-shot {
+    margin-top: 24px;
+}
+
+/* Product screenshots - Match surface treatment: white card, soft shadow */
+.match-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--match-r-lg);
+    background-color: var(--match-surface);
+    box-shadow: var(--match-shadow);
+}
+
+/* --------------------------------------------------------------------------
+   Pipeline diagram - "Filter cheap first"
+   A vertical rail rather than a chip strip, so it reads as a different figure
+   from the horizontal Product flow card above. The rail also leaves room for
+   per-step detail (the Gate B weights) without cramping a row, and it needs no
+   width maths, so it holds up on mobile untouched.
+   -------------------------------------------------------------------------- */
+.match-pipe {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.match-pipe-step {
+    position: relative;
+    padding: 9px 0 9px 34px;
+}
+
+/* Rail segment: runs from this step's marker down to the next step's marker.
+   Drops into the next item's 9px top padding, which keeps it continuous.
+   Offsets are fixed, so any row height works, including the tall Gate B row. */
+.match-pipe-step::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 31px;
+    bottom: -15px;
+    width: 2px;
+    border-radius: 1px;
+    background-color: var(--match-line);
+}
+
+.match-pipe-step:last-child::after {
+    content: none;
+}
+
+/* Marker. Falls back to the canvas tint so a marker reads as an outline,
+   never as a filled block, when the rail meets it. */
+.match-pipe-step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--match-surface);
+    box-shadow: inset 0 0 0 2px var(--match-ink-3);
+    z-index: 1;
+}
+
+/* The two model calls - the only teal elements in the diagram */
+.match-pipe-step--ai::before {
+    background-color: var(--match-teal);
+    box-shadow: 0 0 0 3px var(--match-teal-soft), inset 0 0 0 2px var(--match-teal);
+}
+
+.match-pipe-name {
+    display: block;
+    font-family: var(--header-text-font);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--match-ink);
+    line-height: 1.35;
+}
+
+.match-pipe-step--ai .match-pipe-name {
+    color: var(--match-teal-ink);
+}
+
+.match-pipe-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    color: var(--match-ink-2);
+    line-height: 1.45;
+}
+
+/* Gate B weights. A number plus a proportional rule with no background track,
+   so the relative weight is scannable without turning into a dashboard bar. */
+.match-pipe-weights {
+    display: grid;
+    gap: 7px;
+    max-width: 340px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.match-pipe-weight {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    column-gap: 12px;
+}
+
+.match-pipe-weight::after {
+    content: '';
+    grid-column: 1 / -1;
+    width: var(--w, 100%);
+    height: 2px;
+    margin-top: 4px;
+    border-radius: 1px;
+    background-color: var(--match-teal);
+    opacity: 0.55;
+}
+
+.match-pipe-weight-label {
+    font-size: 13.5px;
+    color: var(--match-ink-2);
+    line-height: 1.4;
+}
+
+.match-pipe-weight-num {
+    font-family: var(--header-text-font);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--match-ink);
+    font-variant-numeric: tabular-nums;
+}
+
+.match-pipe-legend {
+    margin: 18px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--match-line);
+    font-size: 13px;
+    color: var(--match-ink-2);
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   Dark closing section
+   -------------------------------------------------------------------------- */
+.match-dark-section p {
+    color: var(--text-color-reverse);
+}
+
+.match-dark-section .match-lead {
+    color: var(--match-teal-bright);
+}
+
+.match-dark-section .content-link {
+    color: var(--match-teal-bright);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.match-dark-section .content-link:hover {
+    color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 968px) {
+    .match-banner {
+        min-height: 340px;
+        padding: 56px 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .match-banner {
+        min-height: 260px;
+        padding: 40px 17px;
+    }
+
+    .match-card {
+        padding: 20px;
+    }
+
+    .match-flow {
+        gap: 8px;
+    }
+
+    .match-flow-step {
+        font-size: 13px;
+        padding: 7px 13px;
+    }
+
+    .match-lead {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .match-flow-arrow {
+        display: none;
+    }
+}
+
+/* ==========================================================================
+   Lightbox - click any screenshot to zoom
+   ========================================================================== */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.active {
+    display: flex;
+}
+
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lightbox-img {
+    cursor: zoom-in;
+}

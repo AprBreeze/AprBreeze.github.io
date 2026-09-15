@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match - AI Job Search - April Breeze</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ux-match.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Match - an AI job search tool that rebuilds the most repetitive stage of the job hunt tailored to your resume.">
+    <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="ux-design.html" class="logo">
+                <img src="image/Logo.svg" alt="Xinglong Logo" class="logo-image">
+            </a>
+            <ul class="nav-links">
+                <li><a href="ux-design.html"><img src="image/Icon/icon-works.png" alt="Works"> Works</a></li>
+                <li><a href="index.html"><img src="image/Icon/icon-about-me.png" alt="About Me"> About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =====================================================================
+         Hero banner
+         The resume step, floating over the Match watermark. Above the fold, so
+         it loads eagerly and reserves its intrinsic size to avoid layout shift.
+         Deliberately NOT a .lightbox-img: the hero is a decorative entrance, not
+         a detail view, so it does not open the zoom overlay.
+         ===================================================================== -->
+    <div class="match-banner">
+        <img src="image/match/resume.png"
+             alt="Match showing a resume being imported to start a job search"
+             class="match-banner-shot"
+             width="1068" height="580"
+             fetchpriority="high"
+             decoding="async">
+    </div>
+
+    <!-- =====================================================================
+         Portfolio Header
+         ===================================================================== -->
+    <section class="portfolio-header">
+        <h1>Match - AI Job Search</h1>
+        <p>Rebuilding the most repetitive stage of the job hunt tailored to your resume.</p>
+    </section>
+
+    <!-- =====================================================================
+         Project Info + Quick Summary
+         ===================================================================== -->
+    <div class="case-study-container">
+
+        <div class="project-info">
+            <div class="info-item">
+                <span class="info-label">Role</span>
+                Product Designer and Developer
+            </div>
+            <div class="info-item">
+                <span class="info-label">Duration</span>
+                2 weeks
+            </div>
+            <div class="info-item">
+                <span class="info-label">Team</span>
+                Solo Builder
+            </div>
+            <div class="info-item">
+                <span class="info-label">Methods</span>
+                Spec-driven design, Vibe-coding prototyping, Agentic engineering
+            </div>
+        </div>
+
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Quick Summary</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">Match rebuilds the search stage of a job hunt: the posting-after-posting reading, and the guessing about whether you qualify.</p>
+                <p>It starts from a resume, suggests titles across the job lanes that resume can evidence, and returns a shortlist that keeps the model's best guess separate from everything the filters set aside. I built it end to end as a solo project, from the flow and the copy to the specs and the working prototype.</p>
+
+                <div class="match-card">
+                    <span class="match-card-label">Product flow</span>
+                    <div class="match-flow" aria-label="Product flow: Resume, Titles, Loading, Results">
+                        <span class="match-flow-step match-flow-step--active">Resume</span>
+                        <span class="match-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="match-flow-step">Titles</span>
+                        <span class="match-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="match-flow-step">Loading</span>
+                        <span class="match-flow-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="match-flow-step">Results</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         1. Where this started
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Where this started</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">As a new grad, my job hunt meant jumping between LinkedIn, Indeed, and a handful of other boards.</p>
+                <p>Reading posting after posting, guessing by eye whether I qualified. Hours of repetitive work, taken from the time I wanted for learning and growing.</p>
+                <p>I couldn't fix the whole hunt, so I fixed its most repetitive stage: searching for and filtering jobs.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         2. Start from what you already have
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Start from what you already have</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">Resume is the only entry. Everyone has one.</p>
+                <p>No search bar, no query crafting, no keyword guessing. PDF import is parsed to text the model reads reliably, so output quality doesn't depend on how you formatted your file. Paste is there, but tucked behind a link so the common path stays one click.</p>
+
+                <!-- Screenshot: the Resume step and its import dropzone. -->
+                <div class="match-shot">
+                    <img src="image/match/resume.png" alt="Match Resume step and its import dropzone" class="lightbox-img" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         3. Surface the jobs you could apply to
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Jobs you could apply to</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">Most people are capable of roles they would never think to search.</p>
+                <p>The tool reads the resume and proposes titles across the job markets it can evidence, including adjacent lanes you didn't know existed. You keep control: toggle what fits, add your own, cap at three.</p>
+
+                <!-- Screenshot: the Titles step with its suggestion chips. -->
+                <div class="match-shot">
+                    <img src="image/match/title search.png" alt="Match Titles step with its suggestion chips" class="lightbox-img" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         4. Filter cheap first, ask the model only where judgment matters
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Filter cheap first</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">Running the model over every posting would burn tokens and hurt output quality.</p>
+                <p>Too much context in one call invites hallucination. So deterministic gates run first, on title, years of experience, and board-level signals. Only the surviving shortlist reaches the model for ranking.</p>
+
+                <!-- Pipeline diagram. The two starred steps are the only model calls. -->
+                <figure class="match-card">
+                    <figcaption class="match-card-label">Pipeline</figcaption>
+                    <ol class="match-pipe">
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Resume Extract</span>
+                        </li>
+                        <li class="match-pipe-step match-pipe-step--ai">
+                            <span class="match-pipe-name">AI Title Recommendation</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Fetch &amp; Dedupe</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Gate A</span>
+                            <span class="match-pipe-note">Years of experience. A hard gate, no model involved.</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Gate B Scoring</span>
+                            <span class="match-pipe-note">A weighted score decides what survives to the next step</span>
+                            <ul class="match-pipe-weights">
+                                <li class="match-pipe-weight" style="--w: 50%;">
+                                    <span class="match-pipe-weight-label">Title fit</span>
+                                    <span class="match-pipe-weight-num">50%</span>
+                                </li>
+                                <li class="match-pipe-weight" style="--w: 30%;">
+                                    <span class="match-pipe-weight-label">Years of experience fit</span>
+                                    <span class="match-pipe-weight-num">30%</span>
+                                </li>
+                                <li class="match-pipe-weight" style="--w: 20%;">
+                                    <span class="match-pipe-weight-label">Description richness</span>
+                                    <span class="match-pipe-weight-num">20%</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="match-pipe-step match-pipe-step--ai">
+                            <span class="match-pipe-name">AI Filter</span>
+                            <span class="match-pipe-note">Only the surviving shortlist reaches the model for ranking</span>
+                        </li>
+                        <li class="match-pipe-step">
+                            <span class="match-pipe-name">Result</span>
+                        </li>
+                    </ol>
+                    <p class="match-pipe-legend">The pipeline is designed to increase token efficiency while not compromising the output quality.</p>
+                </figure>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         5. Results that admit uncertainty
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Results that admit uncertainty</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">Best Match is the model's shortlist. Backup Jobs holds everything the filters set aside.</p>
+                <p>Backup exists because filters can be wrong, and a wrong filter shouldn't hide a role you could have landed. Each row is title, company, location, board, and one plain sentence on why.</p>
+
+                <!-- Screenshot: the results list with both tabs and the why lines. -->
+                <div class="match-shot">
+                    <img src="image/match/result.png" alt="Match results list with Best Match and Backup Jobs tabs" class="lightbox-img" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         6. Open source, your own key
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">Open source, your own key</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">I want this to be a tool people can adapt, so every AI step sits behind one transport.</p>
+                <p>It runs against a local CLI or any OpenAI-compatible API, with your own key. No vendor lock-in, and no shared service holding your resume.</p>
+
+                <!-- Screenshot: the Settings modal with API key, base URL, and model. -->
+                <div class="match-shot">
+                    <img src="image/match/API settings modal.png" alt="Match Settings modal with API key, base URL, and model" class="lightbox-img" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         7. One optimized path, none of the knobs
+         ===================================================================== -->
+    <div class="case-study-container">
+        <section class="horizontal-section" style="margin-top: 60px;">
+            <div class="content-wrapper" style="max-width: 25%;">
+                <h2 class="section-title-2">One optimized path</h2>
+            </div>
+            <div style="flex: 1; margin-left: 2rem;">
+                <p class="match-lead">All real configuration stays in the CLI and a separate test page.</p>
+                <p>The product shows only the flow that works: no scores, ranks, LLM toggles, or fetch counts. I tuned against the test surface to find the balanced configuration, then shipped users the result of that tuning instead of the controls.</p>
+
+                <!-- Screenshot: the product flow, or the Settings modal. -->
+                <div class="match-shot">
+                    <img src="image/match/test.png" alt="Match product flow with the Settings modal" class="lightbox-img" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- =====================================================================
+         Closing - what I learned
+         ===================================================================== -->
+    <div class="match-dark-section" style="background-color: #000000; max-width: 100%; padding: 30px;">
+        <div class="case-study-container">
+            <section class="horizontal-section" style="margin-top: 60px;">
+                <div class="content-wrapper" style="max-width: 25%;">
+                    <h2 class="section-title-2" style="color: white;">What I learned</h2>
+                </div>
+                <div style="flex: 1; margin-left: 2rem;">
+                    <p style="margin-bottom: 16px;">The specs, the decision log, and the documents to orchestrate agents came from studying agent engineering and rebuilding my workflow around it.</p>
+                    <p style="margin-bottom: 16px;">Two resources shaped it most: Google and Kaggle's <a href="https://www.kaggle.com/learn-guide/5-day-agents-vibecoding" target="_blank" rel="noopener noreferrer" class="content-link">5-Day AI Agents: Intensive Vibe Coding Course</a>, and Kun's <a href="https://www.youtube.com/watch?v=iQyg-KypKAA&amp;t=1988s" target="_blank" rel="noopener noreferrer" class="content-link">Agentic Engineering workflow talk</a>.</p>
+                    <p style="margin-bottom: 16px;">That pushed me to try real vibe-coded prototyping this time, moving fast on flow and copy while keeping the reasoning in specs I wrote and reviewed.</p>
+                    <p style="margin-bottom: 16px;">I'm grateful that today's LLM advances let designers take this on themselves: framing the problem, designing the flow, and carrying it through to a working implementation, all at the prototype stage.</p>
+                    <p>The project isn't done. Some job boards are only partly supported. I'll keep updating until they are, then share some more updates.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-content">
+            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024-2025 Xinglong Zhou. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox - click a .lightbox-img to zoom, click the backdrop or press Esc to close -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+        <img id="lightbox-img" alt="">
+        <button id="lightbox-close" type="button" aria-label="Close preview">&#10005;</button>
+    </div>
+
+    <script src="ux-interact.js"></script>
+    <script>
+        const lightboxEl = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || '';
+            lightboxEl.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightboxEl.classList.remove('active');
+            lightboxImg.removeAttribute('src');
+        }
+
+        document.querySelectorAll('.lightbox-img').forEach(img => {
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+        });
+
+        // Only the backdrop closes the preview, so clicking the zoomed image keeps it open.
+        lightboxEl.addEventListener('click', e => {
+            if (e.target === lightboxEl) closeLightbox();
+        });
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>

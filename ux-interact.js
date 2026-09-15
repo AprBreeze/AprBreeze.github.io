@@ -11,7 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalCards = flipCards.length;
     
     // Experience gauge update function
+    // Case-study pages load this file but have no flip cards and no gauge, so
+    // bail out instead of dereferencing the missing #gaugeFill element.
     function updateExperienceGauge() {
+        if (!gaugeFill || totalCards === 0) return;
+
         const progress = (flippedCards.size / totalCards) * 100;
         const progressPercent = (flippedCards.size / totalCards * 100).toFixed(2);
         
