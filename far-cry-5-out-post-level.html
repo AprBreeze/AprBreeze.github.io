@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Far Cry 5 Outpost Level Design - Xinglong's Portfolio</title>
+    <title data-title-en="Far Cry 5 Outpost Level Design - Xinglong's Portfolio" data-title-zh="孤岛惊魂5 哨站关卡设计 - Xinglong 的作品集">Far Cry 5 Outpost Level Design - Xinglong's Portfolio</title>
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="project-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,73 +38,65 @@
         <div id="particles-js"></div>
     </div>
 
-    <!-- Far Cry 5 Outpost Level Design Content -->
     <main class="project-main">
-        <img src="image/fc5-overview.jpg" alt="project image" class="grid-image">
+        <img src="image/fc5-overview.jpg" alt="project image" class="grid-image" data-alt-en="Far Cry 5 outpost overview" data-alt-zh="孤岛惊魂5 哨站总览">
         <section class="project-hero">
             <div class="project-hero-content">
-                <h1>Far Cry 5 Outpost Level Design</h1>
-                <p class="project-subtitle">Personal project to experience level editor</p>
+                <h1><span class="lang-en">Far Cry 5 Outpost Level Design</span><span class="lang-zh">孤岛惊魂5 哨站关卡设计</span></h1>
+                <p class="project-subtitle"><span class="lang-en">Personal project to experience level editor</span><span class="lang-zh">个人项目 · 体验关卡编辑器</span></p>
             </div>
         </section>
 
         <div class="project-container">
-            <!-- Project Overview -->
             <section class="project-section">
                 <div class="project-content">
-                    <h2>Design Goals:</h2>
-                    
+                    <h2><span class="lang-en">Design Goals:</span><span class="lang-zh">设计目标：</span></h2>
+
                     <ul class="iteration-list">
-                        <li>Teaches the player how to have fun intuitively;</li>
-                        <li>Rewards players' effort of exploration;</li>
-                        <li>Has an engaging flow and rhythm;</li>
-                        <li>Prevents players from getting lost and have a clear perception of space and direction;</li>
-                        <li>Gives players meaningful choices (multiple approaches);</li>
-                        <li>Creates opportunities for players to write their own narratives and stories;</li>
-                        <li>Gives players a narrative context that is integrated with the story to immerse in.</li>
+                        <li><span class="lang-en">Teaches the player how to have fun intuitively;</span><span class="lang-zh">直观地教会玩家怎么玩得开心；</span></li>
+                        <li><span class="lang-en">Rewards players' effort of exploration;</span><span class="lang-zh">回报玩家探索付出的努力；</span></li>
+                        <li><span class="lang-en">Has an engaging flow and rhythm;</span><span class="lang-zh">拥有有吸引力的动线与节奏；</span></li>
+                        <li><span class="lang-en">Prevents players from getting lost and have a clear perception of space and direction;</span><span class="lang-zh">避免玩家迷路，并让空间与方向感清楚；</span></li>
+                        <li><span class="lang-en">Gives players meaningful choices (multiple approaches);</span><span class="lang-zh">给玩家有意义的选择（多条接近路径）；</span></li>
+                        <li><span class="lang-en">Creates opportunities for players to write their own narratives and stories;</span><span class="lang-zh">给玩家写下自己叙事与故事的空间；</span></li>
+                        <li><span class="lang-en">Gives players a narrative context that is integrated with the story to immerse in.</span><span class="lang-zh">提供与主线故事咬合的叙事语境，方便沉浸。</span></li>
                     </ul>
 
-                    
                     <div class="horizontal-gallery-container">
                         <div class="horizontal-gallery">
-                            <img src="image/fc5-1.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
-                            <img src="image/fc5-2.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
-                            <img src="image/fc5-3.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
-                            <img src="image/fc5-4.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
-                            <img src="image/fc5-5.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
-                            <img src="image/fc5-6.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
-                            <img src="image/fc5-7.png" alt="Far Cry 5 Outpost Level" class="gallery-slide">
+                            <img src="image/fc5-1.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
+                            <img src="image/fc5-2.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
+                            <img src="image/fc5-3.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
+                            <img src="image/fc5-4.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
+                            <img src="image/fc5-5.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
+                            <img src="image/fc5-6.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
+                            <img src="image/fc5-7.png" alt="Far Cry 5 Outpost Level" class="gallery-slide" data-alt-en="Far Cry 5 outpost level" data-alt-zh="孤岛惊魂5 哨站关卡">
                         </div>
                         <div class="gallery-navigation">
                             <button class="gallery-nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
                             <button class="gallery-nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    
                 </div>
 
-
-            <!-- Video Walkthrough Section -->
-
                 <div class="section-title">
-                    <h3>Video Walkthrough</h3>
+                    <h3><span class="lang-en">Video Walkthrough</span><span class="lang-zh">视频演示</span></h3>
                 </div>
                 <div class="project-content">
                     <div style="padding:56.25% 0 0 0;position:relative; width: 80%;"><iframe src="https://player.vimeo.com/video/1009732486?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="FC5 Outpost Clip"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                 </div>
             </section>
 
-            <!-- Reflection Section -->
             <section class="project-section">
                 <div class="section-title">
-                    <h3>Reflection</h3>
+                    <h3><span class="lang-en">Reflection</span><span class="lang-zh">反思</span></h3>
                 </div>
                 <div class="project-content">
                     <ul class="iteration-list">
-                        <li>Effective design requires an effective combination of ideation and iteration.</li>
-                        <li>The goal of level design is to create immersive, interactive environments that engage players.</li>
-                        <li>Using Far Cry 5 level editor allows for practicing real-world design while maintaining the integrity of core gameplay mechanics.</li>
-                        <li>Successful level design must adapt to the unique mechanics of each game, which vary by genre.</li>
+                        <li><span class="lang-en">Effective design requires an effective combination of ideation and iteration.</span><span class="lang-zh">有效设计需要把构思和迭代真正结合起来。</span></li>
+                        <li><span class="lang-en">The goal of level design is to create immersive, interactive environments that engage players.</span><span class="lang-zh">关卡设计的目标，是做出能让玩家沉浸、愿意互动的环境。</span></li>
+                        <li><span class="lang-en">Using Far Cry 5 level editor allows for practicing real-world design while maintaining the integrity of core gameplay mechanics.</span><span class="lang-zh">用《孤岛惊魂5》关卡编辑器，可以在不破坏核心玩法的前提下练习真实制作流程。</span></li>
+                        <li><span class="lang-en">Successful level design must adapt to the unique mechanics of each game, which vary by genre.</span><span class="lang-zh">成功的关卡设计必须适配每款游戏独特的机制，而这些机制会随类型变化。</span></li>
                     </ul>
                 </div>
             </section>
@@ -106,9 +104,9 @@
     </main>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <p><span class="lang-en">Thank you for sticking around! <br> Can't wait to create great experiences with you!</span><span class="lang-zh">谢谢你看到这里。<br>期待和你一起做出好的体验。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -118,11 +116,10 @@
 
     <footer class="game-footer">
         <div class="footer-content">
-            <p>&copy; 2025 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2025 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2025 Xinglong Zhou. 保留所有权利。</span></p>
         </div>
     </footer>
-    
-    <!-- Lightbox Gallery -->
+
     <div class="lightbox" id="gallery-lightbox">
         <div class="lightbox-content">
             <img src="" alt="" class="lightbox-image" id="lightbox-image">
@@ -134,9 +131,10 @@
             <button class="lightbox-btn" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
     <script src="game-design.js"></script>
+    <script src="i18n-switch.js"></script>
 </body>
-</html> 
+</html>

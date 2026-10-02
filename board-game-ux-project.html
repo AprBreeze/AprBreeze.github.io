@@ -3,152 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board Game UX Project</title>
+    <title data-title-en="Board Game UX Project - Xinglong's Portfolio" data-title-zh="桌游体验设计项目 - Xinglong 的作品集">Board Game UX Project - Xinglong's Portfolio</title>
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 
 <body class="project-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html" >About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="project-main">
         <section class="project-hero">
             <div class="project-hero-content">
-                <img src="image/Boardgame thumbnail.jpg" alt="Level design in engine" class="hero-image">
-                <h1>Slasher Board Game Design </h1>
-                <p class="project-subtitle">UXD Course Project 2023</p>
+                <img src="image/Boardgame thumbnail.jpg" alt="Slasher board game" class="hero-image" data-alt-en="Slasher board game" data-alt-zh="Slasher 桌游">
+                <h1><span class="lang-en">Slasher Board Game Design </span><span class="lang-zh">Slasher 桌游设计 </span></h1>
+                <p class="project-subtitle"><span class="lang-en">UXD Course Project 2023</span><span class="lang-zh">UXD 课程项目 2023</span></p>
             </div>
         </section>
 
         <section class="project-content">
             <div class="project-info">
-                <h3>My Role: Gameplay Designer and User Experience Analyst</h3>
+                <h3><span class="lang-en">My Role: Gameplay Designer and User Experience Analyst</span><span class="lang-zh">我的角色：玩法设计师与用户体验分析</span></h3>
                 <br>
-                <p>During my third year at the University of Toronto, I co-developed Slasher, a 4-player cooperative board game inspired by haunted house horror. We chose a cooperative format to challenge our design skills, specifically in balancing player experience and difficulty.
+                <p><span class="lang-en">During my third year at the University of Toronto, I co-developed Slasher, a 4-player cooperative board game inspired by haunted house horror. We chose a cooperative format to challenge our design skills, specifically in balancing player experience and difficulty.
 
-                    My contributions focused on gameplay design and user experience (UX) analysis. I helped conduct two user evaluation playtests, using insights to refine mechanics, incorporate randomness for replayability, and balance difficulty. For UX, I addressed accessibility issues like readability, color contrast, and inclusivity to enhance the overall player experience.</p>
+                    My contributions focused on gameplay design and user experience (UX) analysis. I helped conduct two user evaluation playtests, using insights to refine mechanics, incorporate randomness for replayability, and balance difficulty. For UX, I addressed accessibility issues like readability, color contrast, and inclusivity to enhance the overall player experience.</span><span class="lang-zh">在多伦多大学读大三时，我参与共同开发了 Slasher：一款受鬼屋恐怖启发的 4 人合作桌游。我们选择合作模式，是为了挑战自己在玩家体验与难度平衡上的设计能力。
+
+                    我的贡献集中在玩法设计与用户体验（UX）分析。我协助完成两轮用户评估试玩，用反馈迭代机制、加入随机性以提升可重玩性，并平衡难度。在体验侧，我处理可读性、色彩对比和包容性等无访问问题，提升整体玩家体验。</span></p>
                 <br>
-                <p>I contributed to gameplay design and user experience analysis, helping conduct two user evaluation playtests that revealed key insights for improvement. Through design iterations, we incorporated elements of randomness to enhance replayability and introduced mechanics that balanced difficulty to keep gameplay engaging. On the UX aspect, I worked on identifying and resolving accessibility issues, such as readability, color contrast, and inclusivity, to improve the overall user experience.</p>
+                <p><span class="lang-en">I contributed to gameplay design and user experience analysis, helping conduct two user evaluation playtests that revealed key insights for improvement. Through design iterations, we incorporated elements of randomness to enhance replayability and introduced mechanics that balanced difficulty to keep gameplay engaging. On the UX aspect, I worked on identifying and resolving accessibility issues, such as readability, color contrast, and inclusivity, to improve the overall user experience.</span><span class="lang-zh">我参与了玩法设计与用户体验分析，协助完成两轮用户评估试玩，并据此找到关键改进点。通过设计迭代，我们加入随机元素提升可重玩性，并引入能平衡难度、保持对局张力的机制。在体验侧，我识别并解决可读性、色彩对比和包容性等可访问问题，改善整体用户体验。</span></p>
             </div>
 
             <div class="project-section">
-                <h3>Slasher Game Board</h3>
+                <h3><span class="lang-en">Slasher Game Board</span><span class="lang-zh">Slasher 游戏棋盘</span></h3>
                 <br>
                 <div class="project-image">
-                    <img src="image/slasher-highfi-portotype.png" alt="Slasher Game Board" class="content-image">
+                    <img src="image/slasher-highfi-portotype.png" alt="Slasher Game Board" class="content-image" data-alt-en="Slasher Game Board" data-alt-zh="Slasher 游戏棋盘">
                 </div>
             </div>
 
             <div class="project-section">
-                <h3>Project Overview</h3>
+                <h3><span class="lang-en">Project Overview</span><span class="lang-zh">项目概览</span></h3>
                 <br>
-                <p>The "Slasher" board game project, developed in a UXD board game design class, centers on a cooperative, horror-themed game where players must navigate through a mansion, work together to evade a supernatural slasher, and collect artifacts to exorcise it. The game incorporates strategic and random elements, encouraging collaboration among players while maintaining suspense and unpredictability.</p>
+                <p><span class="lang-en">The "Slasher" board game project, developed in a UXD board game design class, centers on a cooperative, horror-themed game where players must navigate through a mansion, work together to evade a supernatural slasher, and collect artifacts to exorcise it. The game incorporates strategic and random elements, encouraging collaboration among players while maintaining suspense and unpredictability.</span><span class="lang-zh">「Slasher」桌游项目诞生于 UXD 桌游设计课：这是一款合作恐怖主题游戏。玩家需在宅邸中穿行，协作躲避超自然杀人狂，并收集圣物将其驱除。游戏融合策略与随机，既鼓励协作，也保持悬念与不可预测性。</span></p>
             </div>
 
             <div class="project-section">
-                <h3>Design Process</h3>
+                <h3><span class="lang-en">Design Process</span><span class="lang-zh">设计流程</span></h3>
                 <div class="horizontal-section">
                     <div class="content-wrapper">                
-                        <p>The initial design started with a low-fidelity prototype hand-drawn on A4 sheets, focusing on basic gameplay mechanics and player roles. Each player had unique abilities, and the game was driven by dice rolls to dictate the slasher's movements and trigger room-based disasters. The design emphasized cooperative gameplay, with players needing to pool resources and strategize effectively to win.</p>
-                        <p>Feedback from the first round of user testing highlighted the need for clearer rules and a more intuitive game structure. The team addressed these issues by developing a high-fidelity prototype that included graphical design aligned with the slasher theme and a comprehensive rulebook. The gameplay mechanics were refined to make action cards more accessible and user-friendly, balancing the cognitive load required to play.</p>
+                        <p><span class="lang-en">The initial design started with a low-fidelity prototype hand-drawn on A4 sheets, focusing on basic gameplay mechanics and player roles. Each player had unique abilities, and the game was driven by dice rolls to dictate the slasher's movements and trigger room-based disasters. The design emphasized cooperative gameplay, with players needing to pool resources and strategize effectively to win.</span><span class="lang-zh">初期设计从画在 A4 纸上的低保真原型开始，聚焦基础玩法机制与玩家角色。每位玩家拥有独特能力；骰子决定杀人狂的移动，并触发房间灾难。设计强调合作玩法：玩家需要共享资源并有效制定策略才能获胜。</span></p>
+                        <p><span class="lang-en">Feedback from the first round of user testing highlighted the need for clearer rules and a more intuitive game structure. The team addressed these issues by developing a high-fidelity prototype that included graphical design aligned with the slasher theme and a comprehensive rulebook. The gameplay mechanics were refined to make action cards more accessible and user-friendly, balancing the cognitive load required to play.</span><span class="lang-zh">第一轮用户测试反馈指出：规则需要更清晰，游戏结构也要更直观。团队据此做出高保真原型，补上贴合主题的视觉设计与完整规则书，并打磨玩法，让行动卡更易理解、更好用，平衡游玩所需的认知负担。</span></p>
                     </div>
-                    <img src="image/Board Ideation.png" alt="Board Ideation" class="content-image gallery-image">
+                    <img src="image/Board Ideation.png" alt="Board Ideation" class="content-image gallery-image" data-alt-en="Board Ideation" data-alt-zh="棋盘构思">
                 </div>
 
                 
 
             <div class="project-section">
-                <h3>Prototype Evolution</h3>
+                <h3><span class="lang-en">Prototype Evolution</span><span class="lang-zh">原型演进</span></h3>
                 <br>
                 <div class="project-image-gallery">
-                    <img src="image/Board Ideation.png" alt="Board Ideation" class="content-image gallery-image">
-                    <img src="image/slasher-lowfi-portotype.png" alt="slasher-lowfi-portotype" class="content-image gallery-image">
+                    <img src="image/Board Ideation.png" alt="Board Ideation" class="content-image gallery-image" data-alt-en="Board Ideation" data-alt-zh="棋盘构思">
+                    <img src="image/slasher-lowfi-portotype.png" alt="Slasher low-fidelity prototype" class="content-image gallery-image" data-alt-en="Slasher low-fidelity prototype" data-alt-zh="Slasher 低保真原型">
                 </div>
             </div>
 
             <div class="project-section">
-                <h3>User Testing Process</h3>
+                <h3><span class="lang-en">User Testing Process</span><span class="lang-zh">用户测试流程</span></h3>
                 <br>
                    
                 
-                <p><strong>First Session (Low-Fidelity Prototype):</strong> Conducted with participants aged 21–22, this session revealed that while the game was perceived as collaborative, users struggled to play without facilitator guidance due to unclear rules. Players were hesitant to use action cards, indicating the need for simplification and better instruction.</p>
+                <p><span class="lang-en"><strong>First Session (Low-Fidelity Prototype):</strong> Conducted with participants aged 21–22, this session revealed that while the game was perceived as collaborative, users struggled to play without facilitator guidance due to unclear rules. Players were hesitant to use action cards, indicating the need for simplification and better instruction.</span><span class="lang-zh"><strong>第一场（低保真原型）：</strong>参与者年龄 21–22 岁。结果显示游戏被感知为合作向，但规则不清导致玩家离开引导者很难自主游玩；行动卡使用也偏犹豫，说明需要简化机制并改进说明。</span></p>
                 <br>
-                <p><strong>Second Session (High-Fidelity Prototype):</strong> This iteration involved more diverse participants and tested the usability of the rulebook. While players better understood the general rules, specific details remained confusing, and reading through the lengthy rulebook took significant time. Feedback also noted the importance of clearer visual aids and rulebook improvements.</p>
+                <p><span class="lang-en"><strong>Second Session (High-Fidelity Prototype):</strong> This iteration involved more diverse participants and tested the usability of the rulebook. While players better understood the general rules, specific details remained confusing, and reading through the lengthy rulebook took significant time. Feedback also noted the importance of clearer visual aids and rulebook improvements.</span><span class="lang-zh"><strong>第二场（高保真原型）：</strong>本轮参与者更多元，重点测试规则书可用性。玩家对总体规则理解更好，但细节仍易混淆；通读冗长规则书也耗时。反馈还强调需要更清晰的视觉辅助，并继续改进规则书。</span></p>
             </div>
 
             <div class="project-section">
-                <h3>Playtest Results</h3>
+                <h3><span class="lang-en">Playtest Results</span><span class="lang-zh">试玩结果</span></h3>
                 <br>
                 <div class="project-image-gallery">
-                    <img src="image/boardgame-user evaluation 1.png" alt="Playtest Results 1" class="content-image gallery-image">
-                    <img src="image/boardgame-user evaluation 4.jpg" alt="User Testing Process" class="content-image gallery-image">
+                    <img src="image/boardgame-user evaluation 1.png" alt="Playtest Results 1" class="content-image gallery-image" data-alt-en="Playtest Results 1" data-alt-zh="试玩结果 1">
+                    <img src="image/boardgame-user evaluation 4.jpg" alt="User Testing Process" class="content-image gallery-image" data-alt-en="User Testing Process" data-alt-zh="用户测试过程">
                 </div>
 
                 <div class="project-image-gallery">
-                    <img src="image/boardgame-user evaluation 3.jpg" alt="Playtest Results 3" class="content-image gallery-image">
-                    <img src="image/boardgame-user evaluation 2.png" alt="Playtest Results 2" class="content-image gallery-image">
+                    <img src="image/boardgame-user evaluation 3.jpg" alt="Playtest Results 3" class="content-image gallery-image" data-alt-en="Playtest Results 3" data-alt-zh="试玩结果 3">
+                    <img src="image/boardgame-user evaluation 2.png" alt="Playtest Results 2" class="content-image gallery-image" data-alt-en="Playtest Results 2" data-alt-zh="试玩结果 2">
                 </div>
 
             </div>
 
             <div class="project-section">
-                <h3>Iteration Process</h3>
+                <h3><span class="lang-en">Iteration Process</span><span class="lang-zh">迭代过程</span></h3>
                 <ul class="iteration-list">
-                    <li><strong>Rulebook Revisions:</strong> Shifted from dense information to a step-by-step structure. A simplified "Quick Start Guide" was introduced for ease of learning the game rules.</li>
-                    <li><strong>Visual Cues:</strong> Added art and clearer visual indicators to the board to aid players in understanding gameplay and movement.</li>
-                    <li><strong>Action Card Use:</strong> Simplified the mechanics so that using action cards no longer required one of the limited player actions. This change aimed to make gameplay faster and more engaging.</li>
-                    <li><strong>Clarified Card Functions:</strong> Differentiated and simplified passive and active action cards to avoid confusion, specifically for cards like "Armor" and "Hide."</li>
-                    <li><strong>Visual Enhancements:</strong> Added thematic elements and refined the board's layout to align with the horror theme, making gameplay more engaging.</li>
-                    <li><strong>Balancing Gameplay:</strong> Tweaked player abilities and action card effects to ensure that roles like the Babysitter were not overwhelmingly advantageous and that all characters had impactful strategic contributions.</li>
+                    <li><span class="lang-en"><strong>Rulebook Revisions:</strong> Shifted from dense information to a step-by-step structure. A simplified "Quick Start Guide" was introduced for ease of learning the game rules.</span><span class="lang-zh"><strong>规则书修订：</strong>从信息堆叠改为分步结构，并新增简化版「快速入门指南」，降低学规则成本。</span></li>
+                    <li><span class="lang-en"><strong>Visual Cues:</strong> Added art and clearer visual indicators to the board to aid players in understanding gameplay and movement.</span><span class="lang-zh"><strong>视觉线索：</strong>为棋盘补充美术与更清晰的视觉指示，帮助玩家理解玩法与移动。</span></li>
+                    <li><span class="lang-en"><strong>Action Card Use:</strong> Simplified the mechanics so that using action cards no longer required one of the limited player actions. This change aimed to make gameplay faster and more engaging.</span><span class="lang-zh"><strong>行动卡使用：</strong>简化机制，使用行动卡不再消耗有限的玩家行动次数，让对局更快、更有参与感。</span></li>
+                    <li><span class="lang-en"><strong>Clarified Card Functions:</strong> Differentiated and simplified passive and active action cards to avoid confusion, specifically for cards like "Armor" and "Hide."</span><span class="lang-zh"><strong>澄清卡牌功能：</strong>区分并简化被动与主动行动卡，减少混淆，尤其是「Armor」与「Hide」这类卡。</span></li>
+                    <li><span class="lang-en"><strong>Visual Enhancements:</strong> Added thematic elements and refined the board's layout to align with the horror theme, making gameplay more engaging.</span><span class="lang-zh"><strong>视觉强化：</strong>补充主题元素并调整棋盘布局，贴合恐怖氛围，让对局更有代入感。</span></li>
+                    <li><span class="lang-en"><strong>Balancing Gameplay:</strong> Tweaked player abilities and action card effects to ensure that roles like the Babysitter were not overwhelmingly advantageous and that all characters had impactful strategic contributions.</span><span class="lang-zh"><strong>玩法平衡：</strong>调整玩家能力与行动卡效果，避免 Babysitter 等角色过于强势，并保证每个角色都能做出有分量的策略贡献。</span></li>
                 </ul>
             </div>
 
             <div class="project-section">
-                <h3>Key Outcomes</h3>
+                <h3><span class="lang-en">Key Outcomes</span><span class="lang-zh">关键成果</span></h3>
                 <ul class="outcomes-list">
-                    <li><strong>Enhanced Gameplay and Engagement:</strong> Iterative testing and revisions made the "Slasher" board game more collaborative and enjoyable, with a strong theme that players found immersive. The cooperative elements and strategic gameplay were well-received.</li>
-                    <li><strong>Rulebook and Instructional Adjustments:</strong> While the addition of a "Quick Start Guide" improved onboarding, the comprehensive rulebook was still complex, presenting a learning curve for new players. Simplifying the rules further could enhance clarity and ease of play.</li>
-                    <li><strong>Balanced Game Mechanics:</strong> Revisions to action cards and player abilities improved gameplay balance, ensuring strategic and exciting sessions. Clarifications made action cards more accessible, contributing to a smoother pace.</li>
-                    <li><strong>Collaborative Success:</strong> Changes encouraged active teamwork, aligning with the game's core goal. Players became more strategic once they understood the game, underscoring the importance of clear initial instructions.</li>
-                    <li><strong>Positive Theme Reception:</strong> The horror theme effectively reinforced gameplay mechanics and was well-received, adding to player enjoyment.</li>
+                    <li><span class="lang-en"><strong>Enhanced Gameplay and Engagement:</strong> Iterative testing and revisions made the "Slasher" board game more collaborative and enjoyable, with a strong theme that players found immersive. The cooperative elements and strategic gameplay were well-received.</span><span class="lang-zh"><strong>玩法与投入感提升：</strong>反复测试与修订让「Slasher」更合作、更好玩；主题鲜明、沉浸感强，合作与策略玩法也获得正向反馈。</span></li>
+                    <li><span class="lang-en"><strong>Rulebook and Instructional Adjustments:</strong> While the addition of a "Quick Start Guide" improved onboarding, the comprehensive rulebook was still complex, presenting a learning curve for new players. Simplifying the rules further could enhance clarity and ease of play.</span><span class="lang-zh"><strong>规则书与教学调整：</strong>「快速入门指南」改善了上手体验，但完整规则书仍偏复杂，新玩家仍有学习曲线。进一步简化规则有助于提升清晰度与易玩性。</span></li>
+                    <li><span class="lang-en"><strong>Balanced Game Mechanics:</strong> Revisions to action cards and player abilities improved gameplay balance, ensuring strategic and exciting sessions. Clarifications made action cards more accessible, contributing to a smoother pace.</span><span class="lang-zh"><strong>机制更平衡：</strong>行动卡与玩家能力的修订改善了平衡，对局更有策略性与张力；澄清后行动卡更易上手，节奏也更顺。</span></li>
+                    <li><span class="lang-en"><strong>Collaborative Success:</strong> Changes encouraged active teamwork, aligning with the game's core goal. Players became more strategic once they understood the game, underscoring the importance of clear initial instructions.</span><span class="lang-zh"><strong>合作目标达成：</strong>改动推动了主动协作，贴合游戏核心目标。玩家一旦理解规则就会更偏策略，也说明开场说明必须清楚。</span></li>
+                    <li><span class="lang-en"><strong>Positive Theme Reception:</strong> The horror theme effectively reinforced gameplay mechanics and was well-received, adding to player enjoyment.</span><span class="lang-zh"><strong>主题反响积极：</strong>恐怖主题有效强化了玩法机制，并获得好评，提升了玩家乐趣。</span></li>
                 </ul>
                 
             </div>
 
             <div class="project-section">
-                <h3>Slasher Game Materials</h3>
+                <h3><span class="lang-en">Slasher Game Materials</span><span class="lang-zh">Slasher 游戏物料</span></h3>
                 <br>
                 <div class="project-image-gallery">
-                    <img src="image/slasher-rulebook.png" alt="Slasher Game Rule Book" class="content-image gallery-image">
-                    <img src="image/slasher-game-ingredients.png" alt="Slasher Game Ingredients" class="content-image gallery-image">
-                    <img src="image/slasher-sale-sheet.png" alt="Slasher Game Sale Sheet" class="content-image gallery-image">
+                    <img src="image/slasher-rulebook.png" alt="Slasher Game Rule Book" class="content-image gallery-image" data-alt-en="Slasher Game Rule Book" data-alt-zh="Slasher 规则书">
+                    <img src="image/slasher-game-ingredients.png" alt="Slasher Game Ingredients" class="content-image gallery-image" data-alt-en="Slasher Game Ingredients" data-alt-zh="Slasher 游戏组件">
+                    <img src="image/slasher-sale-sheet.png" alt="Slasher Game Sell Sheet" class="content-image gallery-image" data-alt-en="Slasher Game Sell Sheet" data-alt-zh="Slasher 宣发册">
                 </div>
             </div>
         </section>
     </main>
         
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <p><span class="lang-en">Thank you for sticking around! <br> Can't wait to create great experiences with you!</span><span class="lang-zh">谢谢你看到这里。<br>期待和你一起做出好的体验。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -158,13 +166,15 @@
 
     <footer class="game-footer">
         <div class="footer-content">
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
             <div class="social-icons">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" data-aria-en="LinkedIn" data-aria-zh="领英"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub" data-aria-en="GitHub" data-aria-zh="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter" data-aria-en="Twitter" data-aria-zh="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
+
+    <script src="i18n-switch.js"></script>
 </body>
 </html>

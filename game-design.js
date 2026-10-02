@@ -1,5 +1,13 @@
 // Game Design Page JavaScript
 
+function lightboxCaptionText(index, total) {
+  var n = index + 1;
+  if (document.documentElement.getAttribute('data-lang') === 'zh') {
+    return '第 ' + n + ' 张，共 ' + total + ' 张 · 滚轮缩放';
+  }
+  return 'Image ' + n + ' of ' + total + ' - Use mouse wheel to zoom';
+}
+
 // Initialize particles background
 document.addEventListener('DOMContentLoaded', function() {
   if (typeof particlesJS !== 'undefined') {
@@ -402,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Opening lightbox for image:', index);
         lightboxImage.src = src;
         lightboxImage.alt = alt;
-        lightboxCaption.textContent = `Image ${index + 1} of ${slides.length} - Use mouse wheel to zoom`;
+        lightboxCaption.textContent = lightboxCaptionText(index, slides.length);
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent scrolling while lightbox is open
         
@@ -443,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const slide = slides[currentImageIndex];
         lightboxImage.src = slide.src;
         lightboxImage.alt = slide.alt;
-        lightboxCaption.textContent = `Image ${currentImageIndex + 1} of ${slides.length} - Use mouse wheel to zoom`;
+        lightboxCaption.textContent = lightboxCaptionText(currentImageIndex, slides.length);
         console.log('Navigated to image:', currentImageIndex);
         
         // Reset zoom and position when navigating
@@ -452,6 +460,12 @@ document.addEventListener('DOMContentLoaded', function() {
         translateY = 0;
         updateImageTransform();
       }
+
+      document.addEventListener('portfolio-lang-change', function () {
+        if (lightbox.classList.contains('active')) {
+          lightboxCaption.textContent = lightboxCaptionText(currentImageIndex, slides.length);
+        }
+      });
       
       // Zoom functionality with mouse wheel
       lightboxImage.addEventListener('wheel', function(e) {

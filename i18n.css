@@ -1,0 +1,94 @@
+html[data-lang="zh"] .lang-en,
+html:not([data-lang="zh"]) .lang-zh {
+  display: none !important;
+}
+
+html[data-lang="zh"] {
+  --game-header-font: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --game-body-font: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+html[data-lang="zh"] .game-hero h1,
+html[data-lang="zh"] .hero h1,
+html[data-lang="zh"] h1,
+html[data-lang="zh"] .mission-nav-header h2,
+html[data-lang="zh"] .category-title,
+html[data-lang="zh"] .nav-links a {
+  letter-spacing: 0;
+}
+
+html[data-lang="zh"] .game-hero h1,
+html[data-lang="zh"] .hero h1 {
+  line-height: 1.35;
+}
+
+html[data-lang="zh"] .rotating-text {
+  height: 2rem;
+}
+
+html[data-lang="zh"] .text-phrase {
+  line-height: 1.6;
+}
+
+html[data-lang="zh"] .flip-card {
+  height: 112px;
+}
+
+html[data-lang="zh"] .flip-card-back p {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.nav-end {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--game-border, #2a2a2a);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-switch-btn {
+  font-family: "Noto Sans SC", "Rajdhani", sans-serif;
+  background: transparent;
+  color: var(--secondary-text-color, #bfbfbf);
+  border: 0;
+  padding: 0.28rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.lang-switch-btn.is-active {
+  background: var(--game-accent, #707de1);
+  color: #121212;
+}
+
+.lang-switch-btn:focus-visible {
+  outline: 2px solid var(--game-accent-alt, #61efce);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .nav-container {
+    flex-wrap: wrap;
+    row-gap: 0.6rem;
+  }
+
+  .nav-end {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 0.9rem;
+  }
+}

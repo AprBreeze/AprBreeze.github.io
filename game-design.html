@@ -3,33 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game & Level Design Portfolio</title>
+    <title data-title-en="Game & Level Design Portfolio" data-title-zh="游戏与关卡设计作品集">Game & Level Design Portfolio</title>
     <link rel="stylesheet" href="game-base.css">
     <link rel="stylesheet" href="game-design.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="game-design-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html" class="active">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html" >About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html" class="active"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="game-main">
         <section class="game-hero">
             <div class="hero-content">
-                <h1>Game & Level <span class="accent">Design</span></h1>
+                <h1><span class="lang-en">Game & Level <span class="accent">Design</span></span><span class="lang-zh">游戏与关卡<span class="accent">设计</span></span></h1>
                 <div class="hero-text-container">
                     <div class="rotating-text"></div>
                 </div>
@@ -37,161 +45,140 @@
             </div>
         </section>
 
-        <!-- Mobile Mission Toggle Button -->
-        <button class="mission-toggle" onclick="toggleMissionNav()">
+        <button class="mission-toggle" onclick="toggleMissionNav()" data-aria-en="Open quest list" data-aria-zh="打开任务列表" aria-label="Open quest list">
             <i class="fas fa-bars"></i>
         </button>
 
-        <!-- Mission Panel Layout -->
         <div class="mission-panel">
-            <!-- Left Navigation Panel - Fixed Sidebar -->
             <div class="mission-nav">
                 <div class="mission-nav-header">
-                    <h2><i class="fas fa-list-ul"></i> My Quests</h2>
+                    <h2><i class="fas fa-list-ul"></i> <span class="lang-en">My Quests</span><span class="lang-zh">我的任务</span></h2>
                 </div>
-                
+
                 <div class="mission-category">
                     <h3 class="category-title">
-                        <i class="fas fa-map"></i> Level Design
+                        <i class="fas fa-map"></i> <span class="lang-en">Level Design</span><span class="lang-zh">关卡设计</span>
                     </h3>
                     <ul class="mission-list">
                         <li class="mission-item" data-target="project-12">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Persona 5: The Phantom X</span>
+                            <span class="mission-name"><span class="lang-en">Persona 5: The Phantom X</span><span class="lang-zh">女神异闻录：夜幕魅影</span></span>
                         </li>
                         <li class="mission-item" data-target="project-1">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Ubisoft Level Design Competition 2024</span>
+                            <span class="mission-name"><span class="lang-en">Ubisoft Level Design Competition 2024</span><span class="lang-zh">育碧关卡设计大赛 2024</span></span>
                         </li>
                         <li class="mission-item" data-target="project-2">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Open World Exploration Design</span>
+                            <span class="mission-name"><span class="lang-en">Open World Exploration Design</span><span class="lang-zh">开放世界探索设计</span></span>
                         </li>
                         <li class="mission-item" data-target="project-9">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Ubisoft Level Design Competition 2022</span>
+                            <span class="mission-name"><span class="lang-en">Ubisoft Level Design Competition 2022</span><span class="lang-zh">育碧关卡设计大赛 2022</span></span>
                         </li>
                         <li class="mission-item" data-target="project-6">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Far Cry 5 Outpost</span>
+                            <span class="mission-name"><span class="lang-en">Far Cry 5 Outpost</span><span class="lang-zh">孤岛惊魂5 哨站</span></span>
                         </li>
                         <li class="mission-item" data-target="project-7">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Level Breakdown Framework</span>
+                            <span class="mission-name"><span class="lang-en">Level Breakdown Framework</span><span class="lang-zh">关卡拆解框架</span></span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="mission-category">
                     <h3 class="category-title">
-                        <i class="fas fa-gears"></i> System Design
+                        <i class="fas fa-gears"></i> <span class="lang-en">System Design</span><span class="lang-zh">系统设计</span>
                     </h3>
                     <ul class="mission-list">
                         <li class="mission-item" data-target="project-3">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Slasher Board Game</span>
+                            <span class="mission-name"><span class="lang-en">Slasher Board Game</span><span class="lang-zh">Slasher 桌游</span></span>
                         </li>
                         <li class="mission-item" data-target="project-14">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Apex Legends: EVO Shield and Player Engagement Breakdown</span>
+                            <span class="mission-name"><span class="lang-en">Apex Legends: EVO Shield and Player Engagement Breakdown</span><span class="lang-zh">Apex英雄：进化甲与玩家参与</span></span>
                         </li>
                         <li class="mission-item" data-target="project-5">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Apex Legend System Analysis</span>
+                            <span class="mission-name"><span class="lang-en">Apex Legend System Analysis</span><span class="lang-zh">Apex英雄系统分析</span></span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="mission-category">
                     <h3 class="category-title">
-                        <i class="fas fa-compass"></i> UX Design
+                        <i class="fas fa-compass"></i> <span class="lang-en">UX Design</span><span class="lang-zh">体验设计</span>
                     </h3>
                     <ul class="mission-list">
                         <li class="mission-item" data-target="project-10">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">UX Redesign - Tom Clancy's Splinter Cell: Blacklist</span>
+                            <span class="mission-name"><span class="lang-en">UX Redesign - Tom Clancy's Splinter Cell: Blacklist</span><span class="lang-zh">细胞分裂：黑名单 体验重设计</span></span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="mission-category">
                     <h3 class="category-title">
-                        <i class="fas fa-clipboard-list"></i> Other Works
+                        <i class="fas fa-clipboard-list"></i> <span class="lang-en">Other Works</span><span class="lang-zh">其他作品</span>
                     </h3>
                     <ul class="mission-list">
                         <li class="mission-item" data-target="project-13">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Cut the Cheese - TOJam 2026</span>
+                            <span class="mission-name"><span class="lang-en">Cut the Cheese - TOJam 2026</span><span class="lang-zh">Cut the Cheese · 多伦多 Game Jam 2026</span></span>
                         </li>
                         <li class="mission-item" data-target="project-11">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Neon Jumpers</span>
+                            <span class="mission-name"><span class="lang-en">Neon Jumpers</span><span class="lang-zh">Neon Jumpers</span></span>
                         </li>
                         <li class="mission-item" data-target="project-4">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Hard West 2 Walkthrough Guide</span>
+                            <span class="mission-name"><span class="lang-en">Hard West 2 Walkthrough Guide</span><span class="lang-zh">血战西部2 流程攻略</span></span>
                         </li>
                         <li class="mission-item" data-target="project-8">
                             <span class="mission-status completed"></span>
-                            <span class="mission-name">Video Game Content Creator</span>
+                            <span class="mission-name"><span class="lang-en">Video Game Content Creator</span><span class="lang-zh">游戏视频创作者</span></span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Main Content Area -->
             <div class="main-content">
 
-                <h1 style="padding-top: 3rem;">Level Design</h1>
+                <h1 style="padding-top: 3rem;"><span class="lang-en">Level Design</span><span class="lang-zh">关卡设计</span></h1>
 
-                                <!-- Persona 5: The Phantom X -->
-                                <article class="game-card" id="project-12">
-                                    <a href="persona-5-x.html" style="text-decoration: none;">
-                                        <div class="card-image">
-                                            <img src="image/P5X/P5X-cover.jpg" alt="P5X">
-                                        </div>
-                                        <div class="card-content">
-                                            <h2>Persona 5 The Phantom X</h2>
-                                            <p class="card-category">Internship @ Perfect World - Black Wings Studio </p>
-                                            <p class="card-description">P5X is a mobile F2P J-RPG that are released globally. During the internship, I designed a main quest level and several side quest contents, including level blockout, scripting dialogue, and cinematic implementation.</p>
-                                            <!-- <ul class="card-skills">
-                                                <li>Level Design</li>
-                                                <li>Dynamic Pacing</li>
-                                                <li>Modular Design</li>
-                                                <li>Environmental Storytelling</li>
-                                                <li>User Research</li>
-                                            </ul> -->
-                                            <div class="card-links">
-                                                <a href="persona-5-x.html" class="view-button">
-                                                    <span>View Work</span>
-                                                    <i class="fas fa-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </article>
+                <article class="game-card" id="project-12">
+                    <a href="persona-5-x.html" style="text-decoration: none;">
+                        <div class="card-image">
+                            <img src="image/P5X/P5X-cover.jpg" alt="P5X" data-alt-en="Persona 5: The Phantom X" data-alt-zh="女神异闻录：夜幕魅影">
+                        </div>
+                        <div class="card-content">
+                            <h2><span class="lang-en">Persona 5 The Phantom X</span><span class="lang-zh">女神异闻录：夜幕魅影</span></h2>
+                            <p class="card-category"><span class="lang-en">Internship @ Perfect World - Black Wings Studio</span><span class="lang-zh">实习 · 完美世界 · 黑羽工作室</span></p>
+                            <p class="card-description"><span class="lang-en">P5X is a mobile F2P J-RPG that are released globally. During the internship, I designed a main quest level and several side quest contents, including level blockout, scripting dialogue, and cinematic implementation.</span><span class="lang-zh">《女神异闻录：夜幕魅影》是一款全球发行的移动端免费日式角色扮演游戏。实习期间，我设计了一段主线关卡和若干支线，包括白盒、台词编写和演出实现。</span></p>
+                            <div class="card-links">
+                                <a href="persona-5-x.html" class="view-button">
+                                    <span><span class="lang-en">View Work</span><span class="lang-zh">查看作品</span></span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </article>
 
-
-                <!-- Ubisoft NEXT Level Design Competition 2024 -->
                 <article class="game-card" id="project-1">
                     <a href="game-project-1.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/ubisoft NEXT 2024 overview.png" alt="Game Project 1">
+                            <img src="image/ubisoft NEXT 2024 overview.png" alt="Ubisoft NEXT 2024" data-alt-en="Ubisoft NEXT Level Design Competition 2024" data-alt-zh="育碧 NEXT 关卡设计大赛 2024">
                         </div>
                         <div class="card-content">
-                            <h2>Ubisoft NEXT Level Design Competition 2024</h2>
-                            <p class="card-category">Competition Entry</p>
-                            <p class="card-description">Designed a verticality-themed FPS level that supports stealth and aggressor playstyles. Placed in Top 10.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Level Design</li>
-                                <li>Dynamic Pacing</li>
-                                <li>Modular Design</li>
-                                <li>Environmental Storytelling</li>
-                                <li>User Research</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Ubisoft NEXT Level Design Competition 2024</span><span class="lang-zh">育碧 NEXT 关卡设计大赛 2024</span></h2>
+                            <p class="card-category"><span class="lang-en">Competition Entry</span><span class="lang-zh">参赛作品</span></p>
+                            <p class="card-description"><span class="lang-en">Designed a verticality-themed FPS level that supports stealth and aggressor playstyles. Placed in Top 10.</span><span class="lang-zh">设计了一张以垂直空间为主题的第一人称射击关卡，同时支持潜行和正面强攻。进入十强。</span></p>
                             <div class="card-links">
                                 <a href="game-project-1.html" class="view-button">
-                                    <span>View Project</span>
+                                    <span><span class="lang-en">View Project</span><span class="lang-zh">查看项目</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -199,24 +186,18 @@
                     </a>
                 </article>
 
-                <!-- Open World Exploration Gameplay Design -->
                 <article class="game-card" id="project-2">
                     <a href="perfect-world-intern.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/INCARNATION.png" alt="Game Project 2">
+                            <img src="image/INCARNATION.png" alt="Open world exploration" data-alt-en="Open world exploration gameplay design" data-alt-zh="开放世界探索玩法设计">
                         </div>
                         <div class="card-content">
-                            <h2>Open World Exploration Gameplay Design</h2>
-                            <p class="card-category">Level Designer Intern - Perfect World</p>
-                            <p class="card-description">Prototyped 5 open-world exploration gameplay challenges, drafting exploration level metrics for an open-world project.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Level Design</li>
-                                <li>Gameplay Design</li>
-                                <li>Ecosystem Design</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Open World Exploration Gameplay Design</span><span class="lang-zh">开放世界探索玩法设计</span></h2>
+                            <p class="card-category"><span class="lang-en">Level Designer Intern - Perfect World</span><span class="lang-zh">关卡设计师实习 · 完美世界</span></p>
+                            <p class="card-description"><span class="lang-en">Prototyped 5 open-world exploration gameplay challenges, drafting exploration level metrics for an open-world project.</span><span class="lang-zh">为一个开放世界项目做了 5 个探索玩法挑战的原型，并起草了探索关卡指标。</span></p>
                             <div class="card-links">
                                 <a href="perfect-world-intern.html" class="view-button">
-                                    <span>View Work</span>
+                                    <span><span class="lang-en">View Work</span><span class="lang-zh">查看作品</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -224,23 +205,18 @@
                     </a>
                 </article>
 
-                <!-- Ubisoft NEXT Level Design Competition 2022 -->
                 <article class="game-card" id="project-9">
                     <a href="next-level-2022.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/Ubisoft Next Level Design 2022 Thumbnail.png" alt="Game Project 1">
+                            <img src="image/Ubisoft Next Level Design 2022 Thumbnail.png" alt="Ubisoft NEXT 2022" data-alt-en="Ubisoft NEXT Level Design Competition 2022" data-alt-zh="育碧 NEXT 关卡设计大赛 2022">
                         </div>
                         <div class="card-content">
-                            <h2>Ubisoft NEXT Level Design Competition 2022</h2>
-                            <p class="card-category">Competition Entry</p>
-                            <p class="card-description">This was my first entry into the Ubisoft NEXT Level Design Competition in 2022. The challenge was to design a stealth action game level with a strong theme, immersive environments, visual references, and clear presentation.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Level Design</li>
-                                <li>Dynamic Pacing</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Ubisoft NEXT Level Design Competition 2022</span><span class="lang-zh">育碧 NEXT 关卡设计大赛 2022</span></h2>
+                            <p class="card-category"><span class="lang-en">Competition Entry</span><span class="lang-zh">参赛作品</span></p>
+                            <p class="card-description"><span class="lang-en">This was my first entry into the Ubisoft NEXT Level Design Competition in 2022. The challenge was to design a stealth action game level with a strong theme, immersive environments, visual references, and clear presentation.</span><span class="lang-zh">这是我 2022 年第一次参加育碧 NEXT 关卡设计大赛。题目是设计一张潜行动作关卡，要有明确主题、沉浸的环境、视觉参考，以及清楚的表达。</span></p>
                             <div class="card-links">
                                 <a href="next-level-2022.html" class="view-button">
-                                    <span>View Project</span>
+                                    <span><span class="lang-en">View Project</span><span class="lang-zh">查看项目</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -248,24 +224,18 @@
                     </a>
                 </article>
 
-                <!-- Far Cry 5 Outpost Level Design -->
                 <article class="game-card" id="project-6">
                     <a href="far-cry-5-out-post-level.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/fc5-overview.jpg" alt="Board Game Project">
+                            <img src="image/fc5-overview.jpg" alt="Far Cry 5 outpost" data-alt-en="Far Cry 5 outpost level design" data-alt-zh="孤岛惊魂5 哨站关卡设计">
                         </div>
                         <div class="card-content">
-                            <h2>Level Design - Far Cry 5 Outpost </h2>
-                            <p class="card-category">Passion Project - Level Design with Level Editor</p>
-                            <p class="card-description">I designed a Far Cry 5 outpost using the level editor to explore the creation pipeline, enhance environmental storytelling, and encourage unique traversal opportunities.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Level Design</li>
-                                <li>Level Editor</li>
-                                <li>Environmental Storytelling</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Level Design - Far Cry 5 Outpost</span><span class="lang-zh">关卡设计 · 孤岛惊魂5 哨站</span></h2>
+                            <p class="card-category"><span class="lang-en">Passion Project - Level Design with Level Editor</span><span class="lang-zh">个人项目 · 用关卡编辑器做关卡设计</span></p>
+                            <p class="card-description"><span class="lang-en">I designed a Far Cry 5 outpost using the level editor to explore the creation pipeline, enhance environmental storytelling, and encourage unique traversal opportunities.</span><span class="lang-zh">我用《孤岛惊魂5》的关卡编辑器设计了一座哨站，用来熟悉制作流程、加强环境叙事，并给出不一样的动线。</span></p>
                             <div class="card-links">
                                 <a href="far-cry-5-out-post-level.html" class="view-button">
-                                    <span>View Project</span>
+                                    <span><span class="lang-en">View Project</span><span class="lang-zh">查看项目</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -273,25 +243,18 @@
                     </a>
                 </article>
 
-                <!-- Level Breakdown Framework -->
                 <article class="game-card" id="project-7">
                     <a href="blog/level-breakdown.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/leveldesignbreakdown.png" alt="Level Design Breakdown Framework">
+                            <img src="image/leveldesignbreakdown.png" alt="Level Design Breakdown Framework" data-alt-en="Level Design Breakdown Framework" data-alt-zh="关卡拆解框架">
                         </div>
                         <div class="card-content">
-                            <h2>Level Breakdown Framework</h2>
-                            <p class="card-category">Blog Post - Design Methodology</p>
-                            <p class="card-description">A structured approach to systematically breaking down game levels, exploring mechanics, narrative, space, and pacing for better level design analysis.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Level Design</li>
-                                <li>Design Analysis</li>
-                                <li>Methodology</li>
-                                <li>Framework Development</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Level Breakdown Framework</span><span class="lang-zh">关卡拆解框架</span></h2>
+                            <p class="card-category"><span class="lang-en">Blog Post - Design Methodology</span><span class="lang-zh">博客 · 设计方法</span></p>
+                            <p class="card-description"><span class="lang-en">A structured approach to systematically breaking down game levels, exploring mechanics, narrative, space, and pacing for better level design analysis.</span><span class="lang-zh">一套系统拆解关卡的方法，从机制、叙事、空间和节奏入手，让关卡分析更清楚。</span></p>
                             <div class="card-links">
                                 <a href="blog/level-breakdown.html" class="view-button">
-                                    <span>Read Post</span>
+                                    <span><span class="lang-en">Read Post</span><span class="lang-zh">阅读文章</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -299,29 +262,20 @@
                     </a>
                 </article>
 
-                <h1>System Design</h1>
+                <h1><span class="lang-en">System Design</span><span class="lang-zh">系统设计</span></h1>
 
-                <!-- Slasher Board Game -->
                 <article class="game-card" id="project-3">
                     <a href="board-game-ux-project.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/Boardgame thumbnail.jpg" alt="Board Game Project">
+                            <img src="image/Boardgame thumbnail.jpg" alt="Slasher board game" data-alt-en="Slasher board game" data-alt-zh="Slasher 桌游">
                         </div>
                         <div class="card-content">
-                            <h2>Slasher Board Game Design - Gameplay and UX Design</h2>
-                            <p class="card-category"> UX Course Project - University of Toronto</p>
-                            <p class="card-description">Slasher is a 4-player co-op board game where players navigate a haunted mansion to exorcise a supernatural slasher.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Gameplay Design</li>
-                                <li>Board Design</li>
-                                <li>UX Design</li>
-                                <li>Usability Testing</li>
-                                <li>Open Playtest</li>
-                                <li>Data Driven Iteration</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Slasher Board Game Design - Gameplay and UX Design</span><span class="lang-zh">Slasher 桌游设计 · 玩法与体验设计</span></h2>
+                            <p class="card-category"><span class="lang-en">UX Course Project - University of Toronto</span><span class="lang-zh">多伦多大学体验设计课程项目</span></p>
+                            <p class="card-description"><span class="lang-en">Slasher is a 4-player co-op board game where players navigate a haunted mansion to exorcise a supernatural slasher.</span><span class="lang-zh">Slasher 是一款 4 人合作桌游。玩家在闹鬼宅邸里行动，驱除一名超自然杀人狂。</span></p>
                             <div class="card-links">
                                 <a href="board-game-ux-project.html" class="view-button">
-                                    <span>View Project</span>
+                                    <span><span class="lang-en">View Project</span><span class="lang-zh">查看项目</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -329,19 +283,18 @@
                     </a>
                 </article>
 
-                <!-- Apex Legends: EVO Shield and Player Engagement Breakdown -->
                 <article class="game-card" id="project-14">
                     <a href="blog.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/game/apex%20evo%20shield.jpg" alt="Apex Legends: EVO Shield and Player Engagement Breakdown">
+                            <img src="image/game/apex%20evo%20shield.jpg" alt="Apex Legends EVO Shield" data-alt-en="Apex Legends: EVO Shield and Player Engagement Breakdown" data-alt-zh="Apex英雄：进化甲与玩家参与度拆解">
                         </div>
                         <div class="card-content">
-                            <h2>Apex Legends: EVO Shield and Player Engagement Breakdown</h2>
-                            <p class="card-category">Design Breakdown - 2021</p>
-                            <p class="card-description">A two-part written analysis on why Apex Legends keeps players engaged, covering badges, legend design, loot RNG, TTK, and the EVO Shield feedback loop.</p>
+                            <h2><span class="lang-en">Apex Legends: EVO Shield and Player Engagement Breakdown</span><span class="lang-zh">Apex英雄：进化甲与玩家参与度拆解</span></h2>
+                            <p class="card-category"><span class="lang-en">Design Breakdown - 2021</span><span class="lang-zh">设计拆解 · 2021</span></p>
+                            <p class="card-description"><span class="lang-en">A two-part written analysis on why Apex Legends keeps players engaged, covering badges, legend design, loot RNG, TTK, and the EVO Shield feedback loop.</span><span class="lang-zh">上下两篇书面分析，讨论《Apex英雄》如何维持玩家参与：徽章、传奇设计、战利品随机、击杀时间（TTK），以及进化甲的反馈循环。</span></p>
                             <div class="card-links">
                                 <a href="blog.html" class="view-button">
-                                    <span>Read on My Blog</span>
+                                    <span><span class="lang-en">Read on My Blog</span><span class="lang-zh">在博客中阅读</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -349,22 +302,18 @@
                     </a>
                 </article>
 
-                <!-- Apex System Breakdown Analysis -->
                 <article class="game-card" id="project-5">
                     <a href="apex-analysis.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/Apex_Economy_System.png" alt="Board Game Project">
+                            <img src="image/Apex_Economy_System.png" alt="Apex economy system" data-alt-en="Apex Legends system breakdown" data-alt-zh="Apex英雄系统拆解">
                         </div>
                         <div class="card-content">
-                            <h2>Apex System Breakdown Analysis</h2>
-                            <p class="card-category">Design Breakdown</p>
-                            <p class="card-description">I analyzed Apex Legends' economy system and combat mechanics as incentives for combat motivation.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Analytical Thinking</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Apex System Breakdown Analysis</span><span class="lang-zh">Apex英雄系统拆解分析</span></h2>
+                            <p class="card-category"><span class="lang-en">Design Breakdown</span><span class="lang-zh">设计拆解</span></p>
+                            <p class="card-description"><span class="lang-en">I analyzed Apex Legends' economy system and combat mechanics as incentives for combat motivation.</span><span class="lang-zh">我分析了《Apex英雄》的经济系统和战斗机制，看它们怎样促使玩家主动投入战斗。</span></p>
                             <div class="card-links">
                                 <a href="apex-analysis.html" class="view-button">
-                                    <span>View Work</span>
+                                    <span><span class="lang-en">View Work</span><span class="lang-zh">查看作品</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -372,24 +321,20 @@
                     </a>
                 </article>
 
-                <h1>UX Design</h1>
+                <h1><span class="lang-en">UX Design</span><span class="lang-zh">体验设计</span></h1>
 
-                <!-- UX Redesign - Splinter Cell: Blacklist -->
                 <article class="game-card" id="project-10">
                     <a href="game-blacklist-ux.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/bl-ux/top.png" alt="Board Game Project">
+                            <img src="image/bl-ux/top.png" alt="Splinter Cell Blacklist UX redesign" data-alt-en="UX redesign of Tom Clancy's Splinter Cell: Blacklist" data-alt-zh="细胞分裂：黑名单 体验重设计">
                         </div>
                         <div class="card-content">
-                            <h2>UX Redesign - Tom Clancy's Splinter Cell: Blacklist</h2>
-                            <p class="card-category"> UI/UX Personal Project</p>
-                            <p class="card-description">My redesign project of the classic Tom Clancy's Splinter Cell: Blacklist aims to expose these legacy issues, sharpening my awareness of UX problems that hinder player engagement.</p>
-                            <!-- <ul class="card-skills">
-                                <li>UX Design</li>
-                            </ul> -->
+                            <h2><span class="lang-en">UX Redesign - Tom Clancy's Splinter Cell: Blacklist</span><span class="lang-zh">体验重设计 · 细胞分裂：黑名单</span></h2>
+                            <p class="card-category"><span class="lang-en">UI/UX Personal Project</span><span class="lang-zh">个人体验设计项目</span></p>
+                            <p class="card-description"><span class="lang-en">My redesign project of the classic Tom Clancy's Splinter Cell: Blacklist aims to expose these legacy issues, sharpening my awareness of UX problems that hinder player engagement.</span><span class="lang-zh">这次对《细胞分裂：黑名单》的重设计，用来把那些遗留的界面问题摆出来，也让我更清楚哪些体验问题会挡住玩家投入。</span></p>
                             <div class="card-links">
                                 <a href="game-blacklist-ux.html" class="view-button">
-                                    <span>View Project</span>
+                                    <span><span class="lang-en">View Project</span><span class="lang-zh">查看项目</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -397,22 +342,21 @@
                     </a>
                 </article>
 
-                <h1>Other Works</h1>
+                <h1><span class="lang-en">Other Works</span><span class="lang-zh">其他作品</span></h1>
 
-                <!-- Cut the Cheese - Toronto Game Jam 2026 -->
                 <article class="game-card" id="project-13">
                     <a href="https://chensimon.itch.io/cut-the-cheese" style="text-decoration: none;" target="_blank">
                         <div class="card-image">
-                            <img src="image/game/cut the cheese.png" alt="Cut the Cheese - TOJam 2026">
+                            <img src="image/game/cut the cheese.png" alt="Cut the Cheese" data-alt-en="Cut the Cheese - TOJam 2026" data-alt-zh="Cut the Cheese · 多伦多 Game Jam 2026">
                         </div>
                         <div class="card-content">
                             <h2>Cut the Cheese</h2>
-                            <p class="card-category">Toronto Game Jam 2026 Submission</p>
-                            <p class="card-type">2D Fighting Game</p>
-                            <p class="card-description">Slice off your opponent's cheese. The less they have, the faster they move! Knock them off the platform to win. A TOJam26 weekend game inspired by Wii Swordplay and Smash Bros.</p>
+                            <p class="card-category"><span class="lang-en">Toronto Game Jam 2026 Submission</span><span class="lang-zh">多伦多 Game Jam 2026 参赛作品</span></p>
+                            <p class="card-type"><span class="lang-en">2D Fighting Game</span><span class="lang-zh">2D 格斗</span></p>
+                            <p class="card-description"><span class="lang-en">Slice off your opponent's cheese. The less they have, the faster they move! Knock them off the platform to win. A TOJam26 weekend game inspired by Wii Swordplay and Smash Bros.</span><span class="lang-zh">把对手身上的奶酪切下来。切得越少，移动越快。把对方打下平台即获胜。多伦多 Game Jam 2026 的周末作品，灵感来自《Wii 运动 度假胜地》的剑术和《任天堂明星大乱斗》。</span></p>
                             <div class="card-links">
                                 <a href="https://chensimon.itch.io/cut-the-cheese" class="view-button" target="_blank">
-                                    <span>Play on itch.io</span>
+                                    <span><span class="lang-en">Play on itch.io</span><span class="lang-zh">在 itch.io 上游玩</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -420,25 +364,18 @@
                     </a>
                 </article>
 
-                <!-- Neon Jumpers TOJAM-->
                 <article class="game-card" id="project-11">
                     <a href="https://anthonygunadi.itch.io/neon-jumpers" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/neon jumpers/NJ1.gif" alt="neon jumpers itch page">
+                            <img src="image/neon jumpers/NJ1.gif" alt="Neon Jumpers" data-alt-en="Neon Jumpers" data-alt-zh="Neon Jumpers">
                         </div>
                         <div class="card-content">
-                            <h2>Neon Jumpers Game Design</h2>
-                            <p class="card-category">Toronto Game Jam Submission</p>
-                            <p class="card-description">A chaotic 1v1 showdown where the battlefield is the music! Duel your opponent as the floor pulses with the audio spectrum and control the rhythm to your advantage.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Level Design</li>
-                                <li>Design Analysis</li>
-                                <li>Methodology</li>
-                                <li>Framework Development</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Neon Jumpers Game Design</span><span class="lang-zh">Neon Jumpers 游戏设计</span></h2>
+                            <p class="card-category"><span class="lang-en">Toronto Game Jam Submission</span><span class="lang-zh">多伦多 Game Jam 参赛作品</span></p>
+                            <p class="card-description"><span class="lang-en">A chaotic 1v1 showdown where the battlefield is the music! Duel your opponent as the floor pulses with the audio spectrum and control the rhythm to your advantage.</span><span class="lang-zh">一场混乱的 1 对 1，战场就是音乐。地板随着音频频谱起伏，用节奏取得优势。</span></p>
                             <div class="card-links">
                                 <a href="https://anthonygunadi.itch.io/neon-jumpers" class="view-button">
-                                    <span>View Project</span>
+                                    <span><span class="lang-en">View Project</span><span class="lang-zh">查看项目</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -446,24 +383,18 @@
                     </a>
                 </article>
 
-                <!-- Game Review & Guide Writer -->
                 <article class="game-card" id="project-4">
                     <a href="game-review&guide.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/HardWest2-Published Game Review and Guide.jpg" alt="Board Game Project">
+                            <img src="image/HardWest2-Published Game Review and Guide.jpg" alt="Hard West 2 guide" data-alt-en="Hard West 2 walkthrough guide" data-alt-zh="血战西部2 流程攻略">
                         </div>
                         <div class="card-content">
-                            <h2>Hard West 2 Walkthrough Guide</h2>
-                            <p class="card-category">Freelance - UCG Media</p>
-                            <p class="card-description">At UCG Media, I produced game reviews, news articles, and walkthrough guides for social media content and magazine.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Game Review</li>
-                                <li>Analytical Writing</li>
-                                <li>Remote Collaboration</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Hard West 2 Walkthrough Guide</span><span class="lang-zh">血战西部2 流程攻略</span></h2>
+                            <p class="card-category"><span class="lang-en">Freelance - UCG Media</span><span class="lang-zh">自由职业 · UCG（游戏机实用技术）</span></p>
+                            <p class="card-description"><span class="lang-en">At UCG Media, I produced game reviews, news articles, and walkthrough guides for social media content and magazine.</span><span class="lang-zh">在 UCG（游戏机实用技术），我为社交媒体和杂志撰写游戏评测、新闻和流程攻略。</span></p>
                             <div class="card-links">
                                 <a href="game-review&guide.html" class="view-button">
-                                    <span>View Work</span>
+                                    <span><span class="lang-en">View Work</span><span class="lang-zh">查看作品</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -471,25 +402,18 @@
                     </a>
                 </article>
 
-                <!-- Video Channel -->
                 <article class="game-card" id="project-8">
                     <a href="blog/video-channel.html" style="text-decoration: none;">
                         <div class="card-image">
-                            <img src="image/game/Spiritfarer%20cover.png" alt="Video Game Content Creator">
+                            <img src="image/game/Spiritfarer%20cover.png" alt="Spiritfarer" data-alt-en="Video game content creator" data-alt-zh="游戏视频创作者">
                         </div>
                         <div class="card-content">
-                            <h2>Video Game Content Creator</h2>
-                            <p class="card-category">Content Creation - 2022</p>
-                            <p class="card-description">Sharing my passion for game design through video content creation - reviews, analysis, and design breakdowns with 300K+ views.</p>
-                            <!-- <ul class="card-skills">
-                                <li>Content Creation</li>
-                                <li>Game Analysis</li>
-                                <li>Video Production</li>
-                                <li>Design Communication</li>
-                            </ul> -->
+                            <h2><span class="lang-en">Video Game Content Creator</span><span class="lang-zh">游戏视频创作者</span></h2>
+                            <p class="card-category"><span class="lang-en">Content Creation - 2022</span><span class="lang-zh">内容创作 · 2022</span></p>
+                            <p class="card-description"><span class="lang-en">Sharing my passion for game design through video content creation - reviews, analysis, and design breakdowns with 300K+ views.</span><span class="lang-zh">用视频分享我对游戏设计的兴趣：评测、分析和设计拆解，累计播放超过 30 万次。</span></p>
                             <div class="card-links">
                                 <a href="blog/video-channel.html" class="view-button">
-                                    <span>View Content</span>
+                                    <span><span class="lang-en">View Content</span><span class="lang-zh">查看内容</span></span>
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -497,15 +421,14 @@
                     </a>
                 </article>
 
-                
             </div>
         </div>
     </main>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <p><span class="lang-en">Thank you for sticking around! <br> Can't wait to create great experiences with you!</span><span class="lang-zh">谢谢你看到这里。<br>期待和你一起做出好的体验。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -515,12 +438,13 @@
 
     <footer class="game-footer" style="margin-left: 320px;">
         <div class="footer-content">
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
         </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
     <script src="game-design.js"></script>
+    <script src="i18n-switch.js"></script>
 </body>
-</html> 
+</html>

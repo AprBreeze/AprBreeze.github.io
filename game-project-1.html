@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubisoft NEXT 2024 - Level Design Project</title>
+    <title data-title-en="Ubisoft NEXT 2024 - Level Design Project" data-title-zh="育碧 NEXT 2024 - 关卡设计项目">Ubisoft NEXT 2024 - Level Design Project</title>
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="project-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="project-main">
         <section class="project-hero">
             <div class="project-hero-content">
-                <img src="image/In Engine.png" alt="Level design in engine" class="hero-image">
-                <h1>Ubisoft NEXT 2024</h1>
-                <p class="project-subtitle">Level Design Competition Entry - Top 10 in Level Design</p>
+                <img src="image/In Engine.png" alt="Level design in engine" class="hero-image" data-alt-en="Level design in engine" data-alt-zh="引擎内关卡设计">
+                <h1><span class="lang-en">Ubisoft NEXT 2024</span><span class="lang-zh">育碧 NEXT 2024</span></h1>
+                <p class="project-subtitle"><span class="lang-en">Level Design Competition Entry - Top 10 in Level Design</span><span class="lang-zh">关卡设计大赛参赛作品 - 关卡设计 Top 10</span></p>
             </div>
         </section>
 
         <section class="project-overview">
             <div class="project-container">
                 <div class="project-description">
-                    <h2>Project Overview</h2>
-                    <p>During this project, I designed an FPS level incorporating stealth mechanics. The theme of the design competition was Verticality.</p>
-                    <p>In this level, I implemented a multi-layered structure. The player starts from the port, infiltrates the cargo ship to search for the missing agent, explores environmental storytelling, uncovers the secrets hidden on the cargo ship, and ultimately escapes from the top deck.</p>
+                    <h2><span class="lang-en">Project Overview</span><span class="lang-zh">项目概览</span></h2>
+                    <p><span class="lang-en">During this project, I designed an FPS level incorporating stealth mechanics. The theme of the design competition was Verticality.</span><span class="lang-zh">在这个项目中，我设计了一张融合潜行机制的 FPS 关卡。大赛主题是垂直性（Verticality）。</span></p>
+                    <p><span class="lang-en">In this level, I implemented a multi-layered structure. The player starts from the port, infiltrates the cargo ship to search for the missing agent, explores environmental storytelling, uncovers the secrets hidden on the cargo ship, and ultimately escapes from the top deck.</span><span class="lang-zh">关卡采用多层结构：玩家从港口出发，潜入货轮寻找失踪特工，通过环境叙事探索线索，揭开货轮上的秘密，最终从顶层甲板撤离。</span></p>
                 </div>
             </div>
         </section>
@@ -48,10 +56,10 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">A quick peek of the level design document if you are short on time:</h2>
+                <h2 class="section-title"><span class="lang-en">A quick peek of the level design document if you are short on time:</span><span class="lang-zh">时间有限？先快速看一眼关卡设计文档：</span></h2>
                 <div class="section-content">                    
                     <div class="cta-buttons">
-                        <a href="#Level-Design-Document" class="cta-primary">Jump to Level Design Document</a>
+                        <a href="#Level-Design-Document" class="cta-primary"><span class="lang-en">Jump to Level Design Document</span><span class="lang-zh">跳转到关卡设计文档</span></a>
                     </div>
                 </div>
             </div>
@@ -60,12 +68,12 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">This Journey Starts From Ideation</h2>
+                <h2 class="section-title"><span class="lang-en">This Journey Starts From Ideation</span><span class="lang-zh">旅程从构思开始</span></h2>
                 <div class="horizontal-section">
-                        <img src="image/Sticky.jpg" alt="Sticky notes for brainstorming" class="section-image" style="max-width: 40%;"> 
+                        <img src="image/Sticky.jpg" alt="Sticky notes for brainstorming" class="section-image" style="max-width: 40%;" data-alt-en="Sticky notes for brainstorming" data-alt-zh="头脑风暴便利贴"> 
                     <div style="margin-left: 20px;">
-                        <h3>💡 Divergence Brainstorming</h3>     
-                        <p>I applied a divergent mindset to generate a range of relevant ideas, which I documented on my idea board. By identifying connections between related ideas, I was able to develop my ideas to be more comprehensive, refined and creative.</p>
+                        <h3><span class="lang-en">💡 Divergence Brainstorming</span><span class="lang-zh">💡 发散式头脑风暴</span></h3>     
+                        <p><span class="lang-en">I applied a divergent mindset to generate a range of relevant ideas, which I documented on my idea board. By identifying connections between related ideas, I was able to develop my ideas to be more comprehensive, refined and creative.</span><span class="lang-zh">我用发散思维生成一系列相关想法，并记在灵感板上。通过找出想法之间的关联，我把构思打磨得更完整、更细致，也更有创意。</span></p>
                     </div>
                     
                 </div>
@@ -74,46 +82,32 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">User Research</h2>
+                <h2 class="section-title"><span class="lang-en">User Research</span><span class="lang-zh">用户研究</span></h2>
                 <div class="section-content">
-                    <h3> Player Quotes ➡️ Engagement Types</h3>
-                    <p>To better understand user needs, I reviewed two recent critiques of Call of Duty titles and extracted key quotes into engagement codes. These codes act as design insights and directions, ensuring that my work aligns with player expectations and desires.</p>
+                    <h3><span class="lang-en"> Player Quotes ➡️ Engagement Types</span><span class="lang-zh">玩家原话 ➡️ 参与类型</span></h3>
+                    <p><span class="lang-en">To better understand user needs, I reviewed two recent critiques of Call of Duty titles and extracted key quotes into engagement codes. These codes act as design insights and directions, ensuring that my work aligns with player expectations and desires.</span><span class="lang-zh">为更好理解用户需求，我阅读了两篇近期《使命召唤》相关评测，并把关键原话提炼成投入点。这些投入点作为设计洞见与方向，确保作品对齐玩家期望。</span></p>
                     <div class = "horizontal-section">
                         <div class = "content-wrapper" style = "flex: 0 0 70%; max-width: 70%;">
-                            <h3>Player Quotes from Previous COD Games</h3>
+                            <h3><span class="lang-en">Player Quotes from Previous COD Games</span><span class="lang-zh">往期 COD 游戏的玩家原话</span></h3>
                             <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li>" with communication to team members limited to radio chatter. As a result, there's zero sense of camaraderie"</li>
-                                <li>"opting for a thin veil of openness and choice over Call of Duty's once-trademark blockbuster storytelling. It's a shame because you can see a scenario where these missions could've reached the heights of 2019's Lights Out."</li>
-                                <li>"no matter how stealthily you approach the situation you're only really delaying the inevitable firefights against seemingly endlessly spawning enemies. And once you are spotted you'll have a near-impossible job trying to lose them."</li>
-                                <li>"these open combat missions, they all end up blending into a rinse-and-repeat experience I felt like I was playing over and over, just in different locations."</li>
+                                <li><span class="lang-en">" with communication to team members limited to radio chatter. As a result, there's zero sense of camaraderie"</span><span class="lang-zh">「与队友的沟通仅限于无线电闲聊。结果几乎没有战友情谊感。」</span></li>
+                                <li><span class="lang-en">"opting for a thin veil of openness and choice over Call of Duty's once-trademark blockbuster storytelling. It's a shame because you can see a scenario where these missions could've reached the heights of 2019's Lights Out."</span><span class="lang-zh">「用一层薄薄的开放与选择，取代了《使命召唤》曾经标志性的大片叙事。很可惜 - 你能想象这些任务本可以达到 2019 年 Lights Out 的高度。」</span></li>
+                                <li><span class="lang-en">"no matter how stealthily you approach the situation you're only really delaying the inevitable firefights against seemingly endlessly spawning enemies. And once you are spotted you'll have a near-impossible job trying to lose them."</span><span class="lang-zh">「无论你多潜行地接近局面，本质上只是在推迟与似乎无限刷出的敌人不可避免的交火。一旦被发现，想甩掉他们几乎不可能。」</span></li>
+                                <li><span class="lang-en">"these open combat missions, they all end up blending into a rinse-and-repeat experience I felt like I was playing over and over, just in different locations."</span><span class="lang-zh">「这些开放战斗任务最终都混成了一种重复刷洗的体验 - 感觉自己一遍遍在玩同一套流程，只是换了地点。」</span></li>
                             </ul>
                         </div>
-                            <div>
-                                <h3>Engagement Codes</h3>
-                                <ul class="codes-list" style="list-style-type: none !important; padding-left: 0;">
-                                    <li>Team member/NPC interaction</li>
-                                    <li>Sense of camaraderie</li>
-                                    <li>Blockbuster narrative</li>
-                                    <li>Tactical stealth gameplay</li>
-                                    <li>Mistake tolerance</li>
-                                    <li>Avoid Obvious Repetition</li>
-                                    <li>Various objective type</li>
-                            </div>
+                        <div>
+                            <h3><span class="lang-en">Engagement Codes</span><span class="lang-zh">投入点</span></h3>
+                            <ul class="codes-list" style="list-style-type: none !important; padding-left: 0;">
+                                <li><span class="lang-en">Team member/NPC interaction</span><span class="lang-zh">队友 / NPC 互动</span></li>
+                                <li><span class="lang-en">Sense of camaraderie</span><span class="lang-zh">战友情谊感</span></li>
+                                <li><span class="lang-en">Blockbuster narrative</span><span class="lang-zh">大片级叙事</span></li>
+                                <li><span class="lang-en">Tactical stealth gameplay</span><span class="lang-zh">战术潜行玩法</span></li>
+                                <li><span class="lang-en">Mistake tolerance</span><span class="lang-zh">容错空间</span></li>
+                                <li><span class="lang-en">Avoid Obvious Repetition</span><span class="lang-zh">避免明显重复</span></li>
+                                <li><span class="lang-en">Various objective type</span><span class="lang-zh">多样目标类型</span></li>
+                            </ul>
                         </div>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="project-container">
-                <h2 class="section-title">Mechanics Engagement Breakdown</h2>
-                <div class="section-content">
-                    <p>🔎 I created a table to break down the engagement type of each gameplay ingredient that is available in the competition.</p>
-                    <p>This approach allowed me to understand gameplay ingredients from the players' perspective and helped me strategically incorporate these mechanics and craft dynamic gameplay experiences by thoughtfully using different engagement types throughout my level.</p>
-                    <div class="image-grid">
-                        <img src="image/Gameplay element 1.png" alt="Gameplay elements breakdown" class="section-image" style="max-width: 60%;">
-                        <img src="image/Gameplay element 2.png" alt="Gameplay elements breakdown" class="section-image" style="max-width: 60%;">
                     </div>
                 </div>
             </div>
@@ -121,42 +115,58 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Level Beat Pacing Sheet</h2>
-                <h3>Click the image to view the full size</h3>
+                <h2 class="section-title"><span class="lang-en">Mechanics Engagement Breakdown</span><span class="lang-zh">机制参与拆解</span></h2>
                 <div class="section-content">
-                    <img src="image/Level Pacing Sheet.png" alt="Level pacing sheet" class="section-image gallery-slide" style="max-width: 100%; cursor: pointer;">
-                    <p>This level pacing sheet is to map out the pace and narrative flow of the level. </p> 
-                    <p>Each beat is assigned a specific engagement type, paired with corresponding events and gameplay activities. I planned the beats, <span class="highlight">ensuring that various gameplay and environmental shifts interweave dynamically</span>. This cohesive design approach helped me create a engaging level structure that keeps players continuously immersed.</p>
+                    <p><span class="lang-en">🔎 I created a table to break down the engagement type of each gameplay ingredient that is available in the competition.</span><span class="lang-zh">🔎 我做了一张表，拆解大赛可用的每一种玩法要素对应的参与类型。</span></p>
+                    <p><span class="lang-en">This approach allowed me to understand gameplay ingredients from the players' perspective and helped me strategically incorporate these mechanics and craft dynamic gameplay experiences by thoughtfully using different engagement types throughout my level.</span><span class="lang-zh">这个方法让我从玩家视角理解玩法要素，也帮助我有策略地纳入这些机制，并在关卡中有意识地切换不同参与类型，做出更有变化的体验。</span></p>
+                    <div class="image-grid">
+                        <img src="image/Gameplay element 1.png" alt="Gameplay elements breakdown" class="section-image" style="max-width: 60%;" data-alt-en="Gameplay elements breakdown" data-alt-zh="玩法要素拆解">
+                        <img src="image/Gameplay element 2.png" alt="Gameplay elements breakdown" class="section-image" style="max-width: 60%;" data-alt-en="Gameplay elements breakdown" data-alt-zh="玩法要素拆解">
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">360 Approach</h2>
+                <h2 class="section-title"><span class="lang-en">Level Beat Pacing Sheet</span><span class="lang-zh">关卡节拍节奏表</span></h2>
+                <h3><span class="lang-en">Click the image to view the full size</span><span class="lang-zh">点击图片查看大图</span></h3>
                 <div class="section-content">
-                    <img src="image/NEXT_360 Approach.png" alt="Level pacing sheet" class="section-image" style="max-width: 100%;">
-
-                    <p>I adopted the 360 Approach for Open World Mission Design developed by Philippe Bergeron, Level Design Director at Ubisoft Montreal. </p> 
-                    <p>This design approach  allows players to <span class="highlight">approach the point of interest from various angles while ensuring a consistent experience </span> for all players.</p>
+                    <img src="image/Level Pacing Sheet.png" alt="Level pacing sheet" class="section-image gallery-slide" style="max-width: 100%; cursor: pointer;" data-alt-en="Level pacing sheet" data-alt-zh="关卡节奏表">
+                    <p><span class="lang-en">This level pacing sheet is to map out the pace and narrative flow of the level. </span><span class="lang-zh">这张关卡节奏表用来梳理关卡的节奏与叙事推进。</span></p> 
+                    <p><span class="lang-en">Each beat is assigned a specific engagement type, paired with corresponding events and gameplay activities. I planned the beats, <span class="highlight">ensuring that various gameplay and environmental shifts interweave dynamically</span>. This cohesive design approach helped me create a engaging level structure that keeps players continuously immersed.</span><span class="lang-zh">每个节拍都对应一种参与类型，并搭配相应事件与玩法活动。我规划节拍时，<span class="highlight">确保多样玩法与环境变化动态交织</span>。这种整体设计方法帮助我做出能让玩家持续沉浸的关卡结构。</span></p>
                 </div>
             </div>
         </section>
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Player Flow Chart</h2>
+                <h2 class="section-title"><span class="lang-en">360 Approach</span><span class="lang-zh">360度探索设计方式</span></h2>
                 <div class="section-content">
-                    <h3>Click the image to view the full size</h3>
-                    <img src="image/NEXT Player Flow Charts 1.png" alt="Level pacing sheet" class="section-image gallery-slide" style="max-width: 100%; margin-bottom: 0px; cursor: pointer;"" >
-                    <img src="image/NEXT Player Flow Charts 2.png" alt="Level pacing sheet" class="section-image gallery-slide" style="max-width: 100%; cursor: pointer;">
+                    <img src="image/NEXT_360 Approach.png" alt="360 Approach diagram" class="section-image" style="max-width: 100%;" data-alt-en="360 Approach diagram" data-alt-zh="360度探索设计方式示意图">
 
-                    <p>I created separate flowcharts for stealth and aggressor players to illustrate the intensity curve of their gameplay experience.</p> 
+                    <p><span class="lang-en">I adopted the 360 Approach for Open World Mission Design developed by Philippe Bergeron, Level Design Director at Ubisoft Montreal. </span><span class="lang-zh">我采用了育碧蒙特利尔关卡设计总监 Philippe Bergeron 提出的开放世界任务「360度探索设计方式」。</span></p> 
+                    <p><span class="lang-en">This design approach  allows players to <span class="highlight">approach the point of interest from various angles while ensuring a consistent experience </span> for all players.</span><span class="lang-zh">这一设计方式让玩家可以<span class="highlight">从多个角度接近兴趣点，同时保证所有玩家获得一致体验</span>。</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="project-container">
+                <h2 class="section-title"><span class="lang-en">Player Flow Chart</span><span class="lang-zh">玩家流程图</span></h2>
+                <div class="section-content">
+                    <h3><span class="lang-en">Click the image to view the full size</span><span class="lang-zh">点击图片查看大图</span></h3>
+                    <img src="image/NEXT Player Flow Charts 1.png" alt="Player flow chart stealth" class="section-image gallery-slide" style="max-width: 100%; margin-bottom: 0px; cursor: pointer;" data-alt-en="Player flow chart stealth" data-alt-zh="玩家流程图 · 潜行">
+                    <img src="image/NEXT Player Flow Charts 2.png" alt="Player flow chart aggressor" class="section-image gallery-slide" style="max-width: 100%; cursor: pointer;" data-alt-en="Player flow chart aggressor" data-alt-zh="玩家流程图 · 强攻">
+
+                    <p><span class="lang-en">I created separate flowcharts for stealth and aggressor players to illustrate the intensity curve of their gameplay experience.</span><span class="lang-zh">我分别为潜行与强攻玩家做了流程图，用来呈现各自玩法体验的强度曲线。</span></p> 
                     <div class="horizontal-section">
-                        <p>The preparation done during the Beat Pacing Sheet phase really paid off. The game's difficulty rises and falls smoothly, creating a well-balanced and engaging level experience. I studied the <span class="highlight">three-act hero’s journey structure</span> from film studies. Throughout the narrative, I <span class="highlight">gradually revealed the enemy’s conspiracy, using foreshadowing techniques to keep players hooked</span>.
+                        <p><span class="lang-en">The preparation done during the Beat Pacing Sheet phase really paid off. The game's difficulty rises and falls smoothly, creating a well-balanced and engaging level experience. I studied the <span class="highlight">three-act hero’s journey structure</span> from film studies. Throughout the narrative, I <span class="highlight">gradually revealed the enemy’s conspiracy, using foreshadowing techniques to keep players hooked</span>.
                         <br><br>Some of the lores to foreshadowing the enemy's conspiracy ➡️ <br>"Ooo, what could possibly go wrong on a cargo ship?" 
-                        </p>
-                        <img src="image/NEXTlore.png" alt="Level pacing sheet" class="section-image" style="max-width: 35%;">
+                        </span><span class="lang-zh">节拍节奏表阶段的准备确实起了作用。难度起伏顺畅，关卡体验更平衡、更抓人。我参考了电影研究中的<span class="highlight">三幕式英雄之旅结构</span>。叙事过程中，我<span class="highlight">逐步揭开敌方阴谋，并用伏笔手法持续钩住玩家</span>。
+                        <br><br>用于暗示敌方阴谋的部分设定文案 ➡️ <br>「哦，货轮上还能出什么岔子呢？」
+                        </span></p>
+                        <img src="image/NEXTlore.png" alt="Lore foreshadowing text" class="section-image" style="max-width: 35%;" data-alt-en="Lore foreshadowing text" data-alt-zh="设定文案伏笔">
                     </div>
                     
                 </div>
@@ -164,25 +174,25 @@
         </section>
 
         <section class="project-section" id="Level-Design-Document">
-            <h2 class="section-title">Level Design Document with the 2D layout </h2>
+            <h2 class="section-title"><span class="lang-en">Level Design Document with the 2D layout </span><span class="lang-zh">关卡设计文档与 2D 布局</span></h2>
             <div class="horizontal-section">
                 <div class="content-wrapper" style="max-width: 25%; ">
                     <ul class="document-index">
-                        <h3>Document Index</h3>
-                        <li>Mission Brief</li>
-                        <li>2D Layout & Design Rationale</li>
-                        <li>Environment Reference</li>
-                        <li>Walk Through Map
+                        <h3><span class="lang-en">Document Index</span><span class="lang-zh">文档目录</span></h3>
+                        <li><span class="lang-en">Mission Brief</span><span class="lang-zh">任务简报</span></li>
+                        <li><span class="lang-en">2D Layout & Design Rationale</span><span class="lang-zh">2D 布局与设计论证</span></li>
+                        <li><span class="lang-en">Environment Reference</span><span class="lang-zh">环境参考</span></li>
+                        <li><span class="lang-en">Walk Through Map</span><span class="lang-zh">流程地图</span>
                             <ul>
-                                <li>Stealth Approach</li>
-                                <li>Aggressor Approach</li>
+                                <li><span class="lang-en">Stealth Approach</span><span class="lang-zh">潜行路线</span></li>
+                                <li><span class="lang-en">Aggressor Approach</span><span class="lang-zh">强攻路线</span></li>
                             </ul>
                         </li>
-                        <li>Design Analysis
+                        <li><span class="lang-en">Design Analysis</span><span class="lang-zh">设计分析</span>
                             <ul>
-                                <li>360 Approach</li>
-                                <li>Beat Pacing Sheet</li>
-                                <li>Player Flow Chart</li>
+                                <li><span class="lang-en">360 Approach</span><span class="lang-zh">360度探索设计方式</span></li>
+                                <li><span class="lang-en">Beat Pacing Sheet</span><span class="lang-zh">节拍节奏表</span></li>
+                                <li><span class="lang-en">Player Flow Chart</span><span class="lang-zh">玩家流程图</span></li>
                             </ul>
                         </li>
                     </ul>
@@ -195,49 +205,49 @@
                         <div class="carousel-container">
                             <div class="carousel-track">
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document cover.png" alt="Level Design Document Cover" class="carousel-image">
+                                    <img src="image/Mission Design Document cover.png" alt="Level Design Document Cover" class="carousel-image" data-alt-en="Level Design Document Cover" data-alt-zh="关卡设计文档封面">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 1.png" alt="Level Design Document Page 1" class="carousel-image">
+                                    <img src="image/Mission Design Document 1.png" alt="Level Design Document Page 1" class="carousel-image" data-alt-en="Level Design Document Page 1" data-alt-zh="关卡设计文档第 1 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 2.png" alt="Level Design Document Page 2" class="carousel-image">
+                                    <img src="image/Mission Design Document 2.png" alt="Level Design Document Page 2" class="carousel-image" data-alt-en="Level Design Document Page 2" data-alt-zh="关卡设计文档第 2 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 3.png" alt="Level Design Document Page 3" class="carousel-image">
+                                    <img src="image/Mission Design Document 3.png" alt="Level Design Document Page 3" class="carousel-image" data-alt-en="Level Design Document Page 3" data-alt-zh="关卡设计文档第 3 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 4.png" alt="Level Design Document Page 4" class="carousel-image">
+                                    <img src="image/Mission Design Document 4.png" alt="Level Design Document Page 4" class="carousel-image" data-alt-en="Level Design Document Page 4" data-alt-zh="关卡设计文档第 4 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 5.png" alt="Level Design Document Page 5" class="carousel-image">
+                                    <img src="image/Mission Design Document 5.png" alt="Level Design Document Page 5" class="carousel-image" data-alt-en="Level Design Document Page 5" data-alt-zh="关卡设计文档第 5 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 6.png" alt="Level Design Document Page 6" class="carousel-image">
+                                    <img src="image/Mission Design Document 6.png" alt="Level Design Document Page 6" class="carousel-image" data-alt-en="Level Design Document Page 6" data-alt-zh="关卡设计文档第 6 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 7.png" alt="Level Design Document Page 7" class="carousel-image">
+                                    <img src="image/Mission Design Document 7.png" alt="Level Design Document Page 7" class="carousel-image" data-alt-en="Level Design Document Page 7" data-alt-zh="关卡设计文档第 7 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 8.png" alt="Level Design Document Page 8" class="carousel-image">
+                                    <img src="image/Mission Design Document 8.png" alt="Level Design Document Page 8" class="carousel-image" data-alt-en="Level Design Document Page 8" data-alt-zh="关卡设计文档第 8 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 9.png" alt="Level Design Document Page 9" class="carousel-image">
+                                    <img src="image/Mission Design Document 9.png" alt="Level Design Document Page 9" class="carousel-image" data-alt-en="Level Design Document Page 9" data-alt-zh="关卡设计文档第 9 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 10.png" alt="Level Design Document Page 10" class="carousel-image">
+                                    <img src="image/Mission Design Document 10.png" alt="Level Design Document Page 10" class="carousel-image" data-alt-en="Level Design Document Page 10" data-alt-zh="关卡设计文档第 10 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 11.png" alt="Level Design Document Page 11" class="carousel-image">
+                                    <img src="image/Mission Design Document 11.png" alt="Level Design Document Page 11" class="carousel-image" data-alt-en="Level Design Document Page 11" data-alt-zh="关卡设计文档第 11 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 12.png" alt="Level Design Document Page 12" class="carousel-image">
+                                    <img src="image/Mission Design Document 12.png" alt="Level Design Document Page 12" class="carousel-image" data-alt-en="Level Design Document Page 12" data-alt-zh="关卡设计文档第 12 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 13.png" alt="Level Design Document Page 13" class="carousel-image">
+                                    <img src="image/Mission Design Document 13.png" alt="Level Design Document Page 13" class="carousel-image" data-alt-en="Level Design Document Page 13" data-alt-zh="关卡设计文档第 13 页">
                                 </div>
                                 <div class="carousel-slide">
-                                    <img src="image/Mission Design Document 14.png" alt="Level Design Document Page 14" class="carousel-image">
+                                    <img src="image/Mission Design Document 14.png" alt="Level Design Document Page 14" class="carousel-image" data-alt-en="Level Design Document Page 14" data-alt-zh="关卡设计文档第 14 页">
                                 </div>
                             </div>
                         </div>
@@ -251,83 +261,88 @@
                 </div>
             </div>
             <div>
-                <h3>When designing the 2D level layout, my primary considerations included:
-                </h3>
+                <h3><span class="lang-en">When designing the 2D level layout, my primary considerations included:
+                </span><span class="lang-zh">设计 2D 关卡布局时，我的主要考量包括：
+                </span></h3>
                 <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                    <li><span class="highlight">⏳ Flow and Pacing: </span><br>Shaping the level's tutorial, development, climax, and conclusion through progressive difficulty.</li>
-                    <li><span class="highlight">🎡 Thematic Points of Interest: </span><br>Creating memorable landmarks with unique themes (e.g., a huge cargo ship) to aid player recall.</li>
-                    <li><span class="highlight">↔️ Branching Paths: </span><br>Providing appropriate multiple path choices to enhance exploration and replayability, while carefully avoiding player confusion.</li>
-                    <li><span class="highlight">🎲 Gameplay Variety: </span><br>Preventing monotonous, repetitive gameplay by introducing diverse enemies, environmental challenges, puzzles, or narrative events to maintain freshness.</li>
-                    <li><span class="highlight">📜 Narrative Integrity: </span><br>Ensuring the story's complete arc by pre-scripting the overall narrative and structure.</li>
+                    <li><span class="lang-en"><span class="highlight">⏳ Flow and Pacing: </span><br>Shaping the level's tutorial, development, climax, and conclusion through progressive difficulty.</span><span class="lang-zh"><span class="highlight">⏳ 动线与节奏：</span><br>通过渐进难度塑造关卡的教学、发展、高潮与收尾。</span></li>
+                    <li><span class="lang-en"><span class="highlight">🎡 Thematic Points of Interest: </span><br>Creating memorable landmarks with unique themes (e.g., a huge cargo ship) to aid player recall.</span><span class="lang-zh"><span class="highlight">🎡 主题兴趣点：</span><br>用独特主题打造难忘地标（例如巨型货轮），帮助玩家记忆。</span></li>
+                    <li><span class="lang-en"><span class="highlight">↔️ Branching Paths: </span><br>Providing appropriate multiple path choices to enhance exploration and replayability, while carefully avoiding player confusion.</span><span class="lang-zh"><span class="highlight">↔️ 分支路径：</span><br>提供适度多路径选择，增强探索与重玩性，同时避免玩家迷路。</span></li>
+                    <li><span class="lang-en"><span class="highlight">🎲 Gameplay Variety: </span><br>Preventing monotonous, repetitive gameplay by introducing diverse enemies, environmental challenges, puzzles, or narrative events to maintain freshness.</span><span class="lang-zh"><span class="highlight">🎲 玩法多样性：</span><br>通过多样敌人、环境挑战、解谜或叙事事件避免单调重复，保持新鲜感。</span></li>
+                    <li><span class="lang-en"><span class="highlight">📜 Narrative Integrity: </span><br>Ensuring the story's complete arc by pre-scripting the overall narrative and structure.</span><span class="lang-zh"><span class="highlight">📜 叙事完整性：</span><br>预先脚本化整体叙事与结构，保证故事弧线完整。</span></li>
                 </ul>
             </div>
         </section>
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Finally I moved into 3D Blockout</h2>
+                <h2 class="section-title"><span class="lang-en">Finally I moved into 3D Blockout</span><span class="lang-zh">最后进入 3D 白盒</span></h2>
                 <div class="section-content">
                     <div class="blockout-gallery">
-                        <img src="image/In Engine.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout2.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout4.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout3.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout5.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout7.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout6.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout8.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout9.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout10.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
-                        <img src="image/Blockout11.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;">
+                        <img src="image/In Engine.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout2.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout4.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout3.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout5.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout7.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout6.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout8.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout9.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout10.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
+                        <img src="image/Blockout11.png" alt="Level Blockout" class="gallery-image gallery-slide" style="cursor: pointer;" data-alt-en="Level Blockout" data-alt-zh="关卡白盒">
                     </div>
                 </div>
             </div>
             <div class="section-content">
-                <h3>For the 3D blockout, my main focuses were:
-                </h3>
+                <h3><span class="lang-en">For the 3D blockout, my main focuses were:
+                </span><span class="lang-zh">3D 白盒阶段，我的主要关注点是：
+                </span></h3>
                 <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                    <li><span class="highlight">🎯 Clear Objectives and Visual Guidance: </span><br>Maintaining clear and readable objectives through the strategic use of lighting, landmark placement, and environmental structures to guide the player's line of sight.</li>
-                    <li><span class="highlight">🧱 Cover Placement: </span><br>Providing sufficient cover in combat areas and considering both player and AI lines of fire.
-                    </li>
-                    <li><span class="highlight">🪜 Verticality and Elevation Changes:</span><br>Utilizing platforms, ramps, and stairs of varying heights to add spatial dimension and gameplay diversity.
-                    </li>
-                    <li><span class="highlight">🕵️‍♂️ Environmental Storytelling: </span><br>Conveying narrative and supplementary background information through scene arrangement, object placement, and text collectibles.
-                    </li>
+                    <li><span class="lang-en"><span class="highlight">🎯 Clear Objectives and Visual Guidance: </span><br>Maintaining clear and readable objectives through the strategic use of lighting, landmark placement, and environmental structures to guide the player's line of sight.</span><span class="lang-zh"><span class="highlight">🎯 清晰目标与视觉引导：</span><br>通过灯光、地标布置与环境结构引导视线，保持目标清晰可读。</span></li>
+                    <li><span class="lang-en"><span class="highlight">🧱 Cover Placement: </span><br>Providing sufficient cover in combat areas and considering both player and AI lines of fire.
+                    </span><span class="lang-zh"><span class="highlight">🧱 掩体布置：</span><br>在战斗区域提供充足掩体，并同时考虑玩家与 AI 的射击线。
+                    </span></li>
+                    <li><span class="lang-en"><span class="highlight">🪜 Verticality and Elevation Changes:</span><br>Utilizing platforms, ramps, and stairs of varying heights to add spatial dimension and gameplay diversity.
+                    </span><span class="lang-zh"><span class="highlight">🪜 垂直性与高度变化：</span><br>用不同高度的平台、坡道与楼梯增加空间层次和玩法多样性。
+                    </span></li>
+                    <li><span class="lang-en"><span class="highlight">🕵️‍♂️ Environmental Storytelling: </span><br>Conveying narrative and supplementary background information through scene arrangement, object placement, and text collectibles.
+                    </span><span class="lang-zh"><span class="highlight">🕵️‍♂️ 环境叙事：</span><br>通过场景布置、物件摆放与文本收集物传达叙事与补充背景。
+                    </span></li>
                 </ul>
             </div>
         </section>
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Feedback from Ubisoft Judges</h2>
+                <h2 class="section-title"><span class="lang-en">Feedback from Ubisoft Judges</span><span class="lang-zh">育碧评委反馈</span></h2>
                 <div class = "horizontal-section">
                     <div class = "content-wrapper">
-                        <h3>Pros:</h3>
+                        <h3><span class="lang-en">Pros:</span><span class="lang-zh">优点：</span></h3>
                         <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                            <li>1. The overall layout is well-structured.</li>
-                            <li>2. The mission objective is clear and easy to follow.</li>
-                            <li>3. Effective use of notes and ally NPCs enhances the experience.</li>
-                            <li>4. Key and room placements are well thought out.</li>
-                            <li>5. Ammo distribution is balanced and sufficient.</li>
+                            <li><span class="lang-en">1. The overall layout is well-structured.</span><span class="lang-zh">1. 整体布局结构清晰。</span></li>
+                            <li><span class="lang-en">2. The mission objective is clear and easy to follow.</span><span class="lang-zh">2. 任务目标清楚，容易跟随。</span></li>
+                            <li><span class="lang-en">3. Effective use of notes and ally NPCs enhances the experience.</span><span class="lang-zh">3. 纸条与友方 NPC 运用得当，提升了体验。</span></li>
+                            <li><span class="lang-en">4. Key and room placements are well thought out.</span><span class="lang-zh">4. 钥匙与房间布置考虑周到。</span></li>
+                            <li><span class="lang-en">5. Ammo distribution is balanced and sufficient.</span><span class="lang-zh">5. 弹药分布均衡且充足。</span></li>
                         </ul>
                     </div>
                     <div>
-                        <h3>Cons:</h3>
+                        <h3><span class="lang-en">Cons:</span><span class="lang-zh">不足：</span></h3>
                         <ul class="codes-list" style="list-style-type: none !important; padding-left: 0;">
-                            <li>1. Some areas of the level feel claustrophobic due to tight walkways.</li>
-                            <li>2. Certain placement issues resulted in gaps in the level, allowing the AI to detect the player unexpectedly.</li>
-                            <li>3. These gaps also caused AI pathfinding issues, preventing them from reaching the player in some cases.</li>
-                            <li>4. The ending feels rushed, as the ladder leading to the next section is placed just outside the room.</li>
+                            <li><span class="lang-en">1. Some areas of the level feel claustrophobic due to tight walkways.</span><span class="lang-zh">1. 部分区域走道过窄，显得压抑。</span></li>
+                            <li><span class="lang-en">2. Certain placement issues resulted in gaps in the level, allowing the AI to detect the player unexpectedly.</span><span class="lang-zh">2. 某些摆放问题导致关卡出现缝隙，AI 会意外发现玩家。</span></li>
+                            <li><span class="lang-en">3. These gaps also caused AI pathfinding issues, preventing them from reaching the player in some cases.</span><span class="lang-zh">3. 这些缝隙也造成 AI 寻路问题，有时无法抵达玩家。</span></li>
+                            <li><span class="lang-en">4. The ending feels rushed, as the ladder leading to the next section is placed just outside the room.</span><span class="lang-zh">4. 结尾偏仓促 - 通往下一区域的梯子就放在房间外侧。</span></li>
                         </ul>
                         </div>
                 </div>
                 <div>
-                    <h3>Lessons I learned and will put in future practice:</h3>
+                    <h3><span class="lang-en">Lessons I learned and will put in future practice:</span><span class="lang-zh">我学到的、会带到未来实践中的教训：</span></h3>
                     <ul class="codes-list" style="list-style-type: none !important; padding-left: 0;">
                         
-                        <li>1. I need to develop better <span class="highlight">spatial management skills</span> to avoid overly narrow areas. </li>
-                        <li>2. It's also crucial to <span class="highlight">align modular level elements more accurately </span>to ensure proper AI functionality.</li>
-                        <li>3. While I aimed for players to immediately understand their choices at the end, particularly favoring the rescue option, this led me to focus disproportionately on refining that specific experience. I neglected the other option, which taught me a vital lesson: in future projects, I must <span class="highlight">consider all player choices and ensure each provides meaningful gameplay</span>.</li>
+                        <li><span class="lang-en">1. I need to develop better <span class="highlight">spatial management skills</span> to avoid overly narrow areas. </span><span class="lang-zh">1. 我需要提升<span class="highlight">空间管理能力</span>，避免区域过窄。</span></li>
+                        <li><span class="lang-en">2. It's also crucial to <span class="highlight">align modular level elements more accurately </span>to ensure proper AI functionality.</span><span class="lang-zh">2. 同样关键的是<span class="highlight">更精确地对齐模块化关卡元件</span>，保证 AI 正常运作。</span></li>
+                        <li><span class="lang-en">3. While I aimed for players to immediately understand their choices at the end, particularly favoring the rescue option, this led me to focus disproportionately on refining that specific experience. I neglected the other option, which taught me a vital lesson: in future projects, I must <span class="highlight">consider all player choices and ensure each provides meaningful gameplay</span>.</span><span class="lang-zh">3. 我希望玩家在结尾立刻理解自己的选择，尤其偏向救援路线，结果过度打磨那一条体验，忽视了另一条。这让我学到关键一课：未来项目必须<span class="highlight">兼顾所有玩家选择，并保证每条路径都有有意义的玩法</span>。</span></li>
                     </ul>
                 </div>
             </div>
@@ -336,7 +351,7 @@
 
         <div class="project-navigation">
             <a href="game-design.html" class="nav-button back-button">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
+                <i class="fas fa-arrow-left"></i> <span class="lang-en">Back to Portfolio</span><span class="lang-zh">返回作品集</span>
             </a>
         </div>
     </main>
@@ -355,9 +370,9 @@
     </div>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <p><span class="lang-en">Thank you for sticking around! <br> Can't wait to create great experiences with you!</span><span class="lang-zh">谢谢你看到这里。<br>期待和你一起做出好的体验。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -367,11 +382,11 @@
 
     <footer class="game-footer">
         <div class="footer-content">
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
             <div class="social-icons">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn" data-aria-en="LinkedIn" data-aria-zh="领英"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub" data-aria-en="GitHub" data-aria-zh="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter" data-aria-en="Twitter" data-aria-zh="推特"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
@@ -379,5 +394,6 @@
     <script src="script.js"></script>
     <script src="project-carousel.js"></script>
     <script src="game-design.js"></script>
+    <script src="i18n-switch.js"></script>
 </body>
 </html>

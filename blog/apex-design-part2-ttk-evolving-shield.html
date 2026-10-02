@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How the Magic of EVO Shield Encourages Players Into Combat Behavior - Xinglong's Blog</title>
+    <title data-title-en="How the Magic of EVO Shield Encourages Players Into Combat Behavior - Xinglong's Blog" data-title-zh="进化甲的魔法如何推动玩家走向交战 - Xinglong 的博客">How the Magic of EVO Shield Encourages Players Into Combat Behavior - Xinglong's Blog</title>
     <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="../i18n.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="../image/Logo-black-bg.svg" type="image/svg">
-    <meta name="description" content="Part 2 of a design analysis on why Apex Legends keeps players engaged: how a longer time-to-kill and the EVO Shield system create a fair, controlled positive feedback loop.">
+    <meta name="description" content="Part 2 of a design analysis on why Apex Legends keeps players engaged: how a longer time-to-kill and the EVO Shield system create a fair, controlled positive feedback loop." data-desc-en="Part 2 of a design analysis on why Apex Legends keeps players engaged: how a longer time-to-kill and the EVO Shield system create a fair, controlled positive feedback loop." data-desc-zh="设计分析系列第二篇：为什么 Apex英雄 能留住玩家——更长的击杀时间（TTK）与进化甲系统如何形成公平、可控的正反馈循环。">
     <style>
         /* Override the opacity: 0 to make content visible immediately */
         .post-section {
@@ -18,18 +19,25 @@
             transform: translateY(0) !important;
         }
     </style>
+    <script src="../i18n-boot.js"></script>
 </head>
 <body class="blog-body">
     <header class="main-header">
         <nav class="nav-container">
-            <a href="../game-design.html" class="logo">
-                <img src="../image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+            <a href="../game-design.html">
+                <img src="../image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="../game-design.html">Game & Level Design</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="../game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="../blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="../game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -37,82 +45,82 @@
         <article class="blog-single">
             <header class="blog-post-header">
                 <div class="post-meta">
-                    <span class="post-date">August 2021</span>
+                    <span class="post-date"><span class="lang-en">August 2021</span><span class="lang-zh">2021年8月</span></span>
                     <span class="post-tags">
-                        <span class="tag">Game Design</span>
-                        <span class="tag">Apex Legends</span>
+                        <span class="tag"><span class="lang-en">Game Design</span><span class="lang-zh">游戏设计</span></span>
+                        <span class="tag"><span class="lang-en">Apex Legends</span><span class="lang-zh">Apex英雄</span></span>
                     </span>
                 </div>
-                <h1 class="post-title">How the Magic of EVO Shield Encourages Players Into Combat Behavior</h1>
+                <h1 class="post-title"><span class="lang-en">How the Magic of EVO Shield Encourages Players Into Combat Behavior</span><span class="lang-zh">进化甲的魔法如何推动玩家走向交战</span></h1>
                 <div class="post-featured-image">
-                    <img src="../image/game/apex%20evo%20shield.jpg" alt="Apex Legends EVO Shield cover art">
+                    <img src="../image/game/apex%20evo%20shield.jpg" alt="Apex Legends EVO Shield cover art" data-alt-en="Apex Legends EVO Shield cover art" data-alt-zh="Apex英雄 进化甲封面图">
                 </div>
             </header>
 
             <div class="blog-post-content">
                 <div class="post-disclaimer">
-                    <p><i class="fas fa-circle-info"></i>This piece is adapted from a video script I originally wrote back in 2021. Some systems and specific numbers may have changed since then, but it still reflects the design thinking behind the original analysis.</p>
+                    <p><i class="fas fa-circle-info"></i><span class="lang-en">This piece is adapted from a video script I originally wrote back in 2021. Some systems and specific numbers may have changed since then, but it still reflects the design thinking behind the original analysis.</span><span class="lang-zh">本文改编自我 2021 年写的一则视频脚本。此后部分系统和具体数值可能已变，但仍能反映当时分析背后的设计思路。</span></p>
                 </div>
 
                 <section class="post-section">
-                    <p>TTK, or "time to kill," is a term most FPS players already know: it's how long it takes to kill an enemy with a given weapon. Understanding Apex's TTK is the key to understanding why its EVO Shield system works the way it does, so it's worth laying out the numbers before getting into the mechanic itself.</p>
+                    <p><span class="lang-en">TTK, or "time to kill," is a term most FPS players already know: it's how long it takes to kill an enemy with a given weapon. Understanding Apex's TTK is the key to understanding why its EVO Shield system works the way it does, so it's worth laying out the numbers before getting into the mechanic itself.</span><span class="lang-zh">击杀时间（TTK）是多数 FPS 玩家都熟悉的概念：用某把武器打倒敌人需要多久。理解 Apex英雄 的 TTK，是理解进化甲为何这样运作的关键，所以在谈机制本身之前，有必要先把数字摆清楚。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>Apex's TTK Is Longer Than Its Peers</h2>
-                    <p>Based on the most recent season's data on the Apex Wiki, most short to mid range weapons in Apex (excluding shotguns, pistols, and sniper rifles, which behave very differently) land somewhere around 1 to 1.2 seconds TTK against a purple armored target at 25 meters. That doesn't sound long on its own.</p>
-                    <p>Compare that to similar games, though, and the gap shows up fast. Most comparable weapons in Call of Duty: Warzone come in under 1 second TTK, and some of the stronger guns get close to or even hit 0.5 seconds. A Reddit testing thread on PUBG found most weapons within 50 meters land in the 0.2 to 0.4 second range, dramatically faster still.</p>
-                    <p>It's fair to push back here: that Apex number assumes purple armor, and players don't always have purple armor in the early to mid game. Looking at a separate breakdown by armor tier, even white armor keeps TTK in the 0.7 to 0.9 second range, and only this season's care package weapon gets close to 0.6 seconds. Across the board, Apex's TTK runs longer than comparable games, and the gap widens further as the match goes on and players upgrade their armor.</p>
-                    <p>It's also worth remembering that these numbers assume perfect accuracy, every shot landing. Apex layers on a wide range of defensive and mobility abilities on top of that (Wraith's Into the Void, Gibraltar's Dome Shield, Horizon's Gravity Lift, Octane's Stim, to name a few), all of which push the real time needed to down an opponent well past the theoretical TTK number. Aimbot users aside, obviously.</p>
+                    <h2><span class="lang-en">Apex's TTK Is Longer Than Its Peers</span><span class="lang-zh">Apex英雄 的 TTK 比同类游戏更长</span></h2>
+                    <p><span class="lang-en">Based on the most recent season's data on the Apex Wiki, most short to mid range weapons in Apex (excluding shotguns, pistols, and sniper rifles, which behave very differently) land somewhere around 1 to 1.2 seconds TTK against a purple armored target at 25 meters. That doesn't sound long on its own.</span><span class="lang-zh">根据 Apex Wiki 上最近赛季的数据，Apex英雄 里多数中近距离武器（不含手感差异很大的霰弹枪、手枪和狙击枪）对 25 米处穿紫甲目标的 TTK，大约落在 1 到 1.2 秒。单看并不觉得长。</span></p>
+                    <p><span class="lang-en">Compare that to similar games, though, and the gap shows up fast. Most comparable weapons in Call of Duty: Warzone come in under 1 second TTK, and some of the stronger guns get close to or even hit 0.5 seconds. A Reddit testing thread on PUBG found most weapons within 50 meters land in the 0.2 to 0.4 second range, dramatically faster still.</span><span class="lang-zh">但一和同类游戏比，差距马上就出来了。《使命召唤：战区》里多数可比武器的 TTK 不到 1 秒，部分强枪甚至接近或达到 0.5 秒。Reddit 上关于绝地求生的测试帖显示，50 米内多数武器的 TTK 在 0.2 到 0.4 秒，更快得多。</span></p>
+                    <p><span class="lang-en">It's fair to push back here: that Apex number assumes purple armor, and players don't always have purple armor in the early to mid game. Looking at a separate breakdown by armor tier, even white armor keeps TTK in the 0.7 to 0.9 second range, and only this season's care package weapon gets close to 0.6 seconds. Across the board, Apex's TTK runs longer than comparable games, and the gap widens further as the match goes on and players upgrade their armor.</span><span class="lang-zh">这里确实可以反驳：Apex英雄 那个数字是按紫甲算的，前中期玩家并不总是有紫甲。按护甲等级拆开看，即便白甲，TTK 也仍在 0.7 到 0.9 秒区间，只有当季空投武器能接近 0.6 秒。整体上，Apex英雄 的 TTK 都比同类更长，而且随着对局推进、护甲升级，这个差距还会继续拉开。</span></p>
+                    <p><span class="lang-en">It's also worth remembering that these numbers assume perfect accuracy, every shot landing. Apex layers on a wide range of defensive and mobility abilities on top of that (Wraith's Into the Void, Gibraltar's Dome Shield, Horizon's Gravity Lift, Octane's Stim, to name a few), all of which push the real time needed to down an opponent well past the theoretical TTK number. Aimbot users aside, obviously.</span><span class="lang-zh">还要记住，这些数字假设枪枪命中。Apex英雄 还叠了大量防御与机动技能（例如 Wraith 的 Into the Void、Gibraltar 的 Dome Shield、Horizon 的 Gravity Lift、Octane 的 Stim），都会把实际击倒时间推到远高于理论 TTK。当然，外挂瞄准除外。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>A Longer TTK Changes How Fights Actually Play Out</h2>
-                    <p>The combination of long TTK and legends with strong survivability makes Apex's combat more drawn out and gives more room for a fight to swing back and forth. Armor and health also regenerate at different rates: shields recharge faster than health, so during a fight players mostly only have time to top off armor. That lets a more skilled player use health damage to build an edge without punishing the weaker side too harshly for a missed shot or two, keeping fights relatively balanced. Because the losing side has more room for error, positioning and timing become more important than raw aim for the side that's already ahead.</p>
-                    <p>The extended fight time has another effect: it gives other squads more time to arrive and third party an ongoing fight. Together, these details push players toward engaging rather than avoiding fights, and create more opportunities for chaos.</p>
-                    <p>Respawn actually tested the opposite approach once, cutting 25 armor points from every armor tier, which shortened TTK across the board. That reduced the margin for error and pushed players toward safer, more passive play. Whether or not that was the exact reasoning, the change didn't stick, likely because it worked against Apex's core identity as a tactical, fast paced battle royale. The longer TTK values used today have stuck around ever since.</p>
+                    <h2><span class="lang-en">A Longer TTK Changes How Fights Actually Play Out</span><span class="lang-zh">更长的 TTK 如何改变战斗实际展开方式</span></h2>
+                    <p><span class="lang-en">The combination of long TTK and legends with strong survivability makes Apex's combat more drawn out and gives more room for a fight to swing back and forth. Armor and health also regenerate at different rates: shields recharge faster than health, so during a fight players mostly only have time to top off armor. That lets a more skilled player use health damage to build an edge without punishing the weaker side too harshly for a missed shot or two, keeping fights relatively balanced. Because the losing side has more room for error, positioning and timing become more important than raw aim for the side that's already ahead.</span><span class="lang-zh">长 TTK 加上生存能力强的传奇角色，让 Apex英雄 的战斗更拉扯，也更有来回翻盘的空间。护甲与生命的恢复速度也不同：护盾回得比血快，所以交战中玩家大多只来得及补甲。这样，更强的一方可以用打出血量来建立优势，又不至于因为弱方漏一两枪就惩罚过重，战斗相对更均衡。正因为落后方容错更大，领先方更依赖站位与时机，而不是纯枪法。</span></p>
+                    <p><span class="lang-en">The extended fight time has another effect: it gives other squads more time to arrive and third party an ongoing fight. Together, these details push players toward engaging rather than avoiding fights, and create more opportunities for chaos.</span><span class="lang-zh">拉长的交战时间还有一层效果：给其他小队更多时间赶到，对正在打的局做第三方劝架。这些细节合在一起，推动玩家更愿意交战而不是躲战，也制造了更多混乱机会。</span></p>
+                    <p><span class="lang-en">Respawn actually tested the opposite approach once, cutting 25 armor points from every armor tier, which shortened TTK across the board. That reduced the margin for error and pushed players toward safer, more passive play. Whether or not that was the exact reasoning, the change didn't stick, likely because it worked against Apex's core identity as a tactical, fast paced battle royale. The longer TTK values used today have stuck around ever since.</span><span class="lang-zh">Respawn 其实试过相反做法：每个护甲等级砍掉 25 点护甲，全面缩短 TTK。容错变小，玩家更偏向安全、被动的打法。不论当时动机是否完全如此，这项改动没有留住，很可能因为它与 Apex英雄「战术、快节奏吃鸡」的核心气质相悖。今天沿用的更长 TTK，自此就一直稳住了。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>The EVO Shield: From a Niche Fix to a Core System</h2>
-                    <p>With TTK established, the EVO Shield mechanic makes a lot more sense. Respawn added the EVO Shield as a permanent piece of battle royale gear in early 2020. The original goal was fairly narrow: give players who like to snipe from range a way to catch up on gear, since it's hard for a long range player to wipe a full squad and loot their gear in a game with TTK this long. The EVO Shield gave that playstyle a viable path to better armor, and opened up a new strategic option in the process.</p>
-                    <p>After several seasons of tuning, EVO Shields have effectively replaced standard shields for everyone except gold armor. What started as a fix for one specific playstyle has become one of the mechanics that most defines Apex's pacing today.</p>
+                    <h2><span class="lang-en">The EVO Shield: From a Niche Fix to a Core System</span><span class="lang-zh">进化甲：从小众补丁到核心系统</span></h2>
+                    <p><span class="lang-en">With TTK established, the EVO Shield mechanic makes a lot more sense. Respawn added the EVO Shield as a permanent piece of battle royale gear in early 2020. The original goal was fairly narrow: give players who like to snipe from range a way to catch up on gear, since it's hard for a long range player to wipe a full squad and loot their gear in a game with TTK this long. The EVO Shield gave that playstyle a viable path to better armor, and opened up a new strategic option in the process.</span><span class="lang-zh">把 TTK 讲清楚之后，进化甲机制就顺理成章多了。Respawn 在 2020 年初把进化甲作为吃鸡模式的常驻装备加入。最初目标相当窄：给喜欢远程狙的玩家一条装备追上的路——在 TTK 这么长的游戏里，远程玩家很难清掉一整队再去搜他们的装备。进化甲让这种玩法有了升级护甲的可行路径，也顺带打开了新的策略选择。</span></p>
+                    <p><span class="lang-en">After several seasons of tuning, EVO Shields have effectively replaced standard shields for everyone except gold armor. What started as a fix for one specific playstyle has become one of the mechanics that most defines Apex's pacing today.</span><span class="lang-zh">经过数个赛季调优，进化甲实质上已取代除金甲以外的常规护盾。从一个针对特定玩法的补丁，变成了今天最能定义 Apex英雄 节奏的机制之一。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>The Math Behind Armor Upgrades</h2>
-                    <p>The clearest thing about EVO Shields is that upgrade points come directly from damage dealt to enemies who are still standing, which rewards players for engaging rather than avoiding fights.</p>
-                    <p>Looking closely at the damage thresholds shows they're tuned to match typical health pools at each stage of a match. Every player drops with white armor, and upgrading white to blue takes 150 damage, which happens to equal exactly one white armored opponent's total health pool, accounting for some healing and armor swaps along the way. In practice, that means a squad that wins its landing fight usually walks away with blue armor across the board, which keeps squads that avoided an early fight roughly on par, gear wise, with squads that won one.</p>
-                    <p>Blue to purple takes 300 damage. By the mid game, most squads are running blue or purple armor, meaning roughly 175 to 200 total health each, and most engagements start with mid range poke rather than an instant knock. Factoring in shield cells, killing one opponent at that stage usually costs around 250 to 300 damage, which lines up neatly with the threshold needed to hit purple. Even players who didn't rack up much damage early can often close the gap by sniping from range as the match nears the final circles, and knockdown shields plus the banner respawn system reduce the cost of dying early, which further encourages players to fight rather than sit back. Looting a defeated squad's evolving armor also lets late starting players inherit upgrade progress and catch up quickly. All of this keeps armor levels relatively even heading into the final circles.</p>
-                    <p>Purple to red, on the other hand, takes 700 damage, a much bigger jump than the earlier tiers. That gap gives squads who haven't hit purple yet time to catch up before the endgame, which cuts down on lopsided blue armor versus red armor fights in the final circle. Between all of these thresholds, most squads entering the final circle end up with purple or red armor regardless of whether they got there by looting or by fighting. The escalating cost curve gives a slight, steady edge to more skilled players at every stage of the match, early, mid, and late, while the underlying numbers make sure players are fighting on roughly even footing most of the time.</p>
+                    <h2><span class="lang-en">The Math Behind Armor Upgrades</span><span class="lang-zh">护甲升级背后的数值</span></h2>
+                    <p><span class="lang-en">The clearest thing about EVO Shields is that upgrade points come directly from damage dealt to enemies who are still standing, which rewards players for engaging rather than avoiding fights.</span><span class="lang-zh">进化甲最清楚的一点是：升级点数直接来自对仍站立敌人造成的伤害，奖励的是交战而不是躲战。</span></p>
+                    <p><span class="lang-en">Looking closely at the damage thresholds shows they're tuned to match typical health pools at each stage of a match. Every player drops with white armor, and upgrading white to blue takes 150 damage, which happens to equal exactly one white armored opponent's total health pool, accounting for some healing and armor swaps along the way. In practice, that means a squad that wins its landing fight usually walks away with blue armor across the board, which keeps squads that avoided an early fight roughly on par, gear wise, with squads that won one.</span><span class="lang-zh">细看伤害阈值会发现，它们被调到贴合对局各阶段的典型血量池。每人落地都是白甲，白升蓝需要 150 伤害，刚好约等于一名白甲对手的总血量池（再算上途中部分治疗和换甲）。实践上，落地战打赢的小队通常整队都能升到蓝甲；这让早期躲战的小队，在装备上仍大致能跟打赢落地战的小队齐平。</span></p>
+                    <p><span class="lang-en">Blue to purple takes 300 damage. By the mid game, most squads are running blue or purple armor, meaning roughly 175 to 200 total health each, and most engagements start with mid range poke rather than an instant knock. Factoring in shield cells, killing one opponent at that stage usually costs around 250 to 300 damage, which lines up neatly with the threshold needed to hit purple. Even players who didn't rack up much damage early can often close the gap by sniping from range as the match nears the final circles, and knockdown shields plus the banner respawn system reduce the cost of dying early, which further encourages players to fight rather than sit back. Looting a defeated squad's evolving armor also lets late starting players inherit upgrade progress and catch up quickly. All of this keeps armor levels relatively even heading into the final circles.</span><span class="lang-zh">蓝升紫需要 300 伤害。到中期，多数小队已是蓝甲或紫甲，约 175 到 200 总血量，多数交火也先从中距离消耗开始，而不是瞬间击倒。算上护盾电池，这个阶段击杀一名对手通常要打出约 250 到 300 伤害，正好贴合升紫门槛。即便前期伤害不多的玩家，临近决赛圈也常能靠远程狙补齐差距；倒地护盾加上旗帜复活系统降低了早死代价，进一步鼓励出击而不是坐等。搜击败小队的进化甲，也让起步晚的玩家能继承升级进度、快速追上。这一切让进入决赛圈时护甲等级相对齐平。</span></p>
+                    <p><span class="lang-en">Purple to red, on the other hand, takes 700 damage, a much bigger jump than the earlier tiers. That gap gives squads who haven't hit purple yet time to catch up before the endgame, which cuts down on lopsided blue armor versus red armor fights in the final circle. Between all of these thresholds, most squads entering the final circle end up with purple or red armor regardless of whether they got there by looting or by fighting. The escalating cost curve gives a slight, steady edge to more skilled players at every stage of the match, early, mid, and late, while the underlying numbers make sure players are fighting on roughly even footing most of the time.</span><span class="lang-zh">紫升红则要 700 伤害，比前面几档跳得大得多。这段差距给还没升到紫的小队在终局前追赶的时间，减少决赛圈里蓝甲对红甲那种一边倒的局。综合各档阈值，多数进入决赛圈的小队最终都是紫甲或红甲，无论靠搜刮还是靠打架。这条递增成本曲线，在前、中、后期都给更强的玩家一点稳定优势，底层数值又保证玩家多数时候仍在大致公平的条件下作战。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>A Positive Feedback Loop, Deliberately Bounded</h2>
-                    <p>Rewarding good performance with better gear is a classic positive feedback loop in game design. Apex's creative director Jason McCord has talked about this directly: one of the core ideas behind Apex's combat design is to give players who are winning fights a clear, tangible edge. Tying that edge to armor progression counteracts the raw randomness that usually punishes skilled players in battle royale games, and it discourages one of the most common, and least interesting, battle royale strategies: hiding until the end.</p>
-                    <p>Passive, avoidant play is boring but genuinely effective in most ranked battle royale games, and boring is the one thing a game can't afford to be. Apex fights this in a few ways at once. Ranked points get softer as rank climbs, making kill points matter more relative to placement. There's no prone stance, cover and vegetation are sparse by design, and the whole system is built around team fights, all of which squeeze out the space for passive, hide and place style play. Camping for placement points ends up as a last resort after teammates die, not a viable main strategy, which quietly discourages passive play at the design level rather than through explicit penalties.</p>
-                    <p>The EVO Shield adds another layer of pressure to engage on top of that. It ties directly to a player's gear advantage later in the match, which nudges players toward strategies that are both more fun and more reliably profitable: fighting when your squad already has an edge and can afford it, whether that's collapsing on an isolated enemy to create a numbers advantage, third partying a weakened squad in the early to mid game, or otherwise picking up kills and armor upgrades without giving up ranked points.</p>
-                    <p>Reduced to its simplest form, the EVO Shield is just a standard positive feedback loop. But layered on top of Apex's long TTK and the specific damage numbers behind each upgrade tier, it becomes something more precise: a feedback loop that runs in a stable, controlled way, while also patching over one of battle royale's most common balance problems, the negative feedback spiral where losing an early fight snowballs into losing the game. It keeps competitive conditions relatively fair while holding onto the addictive randomness that makes battle royale fun in the first place.</p>
+                    <h2><span class="lang-en">A Positive Feedback Loop, Deliberately Bounded</span><span class="lang-zh">正反馈循环，但被有意约束</span></h2>
+                    <p><span class="lang-en">Rewarding good performance with better gear is a classic positive feedback loop in game design. Apex's creative director Jason McCord has talked about this directly: one of the core ideas behind Apex's combat design is to give players who are winning fights a clear, tangible edge. Tying that edge to armor progression counteracts the raw randomness that usually punishes skilled players in battle royale games, and it discourages one of the most common, and least interesting, battle royale strategies: hiding until the end.</span><span class="lang-zh">用更好的装备奖励出色表现，是游戏设计里经典的正反馈循环。Apex英雄 创意总监 Jason McCord 直接谈过这一点：战斗设计的核心想法之一，是给打赢战斗的玩家明确、可感知的优势。把这种优势绑在护甲成长上，能对冲吃鸡里常惩罚高手的那种生硬随机性，也打击最常见、也最无聊的吃鸡策略之一：躲到最后。</span></p>
+                    <p><span class="lang-en">Passive, avoidant play is boring but genuinely effective in most ranked battle royale games, and boring is the one thing a game can't afford to be. Apex fights this in a few ways at once. Ranked points get softer as rank climbs, making kill points matter more relative to placement. There's no prone stance, cover and vegetation are sparse by design, and the whole system is built around team fights, all of which squeeze out the space for passive, hide and place style play. Camping for placement points ends up as a last resort after teammates die, not a viable main strategy, which quietly discourages passive play at the design level rather than through explicit penalties.</span><span class="lang-zh">被动躲战在多数排位吃鸡里无聊却真的有效，而无聊是游戏最承受不起的事。Apex英雄 从好几条线一起对抗。段位越高，排名分越软，击杀分相对名次更重要。没有趴姿，掩体和植被有意稀疏，整套系统围绕团战构建——这些都挤压了被动「躲到吃鸡」式玩法的空间。为名次分蹲点，最后变成队友死后的无奈之选，而不是可行的主策略，从而在设计层面悄悄抑制被动玩法，而不是靠显性惩罚。</span></p>
+                    <p><span class="lang-en">The EVO Shield adds another layer of pressure to engage on top of that. It ties directly to a player's gear advantage later in the match, which nudges players toward strategies that are both more fun and more reliably profitable: fighting when your squad already has an edge and can afford it, whether that's collapsing on an isolated enemy to create a numbers advantage, third partying a weakened squad in the early to mid game, or otherwise picking up kills and armor upgrades without giving up ranked points.</span><span class="lang-zh">进化甲在此之上又加了一层交战压力。它直接挂钩后期装备优势，把玩家往既更好玩、也更稳赚的策略上推：在小队已有优势、打得起的时候出手——无论是压孤立敌人制造人数差，前中期第三方劝架残局，还是在不丢太多段位分的前提下拿击杀和护甲升级。</span></p>
+                    <p><span class="lang-en">Reduced to its simplest form, the EVO Shield is just a standard positive feedback loop. But layered on top of Apex's long TTK and the specific damage numbers behind each upgrade tier, it becomes something more precise: a feedback loop that runs in a stable, controlled way, while also patching over one of battle royale's most common balance problems, the negative feedback spiral where losing an early fight snowballs into losing the game. It keeps competitive conditions relatively fair while holding onto the addictive randomness that makes battle royale fun in the first place.</span><span class="lang-zh">拆到最简，进化甲就是标准的正反馈循环。但叠在 Apex英雄 的长 TTK、以及各升级档位具体伤害数值之上，它变得更精确：一条稳定、可控运转的反馈环，同时修补吃鸡最常见的平衡问题之一——早期打架输掉就滚雪球输掉整局的负反馈螺旋。它让竞技条件相对公平，又保住了吃鸡最初之所以好玩的那种上瘾随机感。</span></p>
                 </section>
 
                 <section class="post-section conclusion">
-                    <h2>Why Apex Keeps Players Around</h2>
-                    <p>That circles back to the question this series opened with: why do players stick with Apex? From the angle of the EVO Shield specifically, veteran players stay because Apex gives them a fair fight, one they can win through skill. A rough game happens, but the next match is a clean slate. For new players, dropping with no gun and white armor is always a good enough reason to just queue up again.</p>
-                    <p>The EVO Shield has been refined across many seasons and is a genuinely mature system at this point. But I don't think it's the single reason Apex feels as good to play as it does. It's one part of a much larger set of systems: the banner respawn mechanic that keeps players from turtling, the adrenaline of the kill feed, an easy to use ping system, and map design, probably the hardest piece of all to analyze cleanly. No mechanic in game design is perfect on its own; each one is just a piece that has to make sense inside a much more complicated system. Drop the EVO Shield into PUBG as is and it would feel out of place and a little absurd.</p>
-                    <p>Looking at how Apex has evolved since launch, it's clear the developers have had a consistent design philosophy the whole way, built out carefully and deliberately rather than the "Overwatch meets PUBG" mashup critique the game got early on. These systems fit together like well machined gears, all turning in service of competitive balance and tense, high stakes combat. To me, it just works.</p>
+                    <h2><span class="lang-en">Why Apex Keeps Players Around</span><span class="lang-zh">为什么 Apex英雄 能留住玩家</span></h2>
+                    <p><span class="lang-en">That circles back to the question this series opened with: why do players stick with Apex? From the angle of the EVO Shield specifically, veteran players stay because Apex gives them a fair fight, one they can win through skill. A rough game happens, but the next match is a clean slate. For new players, dropping with no gun and white armor is always a good enough reason to just queue up again.</span><span class="lang-zh">这就绕回系列开篇的问题：玩家为什么黏着 Apex英雄？单从进化甲这个角度，老手留下来，是因为 Apex英雄 给了他们一场能靠技术赢下来的公平对局。一局打崩了，下一局仍是干净的起跑线。对新玩家来说，落地没枪、只有白甲，永远是再开一局的够用理由。</span></p>
+                    <p><span class="lang-en">The EVO Shield has been refined across many seasons and is a genuinely mature system at this point. But I don't think it's the single reason Apex feels as good to play as it does. It's one part of a much larger set of systems: the banner respawn mechanic that keeps players from turtling, the adrenaline of the kill feed, an easy to use ping system, and map design, probably the hardest piece of all to analyze cleanly. No mechanic in game design is perfect on its own; each one is just a piece that has to make sense inside a much more complicated system. Drop the EVO Shield into PUBG as is and it would feel out of place and a little absurd.</span><span class="lang-zh">进化甲已经历多季打磨，眼下已是相当成熟的系统。但我不认为它是 Apex英雄 手感这么好的唯一原因。它只是更大系统网络里的一块：防止玩家龟缩的旗帜复活机制、击杀播报带来的肾上腺素、好用的标记系统，以及可能最难干净拆解的地图设计。游戏设计里没有哪个机制单拎出来就完美；每一块都要在更复杂的系统里说得通。把进化甲原样丢进绝地求生，只会显得格格不入，甚至有点荒诞。</span></p>
+                    <p><span class="lang-en">Looking at how Apex has evolved since launch, it's clear the developers have had a consistent design philosophy the whole way, built out carefully and deliberately rather than the "Overwatch meets PUBG" mashup critique the game got early on. These systems fit together like well machined gears, all turning in service of competitive balance and tense, high stakes combat. To me, it just works.</span><span class="lang-zh">看 Apex英雄 自发布以来的演进，很清楚开发者一路都有连贯的设计哲学，是精心、有意搭出来的，而不是早期批评的那种「守望先锋加绝地求生」的拼贴。这些系统像精密咬合的齿轮，一起为竞技平衡与高压、高风险的战斗服务。对我来说，它就是管用。</span></p>
                 </section>
             </div>
 
             <div class="post-footer">
                 <div class="author-bio">
                     <div class="author-info">
-                        <h3>Written by Xinglong Zhou</h3>
+                        <h3><span class="lang-en">Written by Xinglong Zhou</span><span class="lang-zh">作者：Xinglong Zhou</span></h3>
                     </div>
                 </div>
 
                 <div class="post-navigation">
-                    <a href="apex-design-part1-badges-legends-loot.html" class="prev-post"><i class="fas fa-arrow-left"></i> Part 1: System Design and Player Engagement</a>
-                    <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+                    <a href="apex-design-part1-badges-legends-loot.html" class="prev-post"><i class="fas fa-arrow-left"></i> <span class="lang-en">Part 1: System Design and Player Engagement</span><span class="lang-zh">上篇：系统设计与玩家投入</span></a>
+                    <a href="../blog.html" class="back-to-blog"><span class="lang-en">Back to Blog</span><span class="lang-zh">返回博客</span></a>
                 </div>
             </div>
         </article>
@@ -123,9 +131,9 @@
         </div>
 
         <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
+            <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
             <div class="contact-content">
-                <p>Looking forward to working together! Let's connect and create something amazing!</p>
+                <p><span class="lang-en">Looking forward to working together! Let's connect and create something amazing!</span><span class="lang-zh">期待一起合作。欢迎联系，一起做出好东西。</span></p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -134,11 +142,12 @@
         </section>
         
         <footer>
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
         </footer>
     </div>
     
     <script src="../script.js"></script>
+    <script src="../i18n-switch.js"></script>
     <script>
         // Back to top button functionality
         const backToTopButton = document.getElementById('back-to-top');

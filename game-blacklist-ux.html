@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blacklist UX</title>
+    <title data-title-en="Blacklist UX" data-title-zh="细胞分裂：黑名单 体验设计">Blacklist UX</title>
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="project-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -30,120 +38,113 @@
 
     <section class="project-hero">
         <div class="project-hero-content">
-            <img src="image/bl-ux/top.png" alt="Level design in engine" class="hero-image">
-            <h1>UX Redesign - Tom Clancy's Splinter Cell: Blacklist </h1>
-            <p class="project-subtitle">UI/UX Design - 2025</p>
+            <img src="image/bl-ux/top.png" alt="Level design in engine" class="hero-image" data-alt-en="Splinter Cell Blacklist UX redesign" data-alt-zh="细胞分裂：黑名单 体验重设计">
+            <h1><span class="lang-en">UX Redesign - Tom Clancy's Splinter Cell: Blacklist</span><span class="lang-zh">体验重设计 · 细胞分裂：黑名单</span></h1>
+            <p class="project-subtitle"><span class="lang-en">UI/UX Design - 2025</span><span class="lang-zh">界面与体验设计 · 2025</span></p>
         </div>
     </section>
 
     <section class="project-overview">
         <div class="project-container">
             <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>In the competitive gaming market now, great content is no longer enough. To compete for users' attention, mobile games have been mastering user experience to minimize the friction for users during crucial stages like onboarding, core gameplay, etc, yet many PC titles still suffer from UX issues. </p>
-                <p>My redesign project of the classic Tom Clancy's Splinter Cell: Blacklist aims to expose these legacy issues, sharpening my awareness of UX problems that hinder player engagement.</p>
+                <h2><span class="lang-en">Project Overview</span><span class="lang-zh">项目概览</span></h2>
+                <p><span class="lang-en">In the competitive gaming market now, great content is no longer enough. To compete for users' attention, mobile games have been mastering user experience to minimize the friction for users during crucial stages like onboarding, core gameplay, etc, yet many PC titles still suffer from UX issues.</span><span class="lang-zh">在如今竞争激烈的游戏市场里，内容本身已经不够。为了抢注意力，手游把用户体验做得很细，尽量减少新手引导、核心玩法等关键节点的摩擦；但许多 PC 作品仍有明显的体验问题。</span></p>
+                <p><span class="lang-en">My redesign project of the classic Tom Clancy's Splinter Cell: Blacklist aims to expose these legacy issues, sharpening my awareness of UX problems that hinder player engagement.</span><span class="lang-zh">这次对经典作《细胞分裂：黑名单》的重设计，就是要把这些遗留问题摆出来，也让我更清楚哪些体验问题会挡住玩家投入。</span></p>
             </div>
         </div>
     </section>
 
-    <!-- Design Goal Section -->
     <section class="design-goal-section">
-        <h2 class="design-goal-title">Design Goal</h2>
+        <h2 class="design-goal-title"><span class="lang-en">Design Goal</span><span class="lang-zh">设计目标</span></h2>
         <div class="design-goal-columns">
             <div class="design-goal-col">
-                <h3>Affordance</h3>
+                <h3><span class="lang-en">Affordance</span><span class="lang-zh">功能可供性</span></h3>
                 <ul>
-                    <li>Enhance the needed</li>
-                    <li>Remove the unnecessary</li>
+                    <li><span class="lang-en">Enhance the needed</span><span class="lang-zh">加强需要的</span></li>
+                    <li><span class="lang-en">Remove the unnecessary</span><span class="lang-zh">去掉多余的</span></li>
                 </ul>
             </div>
             <div class="design-goal-col">
-                <h3>Efficiency</h3>
+                <h3><span class="lang-en">Efficiency</span><span class="lang-zh">效率</span></h3>
                 <ul>
-                    <li>Promote consistency</li>
-                    <li>Re-order by proximity</li>
+                    <li><span class="lang-en">Promote consistency</span><span class="lang-zh">提升一致性</span></li>
+                    <li><span class="lang-en">Re-order by proximity</span><span class="lang-zh">按邻近原则重排</span></li>
                 </ul>
             </div>
             <div class="design-goal-col">
-                <h3>Accessibility</h3>
+                <h3><span class="lang-en">Accessibility</span><span class="lang-zh">可达性</span></h3>
                 <ul>
-                    <li>Understand the need precisely<br>according to anticipated actions</li>
+                    <li><span class="lang-en">Understand the need precisely<br>according to anticipated actions</span><span class="lang-zh">按预期操作<br>精确理解需求</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-
-    <!-- Image Showcase Frame for Comparison -->
-
     <section class="image-showcase-section">
-        <h2>Map Screen</h2>
+        <h2><span class="lang-en">Map Screen</span><span class="lang-zh">地图界面</span></h2>
         <div class="image-showcase-frame">
             <img class="showcase-image" src="image/bl-ux/map 2.png" alt="Showcase Comparison">
         </div>
         <div class="showcase-tabs">
-            <button class="showcase-tab" data-img="image/bl-ux/map 0.png">Original</button>
-            <button class="showcase-tab" data-img="image/bl-ux/map 1.png">Redesign</button>
-            <button class="showcase-tab  active" data-img="image/bl-ux/map 2.png">Annotation</button>
+            <button class="showcase-tab" data-img="image/bl-ux/map 0.png"><span class="lang-en">Original</span><span class="lang-zh">原版</span></button>
+            <button class="showcase-tab" data-img="image/bl-ux/map 1.png"><span class="lang-en">Redesign</span><span class="lang-zh">重设计</span></button>
+            <button class="showcase-tab active" data-img="image/bl-ux/map 2.png"><span class="lang-en">Annotation</span><span class="lang-zh">标注</span></button>
         </div>
     </section>
 
     <section class="image-showcase-section">
-        <h2>Mission Screen</h2>
+        <h2><span class="lang-en">Mission Screen</span><span class="lang-zh">任务界面</span></h2>
         <div class="image-showcase-frame">
             <img class="showcase-image" src="image/bl-ux/mission 2.png" alt="Showcase Comparison">
         </div>
         <div class="showcase-tabs">
-            <button class="showcase-tab" data-img="image/bl-ux/mission 0.png">Original</button>
-            <button class="showcase-tab" data-img="image/bl-ux/mission 1.png">Redesign</button>
-            <button class="showcase-tab  active" data-img="image/bl-ux/mission 2.png">Annotation</button>
+            <button class="showcase-tab" data-img="image/bl-ux/mission 0.png"><span class="lang-en">Original</span><span class="lang-zh">原版</span></button>
+            <button class="showcase-tab" data-img="image/bl-ux/mission 1.png"><span class="lang-en">Redesign</span><span class="lang-zh">重设计</span></button>
+            <button class="showcase-tab active" data-img="image/bl-ux/mission 2.png"><span class="lang-en">Annotation</span><span class="lang-zh">标注</span></button>
         </div>
     </section>
 
     <section class="image-showcase-section">
-        <h2>Paladin Upgrades Screen</h2>
+        <h2><span class="lang-en">Paladin Upgrades Screen</span><span class="lang-zh">圣骑士升级界面</span></h2>
         <div class="image-showcase-frame">
             <img class="showcase-image" src="image/bl-ux/paladin 2.png" alt="Showcase Comparison">
         </div>
         <div class="showcase-tabs">
-            <button class="showcase-tab" data-img="image/bl-ux/paladin 0.png">Original</button>
-            <button class="showcase-tab" data-img="image/bl-ux/paladin 1.png">Redesign</button>
-            <button class="showcase-tab  active" data-img="image/bl-ux/paladin 2.png">Annotation</button>
+            <button class="showcase-tab" data-img="image/bl-ux/paladin 0.png"><span class="lang-en">Original</span><span class="lang-zh">原版</span></button>
+            <button class="showcase-tab" data-img="image/bl-ux/paladin 1.png"><span class="lang-en">Redesign</span><span class="lang-zh">重设计</span></button>
+            <button class="showcase-tab active" data-img="image/bl-ux/paladin 2.png"><span class="lang-en">Annotation</span><span class="lang-zh">标注</span></button>
         </div>
     </section>
 
     <section class="image-showcase-section">
-        <h2>Gadgets Screen</h2>
+        <h2><span class="lang-en">Gadgets Screen</span><span class="lang-zh">装备界面</span></h2>
         <div class="image-showcase-frame">
             <img class="showcase-image" src="image/bl-ux/gadget 2.png" alt="Showcase Comparison">
         </div>
         <div class="showcase-tabs">
-            <button class="showcase-tab" data-img="image/bl-ux/gadget 0.png">Original</button>
-            <button class="showcase-tab" data-img="image/bl-ux/gadget 1.png">Redesign</button>
-            <button class="showcase-tab  active" data-img="image/bl-ux/gadget 2.png">Annotation</button>
+            <button class="showcase-tab" data-img="image/bl-ux/gadget 0.png"><span class="lang-en">Original</span><span class="lang-zh">原版</span></button>
+            <button class="showcase-tab" data-img="image/bl-ux/gadget 1.png"><span class="lang-en">Redesign</span><span class="lang-zh">重设计</span></button>
+            <button class="showcase-tab active" data-img="image/bl-ux/gadget 2.png"><span class="lang-en">Annotation</span><span class="lang-zh">标注</span></button>
         </div>
     </section>
 
     <section class="image-showcase-section">
-        <h2>Launch Screen</h2>
+        <h2><span class="lang-en">Launch Screen</span><span class="lang-zh">出发界面</span></h2>
         <div class="image-showcase-frame">
             <img class="showcase-image" src="image/bl-ux/launch 2.png" alt="Showcase Comparison">
         </div>
         <div class="showcase-tabs">
-            <button class="showcase-tab" data-img="image/bl-ux/launch 0.png">Original</button>
-            <button class="showcase-tab" data-img="image/bl-ux/launch 1.png">Redesign</button>
-            <button class="showcase-tab  active" data-img="image/bl-ux/launch 2.png">Annotation</button>
+            <button class="showcase-tab" data-img="image/bl-ux/launch 0.png"><span class="lang-en">Original</span><span class="lang-zh">原版</span></button>
+            <button class="showcase-tab" data-img="image/bl-ux/launch 1.png"><span class="lang-en">Redesign</span><span class="lang-zh">重设计</span></button>
+            <button class="showcase-tab active" data-img="image/bl-ux/launch 2.png"><span class="lang-en">Annotation</span><span class="lang-zh">标注</span></button>
         </div>
     </section>
 </main>
 
-
-
-
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <p><span class="lang-en">Thank you for sticking around! <br> Can't wait to create great experiences with you!</span><span class="lang-zh">谢谢你看到这里。<br>期待和你一起做出好的体验。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -151,16 +152,15 @@
         </div>
     </section>
 
-
     <footer class="game-footer">
         <div class="footer-content">
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
-            </div>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
         </div>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
     <script src="game-design.js"></script>
+    <script src="i18n-switch.js"></script>
 </body>
-</html> 
+</html>

@@ -3,114 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xinglong's Blog</title>
+    <title data-title-en="Xinglong's Blog" data-title-zh="Xinglong 的博客">Xinglong's Blog</title>
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-    <meta name="description" content="Xinglong Zhou - Blog posts about UX Design, Game Design, and more">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <meta name="description" content="Xinglong Zhou - Blog posts about UX Design, Game Design, and more" data-desc-en="Xinglong Zhou - Blog posts about UX Design, Game Design, and more" data-desc-zh="Xinglong Zhou - 关于体验设计、游戏设计等的博客文章">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="blog-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="game-base.html" >About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html" class="active"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <section class="blog-header">
         <div class="blog-header-content">
-            <h1>My Blog</h1>
-            <p>My thoughts, notes, and analysis.</p>
+            <h1><span class="lang-en">My Blog</span><span class="lang-zh">我的博客</span></h1>
+            <p><span class="lang-en">My thoughts, notes, and analysis.</span><span class="lang-zh">想法、笔记与分析。</span></p>
         </div>
     </section>
 
     <section id="blog" class="blog-posts">
         <div class="blog-grid">
-            <!-- Blog Post - Apex Legends Design Analysis Part 1 -->
             <article class="blog-post">
                 <a href="blog/apex-design-part1-badges-legends-loot.html" class="blog-post-link">
                     <div class="post-image">
-                        <img src="image/game/apex%20system%20design.jpg" alt="Apex Legends System Design cover art">
+                        <img src="image/game/apex%20system%20design.jpg" alt="Apex Legends System Design cover art" data-alt-en="Apex Legends System Design cover art" data-alt-zh="Apex英雄系统设计封面">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
-                            <span class="post-date">July 2021</span>
+                            <span class="post-date"><span class="lang-en">July 2021</span><span class="lang-zh">2021年7月</span></span>
                         </div>
-                        <h2>How System Design in APEX Kept High Player Engagement</h2>
-                        <p>A design breakdown of Apex Legends' badge and scoreboard system, legend diversity, and how folding tactical items into abilities keeps early game randomness in check.</p>
+                        <h2><span class="lang-en">How System Design in APEX Kept High Player Engagement</span><span class="lang-zh">《Apex英雄》的系统设计如何维持高玩家参与</span></h2>
+                        <p><span class="lang-en">A design breakdown of Apex Legends' badge and scoreboard system, legend diversity, and how folding tactical items into abilities keeps early game randomness in check.</span><span class="lang-zh">拆解《Apex英雄》的徽章与记分板系统、传奇多样性，以及把战术道具收进技能如何压住开局随机。</span></p>
                     </div>
                 </a>
             </article>
 
-            <!-- Blog Post - Apex Legends Design Analysis Part 2 -->
             <article class="blog-post">
                 <a href="blog/apex-design-part2-ttk-evolving-shield.html" class="blog-post-link">
                     <div class="post-image">
-                        <img src="image/game/apex%20evo%20shield.jpg" alt="Apex Legends EVO Shield cover art">
+                        <img src="image/game/apex%20evo%20shield.jpg" alt="Apex Legends EVO Shield cover art" data-alt-en="Apex Legends EVO Shield cover art" data-alt-zh="Apex英雄进化甲封面">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
-                            <span class="post-date">August 2021</span>
+                            <span class="post-date"><span class="lang-en">August 2021</span><span class="lang-zh">2021年8月</span></span>
                         </div>
-                        <h2>How the Magic of EVO Shield Encourages Players Into Combat Behavior</h2>
-                        <p>Why Apex's longer time-to-kill matters, and how the EVO Shield turns it into a fair, deliberately bounded positive feedback loop.</p>
+                        <h2><span class="lang-en">How the Magic of EVO Shield Encourages Players Into Combat Behavior</span><span class="lang-zh">进化甲如何把玩家推进战斗</span></h2>
+                        <p><span class="lang-en">Why Apex's longer time-to-kill matters, and how the EVO Shield turns it into a fair, deliberately bounded positive feedback loop.</span><span class="lang-zh">为什么更长的击杀时间（TTK）重要，以及进化甲如何把它收成一条公平、刻意有边界的正反馈循环。</span></p>
                     </div>
                 </a>
             </article>
 
-            <!-- Blog Post 1 - Max Payne 3 Analysis -->
             <article class="blog-post">
                 <a href="blog/max-payne3-analysis.html" class="blog-post-link">
                     <div class="post-image">
-                        <img src="image/max_payne3.png" alt="Max Payne 3 Analysis">
+                        <img src="image/max_payne3.png" alt="Max Payne 3 Analysis" data-alt-en="Max Payne 3 Analysis" data-alt-zh="马克思·佩恩3 分析">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
-                            <span class="post-date">May 29, 2025</span>
+                            <span class="post-date"><span class="lang-en">May 29, 2025</span><span class="lang-zh">2025年5月29日</span></span>
                         </div>
-                        <h2>Analysis of Max Payne 3's Mechanic Design</h2>
-                        <p>A deep dive analysis of Max Payne 3's combat mechanics, exploring what works, what doesn't, and a demo design proposal for improvement.</p>
+                        <h2><span class="lang-en">Analysis of Max Payne 3's Mechanic Design</span><span class="lang-zh">《马克思·佩恩3》机制设计分析</span></h2>
+                        <p><span class="lang-en">A deep dive analysis of Max Payne 3's combat mechanics, exploring what works, what doesn't, and a demo design proposal for improvement.</span><span class="lang-zh">深入分析《马克思·佩恩3》的战斗机制：哪些有效、哪些不足，以及一份改进设计提案。</span></p>
                     </div>
                 </a>
             </article>
 
-            <!-- Blog Post 2 - Level Breakdown -->
             <article class="blog-post">
                 <a href="blog/level-breakdown.html" class="blog-post-link">
                     <div class="post-image">
-                        <img src="image/leveldesignbreakdown.png" alt="Level Design Breakdown">
+                        <img src="image/leveldesignbreakdown.png" alt="Level Design Breakdown" data-alt-en="Level Design Breakdown" data-alt-zh="关卡设计拆解">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
-                            <span class="post-date">May, 2025</span>
+                            <span class="post-date"><span class="lang-en">May, 2025</span><span class="lang-zh">2025年5月</span></span>
                         </div>
-                        <h2>Learn from Systematically Breaking Down Levels</h2>
-                        <p>A structured approach to breaking down and learning from game levels.</p>
+                        <h2><span class="lang-en">Learn from Systematically Breaking Down Levels</span><span class="lang-zh">从系统拆解关卡中学习</span></h2>
+                        <p><span class="lang-en">A structured approach to breaking down and learning from game levels.</span><span class="lang-zh">一套结构化拆解、并从游戏关卡中学习的方法。</span></p>
                     </div>
                 </a>
             </article>
 
-            <!-- Blog Post 3 - Video Channel -->
             <article class="blog-post">
                 <a href="blog/video-channel.html" class="blog-post-link">
                     <div class="post-image">
-                        <img src="image/game/Spiritfarer%20cover.png" alt="Video Game Content Creator">
+                        <img src="image/game/Spiritfarer%20cover.png" alt="Video Game Content Creator" data-alt-en="Video Game Content Creator" data-alt-zh="游戏视频创作者">
                     </div>
                     <div class="post-content">
                         <div class="post-meta">
                             <span class="post-date">2022</span>
                         </div>
-                        <h2>Video Game Content Creator</h2>
-                        <p>Sharing my passion for game design through video content creation - reviews, analysis, and design breakdowns with 300K+ views.</p>
+                        <h2><span class="lang-en">Video Game Content Creator</span><span class="lang-zh">游戏视频创作者</span></h2>
+                        <p><span class="lang-en">Sharing my passion for game design through video content creation - reviews, analysis, and design breakdowns with 300K+ views.</span><span class="lang-zh">用视频分享我对游戏设计的兴趣：评测、分析和设计拆解，累计播放超过 30 万次。</span></p>
                     </div>
                 </a>
             </article>
@@ -122,25 +125,25 @@
     </div>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Looking forward to working together! Let's connect and create something amazing!</p>
+            <p><span class="lang-en">Looking forward to working together! Let's connect and create something amazing!</span><span class="lang-zh">期待一起合作。欢迎联系，一起做出好东西。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
-    
+
     <footer>
-        <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+        <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
     </footer>
-    
+
     <script src="script.js"></script>
+    <script src="i18n-switch.js"></script>
     <script>
-        // Back to top button functionality
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
@@ -148,21 +151,20 @@
                 backToTopButton.classList.remove('show');
             }
         });
-        
+
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
-        // Add animations on scroll
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
             threshold: 0.1
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -171,10 +173,10 @@
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.blog-post').forEach(post => {
             observer.observe(post);
         });
     </script>
 </body>
-</html> 
+</html>

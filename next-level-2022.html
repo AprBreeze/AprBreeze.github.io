@@ -3,61 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubisoft NEXT 2022 - Level Design Competition Entry</title>
+    <title data-title-en="Ubisoft NEXT 2022 - Level Design Competition Entry" data-title-zh="育碧 NEXT 2022 - 关卡设计大赛参赛作品">Ubisoft NEXT 2022 - Level Design Competition Entry</title>
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="project-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="project-main">
         <section class="project-hero">
             <div class="project-hero-content">
-                <h1>Ubisoft NEXT 2022 <br> Level Design Competition Entry</h1>
-                <p class="project-subtitle">Stealth Action Game Level Design - Competition Entry</p>
+                <h1><span class="lang-en">Ubisoft NEXT 2022 <br> Level Design Competition Entry</span><span class="lang-zh">育碧 NEXT 2022 <br> 关卡设计大赛参赛作品</span></h1>
+                <p class="project-subtitle"><span class="lang-en">Stealth Action Game Level Design - Competition Entry</span><span class="lang-zh">潜行动作游戏关卡设计 · 参赛作品</span></p>
             </div>
         </section>
 
         <section class="project-overview">
             <div class="project-container">
                 <div class="project-description">
-                    <h2>Project Overview</h2>
-                    <p>This was my first entry into the Ubisoft NEXT Level Design Competition in 2022. The challenge was to design a stealth action game level with a strong theme, immersive environments, visual references, and clear presentation.</p>
-                    <p>The level had to combine gameplay elements provided by Ubisoft to create an engaging and enjoyable player experience, while supporting multiple approaches and allowing players to approach objectives from all directions.</p>
+                    <h2><span class="lang-en">Project Overview</span><span class="lang-zh">项目概览</span></h2>
+                    <p><span class="lang-en">This was my first entry into the Ubisoft NEXT Level Design Competition in 2022. The challenge was to design a stealth action game level with a strong theme, immersive environments, visual references, and clear presentation.</span><span class="lang-zh">这是我 2022 年第一次参加育碧 NEXT 关卡设计大赛。题目是设计一张潜行动作关卡，要有明确主题、沉浸的环境、视觉参考，以及清楚的表达。</span></p>
+                    <p><span class="lang-en">The level had to combine gameplay elements provided by Ubisoft to create an engaging and enjoyable player experience, while supporting multiple approaches and allowing players to approach objectives from all directions.</span><span class="lang-zh">关卡需要把育碧提供的玩法元素组合起来，做出有吸引力、好玩的体验，同时支持多种切入方式，并让玩家可以从各个方向接近目标。</span></p>
                 </div>
             </div>
         </section>
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Design Problem</h2>
+                <h2 class="section-title"><span class="lang-en">Design Problem</span><span class="lang-zh">设计问题</span></h2>
                 <div class="section-content">
                     <div class="horizontal-section">
-                        <img src="image/Ubisoft Next Level Design Phase 01 Reference Map.png" alt="Design Problem Overview" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
+                        <img src="image/Ubisoft Next Level Design Phase 01 Reference Map.png" alt="Design Problem Overview" data-alt-en="Design Problem Overview" data-alt-zh="设计问题概览" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
                         <div style="margin-left: 20px;">
-                            <p>🎯 The goal was to design a <span class="highlight">stealth action game level</span> with a strong theme, immersive environments, visual references, and a clear presentation.</p>
-                            <p>The level must combine gameplay elements provided by Ubisoft to create an engaging and enjoyable player experience.</p>
+                            <p><span class="lang-en">🎯 The goal was to design a <span class="highlight">stealth action game level</span> with a strong theme, immersive environments, visual references, and a clear presentation.</span><span class="lang-zh">🎯 目标是设计一张<span class="highlight">潜行动作关卡</span>，要有明确主题、沉浸的环境、视觉参考，以及清楚的表达。</span></p>
+                            <p><span class="lang-en">The level must combine gameplay elements provided by Ubisoft to create an engaging and enjoyable player experience.</span><span class="lang-zh">关卡必须组合育碧提供的玩法元素，做出有吸引力、好玩的体验。</span></p>
                             
-                            <h3>📋 Additional Requirements:</h3>
+                            <h3><span class="lang-en">📋 Additional Requirements:</span><span class="lang-zh">📋 额外要求：</span></h3>
                             <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li><span class="highlight">🔄 Support multiple approaches</span> to the objective</li>
-                                <li>🧭 Allow players to <span class="highlight">approachthe level from all directions</span> </li>
+                                <li><span class="lang-en"><span class="highlight">🔄 Support multiple approaches</span> to the objective</span><span class="lang-zh"><span class="highlight">🔄 支持多种切入方式</span>接近目标</span></li>
+                                <li><span class="lang-en">🧭 Allow players to <span class="highlight">approach the level from all directions</span> </span><span class="lang-zh">🧭 让玩家可以<span class="highlight">从各个方向进入关卡</span></span></li>
                             </ul>
                         </div>
                     </div>
@@ -67,19 +75,21 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Started from ideating the pillar experience</h2>
+                <h2 class="section-title"><span class="lang-en">Started from ideating the pillar experience</span><span class="lang-zh">从构思体验支柱开始</span></h2>
                 <div class="section-content">
                     <div class="horizontal-section">
-                        <img src="image/Ubisoft Next Level Design Phase 01 Interior F1 Overview Map.png" alt="Design Process Phase 1" class="section-image gallery-slide" style="max-width: 55%; cursor: pointer; margin-bottom: 1.5rem;">
+                        <img src="image/Ubisoft Next Level Design Phase 01 Interior F1 Overview Map.png" alt="Design Process Phase 1" data-alt-en="Design Process Phase 1" data-alt-zh="设计流程第一阶段" class="section-image gallery-slide" style="max-width: 55%; cursor: pointer; margin-bottom: 1.5rem;">
                         <div style="margin-left: 20px;">
-                            <h3>🎨 Initial Ideation</h3>
+                            <h3><span class="lang-en">🎨 Initial Ideation</span><span class="lang-zh">🎨 初期构思</span></h3>
                             <ol class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li><strong>1.</strong> Ideate narrative for <span class="highlight">player experience and theme</span></li>
-                                <li><strong>2.</strong> Define the <span class="highlight">gameplay plot and experience plot</span>
+                                <li><span class="lang-en"><strong>1.</strong> Ideate narrative for <span class="highlight">player experience and theme</span></span><span class="lang-zh"><strong>1.</strong> 围绕<span class="highlight">玩家体验和主题</span>构思叙事</span></li>
+                                <li><span class="lang-en"><strong>2.</strong> Define the <span class="highlight">gameplay plot and experience plot</span>
                                     <br>• Gameplay plot → what player plays
-                                    <br>• Experience plot → what player feels</li>
-                                <li><strong>3.</strong> Ideate an <span class="highlight">interesting theme and setting</span> for the mission</li>
-                                <li><strong>4.</strong> Start to piece together <span class="highlight">gameplay elements</span> into the level</li>
+                                    <br>• Experience plot → what player feels</span><span class="lang-zh"><strong>2.</strong> 定义<span class="highlight">玩法情节与体验情节</span>
+                                    <br>• 玩法情节 → 玩家在玩什么
+                                    <br>• 体验情节 → 玩家感受到什么</span></li>
+                                <li><span class="lang-en"><strong>3.</strong> Ideate an <span class="highlight">interesting theme and setting</span> for the mission</span><span class="lang-zh"><strong>3.</strong> 为任务构思<span class="highlight">有趣的主题与场景设定</span></span></li>
+                                <li><span class="lang-en"><strong>4.</strong> Start to piece together <span class="highlight">gameplay elements</span> into the level</span><span class="lang-zh"><strong>4.</strong> 开始把<span class="highlight">玩法元素</span>拼进关卡</span></li>
                             </ol>
                         </div>
                     </div>
@@ -89,18 +99,20 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Support main exp with proper gameplay and pacing</h2>
+                <h2 class="section-title"><span class="lang-en">Support main exp with proper gameplay and pacing</span><span class="lang-zh">用合适的玩法与节奏支撑主体验</span></h2>
                 <div class="section-content">
                     <div class="horizontal-section">
-                        <img src="image/Ubisoft Next Level Design Phase 01 Walk Through Map 01.png" alt="Design Process Phase 2" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
+                        <img src="image/Ubisoft Next Level Design Phase 01 Walk Through Map 01.png" alt="Design Process Phase 2" data-alt-en="Design Process Phase 2" data-alt-zh="设计流程第二阶段" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
                         <div style="margin-left: 20px;">
-                            <h3>🎭 Experience Design</h3>
+                            <h3><span class="lang-en">🎭 Experience Design</span><span class="lang-zh">🎭 体验设计</span></h3>
                             <ol class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li><strong>1.</strong> Think about the <span class="highlight">feeling of each area</span></li>
-                                <li><strong>2.</strong> Determine the <span class="highlight">main gameplay beat</span> to convey the feeling
-                                    <br>• Puzzle? Combat encounters? Key & lock?</li>
-                                <li><strong>3.</strong> <span class="highlight">Multiple Approaches</span>
-                                    <br>• Iterate on creating alternatives to create options and replayability for players</li>
+                                <li><span class="lang-en"><strong>1.</strong> Think about the <span class="highlight">feeling of each area</span></span><span class="lang-zh"><strong>1.</strong> 思考<span class="highlight">每个区域的感受</span></span></li>
+                                <li><span class="lang-en"><strong>2.</strong> Determine the <span class="highlight">main gameplay beat</span> to convey the feeling
+                                    <br>• Puzzle? Combat encounters? Key & lock?</span><span class="lang-zh"><strong>2.</strong> 确定用来传达感受的<span class="highlight">主要玩法节拍</span>
+                                    <br>• 解谜？战斗遭遇？钥匙与锁？</span></li>
+                                <li><span class="lang-en"><strong>3.</strong> <span class="highlight">Multiple Approaches</span>
+                                    <br>• Iterate on creating alternatives to create options and replayability for players</span><span class="lang-zh"><strong>3.</strong> <span class="highlight">多种切入方式</span>
+                                    <br>• 反复打磨备选路线，给玩家选择空间和重玩价值</span></li>
                             </ol>
                         </div>
                     </div>
@@ -110,16 +122,16 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Design Challenges</h2>
+                <h2 class="section-title"><span class="lang-en">Design Challenges</span><span class="lang-zh">设计挑战</span></h2>
                 <div class="section-content">
                     <div class="horizontal-section">
-                        <img src="image/Ubisoft Next Level Design Phase 01 Walk Through Map 02.png" alt="Design Challenges" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
+                        <img src="image/Ubisoft Next Level Design Phase 01 Walk Through Map 02.png" alt="Design Challenges" data-alt-en="Design Challenges" data-alt-zh="设计挑战" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
                         <div style="margin-left: 20px;">
-                            <h3>🤔 Key Questions I Faced:</h3>
+                            <h3><span class="lang-en">🤔 Key Questions I Faced:</span><span class="lang-zh">🤔 我面对的关键问题：</span></h3>
                             <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li><span class="highlight">❓ How to make sure different approaches</span> all have enjoyable experiences?</li>
-                                <li><span class="highlight">🔑 How to make a key&lock-type puzzle intuitive</span> (let players know which lock to unlock)?</li>
-                                <li><span class="highlight">📋 How to make sure my approaches</span> are clearly conveyed through my presentation?</li>
+                                <li><span class="lang-en"><span class="highlight">❓ How to make sure different approaches</span> all have enjoyable experiences?</span><span class="lang-zh"><span class="highlight">❓ 如何保证不同切入方式</span>都有好玩的体验？</span></li>
+                                <li><span class="lang-en"><span class="highlight">🔑 How to make a key&lock-type puzzle intuitive</span> (let players know which lock to unlock)?</span><span class="lang-zh"><span class="highlight">🔑 如何让钥匙与锁类解谜更直观</span>（让玩家知道该开哪把锁）？</span></li>
+                                <li><span class="lang-en"><span class="highlight">📋 How to make sure my approaches</span> are clearly conveyed through my presentation?</span><span class="lang-zh"><span class="highlight">📋 如何确保我的切入方式</span>能在演示中清楚地传达？</span></li>
                             </ul>
                         </div>
                     </div>
@@ -129,17 +141,17 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Design Solutions</h2>
+                <h2 class="section-title"><span class="lang-en">Design Solutions</span><span class="lang-zh">设计方案</span></h2>
                 <div class="section-content">
                     <div class="horizontal-section">
-                        <img src="image/Ubisoft Next Level Design Phase 01 Walk Through Map 03.png" alt="Design Solutions" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
+                        <img src="image/Ubisoft Next Level Design Phase 01 Walk Through Map 03.png" alt="Design Solutions" data-alt-en="Design Solutions" data-alt-zh="设计方案" class="section-image gallery-slide" style="max-width: 60%; cursor: pointer; margin-bottom: 1.5rem;">
                         <div style="margin-left: 20px;">
-                            <h3>💡 My Approach to Solving These Challenges:</h3>
+                            <h3><span class="lang-en">💡 My Approach to Solving These Challenges:</span><span class="lang-zh">💡 我应对这些挑战的做法：</span></h3>
                             <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li><span class="highlight">⚖️ Place gameplay elements</span> that have a similar level of engagement for different approaches</li>
-                                <li><span class="highlight">📖 Adding narrative elements</span> like documents to convey the use of keys</li>
-                                <li><span class="highlight">🗺️ Creating separate approaching paths</span> walkthrough for the 3 alternatives</li>
-                                <li><span class="highlight">🎮 Additional insight:</span> Adding gameplay elements in between to make key&lock-type puzzles more interesting</li>
+                                <li><span class="lang-en"><span class="highlight">⚖️ Place gameplay elements</span> that have a similar level of engagement for different approaches</span><span class="lang-zh"><span class="highlight">⚖️ 为不同切入方式放置</span>参与感相近的玩法元素</span></li>
+                                <li><span class="lang-en"><span class="highlight">📖 Adding narrative elements</span> like documents to convey the use of keys</span><span class="lang-zh"><span class="highlight">📖 加入叙事元素</span>（如文件）来说明钥匙的用途</span></li>
+                                <li><span class="lang-en"><span class="highlight">🗺️ Creating separate approaching paths</span> walkthrough for the 3 alternatives</span><span class="lang-zh"><span class="highlight">🗺️ 为 3 条备选路线分别做</span>接近路径流程说明</span></li>
+                                <li><span class="lang-en"><span class="highlight">🎮 Additional insight:</span> Adding gameplay elements in between to make key&lock-type puzzles more interesting</span><span class="lang-zh"><span class="highlight">🎮 额外心得：</span>在钥匙与锁之间插入玩法元素，让这类解谜更有趣</span></li>
                             </ul>
                         </div>
                     </div>
@@ -149,41 +161,41 @@
 
         <section class="project-section">
             <div class="project-container">
-                <h2 class="section-title">Outcome & Reflection</h2>
+                <h2 class="section-title"><span class="lang-en">Outcome & Reflection</span><span class="lang-zh">结果与反思</span></h2>
                 <div class="section-content">
                     <div class="horizontal-section">
                         <div>
-                            <p>I created a detailed level design document and reference sheet for a stealth mission in a competition, sharpening my <span class="highlight">creative problem-solving</span> and gaining practical experience in effective level design.</p>
+                            <p><span class="lang-en">I created a detailed level design document and reference sheet for a stealth mission in a competition, sharpening my <span class="highlight">creative problem-solving</span> and gaining practical experience in effective level design.</span><span class="lang-zh">我为这次比赛的潜行任务做了详细的关卡设计文档和参考页，锻炼了<span class="highlight">创造性问题解决</span>能力，也积累了有效关卡设计的实践经验。</span></p>
                             
-                            <h3>📚 Key Takeaways from Feedback and Self-Reflection:</h3>
+                            <h3><span class="lang-en">📚 Key Takeaways from Feedback and Self-Reflection:</span><span class="lang-zh">📚 来自反馈与自我反思的关键收获：</span></h3>
                             <ul class="quotes-list" style="list-style-type: none !important; padding-left: 0; margin-bottom: 1.5rem;">
-                                <li><span class="highlight">📄 The document has to be cleaner and concise</span></li>
-                                <li><span class="highlight">🏗️ Space arrangement can be more place-like</span> and fitting theme</li>
-                                <li><span class="highlight">✍️ Try concise documentation</span> to level design</li>
-                                <li><span class="highlight">🎬 Mission description needs to be more vivid</span> - Improve presentation</li>
-                                <li><span class="highlight">🗺️ Top-down Map presentation needs more work</span> to showcase details than paragraphs</li>
-                                <li><span class="highlight">📏 Consider the metric of the level</span> - Include a grid for reference</li>
+                                <li><span class="lang-en"><span class="highlight">📄 The document has to be cleaner and concise</span></span><span class="lang-zh"><span class="highlight">📄 文档需要更干净、更简洁</span></span></li>
+                                <li><span class="lang-en"><span class="highlight">🏗️ Space arrangement can be more place-like</span> and fitting theme</span><span class="lang-zh"><span class="highlight">🏗️ 空间布置可以更像真实场所</span>，并更贴合主题</span></li>
+                                <li><span class="lang-en"><span class="highlight">✍️ Try concise documentation</span> to level design</span><span class="lang-zh"><span class="highlight">✍️ 尝试用更简洁的文档</span>做关卡设计</span></li>
+                                <li><span class="lang-en"><span class="highlight">🎬 Mission description needs to be more vivid</span> - Improve presentation</span><span class="lang-zh"><span class="highlight">🎬 任务描述需要更生动</span> - 改进表达</span></li>
+                                <li><span class="lang-en"><span class="highlight">🗺️ Top-down Map presentation needs more work</span> to showcase details than paragraphs</span><span class="lang-zh"><span class="highlight">🗺️ 俯视图呈现还需要加强</span>，用图展示细节，而不是靠大段文字</span></li>
+                                <li><span class="lang-en"><span class="highlight">📏 Consider the metric of the level</span> - Include a grid for reference</span><span class="lang-zh"><span class="highlight">📏 考虑关卡尺度</span> - 加入网格作为参照</span></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="horizontal-section" style="gap: 6rem;">
                         <div class="content-wrapper">
-                            <h3>🎯 Competition Result</h3>
-                            <p>This entry was my <span class="highlight">first entry</span> into the competition. It did not get into the final phase (top 10), but it was a <span class="highlight">great exercise to put theory into practice</span>.</p>
+                            <h3><span class="lang-en">🎯 Competition Result</span><span class="lang-zh">🎯 比赛结果</span></h3>
+                            <p><span class="lang-en">This entry was my <span class="highlight">first entry</span> into the competition. It did not get into the final phase (top 10), but it was a <span class="highlight">great exercise to put theory into practice</span>.</span><span class="lang-zh">这是我的<span class="highlight">首次参赛</span>。没有进入最终阶段（十强），但它是一次<span class="highlight">把理论落到实践的很好练习</span>。</span></p>
                             
-                            <h3>🚀 Moving Forward</h3>
-                            <p>As I continue learning level design knowledge, I will be participating in future competitions! This experience taught me the importance of <span class="highlight">clear documentation, concise presentation, and practical application</span> of design principles.</p>
+                            <h3><span class="lang-en">🚀 Moving Forward</span><span class="lang-zh">🚀 接下来</span></h3>
+                            <p><span class="lang-en">As I continue learning level design knowledge, I will be participating in future competitions! This experience taught me the importance of <span class="highlight">clear documentation, concise presentation, and practical application</span> of design principles.</span><span class="lang-zh">在继续学习关卡设计的同时，我也会继续参加未来的比赛！这次经历让我更明白<span class="highlight">清晰文档、简洁表达，以及把设计原则真正用起来</span>有多重要。</span></p>
                         </div>
                         <div>
-                            <h3>💪 Skills Developed</h3>
+                            <h3><span class="lang-en">💪 Skills Developed</span><span class="lang-zh">💪 培养的能力</span></h3>
                             <ul class="codes-list" style="list-style-type: none !important; padding-left: 0;">
-                                <li>Level design documentation</li>
-                                <li>Multi-approach gameplay design</li>
-                                <li>Narrative integration in levels</li>
-                                <li>Visual presentation skills</li>
-                                <li>Problem-solving methodology</li>
-                                <li>Iterative design process</li>
+                                <li><span class="lang-en">Level design documentation</span><span class="lang-zh">关卡设计文档</span></li>
+                                <li><span class="lang-en">Multi-approach gameplay design</span><span class="lang-zh">多路线玩法设计</span></li>
+                                <li><span class="lang-en">Narrative integration in levels</span><span class="lang-zh">关卡中的叙事融入</span></li>
+                                <li><span class="lang-en">Visual presentation skills</span><span class="lang-zh">视觉呈现能力</span></li>
+                                <li><span class="lang-en">Problem-solving methodology</span><span class="lang-zh">问题解决方法</span></li>
+                                <li><span class="lang-en">Iterative design process</span><span class="lang-zh">迭代设计流程</span></li>
                             </ul>
                         </div>
                     </div>
@@ -202,7 +214,7 @@
 
         <div class="project-navigation">
             <a href="game-design.html" class="nav-button back-button">
-                <i class="fas fa-arrow-left"></i> Back to Portfolio
+                <i class="fas fa-arrow-left"></i> <span class="lang-en">Back to Portfolio</span><span class="lang-zh">返回作品集</span>
             </a>
         </div>
     </main>
@@ -221,9 +233,9 @@
     </div>
 
     <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
+        <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
         <div class="contact-content">
-            <p>Thank you for sticking around! <br> Can't wait to create great experiences with you!</p>
+            <p><span class="lang-en">Thank you for sticking around! <br> Can't wait to create great experiences with you!</span><span class="lang-zh">谢谢你看到这里。<br>期待和你一起做出好的体验。</span></p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
@@ -233,7 +245,7 @@
 
     <footer class="game-footer">
         <div class="footer-content">
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
             <div class="social-icons">
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -244,5 +256,6 @@
     
     <script src="script.js"></script>
     <script src="game-design.js"></script>
+    <script src="i18n-switch.js"></script>
 </body>
-</html> 
+</html>
