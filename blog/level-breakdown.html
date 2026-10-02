@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn from Systematically Breaking Down Levels - Xinglong's Blog</title>
+    <title data-title-en="Learn from Systematically Breaking Down Levels - Xinglong's Blog" data-title-zh="从系统拆解关卡中学习 - Xinglong 的博客">Learn from Systematically Breaking Down Levels - Xinglong's Blog</title>
     <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="../i18n.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-    <meta name="description" content="A structured approach to breaking down game levels, exploring mechanics, narrative, space, and pacing.">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <meta name="description" content="A structured approach to breaking down game levels, exploring mechanics, narrative, space, and pacing." data-desc-en="A structured approach to breaking down game levels, exploring mechanics, narrative, space, and pacing." data-desc-zh="一套拆解游戏关卡的结构化方法，覆盖机制、叙事、空间与节奏。">
     <style>
-        /* Override the opacity: 0 to make content visible immediately */
         .post-section {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
     </style>
-    <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <link rel="icon" href="../image/Logo-black-bg.svg" type="image/svg">
+    <script src="../i18n-boot.js"></script>
 </head>
 <body class="blog-body">
     <header class="main-header">
         <nav class="nav-container">
-            <a href="game-design.html">
-                <img src="../image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+            <a href="../game-design.html">
+                <img src="../image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="../game-design.html">Game & Level Design</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="../game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="../blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="../game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -37,89 +44,90 @@
         <article class="blog-single">
             <header class="blog-post-header">
                 <div class="post-meta">
-                    <span class="post-date">May 30 2025</span>
+                    <span class="post-date"><span class="lang-en">May 30 2025</span><span class="lang-zh">2025年5月30日</span></span>
                 </div>
-                <h1 class="post-title">Learn from Systematically Breaking Down Levels</h1>
+                <h1 class="post-title"><span class="lang-en">Learn from Systematically Breaking Down Levels</span><span class="lang-zh">从系统拆解关卡中学习</span></h1>
                 <div class="post-featured-image">
-                    <img src="../image/leveldesignbreakdown.png" alt="Level design breakdown diagram showing different analysis layers">
+                    <img src="../image/leveldesignbreakdown.png" alt="Level design breakdown diagram showing different analysis layers" data-alt-en="Level design breakdown diagram showing different analysis layers" data-alt-zh="展示不同分析层的关卡设计拆解图">
                 </div>
             </header>
 
             <div class="blog-post-content">
                 <section class="post-section">
-                    <p>Today, after a lot of research and organizing information online, I realized there isn’t a convincing structure for systematically breaking down game levels. Some say breakdowns should involve listing all elements and identifying their design purposes. However, I feel this approach lacks guidance for level design because level design is a complex craft where different dimensions vary greatly yet are interconnected.</p>
-                    
+                    <p><span class="lang-en">Today, after a lot of research and organizing information online, I realized there isn’t a convincing structure for systematically breaking down game levels. Some say breakdowns should involve listing all elements and identifying their design purposes. However, I feel this approach lacks guidance for level design because level design is a complex craft where different dimensions vary greatly yet are interconnected.</span><span class="lang-zh">今天查了很多资料、整理网络上的说法之后，我发现并没有一套足够令人信服、能系统拆解游戏关卡的结构。有人说拆解就是列出所有元素并指出各自设计目的。但我觉得这对关卡设计帮助不够：关卡设计很复杂，不同维度差异很大，又彼此咬合。</span></p>
+
                     <blockquote>
-                        Some say breakdowns should involve listing all elements and identifying their design purposes. However, I feel this approach lacks guidance for level design because level design is a complex craft where different dimensions vary greatly yet are interconnected.
-                        If I break down everything to the smallest units like a system designer, I lose the high-level/cohesive perspective that a level designer needs.
+                        <span class="lang-en">Some say breakdowns should involve listing all elements and identifying their design purposes. However, I feel this approach lacks guidance for level design because level design is a complex craft where different dimensions vary greatly yet are interconnected.
+                        If I break down everything to the smallest units like a system designer, I lose the high-level/cohesive perspective that a level designer needs.</span><span class="lang-zh">有人说拆解就是列出所有元素并指出各自设计目的。但我觉得这对关卡设计帮助不够：关卡设计很复杂，不同维度差异很大，又彼此咬合。
+                        如果像系统设计师那样拆到最小单元，我会丢掉关卡设计师需要的那种整体视角。</span>
                     </blockquote>
-                    
-                    <p>That said, I've been facing repeated setbacks in interviews, and I have to admit that my ability to deconstruct existing products is objectively lacking, something interviewers care about a lot.</p>
+
+                    <p><span class="lang-en">That said, I've been facing repeated setbacks in interviews, and I have to admit that my ability to deconstruct existing products is objectively lacking, something interviewers care about a lot.</span><span class="lang-zh">话说回来，我面试里反复碰壁，也得承认自己拆解现有产品的能力客观上还不够，而这正是面试官很看重的。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>A New Framework for Level Analysis</h2>
-                    <p>So today, I tried combining online insights with my own level design workflow and reflections, and I created a structure for level breakdowns that feels right to me.</p>
-                    
-                    <p>I divided level design into four sections. Although these areas overlap, separating them helps keep the analysis clear:</p>
+                    <h2><span class="lang-en">A New Framework for Level Analysis</span><span class="lang-zh">一套新的关卡分析框架</span></h2>
+                    <p><span class="lang-en">So today, I tried combining online insights with my own level design workflow and reflections, and I created a structure for level breakdowns that feels right to me.</span><span class="lang-zh">所以今天，我把网上的观点和自己的关卡设计流程、反思合在一起，整理出一套我觉得合适的关卡拆解结构。</span></p>
+
+                    <p><span class="lang-en">I divided level design into four sections. Although these areas overlap, separating them helps keep the analysis clear:</span><span class="lang-zh">我把关卡设计分成四块。虽然彼此重叠，但拆开能让分析更清楚：</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h3>1. Mechanics</h3>
+                    <h3><span class="lang-en">1. Mechanics</span><span class="lang-zh">1. 机制</span></h3>
                     <ul>
-                        <li><strong>Gameplay type</strong> - Core gameplay mechanics and their variations</li>
-                        <li><strong>Experience goals</strong> - What the level aims to achieve</li>
-                        <li><strong>Design constraints</strong> - Technical and gameplay limitations</li>
+                        <li><span class="lang-en"><strong>Gameplay type</strong> - Core gameplay mechanics and their variations</span><span class="lang-zh"><strong>玩法类型</strong> - 核心玩法机制及其变体</span></li>
+                        <li><span class="lang-en"><strong>Experience goals</strong> - What the level aims to achieve</span><span class="lang-zh"><strong>体验目标</strong> - 关卡想达成什么</span></li>
+                        <li><span class="lang-en"><strong>Design constraints</strong> - Technical and gameplay limitations</span><span class="lang-zh"><strong>设计约束</strong> - 技术与玩法上的限制</span></li>
                     </ul>
                 </section>
 
                 <section class="post-section">
-                    <h3>2. Narrative</h3>
+                    <h3><span class="lang-en">2. Narrative</span><span class="lang-zh">2. 叙事</span></h3>
                     <ul>
-                        <li><strong>Narrative pacing</strong> - How the story unfolds through the level</li>
-                        <li><strong>Spatial storytelling</strong> - How the macro-level scene content tells the story</li>
+                        <li><span class="lang-en"><strong>Narrative pacing</strong> - How the story unfolds through the level</span><span class="lang-zh"><strong>叙事节奏</strong> - 故事如何在关卡中展开</span></li>
+                        <li><span class="lang-en"><strong>Spatial storytelling</strong> - How the macro-level scene content tells the story</span><span class="lang-zh"><strong>空间叙事</strong> - 宏观场景内容如何讲故事</span></li>
                     </ul>
                 </section>
 
                 <section class="post-section">
-                    <h3>3. Space</h3>
+                    <h3><span class="lang-en">3. Space</span><span class="lang-zh">3. 空间</span></h3>
                     <ul>
-                        <li><strong>Path guidance</strong> - How players are directed through the level</li>
-                        <li><strong>Spatial storytelling</strong> - How micro-level content layout supports the narrative</li>
+                        <li><span class="lang-en"><strong>Path guidance</strong> - How players are directed through the level</span><span class="lang-zh"><strong>路径引导</strong> - 玩家如何被引导穿过关卡</span></li>
+                        <li><span class="lang-en"><strong>Spatial storytelling</strong> - How micro-level content layout supports the narrative</span><span class="lang-zh"><strong>空间叙事</strong> - 微观内容布局如何支撑叙事</span></li>
                     </ul>
                 </section>
 
                 <section class="post-section">
-                    <h3>4. Pacing</h3>
+                    <h3><span class="lang-en">4. Pacing</span><span class="lang-zh">4. 节奏</span></h3>
                     <ul>
-                        <li><strong>Experience flow</strong> - The rhythm and flow of gameplay moments</li>
-                        <li><strong>Experience intensity</strong> - The peaks and valleys of player engagement</li>
+                        <li><span class="lang-en"><strong>Experience flow</strong> - The rhythm and flow of gameplay moments</span><span class="lang-zh"><strong>体验动线</strong> - 玩法时刻的韵律与流动</span></li>
+                        <li><span class="lang-en"><strong>Experience intensity</strong> - The peaks and valleys of player engagement</span><span class="lang-zh"><strong>体验强度</strong> - 玩家投入的波峰与波谷</span></li>
                     </ul>
                 </section>
 
                 <section class="post-section">
-                    <p>This analysis structure matches my actual level design workflow, but the order is slightly different.</p>
-                    
-                    <p>When designing levels, I usually prioritize pacing first — defining the level's rhythm (including narrative pacing) — before working on space (2D layouts and 3D blockouts).</p>
+                    <p><span class="lang-en">This analysis structure matches my actual level design workflow, but the order is slightly different.</span><span class="lang-zh">这套分析结构对应我实际的关卡设计流程，但顺序略有不同。</span></p>
 
-                    <p>However, for breakdowns, I adjusted the order: since narrative and space are more objective and visible, analyzing them first makes the subsequent pacing analysis more accurate and grounded.</p>
+                    <p><span class="lang-en">When designing levels, I usually prioritize pacing first — defining the level's rhythm (including narrative pacing) — before working on space (2D layouts and 3D blockouts).</span><span class="lang-zh">做关卡时，我通常先定节奏——定义关卡韵律（含叙事节奏）——再去做空间（2D 布局和 3D 白盒）。</span></p>
+
+                    <p><span class="lang-en">However, for breakdowns, I adjusted the order: since narrative and space are more objective and visible, analyzing them first makes the subsequent pacing analysis more accurate and grounded.</span><span class="lang-zh">但做拆解时，我调了顺序：叙事和空间更客观、更看得见，先分析它们，后面的节奏分析才更准确、更有依据。</span></p>
                 </section>
 
                 <section class="post-section conclusion">
-                    <h2>Moving Forward</h2>
-                    <p>Moving forward, I plan to use this framework to break down levels and seek feedback from industry veterans to validate my approach. This structured method should help me better understand existing games and improve my ability to discuss level design in professional contexts.</p>
+                    <h2><span class="lang-en">Moving Forward</span><span class="lang-zh">接下来</span></h2>
+                    <p><span class="lang-en">Moving forward, I plan to use this framework to break down levels and seek feedback from industry veterans to validate my approach. This structured method should help me better understand existing games and improve my ability to discuss level design in professional contexts.</span><span class="lang-zh">接下来，我打算用这套框架拆解关卡，并向行业前辈征求反馈来验证方法。结构化的做法，应能帮我更好理解现有游戏，也提升在职业语境里讨论关卡设计的能力。</span></p>
                 </section>
             </div>
 
             <div class="post-footer">
                 <div class="author-bio">
                     <div class="author-info">
-                        <h3>Written by Xinglong Zhou</h3>
+                        <h3><span class="lang-en">Written by Xinglong Zhou</span><span class="lang-zh">作者：Xinglong Zhou</span></h3>
                     </div>
                 </div>
 
                 <div class="post-navigation">
-                    <a href="../blog.html" class="back-to-blog" style="margin: auto;">Back to Blog</a>
+                    <a href="../blog.html" class="back-to-blog" style="margin: auto;"><span class="lang-en">Back to Blog</span><span class="lang-zh">返回博客</span></a>
                 </div>
             </div>
         </article>
@@ -129,26 +137,26 @@
         </div>
 
         <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
+            <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
             <div class="contact-content">
-                <p>Looking forward to working together! Let's connect and create something amazing!</p>
+                <p><span class="lang-en">Looking forward to working together! Let's connect and create something amazing!</span><span class="lang-zh">期待一起合作。欢迎联系，一起做出好东西。</span></p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </section>
-        
+
         <footer>
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
         </footer>
     </div>
-    
+
     <script src="../script.js"></script>
+    <script src="../i18n-switch.js"></script>
     <script>
-        // Back to top button functionality
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
@@ -156,21 +164,20 @@
                 backToTopButton.classList.remove('show');
             }
         });
-        
+
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
-        // Add animations on scroll
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
             threshold: 0.1
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -179,7 +186,7 @@
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.post-section, .related-posts .blog-post').forEach(element => {
             observer.observe(element);
         });

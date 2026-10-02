@@ -3,81 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Legends Analysis - Xinglong's Portfolio</title>
+    <title data-title-en="Apex Legends Analysis - Xinglong's Portfolio" data-title-zh="Apex英雄分析 - Xinglong 的作品集">Apex Legends Analysis - Xinglong's Portfolio</title>
     <link rel="stylesheet" href="game-design.css">
     <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
     <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
+    <script src="i18n-boot.js"></script>
 </head>
 <body class="project-body">
     <header class="main-header">
         <nav class="nav-container">
             <a href="game-design.html">
-                <img src="image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+                <img src="image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="game-design.html">Game & Level Design</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="project-main">
         <section class="project-hero">
             <div class="project-hero-content">
-                <h1>Apex Legends Analysis <br> Combat Mechanics and Motivation for Active Combat</h1>
-                <p class="project-subtitle">A deep dive into Apex Legends' combat system and player engagement - 2021</p>
+                <h1><span class="lang-en">Apex Legends Analysis <br> Combat Mechanics and Motivation for Active Combat</span><span class="lang-zh">Apex英雄分析<br>战斗机制与主动开战的动机</span></h1>
+                <p class="project-subtitle"><span class="lang-en">A deep dive into Apex Legends' combat system and player engagement - 2021</span><span class="lang-zh">拆解《Apex英雄》的战斗系统与玩家参与 · 2021</span></p>
             </div>
         </section>
 
         <section class="project-section">
             <div class="section-content">
-                <h2 class="section-title">Overview</h2>
+                <h2 class="section-title"><span class="lang-en">Overview</span><span class="lang-zh">概览</span></h2>
                 <div class="section-content">
-                    <p>This analysis breaks down the reasons why and how Apex Legend designers encourage players to actively engage in combat. Created in 2021, this was one of my early attempts at game design analysis, marking the beginning of my journey to become a game designer.</p>
+                    <p><span class="lang-en">This analysis breaks down the reasons why and how Apex Legend designers encourage players to actively engage in combat. Created in 2021, this was one of my early attempts at game design analysis, marking the beginning of my journey to become a game designer.</span><span class="lang-zh">这篇分析拆解《Apex英雄》的设计者如何、又为何鼓励玩家主动投入战斗。写于 2021 年，是我早期的游戏设计分析尝试之一，也是我走向游戏设计师这条路的起点。</span></p>
                 </div>
             </div>
         </section>
 
         <section class="horizontal-section" style="gap: 2rem;">
             <div class="content-wrapper">
-                <h2 class="section-title">Economy System Analysis</h2>
+                <h2 class="section-title"><span class="lang-en">Economy System Analysis</span><span class="lang-zh">经济系统分析</span></h2>
                 <div class="section-content">
                     <div class="image-grid">
-                        <img src="image/Apex_Economy_System.png" alt="Apex Legends Economy System Analysis" class="gallery-slide" style="cursor: pointer; max-width: 100%;">
+                        <img src="image/Apex_Economy_System.png" alt="Apex Legends Economy System Analysis" class="gallery-slide" style="cursor: pointer; max-width: 100%;" data-alt-en="Apex Legends Economy System Analysis" data-alt-zh="Apex英雄经济系统分析">
                     </div>
-                    <p>This analysis breaks down the economy and currency system in Apex Legends, examining the role each type of currency plays in shaping the player experience.</p>
-                    <p>Through this breakdown, I found that each currency serves a clear purpose, such as boosting daily active users, enabling cosmetic rewards, or driving monetization. This helped me deconstruct the game's economic design from a more systematic perspective.</p>
+                    <p><span class="lang-en">This analysis breaks down the economy and currency system in Apex Legends, examining the role each type of currency plays in shaping the player experience.</span><span class="lang-zh">这篇分析拆解《Apex英雄》的经济和货币系统，看每种货币如何塑造玩家体验。</span></p>
+                    <p><span class="lang-en">Through this breakdown, I found that each currency serves a clear purpose, such as boosting daily active users, enabling cosmetic rewards, or driving monetization. This helped me deconstruct the game's economic design from a more systematic perspective.</span><span class="lang-zh">拆完之后会发现，每种货币都有清楚用途：拉高日活、承载外观奖励，或推动付费。这让我能用更系统的视角拆开这款游戏的经济设计。</span></p>
                 </div>
             </div>
 
             <div class="content-wrapper">
-                <h2 class="section-title">Combat Mechanics Analysis</h2>
+                <h2 class="section-title"><span class="lang-en">Combat Mechanics Analysis</span><span class="lang-zh">战斗机制分析</span></h2>
                 <div class="section-content">
                     <div class="image-grid">
-                        <img src="image/Apex_Combat.png" alt="Apex Legends Combat Analysis" class="gallery-slide" style="cursor: pointer; max-width: 100%;">
+                        <img src="image/Apex_Combat.png" alt="Apex Legends Combat Analysis" class="gallery-slide" style="cursor: pointer; max-width: 100%;" data-alt-en="Apex Legends Combat Analysis" data-alt-zh="Apex英雄战斗分析">
                     </div>
-                    <p>Among many battle royale games, Apex Legends stands out with its fast-paced combat and rules that encourage engagement.</p>
-                    <p>In this diagram, I analyze the design choices in Apex Legends that motivate players to fight, as well as elements that may negatively impact this motivation. The goal is to break down how Apex encourages players to actively participate in combat.</p>
+                    <p><span class="lang-en">Among many battle royale games, Apex Legends stands out with its fast-paced combat and rules that encourage engagement.</span><span class="lang-zh">在众多大逃杀里，《Apex英雄》靠节奏偏快的战斗、以及鼓励开战的规则脱颖而出。</span></p>
+                    <p><span class="lang-en">In this diagram, I analyze the design choices in Apex Legends that motivate players to fight, as well as elements that may negatively impact this motivation. The goal is to break down how Apex encourages players to actively participate in combat.</span><span class="lang-zh">在这张图里，我分析了推动玩家开战的设计选择，以及可能削弱开战动机的因素。目标是拆清《Apex英雄》如何鼓励玩家主动参与战斗。</span></p>
                 </div>
             </div>
         </section>
 
         <section class="project-section">
             <div class="section-content">
-                <h2 class="section-title">Reflection</h2>
+                <h2 class="section-title"><span class="lang-en">Reflection</span><span class="lang-zh">反思</span></h2>
                 <div class="section-content">
-                    <p>This analysis was created in 2021. Looking back, it was a bit too text-heavy and lacked conciseness, but it marked the starting point of my journey toward becoming a game designer. Furthermore, the structural and analytical approach to design is a mindset that has benefited me to this day.</p>
+                    <p><span class="lang-en">This analysis was created in 2021. Looking back, it was a bit too text-heavy and lacked conciseness, but it marked the starting point of my journey toward becoming a game designer. Furthermore, the structural and analytical approach to design is a mindset that has benefited me to this day.</span><span class="lang-zh">这篇分析写于 2021 年。现在回看，文字偏多、不够精炼，但它是我走向游戏设计师的起点。结构化、可拆解的设计分析方式，至今仍帮到我。</span></p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Lightbox for fullscreen image viewing -->
     <div id="gallery-lightbox" class="lightbox">
         <div class="lightbox-content">
             <img id="lightbox-image" class="lightbox-image" src="" alt="">
@@ -92,11 +99,11 @@
 
     <footer class="game-footer">
         <div class="footer-content">
-            <p>&copy; 2024 Xinglong's Portfolio. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong's Portfolio. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong 的作品集。保留所有权利。</span></p>
         </div>
     </footer>
 
-    <!-- Include the JavaScript file for lightbox functionality -->
     <script src="game-design.js"></script>
+    <script src="i18n-switch.js"></script>
 </body>
 </html>

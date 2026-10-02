@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis of Max Payne 3's Mechanic Design - Xinglong's Blog</title>
+    <title data-title-en="Analysis of Max Payne 3's Mechanic Design - Xinglong's Blog" data-title-zh="马克思·佩恩3 机制设计分析 - Xinglong 的博客">Analysis of Max Payne 3's Mechanic Design - Xinglong's Blog</title>
     <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="../i18n.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-    <link rel="icon" href="image/Logo-black-bg.svg" type="image/svg">
-    <meta name="description" content="A deep dive analysis of Max Payne 3's combat mechanics, exploring what works, what doesn't, and design proposals for improvement.">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Noto+Sans+SC:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <meta name="description" content="A deep dive analysis of Max Payne 3's combat mechanics, exploring what works, what doesn't, and design proposals for improvement." data-desc-en="A deep dive analysis of Max Payne 3's combat mechanics, exploring what works, what doesn't, and design proposals for improvement." data-desc-zh="深入分析马克思·佩恩3 的战斗机制：哪些做对了、哪些不足，以及改进的设计提案。">
     <style>
-        /* Override the opacity: 0 to make content visible immediately */
         .post-section {
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
     </style>
+    <link rel="icon" href="../image/Logo-black-bg.svg" type="image/svg">
+    <script src="../i18n-boot.js"></script>
 </head>
 <body class="blog-body">
     <header class="main-header">
         <nav class="nav-container">
-            <a href="game-design.html" class="logo">
-                <img src="../image/Logo-white.svg" alt="Xinglong Logo" style="height: 2.4rem; vertical-align: middle;">
+            <a href="../game-design.html">
+                <img src="../image/Logo-white.svg" alt="Xinglong Logo" data-alt-en="Xinglong Logo" data-alt-zh="Xinglong 标志" style="height: 2.4rem; vertical-align: middle;">
             </a>
-            <ul class="nav-links">
-                <li><a href="../game-design.html">Game & Level Design</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="../game-base.html">About Me</a></li>
-            </ul>
+            <div class="nav-end">
+                <ul class="nav-links">
+                    <li><a href="../game-design.html"><span class="lang-en">Game & Level Design</span><span class="lang-zh">游戏与关卡设计</span></a></li>
+                    <li><a href="../blog.html"><span class="lang-en">Blog</span><span class="lang-zh">博客</span></a></li>
+                    <li><a href="../game-base.html"><span class="lang-en">About Me</span><span class="lang-zh">关于我</span></a></li>
+                </ul>
+                <div class="lang-switch" role="group" aria-label="Language" data-aria-en="Language" data-aria-zh="语言">
+                    <button type="button" class="lang-switch-btn" data-set-lang="en">EN</button>
+                    <button type="button" class="lang-switch-btn" data-set-lang="zh">中文</button>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -37,164 +44,160 @@
         <article class="blog-single">
             <header class="blog-post-header">
                 <div class="post-meta">
-                    <span class="post-date">May 29 2025</span>
+                    <span class="post-date"><span class="lang-en">May 29 2025</span><span class="lang-zh">2025年5月29日</span></span>
                 </div>
-                <h1 class="post-title">Analysis of Max Payne 3's Mechanic Design</h1>
+                <h1 class="post-title"><span class="lang-en">Analysis of Max Payne 3's Mechanic Design</span><span class="lang-zh">马克思·佩恩3 机制设计分析</span></h1>
                 <div class="post-featured-image">
-                    <img src="../image/max_payne3.png" alt="Max Payne 3 bullet-time action scene">
+                    <img src="../image/max_payne3.png" alt="Max Payne 3 bullet-time action scene" data-alt-en="Max Payne 3 bullet-time action scene" data-alt-zh="马克思·佩恩3 子弹时间动作场景">
                 </div>
             </header>
 
             <div class="blog-post-content">
                 <section class="post-section">
-                    <p>This post came from my note after playing Max Payne 3 recently. </p>
-                    <p>The level design shows structural and thematic variety, but the core combat loop lacks depth. In most encounters, the gameplay boils down to:</p>
+                    <p><span class="lang-en">This post came from my note after playing Max Payne 3 recently.</span><span class="lang-zh">这篇来自我最近玩完《马克思·佩恩3》后的笔记。</span></p>
+                    <p><span class="lang-en">The level design shows structural and thematic variety, but the core combat loop lacks depth. In most encounters, the gameplay boils down to:</span><span class="lang-zh">关卡设计在结构和主题上有变化，但核心战斗循环深度不够。多数遭遇战的玩法可以概括成：</span></p>
                     <blockquote>
-                        <strong>Build up bullet-time meter → Activate bullet-time → Eliminate all enemies → Repeat.</strong>
+                        <span class="lang-en"><strong>Build up bullet-time meter → Activate bullet-time → Eliminate all enemies → Repeat.</strong></span><span class="lang-zh"><strong>积攒子弹时间能量 → 开启子弹时间 → 清掉所有敌人 → 重复。</strong></span>
                     </blockquote>
-                    <p>The only real nuance is avoiding crashing into walls while in bullet-time.</p>
+                    <p><span class="lang-en">The only real nuance is avoiding crashing into walls while in bullet-time.</span><span class="lang-zh">真正多出来的细微差别，大概只是子弹时间里别撞墙。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>✅ What Works: Sensory Impact</h2>
-                    <p>The game absolutely nails the visceral satisfaction of slow-motion kills. The audio and visual feedback is tight and thrilling, shooting enemies in bullet-time feels amazing.</p>
+                    <h2><span class="lang-en">✅ What Works: Sensory Impact</span><span class="lang-zh">✅ 做得好的地方：感官冲击</span></h2>
+                    <p><span class="lang-en">The game absolutely nails the visceral satisfaction of slow-motion kills. The audio and visual feedback is tight and thrilling, shooting enemies in bullet-time feels amazing.</span><span class="lang-zh">慢动作击杀的体感满足感，这款游戏拿捏得很准。声画反馈紧、刺激强，子弹时间里开枪打敌人的感觉非常爽。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>⚠️ What's Lacking: Challenge and Reward</h2>
-                    <p>However, the game lacks a well-defined sense of <strong>challenge and reward</strong>, a strong risk-reward structure is largely missing. The combat remains mostly reactive and doesn't incentivize variation or experimentation.</p>
-                    <p>There are some dynamic shifts introduced through special levels, for example, missions where jumping is disabled (e.g., boat or fire levels where Max is injured). But simply restricting mechanics doesn't add meaningful variety. That's because the <strong>core mechanics aren't deep enough</strong>, and systems don't synergize well.</p>
+                    <h2><span class="lang-en">⚠️ What's Lacking: Challenge and Reward</span><span class="lang-zh">⚠️ 欠缺之处：挑战与回报</span></h2>
+                    <p><span class="lang-en">However, the game lacks a well-defined sense of <strong>challenge and reward</strong>, a strong risk-reward structure is largely missing. The combat remains mostly reactive and doesn't incentivize variation or experimentation.</span><span class="lang-zh">不过，游戏缺少清晰的<strong>挑战与回报</strong>感，风险-回报结构基本缺位。战斗大多是被动反应，也很少激励变化或尝试。</span></p>
+                    <p><span class="lang-en">There are some dynamic shifts introduced through special levels, for example, missions where jumping is disabled (e.g., boat or fire levels where Max is injured). But simply restricting mechanics doesn't add meaningful variety. That's because the <strong>core mechanics aren't deep enough</strong>, and systems don't synergize well.</span><span class="lang-zh">特殊关卡会带来一些动态变化，例如禁用跳跃的任务（如船上或火灾关，Max 受伤）。但单纯限制机制并不会带来有意义的多样性。因为<strong>核心机制本身不够深</strong>，各系统之间也协同不好。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>Suggestions for Improvement</h2>
-                    <p>To deepen the gameplay loop, here are some design additions that could make a big difference:</p>
-                    
-                    <h3>Gun variety with tactical trade-offs</h3>
-                    <p>Some guns might jam easily, encouraging players to use cover more deliberately or rely on short bursts rather than spraying.</p>
-                    
-                    <h3>Destructible cover mechanics</h3>
-                    <p>Certain weapons could destroy hard cover, forcing players to rethink positioning and weapon use, introducing a strategic layer.</p>
-                    
-                    <h3>Weapon identity through reload speed</h3>
-                    <p>In <em>Max Payne 3</em>, one key difference between pistols and rifles was reload speed, not accuracy, since bullet-time minimizes spread.</p>
-                    <p>After emptying a rifle magazine, the player is momentarily helpless. Pistols, with fast reloads, allow continuous action. This kind of design nuance supports weapon identity.</p>
-                    
-                    <h3>New enemy types</h3>
-                    <p>Introduce armored enemies that require headshots, or enemies with helmets that must be knocked off before a kill, some of this is already seen in later levels but could be expanded.</p>
+                    <h2><span class="lang-en">Suggestions for Improvement</span><span class="lang-zh">改进建议</span></h2>
+                    <p><span class="lang-en">To deepen the gameplay loop, here are some design additions that could make a big difference:</span><span class="lang-zh">要加深玩法循环，下面这些设计补充可能会带来明显差异：</span></p>
+
+                    <h3><span class="lang-en">Gun variety with tactical trade-offs</span><span class="lang-zh">带战术取舍的枪械差异</span></h3>
+                    <p><span class="lang-en">Some guns might jam easily, encouraging players to use cover more deliberately or rely on short bursts rather than spraying.</span><span class="lang-zh">有些枪更容易卡壳，促使玩家更刻意地用掩体，或改用短点射而不是狂扫。</span></p>
+
+                    <h3><span class="lang-en">Destructible cover mechanics</span><span class="lang-zh">可破坏掩体机制</span></h3>
+                    <p><span class="lang-en">Certain weapons could destroy hard cover, forcing players to rethink positioning and weapon use, introducing a strategic layer.</span><span class="lang-zh">某些武器能打穿硬掩体，迫使玩家重新思考站位与武器选择，引入一层策略。</span></p>
+
+                    <h3><span class="lang-en">Weapon identity through reload speed</span><span class="lang-zh">用换弹速度塑造武器个性</span></h3>
+                    <p><span class="lang-en">In <em>Max Payne 3</em>, one key difference between pistols and rifles was reload speed, not accuracy, since bullet-time minimizes spread.</span><span class="lang-zh">在《马克思·佩恩3》里，手枪和步枪的一个关键差异是换弹速度，而不是精度——因为子弹时间会大幅压低散布。</span></p>
+                    <p><span class="lang-en">After emptying a rifle magazine, the player is momentarily helpless. Pistols, with fast reloads, allow continuous action. This kind of design nuance supports weapon identity.</span><span class="lang-zh">步枪弹匣打空后，玩家会短暂无助。手枪换弹快，能保持连续行动。这类设计细节支撑了武器个性。</span></p>
+
+                    <h3><span class="lang-en">New enemy types</span><span class="lang-zh">新的敌人类型</span></h3>
+                    <p><span class="lang-en">Introduce armored enemies that require headshots, or enemies with helmets that must be knocked off before a kill, some of this is already seen in later levels but could be expanded.</span><span class="lang-zh">引入需要爆头才能解决的装甲敌人，或必须先打掉头盔才能击杀的戴盔敌人——后期关卡已有部分类似设计，但可以再扩展。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>Integration of New Mechanics: Cases in MP3</h2>
-                    
-                    <h3>✅ Well-integrated examples:</h3>
+                    <h2><span class="lang-en">Integration of New Mechanics: Cases in MP3</span><span class="lang-zh">新机制的融入：MP3 中的案例</span></h2>
+
+                    <h3><span class="lang-en">✅ Well-integrated examples:</span><span class="lang-zh">✅ 融入较好的例子：</span></h3>
                     <ul>
-                        <li><strong>Stealth missions with suppressed pistols</strong>, work well with cover-based gameplay. A small mechanic shift creates a distinct pacing and tone.</li>
-                        <li><strong>Sniper support missions</strong>, force players to stay behind cover, creating a tense shift in playstyle.</li>
+                        <li><span class="lang-en"><strong>Stealth missions with suppressed pistols</strong>, work well with cover-based gameplay. A small mechanic shift creates a distinct pacing and tone.</span><span class="lang-zh"><strong>带消音手枪的潜行任务</strong>，与掩体玩法契合得好。机制上的小变化就能带来不同的节奏与调性。</span></li>
+                        <li><span class="lang-en"><strong>Sniper support missions</strong>, force players to stay behind cover, creating a tense shift in playstyle.</span><span class="lang-zh"><strong>狙击手支援任务</strong>，迫使玩家待在掩体后，玩法紧张感明显转向。</span></li>
                     </ul>
-                    
-                    <h3>❌ Less successful integrations:</h3>
+
+                    <h3><span class="lang-en">❌ Less successful integrations:</span><span class="lang-zh">❌ 融入不太成功的例子：</span></h3>
                     <ul>
-                        <li><strong>Sniper shooter levels (player as sniper)</strong> , the player can't move, and only needs to shoot enemies approaching teammates. Mechanically simple, though it offers a break in intensity.</li>
-                        <li><strong>Injury missions</strong> , Max can't jump or sprint, reducing mobility and forcing slower, less engaging traversal. It feels artificially constrained.</li>
+                        <li><span class="lang-en"><strong>Sniper shooter levels (player as sniper)</strong> , the player can't move, and only needs to shoot enemies approaching teammates. Mechanically simple, though it offers a break in intensity.</span><span class="lang-zh"><strong>狙击射击关（玩家当狙击手）</strong>，玩家不能移动，只需射击靠近队友的敌人。机制简单，虽能换口气降强度。</span></li>
+                        <li><span class="lang-en"><strong>Injury missions</strong> , Max can't jump or sprint, reducing mobility and forcing slower, less engaging traversal. It feels artificially constrained.</span><span class="lang-zh"><strong>受伤任务</strong>，Max 不能跳或冲刺，机动性下降，穿越变得更慢、更乏味。感觉像人为加的限制。</span></li>
                     </ul>
                 </section>
 
                 <section class="post-section">
-                    <h2>🧩 Core Issue: A Fixed Gameplay Loop</h2>
-                    <p>The game's central problem is that the <strong>core loop is rigid</strong>, with few supporting systems to enrich it. Bullet-time is powerful and stylish, but needs mechanics around it to grow.</p>
+                    <h2><span class="lang-en">🧩 Core Issue: A Fixed Gameplay Loop</span><span class="lang-zh">🧩 核心问题：固定的玩法循环</span></h2>
+                    <p><span class="lang-en">The game's central problem is that the <strong>core loop is rigid</strong>, with few supporting systems to enrich it. Bullet-time is powerful and stylish, but needs mechanics around it to grow.</span><span class="lang-zh">游戏的核心问题是<strong>核心循环过于僵硬</strong>，缺少能丰富它的支撑系统。子弹时间/bullet-time 强、有型，但需要周围机制一起生长。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>Design Proposal: Expanding the Core with "Creative Instinct"</h2>
-                    <p><strong>Core experience stays the same</strong>:</p>
-                    <p>Bullet-time (action), finding the right position to activate it (strategy), combined with a brutal aesthetic and dark, emotional tone.</p>
-                    
-                    <h3>Idea:</h3>
-                    <p>Take inspiration from <em>Sleeping Dogs'</em> environmental kill system , what if bullet-time and the environment could interact more meaningfully?</p>
+                    <h2><span class="lang-en">Design Proposal: Expanding the Core with "Creative Instinct"</span><span class="lang-zh">设计提案：用「杀手灵感」扩展核心</span></h2>
+                    <p><span class="lang-en"><strong>Core experience stays the same</strong>:</span><span class="lang-zh"><strong>核心体验不变</strong>：</span></p>
+                    <p><span class="lang-en">Bullet-time (action), finding the right position to activate it (strategy), combined with a brutal aesthetic and dark, emotional tone.</span><span class="lang-zh">子弹时间（动作）、找准位置再开启（策略），再叠上粗粝美学与阴暗、情绪化的调性。</span></p>
+
+                    <h3><span class="lang-en">Idea:</span><span class="lang-zh">想法：</span></h3>
+                    <p><span class="lang-en">Take inspiration from <em>Sleeping Dogs'</em> environmental kill system , what if bullet-time and the environment could interact more meaningfully?</span><span class="lang-zh">借鉴《热血无赖》的环境击杀系统——如果子弹时间与环境能更有意义地互动呢？</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>🎯 Design Goals:</h2>
+                    <h2><span class="lang-en">🎯 Design Goals:</span><span class="lang-zh">🎯 设计目标：</span></h2>
                     <ol>
-                        <li>Add expansion mechanics to enrich the main gameplay loop.</li>
-                        <li>Solve the lack of meaningful ways to refill the bullet-time meter , current system is just "kill to refill", which lacks risk-reward tension.</li>
+                        <li><span class="lang-en">Add expansion mechanics to enrich the main gameplay loop.</span><span class="lang-zh">加入扩展机制，丰富主玩法循环。</span></li>
+                        <li><span class="lang-en">Solve the lack of meaningful ways to refill the bullet-time meter , current system is just "kill to refill", which lacks risk-reward tension.</span><span class="lang-zh">解决子弹时间能量缺少有意义回复方式的问题——目前基本是「杀人回能」，缺少风险-回报张力。</span></li>
                     </ol>
                 </section>
 
                 <section class="post-section">
-                    <h2>Mechanic: Creative Instinct</h2>
-                    <p>Max can use environmental props to create an advantage , increasing player agency and immersion.</p>
-                    
-                    <p><strong>Examples:</strong></p>
+                    <h2><span class="lang-en">Mechanic: Creative Instinct</span><span class="lang-zh">机制：杀手灵感</span></h2>
+                    <p><span class="lang-en">Max can use environmental props to create an advantage , increasing player agency and immersion.</span><span class="lang-zh">Max 能利用环境道具制造优势，提升玩家能动性与沉浸感。</span></p>
+
+                    <p><span class="lang-en"><strong>Examples:</strong></span><span class="lang-zh"><strong>例子：</strong></span></p>
                     <ul>
-                        <li>Use stage props for <strong>quick movement</strong> (e.g., grabbing a crane to rise, sliding down slopes to reposition quickly). These exist in cutscenes but should be playable.</li>
-                        <li>Kick a trash bin to <strong>disrupt enemies</strong>.</li>
-                        <li>Pick up heavy objects like a table as a <strong>makeshift shield</strong> while moving.</li>
+                        <li><span class="lang-en">Use stage props for <strong>quick movement</strong> (e.g., grabbing a crane to rise, sliding down slopes to reposition quickly). These exist in cutscenes but should be playable.</span><span class="lang-zh">用场景道具做<strong>快速移动</strong>（例如抓住吊车上升、沿斜坡滑下快速换位）。这些在过场里有，但应变成可玩操作。</span></li>
+                        <li><span class="lang-en">Kick a trash bin to <strong>disrupt enemies</strong>.</span><span class="lang-zh">踢翻垃圾桶来<strong>干扰敌人</strong>。</span></li>
+                        <li><span class="lang-en">Pick up heavy objects like a table as a <strong>makeshift shield</strong> while moving.</span><span class="lang-zh">搬起桌子这类重物当作<strong>临时盾牌</strong>边走边挡。</span></li>
                     </ul>
-                    
-                    <h3>🎁 Reward:</h3>
-                    <p>Using <strong>Creative Instincts</strong> massively recharges bullet-time , encouraging improvisation and rewarding quick thinking.</p>
-                    
-                    <h3>⚠️ Risk:</h3>
-                    <p>Some props may have unpredictable effects, creating uncertainty , but that's part of the thrill.</p>
+
+                    <h3><span class="lang-en">🎁 Reward:</span><span class="lang-zh">🎁 回报：</span></h3>
+                    <p><span class="lang-en">Using <strong>Creative Instincts</strong> massively recharges bullet-time , encouraging improvisation and rewarding quick thinking.</span><span class="lang-zh">使用<strong>杀手灵感</strong>会大幅回充子弹时间，鼓励即兴发挥，并奖励快速思考。</span></p>
+
+                    <h3><span class="lang-en">⚠️ Risk:</span><span class="lang-zh">⚠️ 风险：</span></h3>
+                    <p><span class="lang-en">Some props may have unpredictable effects, creating uncertainty , but that's part of the thrill.</span><span class="lang-zh">有些道具效果不可预测，带来不确定性——但这正是刺激的一部分。</span></p>
                 </section>
 
                 <section class="post-section">
-                    <h2>Gameplay Example</h2>
-                    <p>The player hides behind a steel plate to recover bullet-time, then dives through the air in slow motion, eliminating enemies mid-jump and sliding into cover on the other side.</p>
-                    <p>This merges strategy, action, and spectacle , and strengthens the player fantasy of Max being a powerful, agile, violent force.</p>
+                    <h2><span class="lang-en">Gameplay Example</span><span class="lang-zh">玩法示例</span></h2>
+                    <p><span class="lang-en">The player hides behind a steel plate to recover bullet-time, then dives through the air in slow motion, eliminating enemies mid-jump and sliding into cover on the other side.</span><span class="lang-zh">玩家躲在钢板后回复子弹时间，再慢动作凌空扑出，半空中清掉敌人，并滑入另一侧掩体。</span></p>
+                    <p><span class="lang-en">This merges strategy, action, and spectacle , and strengthens the player fantasy of Max being a powerful, agile, violent force.</span><span class="lang-zh">这把策略、动作与场面感合在一起，也强化了玩家对 Max 作为强大、敏捷、暴力力量的幻想。</span></p>
                 </section>
 
                 <section class="post-section conclusion">
-                    <h2>Conclusion</h2>
-                    <p>Max Payne 3's bullet-time mechanic is undeniably satisfying, but the game would benefit from deeper systems that support and expand upon this core loop. My Attempt is that by introducing environmental interaction mechanics like "Creative Instinct," the game could maintain its signature style while offering players more meaningful choices and strategic depth.</p>
-                    <p><em>This analysis was inspired by: <a href="https://gamedesignskills.com/game-design/video-game-mechanics/" target="_blank" style="color: var(--game-text);">GameDesignSkills - Video Game Mechanics</a></em></p>
+                    <h2><span class="lang-en">Conclusion</span><span class="lang-zh">结语</span></h2>
+                    <p><span class="lang-en">Max Payne 3's bullet-time mechanic is undeniably satisfying, but the game would benefit from deeper systems that support and expand upon this core loop. My Attempt is that by introducing environmental interaction mechanics like "Creative Instinct," the game could maintain its signature style while offering players more meaningful choices and strategic depth.</span><span class="lang-zh">《马克思·佩恩3》的子弹时间机制确实很爽，但若有更深的系统来支撑并扩展这一核心循环，会更好。我的尝试是：引入像「杀手灵感」这样的环境互动机制，游戏既能保住招牌风格，又能给玩家更多有意义的选择与策略深度。</span></p>
+                    <p><span class="lang-en"><em>This analysis was inspired by: <a href="https://gamedesignskills.com/game-design/video-game-mechanics/" target="_blank" style="color: var(--game-text);">GameDesignSkills - Video Game Mechanics</a></em></span><span class="lang-zh"><em>本文分析灵感来自：<a href="https://gamedesignskills.com/game-design/video-game-mechanics/" target="_blank" style="color: var(--game-text);">GameDesignSkills - Video Game Mechanics</a></em></span></p>
                 </section>
             </div>
 
             <div class="post-footer">
                 <div class="author-bio">
                     <div class="author-info">
-                        <h3>Written by Xinglong Zhou</h3>
+                        <h3><span class="lang-en">Written by Xinglong Zhou</span><span class="lang-zh">作者：Xinglong Zhou</span></h3>
                     </div>
                 </div>
 
-                
                 <div class="post-navigation">
-                    
-                    <a href="../blog.html" class="back-to-blog" style="margin: auto;">Back to Blog</a>
-                    
+                    <a href="../blog.html" class="back-to-blog" style="margin: auto;"><span class="lang-en">Back to Blog</span><span class="lang-zh">返回博客</span></a>
                 </div>
             </div>
         </article>
-
 
         <div id="back-to-top" class="back-to-top">
             <i class="fas fa-arrow-up"></i>
         </div>
 
         <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
+            <h2><span class="lang-en">Get in Touch</span><span class="lang-zh">联系我</span></h2>
             <div class="contact-content">
-                <p>Looking forward to working together! Let's connect and create something amazing!</p>
+                <p><span class="lang-en">Looking forward to working together! Let's connect and create something amazing!</span><span class="lang-zh">期待一起合作。欢迎联系，一起做出好东西。</span></p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/xinglongzhou" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:xinglong.z@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </section>
-        
+
         <footer>
-            <p>&copy; 2024 Xinglong Zhou. All rights reserved.</p>
+            <p><span class="lang-en">&copy; 2024 Xinglong Zhou. All rights reserved.</span><span class="lang-zh">&copy; 2024 Xinglong Zhou. 保留所有权利。</span></p>
         </footer>
     </div>
-    
+
     <script src="../script.js"></script>
+    <script src="../i18n-switch.js"></script>
     <script>
-        // Back to top button functionality
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
@@ -202,21 +205,20 @@
                 backToTopButton.classList.remove('show');
             }
         });
-        
+
         backToTopButton.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        
-        // Add animations on scroll
+
         const observerOptions = {
             root: null,
             rootMargin: '0px',
             threshold: 0.1
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -225,10 +227,10 @@
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.post-section, .related-posts .blog-post').forEach(element => {
             observer.observe(element);
         });
     </script>
 </body>
-</html> 
+</html>
