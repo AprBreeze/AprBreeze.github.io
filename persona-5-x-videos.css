@@ -54,3 +54,224 @@
         margin-bottom: 0.75rem;
     }
 }
+
+/* ==========================================================================
+   Side Quest Design — page-scoped visual elevation
+   Keeps game-design tokens, type, and layout. Raises surface, rhythm, and media.
+   ========================================================================== */
+
+#side-quest-design {
+    --cs-ease: cubic-bezier(0.32, 0.72, 0, 1);
+    --cs-hairline: color-mix(in srgb, var(--game-accent-alt) 22%, var(--game-border));
+}
+
+#side-quest-design .section-content > h3 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.35rem;
+    padding-bottom: 0.7rem;
+    letter-spacing: 0.03em;
+    position: relative;
+}
+
+#side-quest-design .section-content > h3:first-of-type {
+    margin-top: 1.75rem;
+}
+
+#side-quest-design .section-content > h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.75rem;
+    height: 2px;
+    background: var(--game-accent-alt);
+    opacity: 0.7;
+}
+
+#side-quest-design .section-content > h4 {
+    color: var(--game-accent-alt);
+    font-family: var(--game-header-font);
+    letter-spacing: 0.04em;
+    margin-top: 2.75rem;
+}
+
+#side-quest-design .case-study-card {
+    background-color: var(--game-bg-lighter);
+    border: 1px solid var(--cs-hairline);
+    border-radius: 16px;
+    padding: 1.9rem 1.85rem 1.65rem;
+    margin-bottom: 2rem;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.055),
+        0 18px 44px rgba(0, 0, 0, 0.22);
+    transition: border-color 0.7s var(--cs-ease), box-shadow 0.7s var(--cs-ease);
+}
+
+#side-quest-design .case-study-card:last-child {
+    margin-bottom: 0;
+}
+
+#side-quest-design .case-study-card:hover {
+    border-color: color-mix(in srgb, var(--game-accent-alt) 42%, var(--game-border));
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 22px 48px rgba(0, 0, 0, 0.26);
+}
+
+#side-quest-design .case-study-card-body {
+    align-items: flex-start;
+    gap: 2.25rem;
+}
+
+#side-quest-design .case-study-card-body.is-stacked {
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+#side-quest-design .case-study-card-body.is-stacked .diagram-frame {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+}
+
+#side-quest-design .case-study-card-body.is-stacked .diagram-frame svg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#side-quest-design .diagram-frame {
+    background-color: var(--game-bg-darker);
+    border: 1px solid color-mix(in srgb, var(--game-accent) 16%, var(--game-border));
+    border-radius: 12px;
+    padding: 1.4rem 1.25rem 1.15rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+#side-quest-design .diagram-caption {
+    font-size: 0.86rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+#side-quest-design .process-node {
+    font-size: 0.92rem;
+    padding: 0.62rem 0.5rem;
+    border-width: 1px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+#side-quest-design .process-note {
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+#side-quest-design .process-arrow {
+    flex: 0 0 1.15rem;
+    width: 1.15rem;
+    min-width: 1.15rem;
+    height: auto;
+    padding-top: 0.38rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--game-accent);
+    transform: none;
+    opacity: 0.88;
+    overflow: visible;
+}
+
+#side-quest-design .process-arrow i {
+    display: none;
+}
+
+#side-quest-design .process-arrow::before {
+    content: "›";
+    font-size: 1.45rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--game-accent);
+    transform: none;
+}
+
+#side-quest-design .case-study-photo {
+    margin: 2.25rem auto 0;
+}
+
+#side-quest-design .case-study-photo img {
+    border-radius: 12px;
+    border: 1px solid var(--cs-hairline);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+#side-quest-design .case-study-media {
+    max-width: 800px;
+    margin: 0 auto 0.25rem;
+    padding: 6px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--game-bg-darker) 82%, black);
+    border: 1px solid var(--cs-hairline);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+#side-quest-design .case-study-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    border-radius: 9px;
+    transition: none;
+}
+
+#side-quest-design .video-container-main {
+    border-radius: 14px;
+    border: 1px solid var(--cs-hairline);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+#side-quest-design .video-container-main iframe {
+    border-radius: 13px;
+}
+
+#side-quest-design .outcomes-list {
+    margin-bottom: 2rem;
+}
+
+#side-quest-design .reveal-pending {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+#side-quest-design .reveal-pending.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.85s var(--cs-ease), transform 0.85s var(--cs-ease);
+}
+
+@media (max-width: 640px) {
+    #side-quest-design .process-arrow {
+        padding-top: 0;
+        width: 1.15rem;
+        min-width: 1.15rem;
+        align-self: center;
+        transform: rotate(90deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #side-quest-design .case-study-card,
+    #side-quest-design .reveal-pending,
+    #side-quest-design .reveal-pending.is-revealed {
+        transition: none;
+        transform: none;
+        opacity: 1;
+    }
+}

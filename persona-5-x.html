@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-title-en="Persona 5 The Phantom X - Xinglong's Portfolio" data-title-zh="女神异闻录：夜幕魅影 - Xinglong 的作品集">Persona 5 The Phantom X - Xinglong's Portfolio</title>
-    <link rel="stylesheet" href="game-design.css">
-    <link rel="stylesheet" href="persona-5-x-videos.css">
+    <link rel="stylesheet" href="game-design.css?v=16">
+    <link rel="stylesheet" href="persona-5-x-videos.css?v=15">
     <link rel="stylesheet" href="i18n.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -219,22 +219,22 @@
                                         <div class="process-node"><span class="lang-en">Empathize</span><span class="lang-zh">共情</span></div>
                                         <p class="process-note"><span class="lang-en">Name what the player needs right now</span><span class="lang-zh">说清玩家此刻需要什么</span></p>
                                     </div>
-                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-arrow" aria-hidden="true"></div>
                                     <div class="process-step">
                                         <div class="process-node"><span class="lang-en">Define</span><span class="lang-zh">定义</span></div>
                                         <p class="process-note"><span class="lang-en">Translate that need into a concrete goal</span><span class="lang-zh">把需求落成具体目标</span></p>
                                     </div>
-                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-arrow" aria-hidden="true"></div>
                                     <div class="process-step">
                                         <div class="process-node"><span class="lang-en">Ideate</span><span class="lang-zh">构思</span></div>
                                         <p class="process-note"><span class="lang-en">Research comparable puzzle references</span><span class="lang-zh">研究可比的解谜参考</span></p>
                                     </div>
-                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-arrow" aria-hidden="true"></div>
                                     <div class="process-step">
                                         <div class="process-node"><span class="lang-en">Prototype</span><span class="lang-zh">原型</span></div>
                                         <p class="process-note"><span class="lang-en">Sketch and build toward the goal</span><span class="lang-zh">朝着目标草图与搭建</span></p>
                                     </div>
-                                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                                    <div class="process-arrow" aria-hidden="true"></div>
                                     <div class="process-step">
                                         <div class="process-node"><span class="lang-en">Evaluate</span><span class="lang-zh">评估</span></div>
                                         <p class="process-note"><span class="lang-en">Use the goal as a filter for what to cut</span><span class="lang-zh">用目标过滤该砍掉什么</span></p>
@@ -303,6 +303,7 @@
                             <div class="case-study-card-text">
                                 <p><span class="lang-en">Puzzles need a gradual play rhythm, sequenced like setup, development, turn, and resolution. Each side quest starts at a tutorial, then steps through difficulty 1, difficulty 2, and difficulty 3.</span><span class="lang-zh">谜题需要按照起承转合安排循序渐进的游玩节奏。每条支线起始点为教程 → 难度 1 → 难度 2 → 难度 3，依次递进。</span></p>
                                 <p><span class="lang-en">I also design the spatial path so players experience those puzzles in that order. A messy puzzle sequence would break the progressive difficulty curve.</span><span class="lang-zh">空间动线设计上安排玩家按顺序体验解密，避免混乱的谜题顺序干扰渐进式的难度曲线。</span></p>
+                                <p><span class="lang-en">In the exploration content that only unlocked at the version's endgame, I mixed in a few different mechanics so the experience had more variety, and added the hardest combined-mechanic puzzles. Even so, I still interleaved them by difficulty to manage the player's flow.</span><span class="lang-zh">在版本终局才解锁的探索内容中我少量穿插了不同机制让体验更具变化，并且添加了最难的综合机制谜题。不过还是要按难度穿插分布来管理玩家的游玩心流。</span></p>
                             </div>
                             <div class="diagram-frame">
                                 <!-- DIAGRAM COMPONENT: sequential difficulty along spatial path (abstract, no real game content) -->
@@ -556,19 +557,22 @@
                     <h3><span class="lang-en">Part 4 — Final Result</span><span class="lang-zh">第 4 部分 · 最终结果</span></h3>
                     <p><span class="lang-en">During the internship I designed, configured, and shipped about 40 puzzles. They carried nearly half of the exploration content in the main-story version's endgame.</span><span class="lang-zh">实习过程中设计、配置、上线了约 40 个谜题。撑起了主线版本终局近半的探索内容。</span></p>
 
-                    <h4 style="text-align: center;"><span class="lang-en">Side Discovery Video Walkthrough</span><span class="lang-zh">支线视频流程演示</span></h4>
-                    <div class="video-container-main">
-                        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115263768957676&bvid=BV1J4n4zGE8f&cid=32640994939&p=6&t=80&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-                    </div>
-
                     <h4 style="text-align: center;"><span class="lang-en">Side Discovery 2D Layout</span><span class="lang-zh">私人领域支线 2D 布局</span></h4>
-                    <div style="text-align: center;">
-                        <img class="section-image" style="max-width: 800px; margin: 0 auto; display: block;" src="/image/P5X/mini map 2f side quest.png" alt="Level 2F Side Quest Mini-map" data-alt-en="Level 2F side quest mini-map" data-alt-zh="2F 支线小地图">
-                    </div>
+                    <figure class="case-study-media">
+                        <img class="section-image" src="/image/P5X/mini map 2f side quest.png" alt="Level 2F Side Quest Mini-map" data-alt-en="Level 2F side quest mini-map" data-alt-zh="2F 支线小地图">
+                    </figure>
 
                     <h4 style="text-align: center;"><span class="lang-en">Abandoned Residence 2D Layout (Second Puzzle)</span><span class="lang-zh">废弃居所 2D 布局（终局解密）</span></h4>
-                    <div style="text-align: center;">
-                        <img class="section-image" style="max-width: 800px; margin: 0 auto; display: block;" src="/image/P5X/mini map fqjs side quest.png" alt="Abandoned Residence side quest mini-map, second puzzle" data-alt-en="Abandoned Residence side quest mini-map, second puzzle" data-alt-zh="废弃居所支线小地图，第二段解密">
+                    <figure class="case-study-media">
+                        <img class="section-image" src="/image/P5X/mini map fqjs side quest.png" alt="Abandoned Residence side quest mini-map, second puzzle" data-alt-en="Abandoned Residence side quest mini-map, second puzzle" data-alt-zh="废弃居所支线小地图，第二段解密">
+                    </figure>
+
+                    <h4 style="text-align: center;"><span class="lang-en">Side Discovery Video Walkthrough</span><span class="lang-zh">支线视频流程演示</span></h4>
+                    <div class="video-container-main">
+                        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115263768957676&bvid=BV1J4n4zGE8f&cid=32640994939&p=6&t=80&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" title="Side discovery video walkthrough 1"></iframe>
+                    </div>
+                    <div class="video-container-main">
+                        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115638320305105&bvid=BV1x7SvBaE9p&cid=34391461883&p=6&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" title="Side discovery video walkthrough 2"></iframe>
                     </div>
 
 
@@ -618,5 +622,26 @@
     <script src="script.js"></script>
     <script src="game-design.js"></script>
     <script src="i18n-switch.js"></script>
+    <script>
+        (function () {
+            var root = document.getElementById('side-quest-design');
+            if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var items = root.querySelectorAll('.case-study-card, .case-study-photo, .outcomes-list, .case-study-media');
+            if (!items.length) return;
+            items.forEach(function (el) { el.classList.add('reveal-pending'); });
+            if (!('IntersectionObserver' in window)) {
+                items.forEach(function (el) { el.classList.add('is-revealed'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-revealed');
+                    io.unobserve(entry.target);
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+            items.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
 </body>
 </html>

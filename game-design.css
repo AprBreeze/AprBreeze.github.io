@@ -1020,6 +1020,7 @@ button:focus {
     padding: 1.5rem 1.25rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 0.75rem;
 }
 
@@ -1040,7 +1041,20 @@ button:focus {
     line-height: 1.5;
     color: var(--game-text);
     margin: 0;
-    text-align: left;
+    text-align: center;
+}
+
+.project-section .summary-card .summary-card-title,
+.project-section .summary-card h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--game-accent-alt);
+    text-align: center;
+}
+
+.section-content .summary-card-text {
+    margin: 0;
+    text-align: center;
 }
 
 @media (max-width: 900px) {
